@@ -111,6 +111,7 @@ headsepline, % Uncomment to get a line under the header
 %----------------------------------------------------------------------------------------
 %	ABSTRACT PAGE
 \include{Parts/abstract}
+
 %----------------------------------------------------------------------------------------
 %	LIST OF CONTENTS PAGES
 \tableofcontents % Prints the main table of contents
@@ -118,22 +119,27 @@ headsepline, % Uncomment to get a line under the header
 %----------------------------------------------------------------------------------------
 %	DEDICATION
 %----------------------------------------------------------------------------------------
-
 \dedicatory{For/Dedicated to/To my\ldots} 
-
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - CHAPTERS
 %----------------------------------------------------------------------------------------
-
 \mainmatter % Begin numeric (1,2,3...) page numbering
 
 \pagestyle{thesis} % Return the page headers back to the "thesis" style
+%\chapter*{Introduction}\label{chapter:introduction}
+%\setcounter{page}{0}
+%\pagenumbering{arabic}
+%from here on, start the 'real' page numbering, from 1, with normal digits
+\input{Chapters/introduction}
+\addcontentsline{toc}{chapter}{Introduction}
+
+\clearpage
 
 % Include the chapters of the thesis as separate files from the Chapters folder
 % Uncomment the lines as you write the chapters
 
 \include{Chapters/Chapter1}
-%\include{Chapters/Chapter2} 
+\include{Chapters/Chapter2} 
 %\include{Chapters/Chapter3}
 %\include{Chapters/Chapter4} 
 %\include{Chapters/Chapter5} 
