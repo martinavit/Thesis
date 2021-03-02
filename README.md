@@ -3,4 +3,4 @@ PhDThesis
 
 To compile it:
 
-       make -f Makefile
+       make -f Makefile_Didar
