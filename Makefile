@@ -13,7 +13,7 @@ pdf: $(SOURCE)
 
 .PHONY: view
 view: 
-#	$(SH) skim-view.sh $(BASE)
+	$(SH) skim-view.sh $(BASE)
 
 .PHONY: clean
 clean :
