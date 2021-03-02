@@ -18,4 +18,4 @@ view:
 .PHONY: clean
 clean :
 	#$(RM) -f -- *.aux *.bak *.bbl *.blg *.log *.out *.toc *.tdo _region.*
-	mv thesis.aux output_file/
+	$(MV) thesis.aux output_file/
