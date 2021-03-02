@@ -1,6 +1,7 @@
 PDFLATEX = pdflatex -interaction=batchmode -synctex=1
 SH 		 = /bin/bash
 ASCRIPT  = /usr/bin/osascript
+MV = mv
 
 SOURCE   = thesis.tex
 BASE     = "$(basename $(SOURCE))"
