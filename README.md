@@ -3,4 +3,4 @@ PhDThesis
 
 To compile it:
 
-       make -f Makefile_Didar
+       python compile.py
