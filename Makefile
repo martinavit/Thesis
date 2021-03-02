@@ -18,3 +18,4 @@ view:
 .PHONY: clean
 clean :
 	$(RM) -f -- *.aux *.bak *.bbl *.blg *.log *.out *.toc *.tdo _region.*
+	mv *.aux *.bak *.bbl *.blg *.log *.out *.toc *.tdo _region.* output_file/
