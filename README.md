@@ -3,4 +3,4 @@ PhDThesis
 
 To compile it:
 
-       python compile.py
+       python compile.py thesis.tex
