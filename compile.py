@@ -35,5 +35,6 @@ subprocess.call("mv %s %s" % ('*.blg', 'output_file/'), shell=True)
 subprocess.call("mv %s %s" % ('*.bbl', 'output_file/'), shell=True)
 subprocess.call("mv %s %s" % ('*.toc', 'output_file/'), shell=True)
 subprocess.call("mv %s %s" % ('thesis.synctex.gz', 'output_file/'), shell=True)
+subprocess.call("mv %s %s" % ('Chapters/*.aux', 'output_file/'), shell=True)
 
 
