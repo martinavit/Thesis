@@ -41,16 +41,21 @@ headsepline, % Uncomment to get a line under the header
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 
-\usepackage{mathpazo} % Use the Palatino font by default
+%\usepackage{mathpazo} % Use the Palatino font by default
+%\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{xspace} 
 
-\usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
-
-\addbibresource{bibliography.bib} % The filename of the bibliography
+%\usepackage[backend=biber,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
+%\bibliographystyle{unsrt}
+%\usepackage[style=phys, articletitle=false,biblabel=brackets, chaptertitle=false,pageranges=false]{biblatex}
+%\addbibresource{bibliography.bib} % The filename of the bibliography
 
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
-
-\input{hnldefs.tex} % all the definitions of symbols and variables
-
+%for making reference ranges appeaer as they should
+\usepackage[utf8]{inputenc}
+\usepackage{cite}
+\usepackage[compat=1.0.0]{tikz-feynman}
 %----------------------------------------------------------------------------------------
 %	MARGIN SETTINGS
 %----------------------------------------------------------------------------------------
@@ -97,7 +102,6 @@ headsepline, % Uncomment to get a line under the header
 \frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
 
 \pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
-
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
 \include{Parts/titlePage}
@@ -168,7 +172,11 @@ headsepline, % Uncomment to get a line under the header
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
-\printbibliography[heading=bibintoc]
+%\printbibliography[heading=bibintoc]
+\bibliography{thesis}{}
+\bibliographystyle{unsrt}
+
+
 %----------------------------------------------------------------------------------------
 %	ABBREVIATIONS
 %	PHYSICAL CONSTANTS/OTHER DEFINITIONS

@@ -201,8 +201,8 @@
 \RequirePackage{booktabs} % Required for better table rules
 
 \RequirePackage{caption} % Required for customising the captions
-\captionsetup{justification=centerlast,font=small,labelfont=sc,margin=50pt}
-
+\captionsetup{font=small,labelfont=sc,margin=30pt}
+%justification=centerlast,
 %----------------------------------------------------------------------------------------
 %	DEFINE CUSTOM THESIS INFORMATION COMMANDS
 %----------------------------------------------------------------------------------------
@@ -515,6 +515,86 @@ KOMA-script documentation for details.}]{fancyhdr}
 }
 
 %----------------------------------------------------------------------------------------
+%	COMMANDS
+%----------------------------------------------------------------------------------------
+
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{xspace} 
+
+%particles
+\newcommand{\PZ}{\ensuremath{Z}\xspace}
+\newcommand{\Zg}{\ensuremath{\PZ+\gamma}\xspace}
+\newcommand{\Zgs}{\ensuremath{\PZ+\gamma^{(\ast)}}\xspace}
+\newcommand{\Pe}{\ensuremath{e}\xspace}
+\newcommand{\PW}{\ensuremath{W}\xspace}
+\newcommand{\PGm}{\ensuremath{\mu}\xspace}
+\newcommand{\ie}{i.e.\xspace}
+\newcommand{\PGt}{\ensuremath{\tau}\xspace}
+
+
+\newcommand{\displ}{displaced\xspace}
+\newcommand{\Displ}{Displaced\xspace}
+%\newcommand{\displ}{nonprompt\xspace}
+\newcommand{\hnl}{\ensuremath{\mathrm{N}}\xspace}
+\newcommand{\mhnl}{\ensuremath{M_{\hnl}}\xspace}
+\newcommand{\mixpar}{\ensuremath{\mathrm{|V_{\hnl\ell}|^2}}\xspace}
+\newcommand{\mixpare}{\ensuremath{\mathrm{|V_{\hnl\Pe}|^2}}\xspace}
+\newcommand{\mixparm}{\ensuremath{\mathrm{|V_{\hnl\PGm}|^2}}\xspace}
+\newcommand{\mixpart}{\ensuremath{\mathrm{|V_{\hnl\PGt}|^2}}\xspace}
+\newcommand{\eex}{\ensuremath{\Pe\Pe\mathrm{X}}\xspace}
+\newcommand{\mmx}{\ensuremath{\PGm\PGm\mathrm{X}}\xspace}
+\newcommand{\ttx}{\ensuremath{\PGt\PGt\mathrm{X}}\xspace}
+\newcommand{\Irel}{\ensuremath{I_{\mathrm{rel}}}\xspace}
+\newcommand{\dxy}{\ensuremath{d_{\mathrm{xy}}}\xspace}
+\newcommand{\dz}{\ensuremath{d_{\mathrm{z}}}\xspace}
+\newcommand{\absdxy}{\ensuremath{|d_{\mathrm{xy}}|}\xspace}
+\newcommand{\nmiss}{\ensuremath{N_{\mathrm{miss}}}\xspace}
+\newcommand{\absdz}{\ensuremath{|d_{\mathrm{z}}|}\xspace}
+\newcommand{\sigeta}{\ensuremath{\eta}\xspace}
+\newcommand{\abseta}{\ensuremath{|\eta|}\xspace}
+\newcommand{\sip}{\ensuremath{\mathrm{SIP}}\xspace}
+\newcommand{\lept}{\ensuremath{\ell}\xspace}
+\newcommand{\lone}{\ensuremath{\ell_1}\xspace}
+\newcommand{\ltwo}{\ensuremath{\ell_2}\xspace}
+\newcommand{\lthree}{\ensuremath{\ell_3}\xspace}
+\newcommand{\ltwothree}{\ensuremath{\ell_{2/3}}\xspace}
+\newcommand{\mlonetwo}{\ensuremath{M(\lone,\ltwo)}\xspace}
+\newcommand{\mlonethree}{\ensuremath{M(\lone,\lthree)}\xspace}
+\newcommand{\mtwol}{\ensuremath{M(\ltwo,\lthree)}\xspace}
+\newcommand{\mthreel}{\ensuremath{M(\lone,\ltwo,\lthree)}\xspace}
+\newcommand{\MT}{\ensuremath{M_{\mathrm{T}}}\xspace}
+\newcommand{\DRtwol}{\ensuremath{\Delta R(\ltwo,\lthree)}\xspace}
+\newcommand{\Dphi}{\ensuremath{\Delta\phi}\xspace}
+\newcommand{\minDphi}{\ensuremath{\min{\Delta\phi(\lone,\ltwothree)}}\xspace}
+\newcommand{\Xg}{\ensuremath{X+\gamma}\xspace}
+\newcommand{\Xgs}{\ensuremath{X+\gamma^{(\ast)}}\xspace}
+
+
+%\newcommand{\costheta}{\ensuremath{\cos{\left(\vec{r}_{\mathrm{SV}},\vec{p}_{\mathrm{\ltwothree}}\right)}}\xspace}
+\newcommand{\costheta}{\ensuremath{\cos{\theta_{\mathrm{SV,\,\hnl}}}}\xspace}
+\newcommand{\Deltwod}{\ensuremath{\Delta_{\mathrm{2D}}}\xspace}
+\newcommand{\ns}{\ensuremath{\mathrm{\,ns}}\xspace}
+\newcommand{\ptc}{\ensuremath{\pt^{\mathrm{cone}}}\xspace}
+\newcommand{\ptcs}[1]{\ensuremath{p_{\mathrm{T,\,}#1}^{\mathrm{cone}}}\xspace}
+\newcommand{\ptj}{\ensuremath{\pt^{\mathrm{jet}}}\xspace}
+\newcommand{\ptjs}[1]{\ensuremath{p_{\mathrm{T,\,}#1}^{\mathrm{jet}}}\xspace}
+\newcommand{\ptm}{\ensuremath{\pt^{\mathrm{mom}}}\xspace}
+\newcommand{\sigetaj}{\ensuremath{\eta^{\mathrm{jet}}}\xspace}
+\newcommand{\absetaj}{\ensuremath{|\eta^{\mathrm{jet}}|}\xspace}
+\newcommand{\sfr}{\ensuremath{f_{\mathrm{S}}}\xspace}
+\newcommand{\dfr}{\ensuremath{f_{\mathrm{D}}}\xspace}
+\newcommand{\comm}[1]{}
+
+
+\newcommand{\red}{\textcolor[rgb]{1.00,0.00,0.00}}
+\newcommand{\blue}{\textcolor[rgb]{0.00,0.00,1.00}}
+\newcommand{\green}{\textcolor[rgb]{0.00,0.59,0.00}}
+\definecolor{ugblue}{rgb}{0.08, 0.38, 0.74}
+\definecolor{linkcolor_marty}{rgb}{0.00,0.3, 0.00}
+
+
+%----------------------------------------------------------------------------------------
 
 \ifbool{hyperrefsupport}{% If the nohyperref class option has not been specified
 \AtEndPreamble{\RequirePackage{hyperref}
@@ -523,8 +603,8 @@ bookmarksopen=true,
 bookmarksopenlevel=0,
 hypertexnames=false,
 colorlinks=true,% Set to false to disable coloring links
-citecolor=magenta,% The color of citations
-linkcolor=red,% The color of references to document elements (sections, figures, etc)
+citecolor=gray,% The color of citations
+linkcolor=linkcolor_marty,% The color of references to document elements (sections, figures, etc)
 urlcolor=mdtRed,% The color of hyperlinks (URLs)
 pdfstartview={FitV},
 unicode,
