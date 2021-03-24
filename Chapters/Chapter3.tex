@@ -32,7 +32,7 @@ If $\mathcal{N} = 3$, there is a right-chiral counterpart for each $\nu_{SM}$, s
 \end{figure}
 
 Considering the existing searches and considering a model-indipendent phenomenological approach, we could assume the existence of only a \emph{single} sufficiently light HNL can be kinematically accessible at the accelerator experiments; see full overview in~\cite{Atre_2009}. There are then only two free parameters to be constrained: the mass $M_I$ of the HNL and its coupling with an SM neutrino of flavor $\alpha$ controlled by the Yukawa coupling $F_{\alpha I}$. Without any signal excess, upper limits are settled on the mixing parameter $|V^2_{\alpha I}|$ ($= |F^2_{\alpha I}|$) as function of the $M_I$ for a given flavor $\alpha$. It is very often assumed that in the matrix $V$ the other mixing elements for different flavors are zero; this latter consideration, in spite of the fact that does not translate into a valid concrete model, it is very useful to extract generic limits on the single $|V^2_{\alpha I}|$ without involving any model dependent hierarchy between the different flavor mixings. 
-\begin{figure}[t!]
+\begin{figure}[h]
   \centering
   \includegraphics[width=.80\textwidth]{Figures/c3/diagram_decay}
     \caption{Production (left) and decay (right) of the particle $N_{I}$.}
@@ -44,7 +44,7 @@ To set up our notation and convention, we first discuss the formalism for the si
 extension of the SM which includes right handed singlets. Also in this section, we present
 the current constraints on the mass and mixing of a heavy neutrino from various direct
 detection experiments, accelerator searches and electroweak precision constraints.
-\subsection{Seesaw formula}\label{sec:seesaw}
+\subsection{Seesaw mechanism}\label{sec:seesaw}
 The most general renormalisable Lagrangian for the neutrino masses includes both the Dirac and Majorana mass terms. The SM Lagrangian $\mathcal{L}_{SM}$ is extended adding $\mathcal{N}$ right-handed neutrinos $N_I$: (for notations see Eq.~\ref{eq:neutrinoportal}).
 \begin{equation}
 \label{eq:fullSMLag}
@@ -53,7 +53,7 @@ The most general renormalisable Lagrangian for the neutrino masses includes both
     - \frac{M_I}{2} \; \bar {N_I^c} N_I + h.c.\right)
 \end{equation}
 As already explained in the previous section (~\ref{sec:neutrinoPortal}), these $N_I$ are neutral with respect to all the gauge interactions of the SM, thus are called \emph{sterile neutrinos} or \emph{gauge-singlet fermions}.
-In the Higgs phase, the term~\ref{eq:neutrinoportal} brings to the $\nu_{\alpha} - N_I$ mixing. As result the \emph{charge eigentatses} of the $\mathcal{L}_{SM}$ (~\ref{eq:fullSMLag}) do not coincide with the \emph{mass eigenstates}, which can be extracted diagonalizing the following matrix:
+In the Higgs phase, the term~\ref{eq:neutrinoportal} brings to the $\nu_{\alpha} - N_I$ mixing. As result the \emph{charge eigenstates} of the $\mathcal{L}_{SM}$ (~\ref{eq:fullSMLag}) do not coincide with the \emph{mass eigenstates}, which can be extracted diagonalizing the following matrix:
 \begin{equation}
 \label{eq:matrixmass}
  \mathcal{M}_{\nu,N} = 
@@ -67,7 +67,7 @@ with $m_D = 3 \times  \mathcal{N}$ Dirac mass matrix, $(m_D)_{\alpha I} = F_{\al
 Considering the relation between $M_I$ and $m_D$, we could explore two interesting extreme limits:
 \paragraph {Pure Majorana neutrino, $m_D \ll M_I$.}
 In this limit, the mass matrix give rise to 3 almost pure right-handed neutrinos with heavy Majorana mass $M_I$ and 3 almost pure left-handed neutrinos with light Majorna mass $m_\nu = - (vm_D)^{T}M^{-1}_{I}(vm_D)$ which are the 3 eigenvalues of the matrix $(\mathcal{M}_{\nu})_{\alpha \beta}$. This mechanism is then referred to as the \emph{seesaw mechanism}\footnote{This mechanism is usually called \emph{Type-I seesaw}. \emph{Type-II seesaw} has an extra SU(2) triplet scalar~\cite{Deppisch_2015}; in \emph{Type-III seesaw} an extra fermion in the adjoint of SU(2) is added to the model~\cite{Foot:1988aq}}~\cite{MINKOWSKI1977421}~\cite{Mohapatra:1979ia}~\cite{Yanagida:1979as}.
-\begin{figure}[t!]
+\begin{figure}[h]
   \centering
   \includegraphics[width=.60\textwidth]{Figures/c3/funny.png}
     \caption{Silly representation of the \emph{seesaw mechanism}~\cite{funny}. Note that for a fix value of $m_D$, higher is value of the $m^{R}_I$ lower is the one of the $m^{L}_I$ and vice-versa, from this the \emph{seesaw} name.}
@@ -77,18 +77,21 @@ There are then the other $\mathcal{N}$ eigenstates of the $\mathcal{M}_{\nu,N}$ 
 The magnitude of this mixing is given by the ration of the Dirac and Majorana masses $\rightarrow$ \emph{mixing angle} or \emph{active-sterile mixing}:
 
 \begin{equation}
+\label{eq:v2}
  V^2_{\alpha I} \equiv \frac{v^{2}|F_{\alpha I}|^2}{M^{2}_{I}} \ll 1
 \end{equation}
 It generates the 9 measurable neutrino mass parameters from $m_D$ and $M_I$, that contain 18 unknown parameters to the Lagrangian: $number\; of \; HNL \; parameters = 7 \times \mathcal{N} - 3$. $\mathcal{N}$ are the real Majorana masses $M_I$ plus $3\times \mathcal{N}$ complex Yukawa coupling $F_{\alpha I}$ minus 3 phases which go to the redefinitions of $\nu_e, \; \nu_\mu,\; \nu_\tau$.
 
 \paragraph {Pure Dirac neutrino, $M_I \ll m_D$.}
-In this limit, the mass matrix give rise to 3 Dirac neutrinos $\Psi = (\nu_L,\:\bar{\nu_R})$ with mass $m_\nu = m_D$. To obtain the observed neutrino masses then the coupling $F_{\alpha I} \sim 10^{-12}$ which is much smaller than the SM Yukawa couplings.
+In this limit, the mass matrix give rise to 3 Dirac neutrinos $\Psi = (\nu_L,\:\bar{\nu_R})$ with mass $m_\nu = m_D$. To obtain the observed neutrino masses then it is needed that coupling is $F_{\alpha I} \sim 10^{-12}$ which is much smaller than the SM Yukawa couplings.
 
 \vspace{5mm} 
 This paragraph below is freely inspired by the overview given by R.D. Kauber here~\cite{webpage_seesaw}.
 \subsubsection{Considerations on Majorana and Dirac neutrinos}
 \paragraph {Distinction between Majorana and Dirac terms.}
-The nomenclature "Majorana" is used to define different things and it is important for the following chapters to clarify the meaning. In the Sec.~\ref{sec:seesaw} \emph{Majorana} and \emph{Dirac} are used to refer to the mass terms in the Lagrangian~\ref{eq:fullSMLag}. The additional meaning is related to the type of neutrino. A \emph{Majorana} particle is defined as a particle that is its own antiparticle.  A Dirac particle has an antiparticle that is distinctly different from it. Neutrino are the only particle which can be both \emph{Majorana-Dirac} while all the other fermions are strictly Dirac-type. 
+The nomenclature "Majorana" is used to define different things and it is important for the following chapters to clarify the meaning.
+
+In the Sec.~\ref{sec:seesaw} \emph{Majorana} and \emph{Dirac} are used to refer to the mass terms in the Lagrangian~\ref{eq:fullSMLag}. The additional meaning is related to the type of neutrino. A \emph{Majorana} particle is defined as a particle that is its own antiparticle.  A Dirac particle has an antiparticle that is distinctly different from it. Neutrino are the only particle which can be both \emph{Majorana-Dirac} while all the other fermions are strictly Dirac-type. 
 
 \paragraph{Lepton Number conservation.}
 To be more clear and explicit, we write the Dirac mass term as:
@@ -105,11 +108,11 @@ In this way is it easier to see the interactions: $\nu_L$ destroys a left-handed
  creates a LH neutrino and destroys a RH $\bar{\nu_R}$, $\nu^{c}_L$ creates a LH neutrino and destroys a RH antineutrino, $\bar{\nu}^{c}_L$ destroys a LH
  neutrino and creates a right-handed antineutrino.
 
-Looking now at the Feynman diagram of the first term of Eq.~\ref{eq:dirac} a RH particle disappears at a point and a LH particle appears. Therefore weak (chiral) charge is not conserved, but the lepton number, however, is conserved, as we started with a neutrino (not an anti-neutrino) and ended up with a neutrino. $\rightarrow$ 
+Looking now at the Feynman diagram of the first term of Eq.~\ref{eq:dirac} a RH particle disappears at a point and a LH particle appears. Therefore weak (chiral) charge is not conserved, but the lepton number, however, is conserved, as we started with a neutrino (not an anti-neutrino) and ended up with a neutrino $\rightarrow$ \textbf{Dirac conserves the lepton number}.
 
-Same considerations can be made for the Eq.~\ref{eq:majorana}, the weak charge is not conserved and neither the lepton number. We started with zero neutrinos and ended up with two neutrinos.
+Same considerations can be made for the Eq.~\ref{eq:majorana}, the weak charge is not conserved and neither the lepton number. We started with zero neutrinos and ended up with two neutrinos. $\rightarrow$ \textbf{Majorana violates the lepton number}.
 
-To summarize, if the HNL is of Majorana nature, $\ell$ and $\ell^\prime$ (or $\ell$
+Considering here (Fig.~\ref{fig:c3hnldiagram}) as example the leptonic decay of the \PW boson from the HNL decays, if the HNL is of Majorana nature, $\ell$ and $\ell^\prime$ (or $\ell$
 and $\nu_{\ell^\prime}$) can either have the same chirality
 (Fig.~\ref{fig:c3hnldiagram} left) or opposite chirality
 (Fig.~\ref{fig:c3hnldiagram} right). The former decay represents a case
@@ -120,8 +123,6 @@ In the case of a HNL decay mediated by a $\PW^\ast$ boson, a LNV decay
 can lead to final states with no opposite-sign, same-flavor lepton
 pairs (no-OSSF), such as $\Pe^\pm\Pe^\pm\PGm^\mp$ or
 $\PGm^\pm\PGm^\pm\Pe^\mp$.
-Such final states are blessed by relatively low SM background rates,
-thus providing a pristine signal for the performed HNL search.
 Decays mediated by a $\PZ^\ast$ boson (Fig.~\ref{fig:c3hnldiagram}
 bottom) and LNC decays (Fig.~\ref{fig:c3hnldiagram} right), instead, are
 always accompanied by an opposite-sign, same-flavor lepton pair
@@ -139,8 +140,6 @@ lepton flavor can be violated, $\ell\neq\ell^\prime$ (LFV).
 In the LFV case, decay rates to different flavors might not be the
 same ($\mixpare,\mixparm,\mixpart>0$, but
 $\mixpare\neq\mixparm\neq\mixpart$).
-In this search, only LFC cases are considered: one \mixpar parameter
-is nonzero, while the other two are set to their SM value of 0.
 
 \begin{figure}
 \centering
@@ -170,7 +169,218 @@ lepton flavor can be violated, $\ell\neq\ell^\prime$ (LFV).}
 \end{figure}
 
 
+\paragraph{Decay width and branching ratio}
+The main consideration and difference between Majorana and Dirac is that in the first case $m^{c}_I = m_I$. This implies that both $N_I\rightarrow \PW^{+}\ell^-$, $\PZ\nu_{\ell}$, $H\nu_{\ell}$ and $N_I\rightarrow \PW^{-}\ell^+$, $\PZ\bar{\nu}_{\ell}$, $H\bar{\nu}_{\ell}$ decay modes are open. This means that the partial width of $N_I\rightarrow \PW^{+}\ell^-$ and $N_I\rightarrow \PW^{-}\ell^+$ have the same value. Thus the total width for a Majorana neutrino and a Dirac neutrino fixing the mass are related by:
+\begin{equation}
+\label{eq:width}
+\Gamma^{Tot, \: Majorana}_{N_{I}} = 2 \times \Gamma^{Tot, \: Dirac}_{N_{I}}
+\end{equation}
+This brings to the relationship between the life time:
+\begin{equation}
+\label{eq:lifetime}
+c\:\tau^{Tot, \: Majorana}_{N_{I}} = \frac{1}{2} \times c\:\tau^{Tot, \: Dirac}_{N_{I}}
+\end{equation}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{5mm} 
+\section{Theoretical and experimental constraints}
+For a complete overview of the theoretical and experimental constraints of sterile neutrinos searches see Ref~\cite{Deppisch_2015},~\cite{10.3389/fphy.2018.00040},~\cite{PhysRevD.78.013010},~\cite{Drewes_2017},~\cite{DREWES2017250} and~\cite{Antusch_2014}.
+
+
+Sterile neutrinos mix with the $\nu_{SM}$, thus at small mixing the
+active-neutrino mass states contain a small part of sterile neutrinos. Consequently, the mass eigenstates in the HNL couple to SM particles thanks to the tiny but nonzero mixing $V_{\alpha I}$, Eq.~\ref{eq:v2}.
+
+In principle, in any weak processes where the $\nu_{SM}$ participates, also the HNLs do. The strength is suppressed due to the smallness of the $\nu_\alpha - N_I$ mixing angle but the kinematics properties could show the interaction due to the fact that the HNL is much more massive than the active-neutrino.
+Therefore, it is possible to select a particular channel and phase space which enhances some kinematics features associated to the presence of the sterile neutrino.
+
+These properties are explored and exploited in the direct searches for HNLs.
+
+
+
+\subsection{Direct HNL searches}
+Considering the different MeV-TeV mass ranges and taking into account
+the several production and decay modes, we have a quite rich
+experimental landscape. 
+\begin{itemize}
+\item For $M_N$ values below 1 MeV, HNL can be probed by
+  neutrino-oscillation experiments~\cite{de_Gouv_a_2005};
+\item for 10 eV $< M_N <$ 1 MeV, searches for
+  $0\nu\beta\beta$ and precision measurement of $\beta-$decay energy
+  spectra have constrained the mixing \mixpare~\cite{PhysRevLett.111.122503};
+\item for 1 MeV $< M_N <$ 1 GeV, both \mixpare and \mixparm have been
+  constrained by \emph{peak searches} using leptonic decay of pions
+  and kaons like $K \rightarrow \mu(e) N$, $\pi \rightarrow \mu(e)
+  N$~\cite{Liventsev_2013};
+\item for HNL in the MeV-GeV mass ranges, many searches through
+  sterile neutrino decay products have been performed at beam dump experiments~\cite{DORENBOSCH1986473};
+\item for HNL in the GeV-TeV mass ranges, we enter in the domain of
+  the leptonic and hadron colliders.
+\end{itemize}
+
+Quite often the HNL bounds are shown in the 2D plane $mixing, \: V_{\alpha N} \longleftrightarrow
+M_N$ with the assumption to fix at zero the other mixing angles which are not
+represented in the plot. 
+
+To have a clear overview of the current experimental (and theoretical)
+limits we can refer to
+Figs.~\ref{fig:HNL_bc6_pbc_2},~\ref{fig:HNL_bc7_pbc_2}
+and~\ref{fig:HNL_bc8_pbc_2}. Filled colored areas show the existing
+limits which, for low masses (below the charm mass), are driven by the
+results from beam dump experiments (PS191 and CHARM); for masses above
+the charm mass, the most stringent limits are the ones coming from LEP
+(DELPHI) and from Belle and most recently from CMS and ATLAS.
+
+
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=.90\textwidth]{Figures/c3/HNL_bc6_pbc_2.png}
+    \caption{Sensitivity to HNL with coupling to $\nu_e$ only. Current bounds (filled areas) and 10-15 years prospects for projects
+(SHiP, MATHUSLA200, CODEX-b and FASER2) (solid lines). Projections for a LBNE
+near detector with $5\times 10^{21}$ pot and from FCC-ee with
+$10^{12}$ $\PZ_0$ decays are also shown.
+The gray contour named "BBN'' corresponds to and HNL lifetime $>1$sec,
+which is disfavored by BBN~\cite{Ruchayskiy_2012}. The brown line
+labeled "seesaw'' represents the scale of mixing in general expected
+in the canonical \emph{seesaw }. The very light gray at the top
+labeled as "EWPD'' is the 90\% C.L. exclusion limit from the
+electroweak precision data~\cite{Antusch_2015}. The other solid
+contours are explained in the paragraph. 
+% The green contour labeled "Belle'' is the exclusion
+%region at 90\% C.L from HNL searches in B-meson decays at
+%Belle~\cite{Liventsev_2013}. Those labeled "PS191'' (magenta) and
+%"CHARM' (gray) are excluded at 90\% C.L. from beam-dump experiments.
+}
+  \label{fig:HNL_bc6_pbc_2}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=.90\textwidth]{Figures/c3/HNL_bc7_pbc_2.png}
+    \caption{Sensitivity to HNL with coupling to $\nu_\mu$ only. Current bounds (filled areas) and 10-15 years prospects for projects
+(SHiP, MATHUSLA200, CODEX-b and FASER2) (solid lines). Projections for a LBNE
+near detector with $5\times 10^{21}$ pot and from FCC-ee with $10^{12}$ $\PZ_0$ decays are also shown. The gray contour named "BBN'' corresponds to and HNL lifetime $>1$sec,
+which is disfavored by BBN~\cite{Ruchayskiy_2012}. The brown line
+labeled "seesaw'' represents the scale of mixing in general expected
+in the canonical \emph{seesaw }. The very light gray at the top
+labeled as "EWPD'' is the 90\% C.L. exclusion limit from the
+electroweak precision data~\cite{Antusch_2015}. The other solid
+contours are explained in the paragraph.}
+  \label{fig:HNL_bc7_pbc_2}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=.90\textwidth]{Figures/c3/HNL_bc8_pbc_2.png}
+    \caption{Sensitivity to HNL with coupling to $\nu_\tau$ only. Current bounds (filled areas) and 10-15 years prospects for projects
+(SHiP, MATHUSLA200, CODEX-b and FASER2) (solid lines). Projections from FCC-ee with $10^{12}$ $\PZ_0$ decays are also shown.}
+  \label{fig:HNL_bc8_pbc_2}
+\end{figure}
+
+A brief experiment-focused overview follows:
+\begin{itemize}
+\item PS191 (CERN, PS Beam 1983)~\cite{BERNARDI1988332}: the PS191
+  experiment was specifically design to look for neutrino decays in
+  low energy neutrino beam. It was a detector composed of a 12m long
+  decay volume followed by a fine-grain calorimeter. No sterile
+  neutrino candidates were observed but the analysis of neutrino
+  interactions in the calorimeter shows a possible excess of events
+  with electrons~\cite{Vannucci:1985v}.
+\item CHARM (CERN, SPS beam 1985)~\cite{DORENBOSCH1986473}: A search
+  for decays of HNL was performed by the CHARM Collaboration using a
+  neutrino beam produced by dumping 400 GeV protons on a thick Copper
+  target and looking for possible visible decays. It has been assumed
+  the sterile neutrino to be produced by coupling in charmed D meson
+  decays. The following decays were considered, \hnl $\rightarrow
+  e^+e^-\nu_e$, $\rightarrow \mu^+e^-\nu_\mu$ and $\rightarrow
+  \mu^+\mu^-\nu_\mu$ and the limits were settle on \mixpare and
+  \mixparm $< \:10^{-7}$ for \hnl masses around 1.5 GeV. Neutrinos
+  were assumed to be produced by neutral-current neutrino interactions
+  in the CHARM calorimeter.
+\item Belle (KEK, asymmetric-energy $e^+e^-$ collider, 2012)~\cite{Liventsev_2013}: Belle collaboration
+  performed a search on heavy neutral leptons in B-meson
+  decays. The data sample contained $772\times 10^6$ of $B\overline{B}$
+  pairs collected at the $\Upsilon(4S)$ resonance. The limits
+  on the mixing parameter were obtained analyzing the $B\overline{B}$ pairs
+  events using the leptonic and semileptonic B meson decay,
+  $B\rightarrow X\ell\nu_R$, where $\ell = e, \: \mu$ and the $X$ was
+  either a charmed D meson, a light meson ($\pi, \: \rho, \: \eta$) or
+  nothing (leptonic decay). Upper limits were set on on \mixpare and
+  \mixparm in the mass range between 0.5-5.0 GeV. 
+\item DELPHI (CERN, lepton collider LEP, 1997)~\cite{Abreu:1996pa}:
+  the most stringent limits between 1 GeV and 10GeV are still the ones
+  been put by the DELPHI Collaboration. HNL search have been performed
+  using the data collected by DELPHI detector corresponding to $3.3
+  \times 10^6$ hadronic $Z_0$ decays at LEP1. These results are, up to
+  this day, one of the most interesting and most complete because
+  they include the short-lived HNL scenario and as well the long-lived
+  HNL scenario. For short-lived, it was considered the \hnl production
+  giving monojet or acollinear jet topologies, while for long-lived
+  search, \hnl was looked for checking detectable secondary vertices or calorimeter clusters. 
+ Upper limits were set for the branching ratio $BR, \: Z_0\rightarrow \hnl$ of
+ about $1.3 \times 10^-6$ at 96\% C.L. for \hnl masses between 3.5 and
+ 50 GeV. 
+\item CMS and ATLAS (CERN, LHC pp beam 2019): there have been several searches for HNLs in both CMS and ATLAS.
+The ATLAS experiment recently reported on a search for HNLs using events with three charged leptons~\cite{atlasintro2} using 
+pp collision data corresponding to integrated luminosities of 32.9 to
+36.1 $fb^{-1}$. 
+The search is performed in channels with three muons or two muons plus
+one electron---providing sensitivity  to \mixparm only---, where the 
+displaced decay vertex of the HNL was exploited.
+CMS performed searches for HNLs only using prompt leptons,
+either in final states with two same-charge leptons and one or two jets
+(\(\PW^{\pm(\ast)}\to\ell^{\pm}\hnl\to\ell^{\pm}\ell^{\prime\pm}q\bar{q}^{\prime}\))~\cite{Sirunyan:2018xiv},
+in a mass range of 20 GeV to 1.7 TeV.
+CMS searches with three charged leptons in the final state using the leptonic \PW decay are going to extensivly discussed in this
+elaborate.
+\end{itemize}
+
+\subsection{Constraints on HNL}
+In the following list, we tried so summarize the current constraints
+coming from the theoretical predictions and from the most recent results (Figs.~\ref{fig:HNL_bc6_pbc_2},~\ref{fig:HNL_bc7_pbc_2}
+and~\ref{fig:HNL_bc8_pbc_2}.)
+\begin{itemize}
+\item Searches for Charged Lepton Flavor Violation. If we consider an HNL with a
+  mass close to EW scale and with large off-diagonal Yukawa couplings,
+  then this \hnl can lead to LFV in decays of charge leptons. Thus,
+  testing LFV in multilepton searches could be an inderect way to
+  probe the existance of HNL. Searches for such processes have
+  placed 90\% C.L. upper limits on decay branching rates, \ie
+  $BR(\mu^+\rightarrow e^+\gamma) < 4.2\times 10^{-13}$,
+  $BR(\mu^+\rightarrow e^+e^+e^-) < 1.0\times 10^{-12}$ and
+  $BR(\tau^-\rightarrow e^-\mu^+mu^-) < 2.7\times 10^{-8}$. For
+  complete summary and references see~\cite{Pascoli_2019}.
+\item Cosmological constraints on light neutrino masses. The Planck
+  Satellite's measurements of the large scale structures in the
+  universe, combined with the WMAP + highL + BAO data, have set the
+  upper limits on the sum of all the light neutrino
+  masses~\cite{Aghanim:2018eyx}: 
+\begin{equation}
+\label{eq:summasses}
+\sum_{m} m_{\nu_m} < 0.12 \: eV, \;\;\;\; at \;95\% \: C.L.
+\end{equation}
+\item BBN constraints. Observing
+  Figs. ~\ref{fig:HNL_bc6_pbc_2},~\ref{fig:HNL_bc7_pbc_2}
+  and~\ref{fig:HNL_bc8_pbc_2}, a \hnl which falls on the left of the
+  Big Bag Nucleosynthesis line would be able to live long enough in
+  the early Universe to cause an overproduction of primordial
+  Helium-4~\cite{Ruchayskiy_2012}.
+\item \emph{Seesaw} limit. Below the line of the seesaw limit, the
+  mixing of the sterile neutrinos with the active ones becomes too
+  weak to be able to produce the pattern of neutrino flavor oscillations that has been observed~\cite{Canetti_2010}. 
+\end{itemize}
+
+
+
+
+
+
+
+
 
 \clearpage
 
-\subsection{Previous and current results}
