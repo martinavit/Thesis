@@ -531,6 +531,30 @@ KOMA-script documentation for details.}]{fancyhdr}
 \newcommand{\PGm}{\ensuremath{\mu}\xspace}
 \newcommand{\ie}{i.e.\xspace}
 \newcommand{\PGt}{\ensuremath{\tau}\xspace}
+\newcommand{\ttbar}{\ensuremath{t\bar{t}}\xspace}
+\newcommand{\PGg}{\ensuremath{\gamma}\xspace}
+\newcommand{\PGn}{\ensuremath{\nu}\xspace}
+\newcommand{\PQb}{b jets\xspace}
+
+
+
+\newcommand{\MGvATNLO}{\large{M}AD\large{G}RAPH\large{5}\_aMC@NLO\xspace}
+\newcommand{\FASTJET}{\large{F}AST\large{J}ET\xspace}
+\newcommand{\GeV}{\xspace GeV\xspace}
+\newcommand{\TeV}{\xspace TeV\xspace}
+\newcommand{\MeV}{\xspace MeV\xspace}
+\newcommand{\eV}{\xspace eV\xspace}
+
+\newcommand{\fbinv}{\ensuremath{fb^{-1}}\xspace}
+\newcommand{\ptmiss}{\ensuremath{p_{T}^{miss}}\xspace}
+\newcommand{\Pp}{\ensuremath{pp}\xspace}
+\newcommand{\pt}{\ensuremath{p_T}\xspace}
+\newcommand{\DR}{\ensuremath{\Delta R}\xspace}
+\newcommand{\met}{\ensuremath{MET}\xspace}
+\newcommand{\mlll}{\ensuremath{M_{3\ell}}\xspace}
+\newcommand{\mmin}{\ensuremath{min(M_{OS})}\xspace}
+\newcommand{\mtmin}{\ensuremath{M_{T}^{other}}\xspace}
+\newcommand{\Mll}{\ensuremath{M_{\ell\ell}}\xspace}
 
 
 \newcommand{\displ}{displaced\xspace}
