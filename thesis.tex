@@ -44,7 +44,17 @@ headsepline, % Uncomment to get a line under the header
 %\usepackage{mathpazo} % Use the Palatino font by default
 %\usepackage{mathtools}
 \usepackage{amsmath}
+\usepackage{lineno}
+\usepackage{multirow}
+\usepackage{subfig}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+
+
 \usepackage{xspace} 
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+
 
 %\usepackage[backend=biber,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
 %\bibliographystyle{unsrt}
@@ -62,8 +72,8 @@ headsepline, % Uncomment to get a line under the header
 
 \geometry{
 	paper=a4paper, % Change to letterpaper for US letter
-	inner=2.cm, % Inner margin
-	outer=3.3cm, % Outer margin
+	inner=2.8cm, % Inner margin
+	outer=2.8cm, % Outer margin
 	bindingoffset=.5cm, % Binding offset
 	top=2.5cm, % Top margin
 	bottom=2.5cm, % Bottom margin
@@ -147,11 +157,12 @@ headsepline, % Uncomment to get a line under the header
 \include{Chapters/Chapter4} 
 \include{Chapters/Chapter5} 
 \include{Chapters/Chapter6} 
+\include{Chapters/Chapter7} 
 
 %----------------------------------------------------------------------------------------
 %	LIST OF CONTENTS/FIGURES/TABLES PAGES
-\listoffigures % Prints the list of figures
-\listoftables % Prints the list of tables
+%\listoffigures % Prints the list of figures
+%\listoftables % Prints the list of tables
 %----------------------------------------------------------------------------------------
 
 

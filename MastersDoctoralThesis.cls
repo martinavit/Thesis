@@ -201,7 +201,7 @@
 \RequirePackage{booktabs} % Required for better table rules
 
 \RequirePackage{caption} % Required for customising the captions
-\captionsetup{font=small,labelfont=sc,margin=30pt}
+\captionsetup{font=footnotesize,labelfont=sc,margin=18pt,skip=2pt}
 %justification=centerlast,
 %----------------------------------------------------------------------------------------
 %	DEFINE CUSTOM THESIS INFORMATION COMMANDS
@@ -528,14 +528,33 @@ KOMA-script documentation for details.}]{fancyhdr}
 \newcommand{\Zgs}{\ensuremath{\PZ+\gamma^{(\ast)}}\xspace}
 \newcommand{\Pe}{\ensuremath{e}\xspace}
 \newcommand{\PW}{\ensuremath{W}\xspace}
+\newcommand{\PH}{\ensuremath{H}\xspace}
+
+\newcommand{\WZ}{\ensuremath{WZ}\xspace}
 \newcommand{\PGm}{\ensuremath{\mu}\xspace}
 \newcommand{\ie}{i.e.\xspace}
+\newcommand{\eg}{e.g.\xspace}
+
 \newcommand{\PGt}{\ensuremath{\tau}\xspace}
 \newcommand{\ttbar}{\ensuremath{t\bar{t}}\xspace}
 \newcommand{\PGg}{\ensuremath{\gamma}\xspace}
 \newcommand{\PGn}{\ensuremath{\nu}\xspace}
-\newcommand{\PQb}{b jets\xspace}
+\newcommand{\PQc}{\ensuremath{c}\xspace}
+\newcommand{\PQs}{\ensuremath{s}\xspace}
 
+
+\newcommand{\PQb}{b jets\xspace}
+\newcommand{\Pepm}{\ensuremath{e^{\pm}}}
+\newcommand{\Pemp}{\ensuremath{e^{\mp}}}
+\newcommand{\PGmpm}{\ensuremath{\mu^{\pm}}}
+\newcommand{\PGmmp}{\ensuremath{\mu^{\mp}}}
+\newcommand{\cm}{\xspace cm\xspace}
+
+\newcommand{\JPsi}{\xspace\ensuremath{J/\Psi}\xspace}
+\newcommand{\Pgy}{\xspace\ensuremath{\Psi}\xspace}
+\newcommand{\PgUa}{\xspace\ensuremath{\Upsilon\;(1S)}\xspace}
+\newcommand{\PgUb}{\xspace\ensuremath{\Upsilon\;(2S)}\xspace}
+\newcommand{\PgUc}{\xspace\ensuremath{\Upsilon\;(3S)}\xspace}
 
 
 \newcommand{\MGvATNLO}{\large{M}AD\large{G}RAPH\large{5}\_aMC@NLO\xspace}
@@ -555,6 +574,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 \newcommand{\mmin}{\ensuremath{min(M_{OS})}\xspace}
 \newcommand{\mtmin}{\ensuremath{M_{T}^{other}}\xspace}
 \newcommand{\Mll}{\ensuremath{M_{\ell\ell}}\xspace}
+\newcommand{\ptcone}{\ensuremath{p_{T}^{cone}}\xspace}
 
 
 \newcommand{\displ}{displaced\xspace}

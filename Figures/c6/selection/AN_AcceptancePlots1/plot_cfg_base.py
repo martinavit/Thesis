@@ -1,0 +1,403 @@
+import copy
+import os
+from collections import namedtuple
+from operator import itemgetter
+from ROOT import gROOT as gr
+from multiprocessing import Pool, Process, cpu_count
+import modules.fr_net as fr_net
+
+from shutil import copyfile, copytree
+from numpy import array
+from getpass import getuser
+from socket import gethostname
+import time
+import sys
+
+# from copy_reg import pickle       # to pickle methods for multiprocessing
+import copyreg as copy_reg
+from types    import MethodType   # to pickle methods for multiprocessing
+
+from modules.PlotConfigs import HistogramCfg, VariableCfg
+# from modules.HistCreator import CreateHists
+from modules.HistCreator import CreateHists
+from modules.HistDrawer import HistDrawer
+from modules.Variables import getVars,essential_vars
+from modules.Selections import getSelection, Region
+from modules.Samples import createSampleLists, setSumWeights
+from pdb import set_trace
+# from CMGTools.HNL.plotter.qcdEstimationMSSMltau import estimateQCDWMSSM, createQCDWHistograms
+
+
+
+def _pickle_method(method): 
+    func_name = method.im_func.__name__
+    obj = method.im_self
+    cls = method.im_class
+    return _unpickle_method, (func_name, obj, cls)
+
+def _unpickle_method(func_name, obj, cls):
+    for cls in cls.mro():
+        try:
+            func = cls.__dict__[func_name]
+        except KeyError:
+            pass
+        else:
+            break
+    return func.__get__(obj, cls)
+
+copy_reg.pickle(MethodType, _pickle_method, _unpickle_method)
+
+gr.SetBatch(True) # NEEDS TO BE SET FOR MULTIPROCESSING OF plot.Draw()
+
+
+def prepareRegions(channel):
+    regions = []
+    # regions.append(Region('datacard_v1_NewPT',channel,'SR'))
+    # regions.append(Region('datacard_v2_SigReweight',channel,'SR'))
+    # regions.append(Region('datacard_v3_SigReweightNormalized_fixed2',channel,'SR'))
+    # regions.append(Region('datacard_v4_WideV2',channel,'SR'))
+    # regions.append(Region('datacard_v5_BetterDisplacementBin',channel,'SR'))
+
+    # regions.append(Region('SR_v2_EXOAachen',channel,'SR'))
+    # regions.append(Region('MR_nonprompt',channel,'SR'))
+    # regions.append(Region('MR_nonprompt_v1_endgame',channel,'SR'))
+    # regions.append(Region('MR_nonprompt_MartinaRegion',channel,'SR'))
+    # regions.append(Region('MR_nonprompt_disp1',channel,'SR_disp1'))
+    # regions.append(Region('MR_nonprompt_disp2',channel,'SR_disp2'))
+    # regions.append(Region('MR_nonprompt_disp3',channel,'SR_disp3'))
+    # regions.append(Region('MR_nonprompt_v10_GhentSelection',channel,'SR'))
+    # regions.append(Region('SR',channel,'SR'))
+
+    regions.append(Region('AN_AcceptancePlots1',channel,'CustomRegion'))
+    # regions.append(Region('AN_SR',channel,'CustomRegion'))
+    # regions.append(Region('CustomRegion',channel,'CustomRegion'))
+    # regions.append(Region('SR_disp1',channel,'SR_disp1'))
+    # regions.append(Region('SR_disp2',channel,'SR_disp2'))
+    # regions.append(Region('SR_disp3',channel,'SR_disp3'))
+    # regions.append(Region('MR_nonprompt_v40_DropoutM12_80',channel,'SR'))
+    # regions.append(Region('MR_RightBand',channel,'SR'))
+    # regions.append(Region('MR_LeftBand',channel,'SR'))
+    # regions.append(Region('SR_orth',channel,'SR_orth'))
+    # regions.append(Region('MR_DF_closure',channel,'MR_DF_closure'))
+    # regions.append(Region('MR_DF',channel,'MR_DF'))
+    # regions.append(Region('MR_DF_closure',channel,'MR_DF_closure'))
+    # regions.append(Region('MR_SF1',channel,'MR_SF1'))
+    # regions.append(Region('MR_SF2',channel,'MR_SF2'))
+    # regions.append(Region('MR_SF2_closure',channel,'MR_SF2_closure'))
+    # regions.append(Region('MR_nonprompt',channel,'MR_nonprompt'))
+    # regions.append(Region('MR_nonprompt_v41_CutDR0102_relaxRelIso4',channel,'SR'))
+    # regions.append(Region('Z_reproducibility_v3',channel,'SR'))
+    # regions.append(Region('Conversion',channel,'Conversion'))
+    # regions.append(Region('TTbar',channel,'ttbar'))
+    # regions.append(Region('DY',channel,'DY'))
+
+    print('###########################################################')
+    print('# setting analysis regions')
+    print('###########################################################')
+   
+
+    for region in regions: 
+        print('region: %s; channel: %s'%(region.name,region.channel))
+        print('baseline: %s\n'%(region.baseline))
+
+    return regions
+
+def createSamples(channel, analysis_dir, total_weight, server, add_data_cut=None, dataset = '2017'):
+    sample_dict = {}
+    # print "creating samples from %s"%(analysis_dir)
+    samples_all, samples_singlefake, samples_doublefake, samples_nonprompt, samples_mc, samples_data = createSampleLists(analysis_dir=analysis_dir, server = server, channel=channel, add_data_cut=add_data_cut, dataset = dataset)
+
+    #select here the samples you wish to use
+    # working_samples = samples_data_dde
+    working_samples = samples_all
+    working_samples = setSumWeights(working_samples)
+    sample_dict['working_samples'] = working_samples
+    print('')
+
+    print('###########################################################')
+    print('# %d samples to be used:'%(len(working_samples)))
+    print('###########################################################')
+    for sample in working_samples: print('{:<20}{:<20}'.format(*[sample.name,('path: '+sample.ana_dir)]))
+    # for w in working_samples: print('{:<20}{:<20}'.format(*[w.name,('path: '+w.ana_dir+w.dir_name+'/'+tree_prod_name)]))
+
+    return sample_dict
+
+def createVariables(rebin=None):
+    # Taken from Variables.py; can get subset with e.g. getVars(['mt', 'mvis'])
+    DoNotRebin = ['_norm_', 'n_vtx', 'nj', 'nbj',] 
+    variables = essential_vars
+    # if rebin > 0:
+    if rebin != None:
+        for ivar in variables:
+            if ivar.name in DoNotRebin: continue
+            ivar.binning['nbinsx'] = int(ivar.binning['nbinsx']/rebin)
+
+    return variables
+
+def makePlots(plotDir,channel_name,variables, regions, total_weight, sample_dict, make_plots=True, create_trees=False, multiprocess=False, useNeuralNetwork=False, dataframe=True, server = 'starseeker', channel_dir = 'mmm', analysis_dir='/home/dehuazhu/SESSD/4_production/', dataset = '2017', signalReweight = 'False'):
+
+    # get the lumis from here: https://twiki.cern.ch/twiki/bin/viewauth/CMS/PdmV2017Analysis
+    # Golden JSON Int.Lumi: from https://twiki.cern.ch/twiki/bin/viewauth/CMS/PdmVAnalysisSummaryTable
+
+    # 2016
+    if dataset == '2016':
+        int_lumi = 35920.0 # pb
+
+    # 2017
+    if dataset == '2017':
+        int_lumi = 41530.0 # pb ### (all eras), 
+        # int_lumi =  4792.0 # pb (era B)
+
+    # 2018
+    if dataset == '2018':
+        int_lumi = 59740.0 #pb (all eras)
+        # int_lumi = 14000.0 #pb (era A)
+        # int_lumi =  7100.0 #pb (era B)
+        # int_lumi =  6940.0 #pb (era C)
+        # int_lumi = 31930.0 #pb (era D)
+
+
+    ams_dict = {}
+    sample_names = set()
+    for region in regions:
+
+        cfg_main = HistogramCfg(name=region.name, var=None, cfgs=sample_dict['working_samples'], region=region, lumi=int_lumi, weight=total_weight)
+
+        if multiprocess: 
+            multiprocess_status = 'ON'
+        else:
+            multiprocess_status = 'OFF'
+
+        if useNeuralNetwork:
+            fr_method = 'Neural Network'
+        else:
+            fr_method = 'Tight to Loose'
+
+        print('\n#############################################################################')
+        print('# creating plots for %i sample(s) and %i variable(s)...'%(len(sample_dict['working_samples']),len(variables),))
+        print('# using %d CPUs with multiprocess %s'%(cpu_count(),multiprocess_status)) 
+        print('# Method used to estimate Lepton Fake Rate: %s'%(fr_method))
+        if useNeuralNetwork:
+            # print '# Path to Neural Network for SingleFakes1:\t' + fr_net.path_to_NeuralNet('SingleFake1',channel_dir,dataset)
+            # print '# Path to Neural Network for SingleFakes2:\t' + fr_net.path_to_NeuralNet('SingleFake2',channel_dir,dataset)
+            # print '# Path to Neural Network for DoubleFakes:\t' + fr_net.path_to_NeuralNet('DoubleFake',channel_dir,dataset)
+            print('# Path to Neural Network for nonprompt:\t\t' + fr_net.path_to_NeuralNet('nonprompt',channel_dir,dataset))
+        if signalReweight:
+            print('# making datacards including reweighted signal samples')
+        print('#############################################################################')
+
+        i_var = 0
+        start_plots = time.time()
+        for var in variables:
+            i_var += 1
+            print('\nPlotting variable \'%s\' (%d of %d; total time passed: %.1f s)...'%(var.name,i_var,len(variables),time.time()-start_plots))
+            start_plot = time.time()
+            cfg_main.vars = [var]
+            HISTS = CreateHists(cfg_main, analysis_dir,channel_dir,server,useNeuralNetwork,dataset)
+            plots = HISTS.createHistograms(cfg_main, verbose=False, multiprocess = multiprocess, signalReweight = signalReweight)
+            plot = plots[var.name]
+            plot.Group('data_obs', ['data_2017A','data_2017B', 'data_2017C', 'data_2017D', 'data_2017E', 'data_2017F'])
+            # plot.Group('doublefake', ['doublefake_B', 'doublefake_C', 'doublefake_D', 'doublefake_E', 'doublefake_F'])
+            # plot.Group('singlefake', ['singlefake_B', 'singlefake_C', 'singlefake_D', 'singlefake_E', 'singlefake_F'])
+            plot.Group('nonprompt', ['nonprompt_A','nonprompt_B', 'nonprompt_C', 'nonprompt_D', 'nonprompt_E', 'nonprompt_F','Conversions_DYJetsToLL_M10to50_contamination','Conversions_DYJetsToLL_M5to50_contamination','Conversions_DYJets_M50_contamination','Conversions_DYJets_M50_ext_contamination','WZTo3LNu_contamination','ZZTo4L_contamination','WW_contamination','WZ_contamination','ZZ_contamination','TTJets_contamination','TTJets_ext_contamination'])
+            plot.Group('prompt',['Conversions_DYJetsToLL_M10to50','Conversions_DYJetsToLL_M5to50','Conversions_DYJets_M50','Conversions_DYJets_M50_ext','WZTo3LNu','ZZTo4L','WW','WZ','ZZ','TTJets','TTJets_ext'])
+            # plot.Group('contamination', ['conversionsSingle_DYJets_M50_contamination', 'conversionsSingle_DYJets_M50_ext_contamination', 'conversionsSingle_DYJetsToLL_M10to50_contamination','WW_contamination','WZ_contamination','ZZ_contamination'])
+            # plot.Group('Diboson', ['WZTo3LNu','ZZTo4L','WW','WZ','ZZ'])
+            # plot.Group('Single t', ['STbar_tch_inc','ST_tch_inc','ST_sch_lep'])
+            # plot.Group('DY', ['DYJets_M50_ext','DYJets_M50','DYJetsToLL_M10to50','DYJetsToLL_M5to50'])
+            # plot.Group('DY', ['Conversions_DYJetsToLL_M10to50','Conversions_DYJetsToLL_M5to50','Conversions_DYJets_M50','Conversions_DYJets_M50_ext'])
+            # plot.Group('QCD',['QCD_pt_15to20_mu', 'QCD_pt_20to30_mu', 'QCD_pt_30to50_mu', 'QCD_pt_50to80_mu', 'QCD_pt_80to120_mu'])
+            # plot.Group('WJets', ['WJetsToLNu','WJetsToLNu_ext','W1JetsToLNu', 'W2JetsToLNu', 'W3JetsToLNu', 'W4JetsToLNu'])
+            # plot.Group('Conversions', ['Conversions_DYJetsToLL_M10to50','Conversions_DYJets_M50','Conversions_DYJets_M50_ext'])
+            # plot.Group('ConversionsSingle', ['ConversionsSingle_DYJetsToLL_M10to50','ConversionsSingle_DYJets_M50','ConversionsSingle_DYJets_M50_ext'])
+            # plot.Group('ConversionsDouble', ['ConversionsDouble_DYJetsToLL_M10to50','ConversionsDouble_DYJets_M50','ConversionsDouble_DYJets_M50_ext'])
+            plot.Group('HNL', ['HN3L*'])
+            if make_plots:
+                HistDrawer.draw(plot,do_ratio = True, channel = channel_name, plot_dir = plotDir+region.name, server = server, region = region, channel_dir = channel_dir, dataset = dataset)
+            print('\tThis plot took %.1f s to compute.'%(time.time()-start_plot))
+
+
+def producePlots(promptLeptonType, L1L2LeptonType, dataset, option = None, multiprocess = False, dataframe = True):
+    start_time = time.time()
+
+    usr = getuser()
+    hostname = gethostname()
+
+    if 't3ui02' in hostname:
+        if usr == 'dezhu':   plotDirBase = '/work/dezhu/3_figures/1_DataMC/FinalStates/2018/'
+        if usr == 'vstampf': plotDirBase = '/t3home/vstampf/eos/plots/'
+
+    if 'lxplus' in hostname:
+        if usr == 'dezhu':   plotDirBase = '/eos/user/d/dezhu/HNL/plots/FinalStates/'
+        if usr == 'vstampf': plotDirBase = '/eos/user/v/vstampf/plots/'
+
+    if 'starseeker' in hostname:
+        if dataset == '2017':
+            if usr == 'dehuazhu': plotDirBase = '/mnt/StorageElement1/3_figures/1_DataMC/FinalStates/'
+        if dataset == '2018':
+            if usr == 'dehuazhu': plotDirBase = '/mnt/StorageElement1/3_figures/1_DataMC/FinalStates/2018/'
+
+
+    if promptLeptonType == "ele":
+        channel_name = 'e'
+        if L1L2LeptonType == "ee":
+            plotDir = plotDirBase + 'eee/'
+            channel_name += 'ee'
+            channel = 'eee'
+        if L1L2LeptonType == "em":
+            if option == 'OS':
+                plotDir = plotDirBase + 'eem_OS/'
+                channel_name += 'e#mu OS'
+                channel = 'eem_OS'
+            elif option == 'SS':
+                plotDir = plotDirBase + 'eem_SS/'
+                channel_name += 'e#mu SS'
+                channel = 'eem_SS'
+            else:
+                plotDir = plotDirBase + 'eem/'
+                channel_name += 'e#mu'
+                channel = 'eem'
+        if L1L2LeptonType == "mm":
+            plotDir = plotDirBase + 'emm/'
+            channel_name += '#mu#mu'
+            channel = 'emm'
+    if promptLeptonType == "mu":
+        channel_name = '#mu'
+        if L1L2LeptonType == "ee":
+            plotDir = plotDirBase + 'mee/'
+            channel_name += 'ee'
+            channel = 'mee'
+        if L1L2LeptonType == "em":
+            if option == 'OS':
+                plotDir = plotDirBase + 'mem_OS/'
+                channel_name += 'e#mu OS'
+                channel = 'mem_OS'
+            elif option == 'SS':
+                plotDir = plotDirBase + 'mem_SS/'
+                channel_name += 'e#mu SS'
+                channel = 'mem_SS'
+            else:
+                plotDir = plotDirBase + 'eem/'
+                channel_name += 'e#mu'
+                channel = 'eem'
+        if L1L2LeptonType == "mm":
+            plotDir = plotDirBase + 'mmm/'
+            channel_name += '#mu#mu'
+            channel = 'mmm'
+    
+    if "lxplus" in hostname:
+        analysis_dir = '/eos/user/v/vstampf/ntuples/'
+   
+    if "t3ui02" in hostname:
+        if dataset == '2017':
+            analysis_dir = '/work/dezhu/4_production/'
+        if dataset == '2018':
+            analysis_dir = '/work/dezhu/4_production/2018/'
+
+    if "starseeker" in hostname:
+        if dataset == '2017':
+            analysis_dir = '/home/dehuazhu/SESSD/4_production/'
+        if dataset == '2018':
+            analysis_dir = '/mnt/StorageElement1/4_production/2018/'
+            # analysis_dir = '/home/dehuazhu/SESSD/4_production/2018/'
+
+    # total_weight = 'weight * lhe_weight'
+    total_weight = 'puweight * lhe_weight'
+    # total_weight = '1'
+
+    regions = prepareRegions(channel)
+    
+
+    # variables = createVariables(rebin = 2.5)
+    variables = createVariables()
+
+    sample_dict = createSamples(channel,analysis_dir, total_weight, server=hostname, dataset = dataset)
+
+    handle = os.popen('echo $CMSSW_BASE')
+    line = handle.read()
+    handle.close()
+    cmsBaseDir = line.strip('\n')
+
+    for region in regions:
+        regionDir = plotDir+region.name
+        # old_stdout = sys.stdout
+        # log_file = open(regionDir+'/output.log','w')
+        # sys.stdout=log_file
+    
+        if not os.path.exists(regionDir):
+            os.mkdir(regionDir)
+            print("Output directory created. ")
+            print("Output directory: %s"%(regionDir))
+        else:
+            # print "Output directory: ", regionDir, "already exists, overwriting it!"
+            # print("Output directory already exists, overwriting it! ")
+            print("Output directory already exists, trying to preserve it! ")
+            print( "Output directory: %s"%(regionDir))
+            # os.system("rm -rf %s"%(regionDir))
+            # os.system("mkdir %s"%(regionDir))
+        
+        if "starseeker" in hostname:
+            copyfile(cmsBaseDir+'/src/PlotFactory/DataBkgPlots/0_cfg_hn3l_'+channel+'.py', regionDir+'/plot_cfg.py')
+            copyfile(cmsBaseDir+'/src/PlotFactory/DataBkgPlots/master/plot_cfg_hn3l.py', regionDir+'/plot_cfg_base.py')
+            copyfile(cmsBaseDir+'/src/PlotFactory/DataBkgPlots/modules/Selections.py', regionDir+'/Selections.py')
+            copyfile(cmsBaseDir+'/src/PlotFactory/DataBkgPlots/modules/Samples.py', regionDir+'/Samples.py')
+            copyfile(cmsBaseDir+'/src/PlotFactory/DataBkgPlots/modules/fr_net.py', regionDir+'/fr_net.py')
+        else:
+            # copyfile(cmsBaseDir+'/src/CMGTools/HNL/PlotFactory/DataBkgPlots/0_cfg_hn3l_'+channel+'.py', regionDir+'/plot_cfg.py')
+            # copyfile(cmsBaseDir+'/src/CMGTools/HNL/PlotFactory/DataBkgPlots/master/plot_cfg_hn3l.py', regionDir+'/plot_cfg_base.py')
+            # copyfile(cmsBaseDir+'/src/CMGTools/HNL/PlotFactory/DataBkgPlots/modules/Selections.py', regionDir+'/Selections.py')
+            copyfile('0_cfg_hn3l_'+channel+'.py', regionDir+'/plot_cfg.py')
+            copyfile('master/plot_cfg_hn3l.py', regionDir+'/plot_cfg_base.py')
+            copyfile('modules/Selections.py', regionDir+'/Selections.py')
+
+        print('cfg files stored in "',plotDir + region.name + '/"')
+
+        if not os.path.exists(regionDir + '/pdf/'):
+            os.mkdir(regionDir + '/pdf/')
+            os.mkdir(regionDir + '/pdf/linear/')
+            os.mkdir(regionDir + '/pdf/log/')
+        if not os.path.exists(regionDir + '/root/'):
+            os.mkdir(regionDir + '/root/')
+            os.mkdir(regionDir + '/root/linear/')
+            os.mkdir(regionDir + '/root/log')
+        if not os.path.exists(regionDir + '/png/'):
+            os.mkdir(regionDir + '/png/')
+            os.mkdir(regionDir + '/png/linear/')
+            os.mkdir(regionDir + '/png/log/')
+        if not os.path.exists(regionDir + '/tex/'):
+            os.mkdir(regionDir + '/tex/')
+            os.mkdir(regionDir + '/tex/linear/')
+            os.mkdir(regionDir + '/tex/log/')
+        if not os.path.exists(regionDir + '/datacards/'):
+            os.mkdir(regionDir + '/datacards/')
+
+        if "starseeker" in hostname:
+            if dataset == '2017':
+                os.system("cp -rf %s %s"%(regionDir,'/home/dehuazhu/t3work/3_figures/1_DataMC/FinalStates/'+channel+'/'))
+                print('directory %s copied to /t3home/dezhu/eos/t3/figures/1_DataMC/FinalStates/%s!'%(region.name,channel))
+            if dataset == '2018':
+                os.system("cp -rf %s %s"%(regionDir,'/home/dehuazhu/t3work/3_figures/1_DataMC/FinalStates/2018/'+channel+'/'))
+                print('directory %s copied to /t3home/dezhu/eos/t3/figures/1_DataMC/FinalStates/2018/%s!'%(region.name,channel))
+    
+    makePlots(
+        plotDir,
+        channel_name,
+        variables, 
+        regions, 
+        total_weight, 
+        sample_dict, 
+        make_plots=True,
+        multiprocess=True,
+        useNeuralNetwork=True,
+        dataframe=dataframe,
+        server=hostname,
+        channel_dir=channel,
+        analysis_dir=analysis_dir,
+        dataset = dataset,
+        signalReweight = True,
+    )
+
+    end_time = time.time()
+    print('This job took %.1f seconds to compute.'%(end_time-start_time))
+    # sys.stdout = old_stdout
+    # log_file.close()
