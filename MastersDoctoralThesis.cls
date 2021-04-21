@@ -549,12 +549,14 @@ KOMA-script documentation for details.}]{fancyhdr}
 \newcommand{\PGmpm}{\ensuremath{\mu^{\pm}}}
 \newcommand{\PGmmp}{\ensuremath{\mu^{\mp}}}
 \newcommand{\cm}{\xspace cm\xspace}
+\newcommand{\mm}{\xspace mm\xspace}
 
 \newcommand{\JPsi}{\xspace\ensuremath{J/\Psi}\xspace}
 \newcommand{\Pgy}{\xspace\ensuremath{\Psi}\xspace}
 \newcommand{\PgUa}{\xspace\ensuremath{\Upsilon\;(1S)}\xspace}
 \newcommand{\PgUb}{\xspace\ensuremath{\Upsilon\;(2S)}\xspace}
 \newcommand{\PgUc}{\xspace\ensuremath{\Upsilon\;(3S)}\xspace}
+\newcommand{\PKzS}{\ensuremath{K_{S}^{0}}\xspace}
 
 
 \newcommand{\MGvATNLO}{\large{M}AD\large{G}RAPH\large{5}\_aMC@NLO\xspace}

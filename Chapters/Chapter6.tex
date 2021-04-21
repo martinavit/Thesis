@@ -222,7 +222,7 @@ with a tag-and-probe method (see Sec.~\ref{sec:triggereff}).
 \subsection{Object selection}\label{sec:object}
 For the rigorous explanation of the single object reconstruction in
 CMS see Chapter~\ref{Chapter2}, section~\ref{sec:reconstruction}.
-In the same section the general reconstraction performances of
+In the same section the general reconstruction performances of
 displaced object is presented; in the coming subsections, we will
 present the efficiency of the current object selection for displaced
 object using the HNL-signal MC samples. \\
@@ -688,7 +688,7 @@ any dilepton flavor.
     value. The dashed green line in the left plot indicates the
     distance between the generated primary and secondary vertices: any
     reconstructed vertex below this line would lie in the ``wrong''
-    emisphere, opposite to the direction of flight of the HNL.
+    hemisphere, opposite to the direction of flight of the HNL.
     The horizontal dashed lines in the right plot delimit the region
     where $\Delta\rho(\mathrm{gen,rec})$ is less than 10\% of
     $\rho(\mathrm{gen})$. 
@@ -788,7 +788,7 @@ Figures.~\ref{fig:selection_electrons},~\ref{fig:selection_muons} (top-right) sh
 
 The vector sum of the momenta of \ltwo, \lthree, and the neutrino
 corresponds to the momentum of the HNL, and points back exactly to the
-PV. Unfortunately the total momentum of the neutrino is unknwon, and
+PV. Unfortunately the total momentum of the neutrino is unknown, and
 its transverse momentum, estimated by \ptmiss, has limited resolution.
 The decay products of the HNL, however, are emitted at small opening
 angles with respect to the HNL direction. We can thus expect the
@@ -1058,7 +1058,7 @@ All the distributions previously shown contain background predictions using only
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Background estimation}\label{sec:llbackground}
-\subsection{Background composition}
+\subsection{Background composition}\label{sec:llcomposition}
 
 The main SM background processes mimicking the signal final states can be
 classified as follows.
@@ -1080,7 +1080,7 @@ classified as follows.
     produced in the independent decays of different mesons.
     In this case, the probabilities to select different fake nonprompt
     leptons for the analysis can be treated as uncorrelated, as
-    explained in Sec.~\ref{sec:llsingleFakeBkg}.
+    explained in Sec.~\ref{sec_llfakelepton}.
   \item double fake nonprompt leptons:
     a pair of reconstructed leptons produced in the decay chain of the
     same hadron, typically a $B$ meson (\eg via
@@ -1089,7 +1089,7 @@ classified as follows.
     In such decays the two leptons are manifestly not independent and
     their selection probabilities are correlated.
     Therefore the lepton pair must be treated as a single system, as
-    explained in Sec.~\ref{sec:lldoubleFakeBkg}.
+    explained in Sec.~\ref{sec:doubleFakeBkg}.
   \end{itemize}
 \item \textbf{Photon conversions:}
   \PW or \PZ production processes can
@@ -1113,7 +1113,7 @@ classified as follows.
   three leptons peaking at the \PZ mass (Sec.~\ref{sec:conversion}).
   Such conversions are considered as a
   source of a background, as well as an excellent probe for nonprompt
-  lepto n efficiency
+  lepton efficiency
  measurement, in many searches for displaced vertices.
 
 \item Multibosons and other rare processes with prompt
@@ -1129,7 +1129,7 @@ classified as follows.
   estimated from simulation.
 \end{itemize}
  
-\subsection{Fake lepton background}\label{sec_llfakelepton}
+\subsection{Fake-lepton background}\label{sec_llfakelepton}
 The fake-lepton background is estimated using the ``tight-to-loose''
 method.\\
 A general description of the fake-rate method can be found in
@@ -1206,6 +1206,7 @@ $\dfr=\dfr(\ptj)$.
 The definition of the measurement region is similar to that of the
 signal region, with the following differences:
 \begin{itemize}
+\setlength\itemsep{-0.2em}
 \item the two nonprompt leptons, \ltwo and \lthree, are selected with
   the loose identification criteria (see
   Tables~\ref{tab:electronSelection} and \ref{tab:muonSelection})
@@ -1297,9 +1298,8 @@ respectively, as a function of \ptc and in different \abseta bins.
 
 \begin{figure}[h]
   \centering
-  \includegraphics[height=6.4cm, width=7.0cm]{Figures/c6/backgrounds/FR/sFR/data/electrons.pdf}
-  \hfill{}
-  \includegraphics[height=6.4cm, width=7.0cm]{Figures/c6/backgrounds/FR/sFR/data/muons.pdf}\\
+  \includegraphics[height=6cm, width=6.4cm]{Figures/c6/backgrounds/FR/sFR/data/electrons.pdf}
+  \includegraphics[height=6cm, width=6.4cm]{Figures/c6/backgrounds/FR/sFR/data/muons.pdf}\\
   \caption{Single fake rates measured in 2016 data for electrons (left) and
     muons (right) as a function of \ptc, for \abseta ranges $[0,0.8]$
     (top), $[0.8,1.479]$ (middle), and $[1.479,2.5]$ (bottom).}
@@ -1311,13 +1311,10 @@ of the lepton \dxy.
 \begin{figure}[h]
   \centering
   \includegraphics[width=.48\textwidth]{Figures/c6/backgrounds/FR/sFR/QCD/dxy_ele_eta1_FR2.pdf}
-  \hfill{}
   \includegraphics[width=.48\textwidth]{Figures/c6/backgrounds/FR/sFR/QCD/dxy_mu_eta1_FR2.pdf}\\
   \includegraphics[width=.48\textwidth]{Figures/c6/backgrounds/FR/sFR/QCD/dxy_ele_eta2_FR2.pdf}
-  \hfill{}
   \includegraphics[width=.48\textwidth]{Figures/c6/backgrounds/FR/sFR/QCD/dxy_mu_eta2_FR2.pdf}\\
   \includegraphics[width=.48\textwidth]{Figures/c6/backgrounds/FR/sFR/QCD/dxy_ele_eta3_FR2.pdf}
-  \hfill{}
   \includegraphics[width=.48\textwidth]{Figures/c6/backgrounds/FR/sFR/QCD/dxy_mu_eta3_FR2.pdf}
   \caption{Single fake rates obtained in 2016 simulation for electrons
     (left) and muons (right) as
@@ -1325,19 +1322,847 @@ of the lepton \dxy.
     $[0.8,1.479]$ (middle), and $[1.479,2.5]$ (bottom).}
   \label{fig:sfr_dxy}
 \end{figure}
+\clearpage
+\subsubsection{Application of the fake-lepton estimation methods}\label{sec:frChecks}
+To check the accuracy of the background estimates obtained with the
+single- and double-fake-lepton methods, \emph{closure tests} are
+performed in simulation, as well as in control data samples. 
+The prediction of the nonprompt background is obtained as the
+combination of the two contributions described above. The total
+nonprompt background is thus estimated as follows:
+\begin{linenomath}
+  \begin{align*}
+    %\label{eq:dFRbkg_plus_sFRbgk}
+    N_{\mathrm{nonprompt}}^{\mathrm{sig}} & =~ 
+    \sum_i\frac{\sfr(\sigeta_i,\,\ptcs{i})}{1-\sfr(\sigeta_i,\,\ptcs{i})}
+    +~
+    \sum_i\frac{\dfr(\sigetaj_i,\,\ptjs{i})}{1-\dfr(\sigetaj_i,\,\ptjs{i})}\;,
+  \end{align*}
+\end{linenomath}
+
+\paragraph{Closure test in simulation}
+This test is performed using \ttbar MC samples, with the
+following selection: one prompt lepton and two OS \displ leptons and no \PQb jets.\\
+The results are shown in Fig.~\ref{fig:mcClosure} for 2016. The MC
+events are 
+classified based on the presence of one or two single-fake leptons
+(blue histograms) or a double-fake lepton pair (green histograms),
+according to the definitions given in the introduction to
+Sec.~\ref{sec:llcomposition}. MC events are compared with the estimates
+obtained from the fake-rate methods described in
+Sec.~\ref{sec:singleFakeBkg}
+and \ref{sec:doubleFakeBkg}, combined in the red histogram.
+We notice that the double-fake background contributes mostly to
+the low-\DRtwol and low-\mtwol regions. We can conclude that the
+fake-rate background estimations correctly reproduce the expected
+single- and double-fake backgrounds, both the overall yields and the
+kinematic spectra.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=.35\textwidth]{Figures/c6/backgrounds/FR/closureTest/MC/ttbar_DeltaR_st_mu___0.pdf}
+  \includegraphics[width=.35\textwidth]{Figures/c6/backgrounds/FR/closureTest/MC/ttbar_Mll_naked_mu___0.pdf}\\
+  \includegraphics[width=.35\textwidth]{Figures/c6/backgrounds/FR/closureTest/MC/ttbar_dxy_t_mu___0.pdf}
+  \includegraphics[width=.35\textwidth]{Figures/c6/backgrounds/FR/closureTest/MC/ttbar_2D_Delta_PV_SV_mu___0.pdf}
+  \caption{Distributions of \DRtwol (top left), \mtwol (top right),
+    \lthree \dxy (bottom left), and \Deltwod (bottom right) in the
+    2016 \ttbar MC samples,
+    comparing the MC events containing SF leptons
+    and DF leptons with the
+    prediction, for the sum of all final states.
+    The blue and green histograms are stacked, the black points show
+    their sum.}
+  \label{fig:mcClosure}
+\end{figure}
+\clearpage
+\paragraph{Closure test in data sample: sideband control region}\label{sec:llsidebandcr}
+This control region is defined in Table~\ref{tab:side_band_sel}.
+Data in this region are compared to our data-driven (nonprompt DF and
+SF) and MC-based (the other) background estimates.
+
+Results for the Run2 data are shown in
+Fig.~\ref{fig:sb_sr_Ctrl}.\\
+Additional plots divided in separated years can be found in
+Appendix~\ref{app:appendix_DFR_SFR_2017_2018}.
+\begin{table}[h]
+  \centering
+{\small
+  \caption{\label{tab:side_band_sel} Control region selection requirements
+    applied to all data sets.}
+    \begin{tabular}{l|l}
+    \hline
+    Variable     & Requirement       \\
+    \hline
+    \hline
+    \DRtwol      & $<1$              \\
+    \minDphi     & $>1$ rad          \\ 
+    \mlll     & $< 50$ OR $> 80\GeV$ \\
+    N. \PQb jets & $=0$              \\
+    (\ltwo $+$ \lthree) \pt & $> 15 \GeV$              \\
+    \costheta    & $>0.99$            \\
+    \mtwol& $<20\GeV$              \\ 
+    SV probability & $> 0.001$              \\
+    $\sigma$ \Deltwod& $>20$              \\ 
+    resonance vetoes & applied      \\
+    \hline
+     \hline
+     \mthreel in $\Pe\Pe\Pe$ and $\PGm\PGm\Pe$ OS & $<50$\GeV or $>101\GeV$ \\
+    \hline
+    \hline 
+  \end{tabular}
+}
+\end{table}
+
+\begin{figure}[h]
+  \noindent
+  \makebox[\textwidth]{
+  \includegraphics[width=.55\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/onlySideBand/M-6_V-0p00202484567313_mu_muo_datacard_combined_SR.pdf}
+  \includegraphics[width=.55\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/onlySideBand/M-6_V-0p00202484567313_e_ele_datacard_combined_SR.pdf}}\\
+\noindent
+  \makebox[\textwidth]{
+  \includegraphics[width=.35\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/onlySideBand/M-6_V-0p00202484567313_mu_muo_mass3_datacard_combined_mass3.pdf}
+  \includegraphics[width=.35\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/onlySideBand/M-6_V-0p00202484567313_mu_muo_mass_datacard_combined_massl2l3.pdf}
+   \includegraphics[width=.35\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/onlySideBand/M-6_V-0p00202484567313_mu_muo_disp_datacard_combined_displacement.pdf}}\\
+\noindent
+  \makebox[\textwidth]{
+  \includegraphics[width=.35\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/onlySideBand/M-6_V-0p00202484567313_e_ele_mass3_datacard_combined_mass3.pdf}
+  \includegraphics[width=.35\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/onlySideBand/M-6_V-0p00202484567313_e_ele_mass_datacard_combined_massl2l3.pdf}
+   \includegraphics[width=.35\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/onlySideBand/M-6_V-0p00202484567313_e_ele_disp_datacard_combined_displacement.pdf}}\\
+  \caption{At the top, search region-like distributions with the selection of the
+    sideband control region, in data and background
+    predictions, in final states with more than two muons (left) and
+    more than two electrons (right). In the middle and at the bottom, distributions of three-lepton invariant mass (left), \mtwol
+    (middle), and \Deltwod (right) in the combined Full-Run2 sideband control region,
+    for the sum of all final states with muon couplings (middle) and
+    electron couplings (bottom).}
+  \label{fig:sb_sr_Ctrl}
+\end{figure}
+
+\paragraph*{Closure test in data sample: \PQb jet control region}
+This control region is defined in Table~\ref{tab:ttbar_sel}.
+Data in this region are compared to our data-driven (nonprompt DF and
+SF) and MC-based (the other) background estimates.\\
+Results for the Run2 data  are shown in
+Fig.~\ref{fig:sb_ttbar_Ctrl}.\\
+Additional plots divided in separated years can be found in
+Appendix~\ref{app:appendix_DFR_SFR_2017_2018}.
+
+\begin{table}[h]
+  \centering
+{\small
+  \caption{\label{tab:ttbar_sel} \PQb jet control region selection requirements
+    applied to all data sets.}
+   \begin{tabular}{l|l}
+    \hline
+    Variable     & Requirement       \\
+    \hline
+    \hline
+    \DRtwol      & $<1$              \\
+    \minDphi     & $>1$ rad          \\ 
+    %%\mthreel     & $< 50$ OR $> 80\GeV$ \\
+    N. \PQb jets & $\neq 0$              \\
+    (\ltwo $+$ \lthree) \pt & $> 15 \GeV$              \\
+    \costheta    & $>0.99$            \\
+    \mtwol& $<20\GeV$              \\ 
+    SV probability & $> 0.001$              \\
+    $\sigma$ \Deltwod& $>20$              \\ 
+    resonance vetoes & applied      \\
+    \hline
+     \hline
+     \mlll in $\Pe\Pe\Pe$ and $\PGm\PGm\Pe$ OS & $<50$\GeV or $>101\GeV$ \\
+    \hline
+    \hline 
+  \end{tabular}
+}
+\end{table}
+
+\begin{figure}[h]
+   \noindent
+  \makebox[\textwidth]{
+  \includegraphics[width=.55\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/onlyBjet/M-6_V-0p00202484567313_mu_muo_datacard_combined_SR.pdf}
+  \includegraphics[width=.55\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/onlyBjet/M-6_V-0p00202484567313_e_ele_datacard_combined_SR.pdf}}\\
+\noindent
+  \makebox[\textwidth]{
+  \includegraphics[width=.35\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/onlyBjet/M-6_V-0p00202484567313_mu_muo_mass3_datacard_combined_mass3.pdf}
+  \includegraphics[width=.35\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/onlyBjet/M-6_V-0p00202484567313_mu_muo_mass_datacard_combined_massl2l3.pdf}
+   \includegraphics[width=.35\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/onlyBjet/M-6_V-0p00202484567313_mu_muo_disp_datacard_combined_displacement.pdf}}\\
+\noindent
+  \makebox[\textwidth]{
+  \includegraphics[width=.35\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/onlyBjet/M-6_V-0p00202484567313_e_ele_mass3_datacard_combined_mass3.pdf}
+  \includegraphics[width=.35\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/onlyBjet/M-6_V-0p00202484567313_e_ele_mass_datacard_combined_massl2l3.pdf}
+   \includegraphics[width=.35\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/onlyBjet/M-6_V-0p00202484567313_e_ele_disp_datacard_combined_displacement.pdf}}\\
+  \caption{Search region-like distributions with the selection of the
+    \PQb jet control region, in data and background
+    predictions, in final states with more than two muons (left) and
+    more than two electrons (right). In the middle and at the bottom, distributions of three-lepton invariant mass (left), \mtwol
+    (middle), and \Deltwod (right) in the combined Full-Run2 sideband control region,
+    for the sum of all final states with muon couplings (middle) and
+    electron couplings (bottom).}
+  \label{fig:sb_ttbar_Ctrl}
+\end{figure}
 
 
 
 
+\paragraph{Closure test in data sample: data control region (sideband plus bjet)}
+Taking into account the additional informations just presented and considering the low statistic of the fig~\ref{fig:sb_sr_Ctrl}, a new CR has been defined. 
+\begin{table}[h!]
+  \centering
+{\small
+  \caption{\label{tab:sideband_plus_bjet_table} Control region selection requirements
+    applied to all data sets.}
+    \begin{tabular}{l|l}
+    \hline
+    Variable     & Requirement       \\
+    \hline
+    \hline
+    \DRtwol      & $<1$              \\
+    \minDphi     & $>1$ rad          \\ 
+    (\ltwo $+$ \lthree) \pt & $> 15 \GeV$              \\
+    \costheta    & $>0.99$            \\
+    \mtwol& $<20\GeV$              \\ 
+    SV probability & $> 0.001$              \\
+    $\sigma$ \Deltwod& $>20$              \\ 
+    resonance vetoes & applied      \\
+    \hline
+    \multirow{2}{*}{\mthreel  and  N. \PQb jets} & ($<50$\GeV or
+                                                   $>80$\GeV and
+                                                   N.\PQb jets= 0) \\
+      & OR
+                                                   (N.\PQb jets $\neq$
+                                                   0)\\
+     \hline
+     \mthreel in $\Pe\Pe\Pe$ and $\PGm\PGm\Pe$ OS & $<50$\GeV or $>101$\GeV \\
+    \hline
+    \hline 
+  \end{tabular}
+}
+\end{table}
+     
 
 
 
 
+This control region includes the selection listed in table~\ref{tab:side_band_sel} and the region with more than zero \PQb jets. It is obvious that the combination of these two regions 
+is done in a fully orthogonal region wrt to signal region. \\
+  
+
+
+\begin{figure}[h]
+  \noindent
+  \makebox[\textwidth]{
+  \includegraphics[width=.55\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/SideBandPlusBjet/M-6_V-0p00202484567313_mu_muo_datacard_combined_SR.pdf}
+  \includegraphics[width=.55\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/SideBandPlusBjet/M-6_V-0p00202484567313_e_ele_datacard_combined_SR.pdf}}\\
+\noindent
+  \makebox[\textwidth]{
+  \includegraphics[width=.35\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/SideBandPlusBjet/M-6_V-0p00202484567313_mu_muo_mass3_datacard_combined_mass3.pdf}
+  \includegraphics[width=.35\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/SideBandPlusBjet/M-6_V-0p00202484567313_mu_muo_mass_datacard_combined_massl2l3.pdf}
+   \includegraphics[width=.35\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/SideBandPlusBjet/M-6_V-0p00202484567313_mu_muo_disp_datacard_combined_displacement.pdf}}\\
+\noindent
+  \makebox[\textwidth]{
+  \includegraphics[width=.35\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/SideBandPlusBjet/M-6_V-0p00202484567313_e_ele_mass3_datacard_combined_mass3.pdf}
+  \includegraphics[width=.35\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/SideBandPlusBjet/M-6_V-0p00202484567313_e_ele_mass_datacard_combined_massl2l3.pdf}
+   \includegraphics[width=.35\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/SideBandPlusBjet/M-6_V-0p00202484567313_e_ele_disp_datacard_combined_displacement.pdf}}\\
+ \caption{Distributions of three-lepton invariant mass (left), \mtwol
+    (middle), and \Deltwod (right) in the combined Full-Run2 control region in table~\ref{tab:sideband_plus_bjet_table},
+    for the sum of all final states with muon couplings (top) and
+    electron couplings (bottom).}
+  \label{fig:CR_dist}
+\end{figure}
 
 
 
 
+\paragraph{Closure test in data sample: validation of internal and external conversions }
+\label{sec:conversion}
+The photon conversion background is modeled using simulated events,
+ but its overall normalization is checked in a
+ $\PZ\to\ell^-\ell^+\PGg^{(\ast)}$
+ control region in data, as defined in Table~\ref{tab:conv_sel}.
+ \begin{table}[h!]
+  \centering
+  \caption{\label{tab:conv_sel} Conversion control region selection requirements
+    applied to all data sets.}
+    \begin{tabular}{l|l}
+    \hline
+    Variable     & Requirement       \\
+    \hline
+    \hline
+    \DRtwol      & $<1$              \\
+    \minDphi     & $>1$ rad          \\
+    \mthreel     & between 81 and 101\GeV, \ie consistent with an on-shell \PZ boson \\
+    N. \PQb jets & $=0$              \\
+    (\ltwo $+$ \lthree) \pt & $> 15 \GeV$              \\
+    \costheta    & $>0.99$            \\
+    \mtwol& $<20\GeV$              \\ 
+    SV probability & $> 0.001$              \\
+    $\sigma$ \Deltwod& $>20$              \\ 
+    resonance vetoes &  applied      \\
+    \hline
+    \hline
+  \end{tabular}
+\end{table}
 
+ This region is dominated by $\PZ\to\ell^-\ell^+\PGg\to\ell^-\ell^+\Pe$
+ events, with an asymmetric conversion of the real photon.
+ The \mthreel and \mtwol spectra of such events are shown in
+ Fig.~\ref{fig:phoConv}. A fair agreement is found between data and
+ simulation, with no
+ corrections required.
+ 
+
+ 
+ \begin{figure}[h]
+    \noindent
+\makebox[\textwidth]{\includegraphics[width=.49\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/conversion/M-6_V-0p00202484567313_e_ele_datacard_combined_SR.pdf}}\\
+  \makebox[\textwidth]{
+  \includegraphics[width=.38\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/conversion/M-6_V-0p00202484567313_e_ele_mass3_datacard_combined_mass3.pdf}
+  \includegraphics[width=.38\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/conversion/M-6_V-0p00202484567313_e_ele_mass_datacard_combined_massl2l3.pdf}
+  \includegraphics[width=.38\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/conversion/M-6_V-0p00202484567313_e_ele_disp_datacard_combined_displacement.pdf}}
+    \caption{Distribution of the three-lepton and two-lepton invariant
+    masses, \mthreel and \mtwol, in the photon-conversion control
+    region with events with at least 2 electrons in the final state. Full-Run2.}
+  \label{fig:phoConv}
+\end{figure}
+
+\clearpage
+\section{Corrections and efficiencies}\label{sec:llcorrection_efficiencies}
+
+\subsection{Prompt lepton efficiency} \label{sec:promptleptoneff}
+Prompt electron and muon identification and isolation efficiencies
+are measured in data and simulation using a tag-and-probe method,
+applied to samples of inclusive Z boson events.
+The data-to-MC ratios of efficiencies (``scale factors'')
+measured centrally by the \emph{muon physics object group} as a function of the lepton \pt and \sigeta, are
+used to correct the simulated events. Additionally, the scale factors
+are measured for the isolation requirement and the impact
+parameter cuts. The results are presented in
+Fig.~\ref{fig:isoip_muon_prompt}.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=.48\textwidth]{Figures/c6/efficiencies/muons/2018/isoip_prompt_sf_2018.pdf}
+\hfill{}
+  \includegraphics[width=.48\textwidth]{Figures/c6/efficiencies/muons/2018/isoip_prompt_syst_2018.pdf}
+  \caption{Data/MC efficiency scale factors (left) and associated
+  systematic uncertainty (right) for impact parameter and isolation requirement efficiency
+  for prompt muons. 2016 and 2017 SF can be seen in the
+  Appendix~\ref{AppendixB},~\ref{fig:appisoip_muon_prompt}}
+  \label{fig:isoip_muon_prompt}
+\end{figure}
+
+For the prompt electrons, the SFs are obtained following the EGM POG prescriptions using the same
+tag- and probe techniques as the one for the muons. The results as a function of transverse momentum or pseudorapidity are shown in fig~\ref{fig:id_sf_electrons}.
+\begin{figure}[h]
+  \centering
+   \includegraphics[width=.38\textwidth]{Figures/c6/efficiencies/ID_electrons/2018/leptonSF_SFvspT_HNLprompt.pdf}
+\hspace{2cm}
+  \includegraphics[width=.38\textwidth]{Figures/c6/efficiencies/ID_electrons/2016/leptonSF_SFvseta_HNLprompt.pdf}
+  \caption{Prompt electron efficiencies and data-MC scaling factors as
+    a function of transverse momentum (left) or pseudorapidity
+    (right). SF for 2016/17 can be seen in the
+  Appendix~\ref{AppendixB},~\ref{fig:appid_sf_electrons}}
+  \label{fig:id_sf_electrons}
+\end{figure}
+
+\subsection{Trigger efficiency} \label{sec:triggereff}
+Events for this analysis are selected by means of single-electron and
+single-muon triggers, geometrically matched to the prompt lepton \lone
+(see Sec.~\ref{sec:trigger}).
+Similarly to the prompt-lepton identification and isolation,
+trigger efficiencies are also measured in data and simulation with a
+tag-and-probe technique. The resulting data-MC scaling factors are used to correct the
+simulated event yields. 
+
+Trigger efficiencies and data-MC scaling
+factors for electrons are shown in Figure~\ref{fig:trigger_electrons},
+they include both statistical and systematic uncertainties.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=.38\textwidth]{Figures/c6/efficiencies/trigger_electrons/2018/passEle32/leptonSF_SFvspT_passEle32.png}
+\hspace{2cm}
+  \includegraphics[width=.38\textwidth]{Figures/c6/efficiencies/trigger_electrons/2018/passEle32/leptonSF_SFvseta_passEle32.png}
+  \caption{Trigger efficiencies and data-MC scaling factors as a function of transverse momentum (left) or pseudorapidity (right)
+    for HLT\_Ele32WPTightGsf in 2018 data. SF for 2016/17 can be seen in the
+  Appendix~\ref{AppendixB},~\ref{fig:app_trigger_electrons}
+  }
+  \label{fig:trigger_electrons}
+\end{figure}
+
+\subsection{\Displ-lepton reconstruction and ID efficiency} \label{sec:displeptoneff}
+\paragraph{Muons}\label{sec:eff_disp_muon}
+The identification and isolation requirement selection
+efficiency corrections for \displ muons are measured
+using $\PZ\to\mu^-\mu^+$ events. The results are presented
+in Fig.~\ref{fig:idiso_muon_nonprompt}. 
+
+\begin{figure}[h]
+  \centering
+ \includegraphics[width=.48\textwidth]{Figures/c6/efficiencies/muons/2018/idiso_nonprompt_sf_2018.pdf}
+\hfill{}
+  \includegraphics[width=.48\textwidth]{Figures/c6/efficiencies/muons/2018/idiso_nonprompt_syst_2018.pdf}
+  \caption{Data/MC efficiency scale factors (left) and associated
+  systematic uncertainty (right) for ID selection and isolation
+  requirement efficiency for nonprompt muons. 2016/17 SFs can be seen in the
+  Appendix~\ref{AppendixB},~\ref{fig:app_idiso_muon_nonprompt}}
+  \label{fig:idiso_muon_nonprompt}
+\end{figure}
+
+\paragraph{Electrons}\label{sec:eff_disp_ele}
+
+Different reference processes are identified could which mimic---to
+some extent---the main characteristics of \displ electrons 
+stemming from HNL decays, such as the photon conversions in the
+detector material.
+
+
+
+\comm{
+  Also this process presents limitations:
+  \begin{itemize}
+  \item we cannot obtain an absolute efficiency measurement;
+  \item at least in the case of asymmetric conversions, there is no
+    direct measurement of the displacement of the electron production
+    vertex;
+  \item possible discrepancies between data and simulation cannot be
+    attributed unambiguously to the electron reconstruction, and could
+    be due instead to a mis-modeling of the photon conversion process
+    or to the detector material mapping.
+  \end{itemize}}
+
+We select asymmetric photon conversions in events
+\(\PZ\to\ell^-\ell^+\PGg\to\ell^-\ell^+\Pe^\pm(\Pe^\mp),\)
+where $(\Pe^\mp)$ represents a very-low-\pt electron that fails
+reconstruction and/or identification. The other three leptons,
+therefore, have invariant mass
+\(m(\ell^-\ell^+\Pe^\pm)\)
+close to that of the \PZ boson.
+The events are selected as follows:
+\begin{itemize}
+\setlength\itemsep{-0.2em}
+\item a pair of oppositely-charged prompt electrons (muons) is selected with pT > 35 (28)GeV and
+10 (10)GeV requirements applied on the leading and sub-leading lepton transverse momenta,
+ respectively. Electrons (muons) are reconstructed and selected with
+ the identification listed in Tables.~\ref{tab:electronSelection}-~\ref{tab:muonSelection}.
+  The higher-\pt threshold is driven by trigger constraints, while the
+  lower-\pt threshold is chosen to improve the statistical power of
+  the sample; 
+\item the higher-\pt prompt lepton must be matched geometrically to a
+  trigger object and fire the single-electron or single-muon trigger;
+\item a \displ tight electron (see
+  Table~\ref{tab:electronSelection}) with $\pt>7$\GeV, to match the
+  selection on \displ electrons in the analysis;
+\item the invariant mass of the three leptons must lie within 10\GeV
+  of the Z boson mass.
+\end{itemize}
+By comparing the rates in data and simulation we can deduce the level
+of disagreement in \displ electron reconstruction and
+identification efficiency.
+As explained above, it is not straightforward to disentangle different
+contributions to this discrepancy, therefore any data-MC difference is
+to be taken as a maximum possible difference in the efficiency of
+\displ electrons.
+
+Since the position of the \displ electron production vertex is
+unknown, as a proxy for its displacement we use the following
+variable~\cite{convz}:
+
+\begin{align}
+\vcenter{\hbox{\includegraphics[width=.42\textwidth]{Figures/c6/efficiencies/figs_Displacement.png}}}
+&\qquad
+\begin{aligned}
+\mathrm{d = \sqrt{2Rd_{xy}+d_{xy}^2}};
+\\
+\mathrm{R [m] = \frac{\pt [GeV]}{0.3 \cdot B [T]}},
+\end{aligned}\\
+\vcenter{\hbox{\begin{minipage}{4cm}
+\end{minipage}}}
+& \notag
+\end{align}
+
+\noindent where $\mathrm{R}$ is the radius of curvature of the path of
+a charged particle in magnetic field, $\mathrm{d_{xy}}$ is the
+transverse impact parameter of the associated track, $\mathrm{B}$ is the
+magnitude of the magnetic field. The obtained data/MC ratio measured in bins of displacement
+(Figure~\ref{fig:convdispl}) is used as a scale factors per
+electron applied to signal events.  Half of the difference of the
+scale-factor with respect to unity is considered as an uncertainty.
+
+A similar effect was also observed in a study where we use $K_s^0$  and $\lambda$ mesons, which we use to calibrate \displ muon reconstruction efficiencies. See Section~\ref{sec:displacedvertex}.
+The details on how the scale factors and the systematics from each of these studies implemented in the analysis can be found in Sec.~\ref{sec:nonpromptleptoneffsysts}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=.45\textwidth]{Figures/c6/efficiencies/Convz/Nonprompt1DisplCoarse_lle_2016.pdf}
+  \includegraphics[width=.45\textwidth]{Figures/c6/efficiencies/Convz/Nonprompt1DisplCoarse_lle_2017.pdf}\\
+  \includegraphics[width=.45\textwidth]{Figures/c6/efficiencies/Convz/Nonprompt1DisplCoarse_lle_2018.pdf}
+  \caption{The displacement of the \Displ electron in data
+  and simulation measured in $\PZ\to\ell^-\ell^+\Pe$ events, 
+  for 2016 (left), 2017 (middle) and 2018 (right)~\cite{convz}.}
+  \label{fig:convdispl}
+\end{figure}
+
+
+\subsection{\Displ tracking and vertexing efficiency}
+\label{sec:displacedvertex}
+
+In this subsection, we investigate the discrepancy between simulation
+and data concerning heavily displaced track and vertex
+reconstruction. The method is based on the displaced decay of the
+neutral hadrons \PKzS to two charged particles (see
+Fig.~\ref{fig:diagrams}), giving the signature of two displaced tracks
+originating from a common vertex. Here we will discuss the methodology
+(briefly) and the most important results. More information can be found at~\cite{AN-20-111_KshortStudy}.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.35\textwidth]{Figures/c6/efficiencies/diagram_ks}
+    \caption{Diagrams for the decays of \PKzS studied in this method.}
+    \label{fig:diagrams}
+\end{figure}
+
+The \PKzS hadrons are reconstructed in simulation and data focusing on $Z\rightarrow \mu\mu$-events, where the Drell-Yan process can be used for overall simulation-to-data comparison and normalization, and the targeted particles occur in the jets that are produced along with the main process. The study is carried out for the three data taking years of LHC's Run II.
+
+\noindent The events in the selected data and simulated sets must pass the requirements listed below:
+\begin{itemize}
+\setlength\itemsep{-0.2em}
+    \item exact 2 muons in the event;
+    \item the leading muon must have a \pt of at least 30 \GeV, the trailing muon of at least 25 \GeV;
+    \item the selected muon invariant mass is required to be within 10 GeV of the $Z$-boson mass;
+    \item Events containing one or more loosely tagged $b$-jet are vetoed.
+\end{itemize}
+
+\paragraph{Vertex fitting}
+\label{sec:vertexfitting}
+The vertex reconstruction algorithm developed for this study closely
+resembles the built-in $V^0$-vertex fitter in the CMS software (where
+$V^0$ is used to refer to \PKzS vertex), with however some small
+alterations to account for the fact that we are working on MINIAOD
+level instead of RECO. Furthermore, we re-optimized some of the cut
+values in order to retain more $V^0$ candidates at small radial
+displacements from the primary vertex, at the cost of a slightly
+larger overall background. This design choice was inspired by the need
+for a large number of candidates close to the primary vertex, as these
+will be used for normalization (see further on). 
+
+As a check of the vertex fitting algorithm, we plot the invariant mass distributions of the reconstructed \PKzS in Fig.~\ref{fig:invmass_mumuskim}.
+\begin{figure}[h]
+    \centering
+    \includegraphics[clip,trim=0 0 16cm 0,width=0.35\textwidth]{Figures/c6/efficiencies/invmass_mumuskim}
+    \caption{\PKzS candidate spectrum with linear background fit and
+      double gaussian signal fit. Note that in these plots the result for the full 2017E data taking period is shown. }
+    \label{fig:invmass_mumuskim}
+\end{figure}
+
+\paragraph{Methodology}\label{sec:methodology}
+The yields of reconstructed $V^0$-particles is compared between data and simulation, binned in radial distance from the primary vertex. As a first remark, we plot the yield of \PKzS particles, using a relatively fine binning in Fig.~\ref{fig:2017_detector}. Notice how the pixel detector layout has a clear structural influence on the yield, both in simulation and data.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.40\textwidth]{Figures/c6/efficiencies/2017E_detector}
+    \caption{Results for \PKzS particles using a fine binning and linear $y$-axis scale with the radial distances of the pixel detector layers superimposed. Note that in this plot, the total number of \PKzS particles in simulation was normalized to that in data as we merely wanted to perform a shape comparison.}
+    \label{fig:2017_detector}
+\end{figure}
+
+In the following, we normalize the yield in simulation to the yield in
+data at small radial distances.This approach allows us to correct for
+overall mis-modeling effects of $V^0$-particles
+and to isolate the effect under consideration, \ie a systematic
+difference in vertex reconstruction efficiency due to its being
+displaced. The exact range for normalization was chosen to be 0 - 0.5
+cm for $K^0$. Furthermore, a fit to the sidebands in the invariant mass spectrum per bin of radial distance was used to subtract the background contribution.
+
+\subparagraph{Main results and conclusions}\label{sec:mainresults}
+The obtained data-to-simulation ratio plots for the three data taking
+years of Run II are shown in Fig.~\ref{fig:1dplots_2016_2017_2018}. \\
+Note that the discrepancy is very large in the last bin for 2016 data. This can be explained by the reduced tracking performance in eras 2016 B to 2016 F due to the HIP-effect, which in the end turned out to be caused by a saturation effect in the electronics \cite{hipeffect}. The electronics were reconfigured between run 2016 F and 2016 G. It can be checked in the dedicated note ~\cite{AN-20-111_KshortStudy} that the simulation to data agreement is in fact much better for eras 2016 G and H. \\ \\
+In Fig.~\ref{fig:2dplots}, we extend these results by performing a two-dimensional binning: the $x$-axis again represents the radial distance from the primary vertex, while the $y$-axis now holds the reconstructed transverse momentum of the particle. 
+
+\begin{figure}[h]
+\noindent
+\makebox[\textwidth]{
+		\includegraphics[width=0.35\textwidth]{Figures/c6/efficiencies/1dplots/2016tot/ksnorm3small}
+		\includegraphics[width=0.35\textwidth]{Figures/c6/efficiencies/1dplots/2017tot/ksnorm3small}
+		\includegraphics[width=0.35\textwidth]{Figures/c6/efficiencies/1dplots/2018tot/ksnorm3small}}
+	\caption{Data to simulation ratio for data taking year 2016
+          (left), 2017 (middle) and 2018 (right). The error bars on data points and error bands on simulated results represent statistical errors only.}
+	\label{fig:1dplots_2016_2017_2018}
+\end{figure}
+
+\begin{figure}[h]
+	\centering	
+	\includegraphics[width=0.45\textwidth]{Figures/c6/efficiencies/2dplots/2016tot/smallrange}
+	\includegraphics[width=0.45\textwidth]{Figures/c6/efficiencies/2dplots/2017tot/smallrange}
+	\\
+	\includegraphics[width=0.45\textwidth]{Figures/c6/efficiencies/2dplots/2018tot/smallrange}
+	\caption{Uncertainty factors per bin in radial distance and transverse momentum. The red-coloured band overlaying the figure shows the normalization range, i.e. 0 - 0.5 cm. Note that an error of $\pm 0.00$ indicates that the (statistical) error is smaller than 0.005.}
+	\label{fig:2dplots}
+\end{figure}
+
+\clearpage
+\section{Systematic uncertainties}\label{sec:llsystematic}
+Several sources of systematic uncertainty affect the expected signal
+and background yields in different search regions. 
+The effect of the main uncertainties on the signal yields in each
+search region and lepton channels are summarized in
+Fig.~\ref{fig:systematics_all}. 
+Most of the experimental uncertainties are relatively small (less than
+a few \%), where in some search regions the uncertainties are
+dominated by the uncertainties due to the limited signal MC samples statistics. 
+{\color{red}
+  $\leftarrow$ this
+  will change with the new re-weithing procedure which quadruple the
+  stat and reduce the stat error on the signal samples}
+
+\begin{figure}[h]
+\noindent
+\makebox[\textwidth]{  \includegraphics[width=.58\textwidth]{{Figures/c6/systematics/2018/e_ele/M-6_V-0.00202484567313_normalized}.pdf}
+  \includegraphics[width=.58\textwidth]{{Figures/c6/systematics/2018/mu_muo/M-6_V-0.00202484567313_normalized}.pdf}}
+  \caption{Relative up and down variation from the nominal yields for
+    the signal sample with $\mhnl=6\GeV$ and
+    $\mixpar=4\times10^{-6}$. 
+    The variation is shown for each of the search regions for
+    electrons (left) and muons (right), for the 2018 data taking year.}
+  \label{fig:systematics_all}
+\end{figure}
+
+\subsection{Uncertainties on the signal yields}
+All uncertainties summarized in this section are evaluated per search
+region and per lepton channel and considered as shape uncertainties in
+the final fit, with the exception of those that only affect the
+overall normalization, such as the signal cross section and
+luminosity.
+
+\paragraph{Integrated luminosity}
+The uncertainties on the measurements of the LHC integrated
+luminosities are 2.5\% (2016), 2.3\% (2017), and 2.5\% (2018).
+They affect the yields of the signal and of the MC-based background
+estimations in a fully correlated way (within the same data-taking
+period).
+
+\paragraph{Pileup}
+The uncertainty in the modeling of the pileup is evaluated by
+decreasing and increasing the minimum bias cross section by 5\%~\cite{pileuppaper},
+resulting in an uncertainty of 1--4\% for most search regions,
+with some larger deviations for statistically limited search
+regions.
+
+\paragraph{Trigger efficiency}
+Trigger scale factors are used to correct the simulated event yields
+(see Sec.~\ref{sec:triggereff}), and the uncertainties from the
+tag-and-probe fits are used to assess systematic uncertainties,
+with the same procedure as described in
+Sec.~\ref{sec:promptleptoneffsysts}.
+These are found to be less than 1\% for electron triggers and 
+less than 1\% for muon triggers.
+
+\paragraph{Prompt lepton reconstruction and identification efficiency}
+\label{sec:promptleptoneffsysts}
+To find the uncertainties associated with the prompt-lepton
+identification and isolation efficiency scale factors (see
+Sec.~\ref{sec:promptleptoneff}),
+the total yields in each search region are recomputed with the scale
+factors varied up and down by the tag-and-probe fit uncertainties,
+treating all bins as correlated.
+Uncertainties of 2--5\% on the signal yields are found
+for events with a prompt electron, while the systematic on prompt
+muons stays consistently below 1\% for all search regions.
+
+\paragraph{\Displ lepton identification efficiency and displaced vertex efficiency }
+\label{sec:nonpromptleptoneffsysts}
+Data events with Z bosons decaying into lepton pairs provide an excellent testing ground for the prompt lepton 
+reconstruction and identification efficiencies in simulation.
+The main source of the systematic uncertainty in our analysis is the displaced track and vertex reconstruction modeling. 
+We make use of two types of processes to estimate this uncertainty. On one side the converted photons in Z events (described in section~\ref{sec:eff_disp_ele}) 
+are used to asses the modeling of \displ electron reconstruction,  long-lived \PKzS 
+mesons are used to scrutinize the displaced track and vertex reconstruction in simulation. 
+
+Both of these studies studies show consistent results in terms of data/MC agreement across the data taking periods. 
+In both cases we observe larger data/MC scale factors in 2016 data, which is caused by a known tracking inefficiency 
+in data which is not simulated in MC. In this dataset the discrepancy
+between data and simulation can reach up to 30\% (see
+Figs.~\ref{fig:convdispl}--\ref{fig:2dplots}).
+Based on these studies we apply data/MC scale factors per \displ lepton to be applied in simulation and half of this scale factor is considered as a systematic uncertainty.  
+In the channels with \displ $\Pe\Pe$ ($\PGm\PGm$) the scale factors
+are derived from conversion (\PKzS) and in events with \displ $\Pe\PGm$ the 
+scale factor for electron comes from the conversion while for muon
+comes from \PKzS study. The \Displ-muon reconstruction and ID
+efficiency (~\ref{sec:eff_disp_muon}) is added per muon in 
+$\PGm\PGm$ and $\Pe\PGm$ events on top of the corrections for the displaced
+track and vertex reconstruction.
+\begin{table}[h]
+  \centering
+{\footnotesize
+  \caption{\label{tab:summary_SVl} {\color{red}
+  $\rightarrow$ these
+  values have to be checked again} Summary of the application of the
+    efficiencies and systematic uncertainties related to \displ leptons and displaced vertices. The impact for each year is roughly stated.}
+  \begin{tabular}{l|c|c|c|c|c}
+    \hline
+    \ltwo, \lthree    & efficiency & uncert. & 2016  & 2017 &2018    \\
+    \hline
+    \hline
+   $\Pe\Pe$           & per $\Pe$ ID/track eff-cy ($\PZ\gamma$ study(~\ref{sec:eff_disp_ele}))          & $\pm$1/2 SF    & $< 20 \%$  & $< 5 \%$  & $< 10 \%$\\
+   $\PGm\PGm$   &per $\mu$ (ID eff-cy) $\times$ SV eff-cy (\PKzS\ study(~\ref{sec:vertexfitting}))                      & $\pm$1/2 SF    & $< 30 \%$  & $< 10 \%$  & $< 5 \%$\\
+   $\PGm\Pe$       & per $\Pe$ ($\PZ\gamma$ study) $\times$ per $\mu$ (ID
+                     eff-cy) $\times$ $\sqrt{SV_{eff-cy}}$                 & $\pm$1/2 SF    & $< 20 \%$  & $< 7 \%$  & $< 7 \%$\\
+    \hline
+    \hline
+  \end{tabular}
+}
+\end{table}
+
+The uncertainties in the final yields in the different search regions
+and data taking periods are calculated by varying the MC event weights
+by half of these scale factors for each \displ lepton (\ie two per
+event). The resulting uncertainties in each signal region/year and
+lepton channel can be seen in Fig.~\ref{fig:systematics_all}. 
+
+\paragraph{\Displ muon momentum scale and resolution}
+\label{sec:nonpromptleptonscaleresol}
+The study of \PKzS\ decays (Section~\ref{sec:displacedvertex}) also
+provides useful information about the momentum scale and resolution of
+the \displ-muon tracks. For \pt below 200\GeV, the muon momentum 
+estimate is fully dominated by the tracker-only fit. It is easy to
+prove that the muon momentum resolution $\sigma(\pt)/\pt$ is
+approximately equal to the dimuon mass resolution
+$\sigma(M_{2\ell})/M_{2\ell}$. The Gaussian fits to the \PKzS\ mass
+profiles, such as Fig.~\ref{fig:invmass_mumuskim}, can thus be used to
+estimate the momentum scale and resolution through the
+fit parameters $\mu$ and $\sigma/\mu$, respectively. The width of the
+central mass peak is estimated by the smaller of $\sigma_1$ and
+$\sigma_2$, whereas the larger $\sigma$ represents the mass tails.
+Figure~\ref{fig:displMuScaleResol} shows the values of the \PKzS\ mass
+peak and width as a function of the transverse displacement \Deltwod,
+in data and simulation, for the three data taking years.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=.4\textwidth]{Figures/c6/systematics/scale_displMu.png}
+  \includegraphics[width=.4\textwidth]{Figures/c6/systematics/resolution_displMu.png}
+  \caption{Values of the \PKzS\ mass peak (left) and width (right) as
+    a function of the transverse displacement \Deltwod, in data and
+    simulation, for the three data taking years. The mass peak and
+    width are estimated, respectively, by the $\mu$ and smaller
+    $\sigma$ parameters of the double-Gaussian fit to the
+    \PKzS\ mass profile (\eg, see Fig.~\ref{fig:invmass_mumuskim}).}
+  \label{fig:displMuScaleResol}
+\end{figure}
+
+As can be seen, the differences between data and simulation are
+relatively small. Table~\ref{tab:displMuResolA} reports the relative
+data-MC difference in the scale parameter ($\mu$). The difference is
+at the per-mil level, thus negligible. 
+\begin{table}[h]
+\caption{}
+{\scriptsize
+\subfloat[\label{tab:displMuResolA} Relative difference in mass (or
+    momentum) scale between data and simulation, estimated as
+    $(\mu_\mathrm{data}-\mu_\mathrm{sim})/\mu_\mathrm{sim}$.]{\begin{tabular}{l|c|c|c}
+    \hline
+    \multirow{2}{*}{\Deltwod [cm]} &
+    \multicolumn{3}{c}{Data-MC scale difference [\%]} \\
+    & \quad\quad2016\quad\quad & \quad\quad2017\quad\quad & \quad\quad2018\quad\quad \\
+    \hline
+    \hline
+    $<$ 0.5  & $-0.092$ & $-0.074$ & $-0.088$ \\
+    \hline                                       
+    0.5--1.5 & $-0.088$ & $-0.110$ & $-0.096$ \\
+    \hline                                       
+    1.5--4.0 & $-0.086$ & $-0.098$ & $-0.104$ \\
+    \hline                                       
+    $>$ 4.0  & $-0.074$ & $-0.090$ & $-0.098$ \\
+    \hline
+  \end{tabular}}
+\qquad
+\subfloat[\label{tab:displMuResolB} Difference in quadrature in mass
+    (or momentum) resolution between data and simulation, where the
+    resolution is estimated as $\sigma/\mu$.]{\begin{tabular}{l|c|c|c}
+    \hline
+    \multirow{2}{*}{\Deltwod [cm]} &
+    \multicolumn{3}{c}{Data-MC resolution difference [\%]} \\
+    & \quad\quad2016\quad\quad & \quad\quad2017\quad\quad & \quad\quad2018\quad\quad \\
+    \hline
+    \hline
+    $<$ 0.5  & 0.20 & 0.37 & 0.33 \\
+    \hline                           
+    0.5--1.5 & 0.19 & 0.26 & 0.15 \\
+    \hline                           
+    1.5--4.0 & 0.25 & 0.26 & 0.22 \\
+    \hline                           
+    $>$ 4.0  & 0.29 & 0.19 & 0.22 \\
+    \hline
+  \end{tabular}}
+}
+\end{table}
+
+Table~\ref{tab:displMuResolB} reports the difference (in quadrature) in
+resolution between data and simulation, where the resolution is
+estimated as $\sigma/\mu$. The mass (or momentum) resolution is below
+1\% in both data and simulation, and the difference in quadrature is
+0.15--0.40\%. No corrections and no uncertainties are applied.
+
+\paragraph{Statistical uncertainty due to limited MC sample}
+For the processes estimated from simulation, the available number of
+events in the MC samples limits the precision of the modeling.
+The statistical uncertainty on the event yield in each search bin,
+corresponding to the sum in quadrature of the MC event weights, is
+therefore taken as a systematic uncertainty on the shape of the
+distributions used in the analysis.
+
+\paragraph{Uncertainty on signal MC cross section}{\color{red}
+  $\rightarrow$ does this part have to be in Chapter 4??? } 
+The heavy Neutrino model used for generation of Monte Carlo HNL events does not allow for NLO QCD calculations. The simulation of HNL events happens therefore at LO, resulting in large theoretical uncertainties on the cross section (up to $15\%$) that have to cover the effect of the missing higher order QCD corrections and PDF uncertainties.
+
+Instead of relying on these LO uncertainties, a general correction factor for the cross section from LO to NNLO can be derived based on the SM production of \PW\ $\rightarrow$ $\ell$ $\bar{\nu}$ . In HNL production, the only difference from this SM process is the exchange of the SM neutrino by a HNL. The effect of the mass and coupling of the HNL can be factorized in the calculation of the HNL cross section and is not affected by the PDF and scale variations. The dominant effect of these uncertainties appears at the production of the \PW boson, therefore it can be studied in the SM process \PW\ $\rightarrow$ $\ell$ $\bar{\nu}$ , for which recommended values for the cross section at NNLO exist with their corresponding theory uncertainties. Our approach is to get a LO cross section for \PW\ $\rightarrow$ $\ell$ $\bar{\nu}$ calculated with Madgraph using the same exact conditions as the HNL MC production. A correction factor from LO to NNLO can be derived based on this and can then be applied on HNL MC. The PDF and scale uncertainties at NNLO are applied as flat systematic uncertainties to cover the remaining uncertainty on the MC cross section.
+
+It has been checked and verified that the generator conditions are similar between our MC production and the centrally produced W+jets samples, from which the recommended NNLO cross section was taken. The small differences that are present have no significant effect on the cross section calculation. Additionally, lepton universality will allow us to apply the scale factor and uncertainty across all HNL samples, regardless of which lepton flavor(s) they couple with.
+
+The resulting LO cross section for \PW\ $\rightarrow$ $\ell$
+$\bar{\nu}$ ($\ell$ = \Pe\ , \PGm\ , \PGt\ ) is 56500 pb. The recommended NNLO value is $61526.7^{+497.1}_{-264.6}\pm 2312.7$ pb where the quoted uncertainties are respectively scale and PDF uncertainties. Assuming uncorrelated uncertainties and taking the maximum of the two asymmetric errors, the combined uncertainty is $61526.7 \pm 2365.5$ pb, an effect of $3.86\%$. This gives a final scale factor of $1.089 \pm 0.042$.
+
+\paragraph{Other minor systematic uncertainties}
+\textbf{JEC and JER}
+The uncertainty in the calibration of the jet energy scale, as well
+as the jet energy resolution in simulation, affect directly the veto
+on \PQb jets with $\pt>25$\GeV.
+The uncertainties on jet energy scale and resolution are estimated by
+scaling independently the energy of jets up and down by one standard
+deviation; this results in uncertainties on the final signal yields of about
+0--5\% for the energy scale and 0--3\% for the energy resolution,
+mostly around the lower side of these ranges, but occasionally larger
+deviations happen in lower statistics search regions.
+This includes the effect of the migration of events from one search
+region to another.
+
+\textbf{b tagging}
+The efficiency of the \PQb jet veto is corrected for the difference
+between data and simulation, using scaling factors provided by the BTV
+POG~\cite{BTagCorr}.
+The resulting uncertainty is found to
+be below 1\% for all search regions.
+
+\subsection{Uncertainties on the background data-driven predictions}
+The background originating from SM nonprompt leptons is estimated
+using data-driven techniques as described in
+Sec~\ref{sec_llfakelepton}. The general features of the method were
+validated in simulation (Figure~\ref{fig:mcClosure}) as a function of
+the search variables. A much detailed validation in each lepton
+channel separately and in bins of the search regions is also performed
+in four data control samples. Although the lack of large number of events in the high displacement regions do not allow a precise validation, we find that in regions where reasonable statistics are available the method checks out good. 
+Based on the agreement between prediction and observation in these data control samples and simulation, we have decided to treat the uncertainties in this way:
+\begin{itemize}
+\setlength\itemsep{-0.2em}
+\item 30$\%$ for all channels flat;
+\item additional 50$\%$ uncorrelated nuisance for the highest displacement bin and the $\mtwol > 4$\GeV bins;
+\item 3 additional uncorrelated nuisances ($\mu\mu$, $e\mu$ and $ee$) to account for the differences in sources and statistic between the 3 channels in the double fakerate measurement region.
+\end{itemize}
+The 30$\%$ covers all the discrepancies we observe in our control region closure and 50$\%$ is motivated with the lack of statistics in the control regions for the closure test. 
+The closure tests in simulation and data in each data taking period show no particular behavior, as such we consider the 30$\%$ and 50$\%$ systematic uncertainties correlated over all data-taking period and lepton channels, while the additional 3 flavor systematics are taken uncorrelated among the channels and the years. ($\mu\mu$, $e\mu$ and $ee$. For 2016 17, 20, 40 $\%$, for 2017 14, 14, 33 $\%$ and for 2018 10, 11, 25 $\%$).
+
+Concerning the $\Pe\Pe\Pe$ and $\PGm\PGm\Pe$ channels where we observe a large discrepancy in the largest displacement region in the sideband, we have done convincing studies (see section~\ref{sec:conversion}) that the origin of it is not the nonprompt lepton background but it comes from photon conversion. One evidence for this being due to photon conversions is the fact that the excess in data appears only in channels where one lepton from $\PGg\to\Pe\Pe$ gets combined with a prompt lepton that comes from a \PZ decay (namely only in $\Pe\Pe\Pe$ and $\PGmpm\PGmmp\Pe$) to form a displaced vertex. The other channels where we do not expect such a contribution has no such an excess. Also these excess events has three leptons forming a Z mass (see Figure~\ref{fig:phoConv}) is also a strong evidence that these are coming from conversions. It is however almost guaranteed that  the contribution from conversions should be very limited in the signal region due to the \mlll upper bound of 80 GeV. 
+
+The statistical uncertainty on the predicted nonprompt lepton background
+in the majority of search regions is largely driven by the limited
+number of events in data in the sideband control region. This uncertainty
+is propagated to the signal region and it is treated according to Gamma-distributions, using shape parameter $\alpha =$ (1 +  the number of events in the sideband region) and the scale parameter which is the average FR for each bin.
+If no events are observed in the sideband region, we consider, as error, the standard deviation of the Gamma Distribution which has the shape parameter $\alpha = 1$ and the scale parameter $\theta =$ maximum measured fake rate in the corresponding channel.  
 
 
 
@@ -1349,8 +2174,6 @@ of the lepton \dxy.
 
 
 \clearpage
-\section{Corrections and efficiencies}
-\section{Systematic uncertainties}
 \section{Results}
 \subsection{Statistical analysis}
 \subsection{Limits on $V_{Nl}$: Dirac HNL}
