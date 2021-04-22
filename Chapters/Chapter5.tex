@@ -3,58 +3,52 @@
 The first search on HNL using multilepton final state at CMS
 experiment is presented here. The targeted signature comprises 
 three prompt charged leptons in any flavor combination of electron
-and muons and the analysis strategy is built to be able to probe both
-Majorana and Dirac nature of the \hnl. 
+and muons; furthermore the analysis strategy is built to be able to probe both
+Majorana and Dirac nature of the HNL. 
 
 \section{Introduction}
-This search will probe heavy neutrinos direct production in the decay of W bosons, in which the SM neutrino oscillates into an HNL. The focus lies on events in which the HNL in turn decays into either a Z boson and a neutrino, or a W boson and a charged lepton. The resulting electroweak gauge boson can then decay leptonically, leading to a final state with three charged leptons. The Feynman diagram corresponding to the process described above is shown in 
-Fig.~\ref{fig:c5hnldiagram}. Due to a Majorana nature of the HNL, they can decay to a lepton both with the same-sign (Fig.~\ref{fig:c5hnldiagram} left) 
-and opposite-sign (Fig.~\ref{fig:c5hnldiagram} right) to the one at HNL
-production. 
+The search will probe heavy neutrino direct production in the decay of W bosons, in which the SM neutrino oscillates into an HNL. The focus lies on events in which the HNL decays either into a Z boson and a neutrino, or into a W boson and a charged lepton. The resulting electroweak gauge boson can then decay leptonically, leading to a final state with three charged leptons. The Feynman diagrams corresponding to the described processes are shown in 
+Fig.~\ref{fig:c5hnldiagram}. Further, a Majorana HNL can decay into a lepton with either same-sign (Fig.~\ref{fig:c5hnldiagram} left) 
+or opposite-sign (Fig.~\ref{fig:c5hnldiagram} right) with respect to the lepton, $\ell$, coming directly from \PW boson. 
 \begin{figure}[h]
-\centering
-\includegraphics[width=0.24\textwidth]{Figures/c5/hnl_feyn.pdf}
-\includegraphics[width=0.24\textwidth]{Figures/c5/hnl_feyn_2.pdf}
-\includegraphics[width=0.24\textwidth]{Figures/c5/hnl_z_feyn.pdf}
-\includegraphics[width=0.24\textwidth]{Figures/c5/hnl_z_feyn_2.pdf}
-\caption{Typical diagrams for the production of a HNL at the LHC 
-($\hnl$) through its mixing with a SM neutrino, leading to a
+\noindent
+\makebox[\textwidth]{
+\includegraphics[width=0.25\textwidth]{Figures/c5/hnl_feyn.pdf}
+\includegraphics[width=0.25\textwidth]{Figures/c5/hnl_feyn_2.pdf}
+\includegraphics[width=0.25\textwidth]{Figures/c5/hnl_z_feyn.pdf}
+\includegraphics[width=0.25\textwidth]{Figures/c5/hnl_z_feyn_2.pdf}}
+\caption{Typical diagrams for the production of a HNL ($\hnl$)  at the LHC 
+through its mixing with a SM neutrino, leading to a
 final state with three charged leptons and a neutrino.}
 \label{fig:c5hnldiagram}
 \end{figure}
 
-The final results of this analysis will be presented as a function of both the mass and the mixing parameter of the HNL's. 
-The mixing parameter can depend on the flavor of the SM neutrino, so it has to be noted that the decays of the HNL 
-might not be democratic across different lepton flavors.
-
+The final results of this analysis will be presented as a function of both the mass and the mixing parameter of the HNL's. \\
 The search for the HNL will be performed by binning the analysis in
 variables that give discriminating power between signal and
-background, and simultaneously fitting these search region to obtain
+background, and simultaneously fitting these search regions to obtain
 exclusion limits on the HNL signal as a function of its \mixpar and
-mass. The latter analysis is almost fully blind to low mass signals as
-it employs large thresholds on \met and relatively large lepton \pt
-thresholds.
-
-
+mass. 
 
 \section{Analysis setup}
 \subsection{Data and simulation samples}
-The current analysis uses a set of \Pp collision data corresponding to
-an integrated luminosity of 35.9 \fbinv. Several primary datasets are used in this search due to the presence of all three
-lepton flavors and a number of different control regions. (For precise
+The current analysis uses the set of \Pp collision data collected during the 2016 run at center-of-mass energy of 13\TeV corresponding to
+an integrated luminosity of 35.9 \fbinv. Several primary datasets are used in this search for HNLs decaying to different lepton flavors, as well as to 
+define a number of different control regions for the background estimation (for precise
 informations about the "primary dataset" see Chapter~\ref{Chapter2}.)
 
 {\footnotesize
 \begin{itemize}
-\item DoubleEG
+\setlength\itemsep{-0.1em}
+\item Double e$\gamma$ (DoubleEG)
 \item DoubleMuon
-\item MuonEG
+\item Muon-e$\gamma$ (MuonEG)
 \item SingleMuon
 \item SingleElectron
 \end{itemize} }
 
 A number of signal models, as described in the previous
-Chapter~\ref{Chapter4}, were simulated with NLO precision. Signal
+Chapter, were simulated with NLO precision. Signal
 samples are generated with three leptons and a neutrino in the final
 state, which includes N$\to\PW(\ell\nu)\ell$ and
 N$\to\PZ(\ell\ell)\nu$ decay modes of the N. The \hnl masses of the
@@ -66,13 +60,14 @@ The luminosity scenario has a 25~ns bunch crossing separation with an average of
 A challenging aspect of the signal under consideration is that the \pt spectrum of the resulting leptons is in general compressed except for very high masses. The degree of this compression, and which leptons are affected, depends on the mass of the produced HNL. The \pt spectrum of the three hardest generator-level charged leptons is shown in figure~\ref{fig:genPt} for different HNL mass scenarios, ranging from 5 to 200 \GeV . 
 
 \begin{figure}[h]
-\subfloat[]{\includegraphics[width=.32\textwidth]{Figures/c5/genPt/genPtm5.pdf}}
-\subfloat[]{\includegraphics[width=.32\textwidth]{Figures/c5/genPt/genPtm60.pdf}}
-\subfloat[]{\includegraphics[width=.32\textwidth]{Figures/c5/genPt/genPtm200.pdf}}
+\noindent
+\makebox[\textwidth]{
+\subfloat[]{\includegraphics[width=.34\textwidth]{Figures/c5/genPt/genPtm5.pdf}}
+\subfloat[]{\includegraphics[width=.34\textwidth]{Figures/c5/genPt/genPtm60.pdf}}
+\subfloat[]{\includegraphics[width=.34\textwidth]{Figures/c5/genPt/genPtm200.pdf}}}
 \caption{\pt spectrum of the three hardest generator-level leptons in
   the signal simulation of several HNL masses. From top left to bottom
-  right the HNL mass scenarios for which the spectrum is shown are 5
-  \GeV (A), 60 \GeV (B), and 200 \GeV (C).}
+  right the HNL mass scenarios for which the spectrum is shown are 5\GeV (A), 60\GeV (B), and 200\GeV (C).}
 \label{fig:genPt}
 \end{figure}
 
@@ -84,10 +79,8 @@ the W, very little phase space is left for the emission of the lepton
 in the W's decay since all of the W's mass has to go into the
 production of the HNL. For high masses on the other hand, the
 compression is not as pronounced even though the trailing lepton can
-still be seen to prefer relatively low momenta. The reason for the
-compression of the trailing lepton is the fact that the W-boson has to
-be highly off-shell to allow for the production of very heavy
-HNL's. The cross section for off-shell W-boson production drops
+still be seen to prefer relatively low momenta because of the high off-shell W-boson required for production of very heavy
+HNL's. Furthermore the cross section for off-shell W-boson production drops
 rapidly with increasing mass, and as such the trailing lepton also
 tends to have very little phase space available for its production in
 very high mass scenarios.
@@ -96,6 +89,7 @@ We can clearly notice in Fig.~\ref{fig:genPt} different leptons \pt spectra acco
 $M_\hnl$ and its comparison wrt $M_\PW$. For this reason the analysis
 strategy has been divided in two main phase spaces:
 \begin{itemize}
+\setlength\itemsep{-0.1em}
 \item \emph{low mass search:} soft leptons, $M_\hnl < M_\PW$;
 \item \emph{high mass search:} hard leptons, $M_\hnl > M_\PW$;
 \end{itemize}
@@ -140,7 +134,8 @@ The list of triggers used in this analysis are listed in table~\ref{table:HNL_tr
 The overall approach to selecting the offline thresholds in the analysis is the following:
 
 \begin{itemize}
-\item calculate trigger data/MC scale factors (SF) for each lepton-specific trigger and determine values where these SF = const. Typical SF value: 98\% for a muon-specific and 99\% for an electron-specific. 
+\setlength\itemsep{-0.1em}
+\item calculate trigger data/MC scale factors (SF) for each lepton-specific trigger and determine values where these SFs are constant. Typical SF value: 98\% for a muon-specific and 99\% for an electron-specific. 
 \item determine total efficiency of trigger combinations (~\ref{table:HNL_trigger_thresholds}) in MC simulation, and choose \pt thresholds leading to the high overall efficiency and being not lower than the values determined in the first step;
 \item check the overall data/MC SF in a orthogonal dataset which was
   selected without using lepton trigger to avoid unavoidable biases;
@@ -185,20 +180,23 @@ As the single-lepton trigger reaches its plateau for $\pt > 30$\GeV,
 events with leading lepton $\pt > 30$\GeV$\;$are assigned a 2\%
 uncertainty which corresponds to the the largest of the SF of muon and electron specifics. 
 
-
 \begin{figure}[h]
-  \centering
-  \subfloat[{\tiny$3\Pe$, $\pt^\text{lead} > 55\GeV$}]{\includegraphics[width=0.32\textwidth]{Figures/c5/trigger/vsTrailingPt/eee_pt55to1000.pdf}}
-  \subfloat[{\tiny$3\mu$, $\pt^\text{lead} > 55\GeV$}]{\includegraphics[width=0.32\textwidth]{Figures/c5/trigger/vsTrailingPt/mumumu_pt55to1000.pdf}} 
-  \subfloat[{\tiny$2\Pe1\mu$, $\pt^\text{lead} [15,30] $}]{\includegraphics[width=0.32\textwidth]{Figures/c5/trigger/vsTrailingPt/eemu_pt0to30.pdf}}\\
-  \subfloat[{\tiny$2\Pe1\mu$, $\pt^\text{lead} [30,55] $}]{\includegraphics[width=0.32\textwidth]{Figures/c5/trigger/vsTrailingPt/eemu_pt30to55.pdf}} 
-  \subfloat[{\tiny$1\Pe2\mu$, $\pt^\text{lead} [15,30] $}]{\includegraphics[width=0.32\textwidth]{Figures/c5/trigger/vsTrailingPt/emumu_pt0to30.pdf}}
-  \subfloat[{\tiny$1\Pe2\mu$, $\pt^\text{lead} [30,55] $}]{\includegraphics[width=0.32\textwidth]{Figures/c5/trigger/vsTrailingPt/emumu_pt30to55.pdf}} \\
+\noindent
+\makebox[\textwidth]{
+  \subfloat[{\tiny$3\Pe$, $\pt^\text{lead} > 55\GeV$}]{\includegraphics[width=0.34\textwidth]{Figures/c5/trigger/vsTrailingPt/eee_pt55to1000.pdf}}
+  \subfloat[{\tiny$3\mu$, $\pt^\text{lead} > 55\GeV$}]{\includegraphics[width=0.34\textwidth]{Figures/c5/trigger/vsTrailingPt/mumumu_pt55to1000.pdf}} 
+  \subfloat[{\tiny$2\Pe1\mu$, $\pt^\text{lead} [15,30] $}]{\includegraphics[width=0.34\textwidth]{Figures/c5/trigger/vsTrailingPt/eemu_pt0to30.pdf}}}\\
+  \noindent
+\makebox[\textwidth]{
+  \subfloat[{\tiny$2\Pe1\mu$, $\pt^\text{lead} [30,55] $}]{\includegraphics[width=0.34\textwidth]{Figures/c5/trigger/vsTrailingPt/eemu_pt30to55.pdf}} 
+  \subfloat[{\tiny$1\Pe2\mu$, $\pt^\text{lead} [15,30] $}]{\includegraphics[width=0.34\textwidth]{Figures/c5/trigger/vsTrailingPt/emumu_pt0to30.pdf}}
+  \subfloat[{\tiny$1\Pe2\mu$, $\pt^\text{lead} [30,55] $}]{\includegraphics[width=0.34\textwidth]{Figures/c5/trigger/vsTrailingPt/emumu_pt30to55.pdf}}}\\
   \caption{Efficiencies for the OR combination of single, double and trilepton triggers, in trilepton events as a function
   of the trailing lepton \pt.}
   \label{fig:3l1l1lEff}
 \end{figure}
 
+\vspace{2cm}
 \subsection{Object selection}\label{sec:object}
 For the rigorous explanation of the single object reconstruction in
 CMS see Chapter~\ref{Chapter2}, section~\ref{sec:reconstruction}.
@@ -208,8 +206,8 @@ The base objects of this analysis are electrons and muons. Both electrons and mu
 
 An isolation variable (\Irel) is computed as the ratio of the scalar 
 \pt sum of charged hadrons originating from the PV, neutral hadrons, and photons within a cone of 
-$\Delta R<0.3$ around the lepton candidate direction at the vertex, 
-to the transverse momentum $\pt^\ell$ of the lepton candidate. 
+$\Delta R<0.3$ around the lepton candidate direction, and at denominator
+the transverse momentum $\pt^\ell$ of the lepton candidate. 
 "Loose" and "fakeable object" leptons are required to have $\Irel < 0.6$. 
 "Tight" leptons must satisfy $\Irel < 0.1$.
 
@@ -311,7 +309,7 @@ The \ptmiss is obtained as the magnitude of the negative vector sum $\overrighta
 all reconstructed PF candidates and is further adjusted to account for jet energy corrections applied to the event~\cite{CMS-PAS-JME-16-004}.
 
 \section{Analysis strategy}\label{sec:analisi}
-All events entering the signal regions are required to have three light leptons passing the tight requirements as described in the section on object selection(~\ref{sec:object}).
+All events entering the signal regions are required to have three light leptons passing the tight requirements as described in the section above (~\ref{sec:object}).
 The events with three leptons of the same sign are not retained in the analysis. 
 Events with three leptons in which one or several leptons fail the tight criteria, but pass the FO selection entered the sideband region to estimate the non-prompt lepton background. The presence of a fourth FO lepton was vetoed in order to suppress the contribution of processes yielding four leptons such as ZZ, while having only a sub-percent effect on the predicted signal yields.
 
@@ -326,7 +324,7 @@ are categorized according to the sign and flavor of the three
 leptons; events with a OSSF (Opposite Sign Same Flavor) pair and
 events without an OSSF pair. As it will possible to appreciate in the
 next plots, this categorization helps to discriminate between
-different background and it consistently reduces the background yields
+different backgrounds and it consistently reduces the background yields
 from SM processes.
 
 As described in Sec.~\ref{sec:compression}, the analysis
@@ -338,10 +336,10 @@ M_\PW$) and the \emph{high mass search} ($M_\hnl > M_\PW$).
 As the name suggest the low mass region of this analysis focuses on
 the search for HNL's of low mass, in particular those below the mass
 of the W boson. These low mass HNL events are characterized by
-relatively low values for \met  and the trilepton invariant mass
+relatively low values for \met  and for the trilepton invariant mass
 \mlll. And thus upper bounds are applied on \met  and \mlll , namely:
-\met < 75\GeV and \mlll < 80\GeV. The motivation for the latter cut is
-the suppression of the background from asymmetric external- and
+\met < 75\GeV and \mlll < 80\GeV. The latter cut contributes to 
+suppressing the background from asymmetric external- and
 internal conversions. In such events, a lepton might radiate a real or
 virtual photon converting into a lepton pair where one lepton takes
 away most of the photon's energy, and the second lepton ends up
@@ -369,7 +367,7 @@ of the upper \pt cut on the leading lepton \pt.
 The implementation of this upper \pt cut can be seen to help reduce the background significantly while only minimally affecting the signal efficiency.
 
 The low mass category of this analysis only considers events without
-an OSSF pair due to the massive Drell-Yan + jets, asymmetric
+an OSSF pair due to the massive contribution of Drell-Yan + jets, asymmetric
 conversion and $WZ$ backgrounds in events with an OSSF pair.
 Though it is combinatorially more likely for the signal to contain an
 OSSF pair, the background is multiple orders of magnitude larger for
@@ -378,8 +376,7 @@ and the sensitivity was negligible compared to events without an OSSF
 pair.
 Attempts were made to define search regions for such events, which
 ended up being roughly two orders of magnitude less sensitive than
-those without an OSSF pair.
- As such, these events are not further considered the low mass part of
+those without an OSSF pair. Thus, these events are not further considered the low mass part of
  the analysis.
 
 The summary of the \emph{low mass} search event selection is listed in Table~\ref{tab:lowMEventSelectio}.
@@ -395,7 +392,7 @@ The summary of the \emph{low mass} search event selection is listed in Table~\re
     \hline
     \hline
      N. \PQb jets & = 0              \\
-    4th $\ell$ veto & applied      \\
+    4th $\ell$ veto & \checkmark       \\
     $\pt^{leading}$ & < 55 \GeV\\
      \mlll & < 80\GeV\\
     \ptmiss &  < 75\GeV\\
@@ -416,9 +413,9 @@ background for both the low and high leading
 
 \begin{figure}[h]
 \noindent
-\makebox[\textwidth]{  \includegraphics[width=.35\textwidth]{Figures/c5/distribution/minMos_baseline_noOSSF_withSignal.pdf}
-  \includegraphics[width=.35\textwidth]{Figures/c5/distribution/minMos_lowM_3lnoOSSF_highPt_withSignal.pdf}
-  \includegraphics[width=.35\textwidth]{Figures/c5/distribution/minMos_lowM_3lnoOSSF_lowPt_withSignal.pdf}}
+\makebox[\textwidth]{  \includegraphics[width=.34\textwidth]{Figures/c5/distribution/minMos_baseline_noOSSF_withSignal.pdf}
+  \includegraphics[width=.34\textwidth]{Figures/c5/distribution/minMos_lowM_3lnoOSSF_highPt_withSignal.pdf}
+  \includegraphics[width=.34\textwidth]{Figures/c5/distribution/minMos_lowM_3lnoOSSF_lowPt_withSignal.pdf}}
   \caption{Expected background yields and signal yields normalized to
   the total background as a function of \mmin for the high leading \pt
   category of the low mass search (middle) and the low leading \pt category
@@ -426,14 +423,11 @@ background for both the low and high leading
   \label{fig:MminMos}
 \end{figure}
 
-
-
 The definitions of the low mass
 search regions, using this variable, are shown in
 Table~\ref{tab:lowMSRdef}. The expected yields in each of these search
 regions, compared to the predicted yields of several HNL mass
-scenarios, with \mixpar = $10^{-5}$ can be found in the Results
-section.  
+scenarios, with \mixpar = $10^{-5}$ can be found in the Results Sec.~\ref{sec:result}.  
 
 \begin{table}[tbh]
 \centering
@@ -492,10 +486,10 @@ in Table~\ref{tab:highMEventSelectio}.
     \hline
     \hline
      N. \PQb jets & = 0              \\
-    4th $\ell$ vetoe & applied      \\
-    $\pt^{leading}$ & > 55 \GeV\\
-    $\pt^{subleading}$ & > 15 \GeV\\
-    $\pt^{trailing}$ & > 10 \GeV\\
+    4th $\ell$ vetoe & \checkmark       \\
+    $\pt^{leading}$ & > 55\GeV\\
+    $\pt^{subleading}$ & > 15\GeV\\
+    $\pt^{trailing}$ & > 10\GeV\\
      $|\mlll - 91|$ & > 15\GeV\\
      $|\Mll - 91|$ & > 15\GeV\\
     \mmin & > 5\GeV\\
@@ -508,19 +502,16 @@ in Table~\ref{tab:highMEventSelectio}.
 In order to minimize the expected exclusion limits on the HNL mixing
 parameter we started by checking a plethora of variables for
 discriminating power between the signal and the background. The shapes
-of the background and that of the signal were compared in all of these
+of the background and of the signal were compared in all of those
 variables, and the most promising variables, giving large and obvious
 shape differences were picked out by eye. All the variables displaying
 shape differences were then used to design multiple sets of
 preliminary search region definitions used for binning the events. The
 expected signal exclusion limits were computed for each set of search
 regions by performing a simultaneous fit, and compared among the
-several preliminary search region definitions. Two variables stood
-head and shoulders above the rest, the earlier mentioned \mmin and the
+several preliminary search region definitions. Two variables were found to be more optimal than the others: the earlier mentioned \mmin and the
 transverse mass of the lepton not belonging to the pair forming this
-minimum mass, referred to as \mtmin . In addition \mlll was also seen
-to discriminate well between signal and background for very high HNL
-masses, but was outperformed by the latter two variables. The expected
+minimum mass, referred to as \mtmin. The expected
 yields for all three distributions are plotted in fig.~\ref{fig:mtminmm3lOSSF} for events
 with- and without an OSSF pair, compared to several HNL
 mass scenarios with yields normalized to those of the background. Note
@@ -529,34 +520,21 @@ without OSSF pairs.
 
 \begin{figure}[h]
 \noindent
-\makebox[\textwidth]{\includegraphics[width=0.3\textwidth]{Figures/c5/distribution/mt_minMos_highM_3lOSSF_withSignal.pdf}
-\includegraphics[width=.3\textwidth]{Figures/c5/distribution/minMos_highM_3lOSSF_withSignal.pdf}
-\includegraphics[width=.3\textwidth]{Figures/c5/distribution/mt_minMos_highM_3lnoOSSF.pdf}
-\includegraphics[width=.3\textwidth]{Figures/c5/distribution/minMos_highM_3lnoOSSF_withSignal.pdf}}
+\makebox[\textwidth]{\includegraphics[width=0.33\textwidth]{Figures/c5/distribution/mt_minMos_highM_3lOSSF_withSignal.pdf}
+\includegraphics[width=.33\textwidth]{Figures/c5/distribution/minMos_highM_3lOSSF_withSignal.pdf}}\\
+\makebox[\textwidth]{\includegraphics[width=.33\textwidth]{Figures/c5/distribution/mt_minMos_highM_3lnoOSSF.pdf}
+\includegraphics[width=.33\textwidth]{Figures/c5/distribution/minMos_highM_3lnoOSSF_withSignal.pdf}}
 \caption{From left to right: The distributions of \mtmin and \mmin for
-  events with an OSSF pair (2 left) and without an OSSF pair (2 right)} 
+  events with an OSSF pair (top) and without an OSSF pair (bottom)} 
 \label{fig:mtminmm3lOSSF}
 \end{figure}
 
-
-
-Other examples of variables that might be anticipated to be
-discriminating between signal and background are \met and the
-invariant mass of the 3 lepton + neutrino system, where the
-longitudinal momentum of the neutrino is reconstructed from the full
-event kinematics. Multiple solutions are possible here, and the
-solution for which the reconstructed neutrino mass formed a mass
-closest to the W mass with one of the leptons was taken. While \met is
-an obvious choice, it wasn't very useful for the signal under
-investigation since no extra escaping particles are produced. The 3
-lepton + neutrino mass on the other hand gave some discriminating
-power, but was found to be far less effective than \mtmin and \mmin.
-
-After it was found that binning search regions in terms of \mtmin and \mmin gave the best performance by leaps and bounds, more refined search regions were defined using these variables. This was done by defining a very large number of search regions, which were iteratively collapsed in order to retain about one background event in each search region, facilitating correct limit setting and a reliable background prediction. Since the total expected event yields in the categories with- and without the presence of an OSSF pair are very different, less separate search regions are defined in the latter than in the former category. In both cases events in with \mlll < 100 \GeV are split off from the rest and binned in terms of \mtmin . This low \mlll bin is expected to give significant contributions to the exclusion of HNL masses below the W mass, and removes a large fraction of the background for high HNL masses. For events with an OSSF pair, events with a pair of loose leptons forming a mass below 5 \GeV are vetoed in order to purify the low \mlll bin from a very large conversion and W$\gamma^{*}$ background. The search region definitions are shown in tables ~\ref{tab:SRhighmassOSSF} and ~\ref{tab:SRhighmassnoOSSF}. The expected background yields as a function of the search region, together with signal yields for several HNL masses at \mixpar = 10$^{-2}$ can be found in the Results section of this text.
+The selection of the search regions was done by defining, in bins of \mtmin and \mmin, a very large number of search regions which were iteratively collapsed in order to retain about one background event in each search region, facilitating correct limit setting and a reliable background prediction. Besides events with \mlll < 100 \GeV are split off from the rest and binned in terms of \mtmin. This low \mlll bin is expected to give significant contributions to the exclusion of HNL masses below the W mass, and removes a large fraction of the background for high HNL masses. For events with an OSSF pair, events with a pair of loose leptons forming a mass below 5 \GeV are vetoed in order to purify the low \mlll bin from a very large conversion and W$\gamma^{*}$ background. The search region definitions are shown in tables ~\ref{tab:SRhighmassOSSF} and ~\ref{tab:SRhighmassnoOSSF}. The expected background yields as a function of the search region, together with signal yields for several HNL masses at \mixpar = 10$^{-2}$ can be found in the Results Sec.~\ref{sec:result}.
 
 
 \begin{table}[h]
 \centering
+{\small
 \caption{Search regions for events with an OSSF pair in the high mass category.}
 \label{tab:SRhighmassOSSF}
 \resizebox{0.6\textwidth}{!}{
@@ -574,10 +552,12 @@ After it was found that binning search regions in terms of \mtmin and \mmin gave
 				                      & $300-400 $ & SR C7 & \multirow{3}{*}{SR C12} & \multirow{3}{*}{SR C16} \\ \cline{2-3} 									
 									 & $>400$ & SR C8 &  & \\ \hline
 \end{tabular}}
+}
 \end{table}
 
 \begin{table}[h]
 \centering
+{\small
 \caption{Search regions for events without an OSSF pair in the high mass category.}
 \label{tab:SRhighmassnoOSSF}
 \resizebox{0.6\textwidth}{!}{
@@ -593,26 +573,25 @@ After it was found that binning search regions in terms of \mtmin and \mmin gave
 				                      & $150-250 $ & SR D5 & & \\ \cline{2-3}
 				                      & $> 250$ & SR D6  & & \\ \hline								
 \end{tabular}}
+}
 \end{table}
 
 	
 \clearpage
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Background estimation}\label{sec:bgk}
-The standard model backgrounds leading to the final states under consideration can be divided into the following categories:
+The main sources of backgrounds present in the final search regions can be divided into the following categories:
 \begin{itemize}
-\item {\bf WZ production:} When both $\PW$ and $\PZ$ bosons decay leptonically, these events produce the same signature as the new physics scenarios targeted by this analysis: three energetic and isolated leptons and a sizable $\ptmiss$ due to a neutrino from the $\PW$ boson decay. This is the dominant background by large in the searches with three $\Pe$ or $\mu$ forming an OSSF dilepton pair.
+\setlength\itemsep{-0.1em}
+\item {\bf WZ production:} when both $\PW$ and $\PZ$ bosons decay leptonically, these events produce the same signature as the new physics scenarios targeted by this analysis: three energetic and isolated leptons and a sizable $\ptmiss$ due to a neutrino from the $\PW$ boson decay. This is the dominant background by large in the searches with three $\Pe$ or $\mu$ forming an OSSF dilepton pair.
 
-\item {\bf Nonprompt $\Pe$ and $\mu$:} Non-prompt leptons are leptons from heavy-flavor decays, misidentified hadrons, muons from light-mesons that decay in flight, or electrons from unidentified conversions of  photons in jets. This background is dominated by the \ttbar and Drell-Yan processes. This category provides the largest background contribution in the trilepton search regions without an OSSF pair. 
+\item {\bf Nonprompt $\Pe$ and $\mu$:} non-prompt leptons are leptons from heavy-flavor decays, misidentified hadrons, muons from light-mesons that decay in flight, or electrons from unidentified conversions of  photons in jets. This background is dominated by the \ttbar and Drell-Yan processes. This category provides the largest background contribution in the trilepton search regions without an OSSF pair. 
 
-\item {\bf External and internal conversions:} These processes contribute to the trilepton final state when a $\PW$ or a $\PZ$ boson radiates an initial- or final-state photon and this photon undergoes an asymmetric internal or external conversion in which one of the leptons has very low $\pt$. This soft lepton has a high probability of failing the selection criteria of the analysis, leading to a reconstructed two- (in case of a $\PW$ boson) or three-lepton (in case of a $\PZ$ boson) final state. This background mostly contributes to categories with an OSSF pair.
+\item {\bf External and internal conversions:} these processes contribute to the trilepton final state when a $\PW$ or a $\PZ$ boson radiates an initial- or final-state photon and this photon undergoes an asymmetric internal or external conversion in which one of the leptons has very low $\pt$. This soft lepton has a high probability of failing the selection criteria of the analysis, leading to a reconstructed two- (in case of a $\PW$ boson) or three-lepton (in case of a $\PZ$ boson) final state. This background mostly contributes to categories with an OSSF pair.
 
-\item {\bf Rare SM processes with multiple prompt leptons:} Rare standard model processes that yield three or more leptons include multi-boson production (\PW, \PZ, $H$, or a prompt $\gamma$), single boson production in association with a \ttbar pair, and double-parton scattering. Such processes generally have very small production rate and in some cases are 
+\item Rare SM processes with multiple prompt leptons: rare standard model processes that yield three or more leptons include multi-boson production (\PW, \PZ, $H$, or a prompt $\gamma$), single boson production in association with a \ttbar pair, and double-parton scattering. Such processes generally have very small production rate and in some cases are 
 further suppressed by the b-jet veto. 
 \end{itemize}
 
@@ -648,8 +627,7 @@ a nonprompt lepton to pass tight ID and isolation selection.
 
 This ratio is constructed in such a way that eliminates the mother parton \pt and flavor dependence.
 Hence, while measured in the dijet events, it allows to reliably estimate nonprompt lepton background
-arising both from $\ttbar$ and DY+jets processes. 
-
+arising both from $\ttbar$ and DY+jets processes. \\
 To mitigate fake rate dependence on the mother parton \pt, the fake rate is defined as a function
 of a quantity which serves as a proxy for mother parton \pt for non-isolated leptons, and which
 is equal to a lepton \pt for isolated leptons. This quantity is constructed as lepton \pt with 
@@ -659,7 +637,7 @@ the activity in the lepton isolation cone, and is referred to as \ptcone:
 \ptcone = \pt^\ell\times\Bigl(1+ \min\bigl(0., \Irel - \Irel^\text{tight}\bigr) \Bigr)
 \end{equation}
 
-where the $\Irel$ is the relative isolation of the lepton calculated in cone with size 0.3 $\Delta R$, while the $\Irel^\text{tight}$ is the tight WP defined in tables~\ref{tab:muonIDs} and \ref{tab:eleIDs}.
+\noindent where the $\Irel$ is the relative isolation of the lepton calculated in cone with size 0.3 $\Delta R$, while the $\Irel^\text{tight}$ is the tight WP defined in tables~\ref{tab:muonIDs} and \ref{tab:eleIDs}.
 In the application region, \ptcone is used to compute all lepton-related kinematic variables
 such as $\Mll$, $\MT$ etc., as well as is used instead of the lepton \pt when applying 
 search regions \pt thresholds.
@@ -677,11 +655,12 @@ for three electron $|\eta|$ bins for which the MVA discriminant is
 trained. 
 
 \subsubsection{Fake rate measurement} \label{sec:singleFR}
-We measure the fake rate maps in data in two different Primary DataSets (PDs): DoubleMuon PD and DoubleEG PD.
+We measure the fake rate maps in data in two different Primary DataSets (PDs): DoubleMuon-PD and DoubleEG-PD.
 These are the datasets where the prescaled single lepton trigger are being fed.
 
 The control region we use to measure the fake rate is enriched in QCD jet events obtained asking events with the following requirements:
 \begin{itemize}
+\setlength\itemsep{-0.2em}
   {\footnotesize
 	\item one Fakeable Object (defined in Tables~\ref{tab:muonIDs} and \ref{tab:eleIDs});
 	\item at least one jet with $\Delta R$ (jet,FO) $>1$;
@@ -690,10 +669,11 @@ The control region we use to measure the fake rate is enriched in QCD jet events
           3,8,17\GeV for $\mu$ and 8,12\GeV for electrons.}
 \end{itemize}
 
-Measuring the fake rate in jet events in data we should take into account the contamination of prompt leptons, mostly from $\PW$ and $\PZ$ production in association with hadronic jets. To discriminate between QCD events and W we can use the transverse mass of the lepton and the missing transverse energy in the event; requiring $\ptmiss$ and $\MT$ upper limits we strongly reduce the contribution from prompt leptons in the measurement region. 
-
-The residual contamination is subtracted both in the numerator and denominator transverse momentum bins using the simulated $\PW + \ jets$, DY and $\ttbar$ event from Monte Carlo samples. The simulation is normalized in the control region dominated by $\PW + \ jets$, DY processes, with $\ptmiss > \ 20$ GeV and $70 \ < \MT < \ 120 $ GeV.
-Due to different trigger pre-scales of the single lepton trigger, the
+While measuring in data the fake rate in lepton+jet events we should take into account the contamination from prompt leptons, mostly from $\PW$ and $\PZ$ production in association with hadronic jets.
+ To discriminate between QCD events and $\PW$/$\PZ$ events we can use the transverse mass of the lepton and the missing transverse energy; requiring $\ptmiss$ and $\MT$ upper limits we strongly reduce
+  the contribution from prompt leptons in the measurement region. \\
+The residual contamination is subtracted both from the numerator and from the denominator transverse momentum bins using the simulated $\PW + \ jets$, DY and $\ttbar$ events from MC samples. The simulation is normalized in the control region dominated by $\PW + \ jets$, DY processes, with $\ptmiss > \ 20$ GeV and $70 \ < \MT < \ 120 $ GeV.
+Due to different trigger pre-scales of the single lepton triggers, the
 MC normalization and the prompt leptons contribution subtraction are
 performed separately for all triggers in the corresponding \pt ranges.
 % Figures~\ref{fig:mt_fake_muon} (right) and \ref{fig:mt_fake_ele}
@@ -708,8 +688,8 @@ sample of events at the fake rate numerator (i.e. passing the tight requirements
 \caption{$\MT$ distributions for muons. In the left column there are
   transverse mass distributions for fakeable objects while in the
   right one for tight leptons. Three rows for the three muon triggers:
-  HLT$\_$Mu3$\_$PFJet40, $\pt \ \in \ [5,12] \GeV$, HLT$\_$Mu8, $\pt \
-  \in \ [12,25.5] \GeV$ and HLT$\_$Mu17, $\pt \ > 25.5 \GeV$.
+  HLT$\_$Mu3$\_$PFJet40, $\pt \ \in \ [5,12]$\GeV, HLT$\_$Mu8, $\pt \
+  \in \ [12,25.5]$\GeV and HLT$\_$Mu17, $\pt \ > 25.5$\GeV.
 }
 \label{fig:mt_fake_muon}
 \end{figure}
@@ -720,8 +700,7 @@ sample of events at the fake rate numerator (i.e. passing the tight requirements
 \caption{$\MT$ distributions for electron . In the left column there
   are transverse mass distributions for fakeable objects while in the
   right one for tight leptons. Two rows for the two electron triggers:
-  HLT$\_$Ele8$\_$CaloIdM$\_$TrackIdM$\_$PFJet30, $\pt \ \in \ [10,18]
-  \GeV$ and HLT$\_$Ele12$\_$CaloIdL$\_$TrackIdL$\_$IsoVL$\_$PFJet30, $\pt \ > 18 \GeV$.
+  HLT$\_$Ele8$\_$CaloIdM$\_$TrackIdM$\_$PFJet30, $\pt \ \in \ [10,18]$\GeV and HLT$\_$Ele12$\_$CaloIdL$\_$TrackIdL$\_$IsoVL$\_$PFJet30, $\pt \ > 18$\GeV.
 }
 \label{fig:mt_fake_ele}
 \end{figure}
@@ -730,8 +709,8 @@ sample of events at the fake rate numerator (i.e. passing the tight requirements
 \centering
 \includegraphics[width=.7\textwidth]{Figures/c5/FAKE/pt_cone_muon.pdf}
 \caption{$\ptcone$ distributions for muons. In the left column there are transverse momentum distributions for fakeable objects while in the right one for tight leptons. Three rows for the three muon triggers:
-  HLT$\_$Mu3$\_$PFJet40, $\pt \ \in \ [5,12] \GeV$, HLT$\_$Mu8, $\pt \
-  \in \ [12,25.5] \GeV$ and HLT$\_$Mu17, $\pt \ > 25.5 \GeV$.}
+  HLT$\_$Mu3$\_$PFJet40, $\pt \ \in \ [5,12]$\GeV, HLT$\_$Mu8, $\pt \
+  \in \ [12,25.5]$\GeV and HLT$\_$Mu17, $\pt \ > 25.5$\GeV.}
 \label{fig:pt_fake_muon}
 \end{figure}
 
@@ -739,17 +718,14 @@ sample of events at the fake rate numerator (i.e. passing the tight requirements
 \centering
 \includegraphics[width=.7\textwidth]{Figures/c5/FAKE/pt_cone_ele.pdf}
 \caption{$\ptcone$ distributions for electron. In the left column there are transverse momentum distributions for fakeable objects while in the right one for tight leptons. Two rows for the two electron triggers:
-  HLT$\_$Ele8$\_$CaloIdM$\_$TrackIdM$\_$PFJet30, $\pt \ \in \ [10,18]
-  \GeV$ and HLT$\_$Ele12$\_$CaloIdL$\_$TrackIdL$\_$IsoVL$\_$PFJet30, $\pt \ > 18 \GeV$.}
+  HLT$\_$Ele8$\_$CaloIdM$\_$TrackIdM$\_$PFJet30, $\pt \ \in \ [10,18]$\GeV and HLT$\_$Ele12$\_$CaloIdL$\_$TrackIdL$\_$IsoVL$\_$PFJet30, $\pt \ > 18$\GeV.}
 \label{fig:pt_fake_ele}
 \end{figure}
 
 In Figs.~\ref{fig:pt_fake_muon} and ~\ref{fig:pt_fake_ele} the
 contribution of the prompt leptons in the measurement region, after
-the normalization, is shown. As we expected the larger number of
-leptons from electro weak processes is at high $\pt$ lepton. This is
+the normalization, is shown. As we expected the majority of leptons from electro weak processes is at high $\pt$ lepton. This is
 reflected in the calculation of the fake rate map.
-% The final fake rate maps are shown in Fig.~\ref{fig:2d_fake}.
 
 \paragraph{FakeRate measured in MC}
 We also measure FakeRate in MC QCD di-jets and MC $\ttbar$ by finding a nonprompt lepton by the means of MC truth-matching. In Fig.~\ref{fig:comparison_muon} the comparisons of the three measurements are presented.
@@ -766,17 +742,18 @@ We also measure FakeRate in MC QCD di-jets and MC $\ttbar$ by finding a nonpromp
 \label{fig:comparison_muon}
 \end{figure}
 
+\vspace {5cm}
 \subsubsection{Fake rate application}
-We define the application region requiring that at least one of the three selected leptons to fail the tight lepton definition, so to be a fakeable lepton. Then in our signal region, we estimate the contribution by expressing the yields of events where $l$ leptons pass the full selection, and $n \ - \ l$ fail it, in terms of the yields of events with $n$ leptons among prompt and nonprompt ones, efficiencies and fake rates for $n \ = \ 3$ and all possible values of $l$. In this way the background prediction is obtained by weighting the events in the application region according to:
+We define the application region requiring that at least one of the three selected leptons to fail the tight lepton definition, so to be a fakeable lepton. Then in the signal region, we estimate the contribution by expressing the yields of events where $l$ leptons pass the full selection, and $n \ - \ l$ fail it. In this way the background prediction is obtained by weighting the events in the application region according to:
 \begin{itemize}
+\setlength\itemsep{-0.2em}
 \item if the event is $T_{1}T_{2}L_{3}$, i.e. only one fails, it is weighted by $f_{3}/(1-f_{3})$
 \item if the event is $T_{1}L_{2}L_{3}$, i.e. two fail, it is weighted by $(f_{2} \ f_{3})/(1-f_{2})(1-f_{3})$
 \item if the event is $L_{1}L_{2}L_{3}$, i.e. all fail, it is weighted by $(f_{1} \ f_{2} \ f_{3})/(1-f_{1})(1-f_{2})(1-f_{3})$
 \end{itemize}
 where $f_{i}$ is the fake rate evaluated on the kinematic quantities
-of the failing lepton.
-
-In Fig.~\ref{fig:comparison_muon} and in particular the bottom plots we show that in the last bin, in data, the EWK contamination is substantial. We assume the FR to be constant at high \pt, as it is nicely shown in the ones measured in MC QCD di-jets and MC $\ttbar$. Hence the last bin is not used and the leptons with \pt larger than 40 \GeV are predicted with FR ratio at the bin $[35-50]$\GeV.
+of the failing lepton.\\
+In Fig.~\ref{fig:comparison_muon} and in particular the bottom plots we show that in the last bin, in data, the EWK contamination is substantial. We assume the FR to be constant at high \pt, as it is nicely shown in the ones measured in MC QCD di-jets and MC $\ttbar$. Hence the last bin is not used and the leptons with \pt larger than 40\GeV are predicted with FR ratio at the bin $[35-50]$\GeV.
 It is essential to point out that for this analysis the softest lepton (trailing) is typically the one the fails the tight selection and it is predicted using the fake rate ratio measured in data. Thus, the fact that the last bin of the FR shown in Fig.~\ref{fig:comparison_muon} is not used does not affect the analysis because there are not fake leptons at high \pt. 
 
 
@@ -787,16 +764,16 @@ The fake rate extracted from nonprompt leptons in QCD MC events is used in the a
 
 \begin{figure}[h]
 \noindent
-\makebox[\textwidth]{\includegraphics[width=.22\textwidth]{Figures/c5/FAKE/e_closuresLeptonPt_le.pdf}
-\includegraphics[width=.22\textwidth]{Figures/c5/FAKE/e_closuresLeptonPt_tr.pdf}
-\includegraphics[width=.22\textwidth]{Figures/c5/FAKE/e_closuresMT.pdf}
-\includegraphics[width=.22\textwidth]{Figures/c5/FAKE/e_closuresMll.pdf}
-\includegraphics[width=.22\textwidth]{Figures/c5/FAKE/e_closuresMlll.pdf}}\\
-\makebox[\textwidth]{\includegraphics[width=.22\textwidth]{Figures/c5/FAKE/mu_closuresLeptonPt_le.pdf}
-\includegraphics[width=.22\textwidth]{Figures/c5/FAKE/mu_closuresLeptonPt_tr.pdf}
-\includegraphics[width=.22\textwidth]{Figures/c5/FAKE/mu_closuresMT.pdf}
-\includegraphics[width=.22\textwidth]{Figures/c5/FAKE/mu_closuresMll.pdf}
-\includegraphics[width=.22\textwidth]{Figures/c5/FAKE/mu_closuresMlll.pdf}}
+\makebox[\textwidth]{
+\includegraphics[width=.25\textwidth]{Figures/c5/FAKE/e_closuresLeptonPt_tr.pdf}
+\includegraphics[width=.25\textwidth]{Figures/c5/FAKE/e_closuresMT.pdf}
+\includegraphics[width=.25\textwidth]{Figures/c5/FAKE/e_closuresMll.pdf}
+\includegraphics[width=.25\textwidth]{Figures/c5/FAKE/e_closuresMlll.pdf}}\\
+\makebox[\textwidth]{
+\includegraphics[width=.25\textwidth]{Figures/c5/FAKE/mu_closuresLeptonPt_tr.pdf}
+\includegraphics[width=.25\textwidth]{Figures/c5/FAKE/mu_closuresMT.pdf}
+\includegraphics[width=.25\textwidth]{Figures/c5/FAKE/mu_closuresMll.pdf}
+\includegraphics[width=.25\textwidth]{Figures/c5/FAKE/mu_closuresMlll.pdf}}
 \caption{Closure test on $\ttbar$ for electrons (top) and for muons
   (bottom) with the fake rate extracted from nonprompt leptons in QCD MC. Red lines are the predicted nonprompt $\ttbar$ events, black dots the observed number of nonprompt $\ttbar$ events using MC-truth information.}
 \label{fig:closures2_ele}
@@ -804,23 +781,22 @@ The fake rate extracted from nonprompt leptons in QCD MC events is used in the a
 
 \subsection{Background from SM processes}
 One of the backgrounds is SM ZZ production in which both Z bosons
-decay leptonically. Events in which a fourth lepton, passing the FO
-criteria, is found are vetoed, so ZZ events are only retained when one
+decay leptonically. Events in which a fourth FO lepton is found are vetoed, so ZZ events are only retained when one
 of the leptons gets lost.
 
-The important background in events with an OSSF pair, and also in
-the tail bins of the high mass search regions without an OSSF pair, is
-WZ production in which both bosons decay leptonically. WZ gives three
+WZ production in which both bosons decay leptonically is the relevant background in events with an OSSF pair 
+and in the search region bins without an OSSF pair located at tail of the distributions.
+WZ gives three
 prompt leptons, and \met  by means of its escaping neutrino, making it
 one of the hardest backgrounds to distinguish from our signal.
 \subsubsection{ZZ background validation and normalization}
 Due to the fourth lepton veto, we can define a 4$\ell$ control region,
 fully orthogonal to any of the search regions in which we can
 normalize the ZZ cross section to data. We define a control region
-with 4 tight leptons, with two OSSF pairs, both having a mass off-\PZ;
+with 4 tight leptons, with two OSSF pairs, both having a mass on-\PZ;
 events with a loose uncleaned b-tagged jet are vetoed. With the above requirements, this control region is extremely pure in ZZ, with other processing being almost negligible.
 In the given control region, we measure the ZZ normalization by doing a maximum likelihood fit of the ZZ signal hypothesis, including the same treatment of systematic uncertainties as done for the interpretation of the HNL exclusion limits shown later in this text. This procedure yields the following scale factor:
-$\frac{data_{\PZ\PZ}}{MC_{\PZ\PZ}} = 1.03_{-0.10}^{+0.11}$
+$data_{\PZ\PZ}/MC_{\PZ\PZ} = 1.03_{-0.10}^{+0.11}$
 
 Then, we check the prediction of the kinematic shapes in data and MC,
 a few examples of which can be found in
@@ -837,7 +813,7 @@ The sample used here has a large, known, overestimation of
 the cross section, making it necessary to perform a cross section
 measurement in our control region. This is done in the same way as for
 the previously mentioned ZZ background, and the following scale factor
-is obtained: $\frac{data_{\WZ}}{MC_{\WZ}} = 0.652_{-0.058}^{+0.061}$.
+is obtained: $data_{\WZ}/MC_{\WZ}= 0.652_{-0.058}^{+0.061}$.
 
 Figure \ref{fig:validation} shows the distribution of the three main variables used for the search region binning of the analysis. An extremely good match is seen in the \mmin  and \mtmin  distributions, which are used to bin the high mass search regions in which WZ is dominant.
 
@@ -845,10 +821,10 @@ Figure \ref{fig:validation} shows the distribution of the three main variables u
 \begin{figure}[h]
 \noindent
 \makebox[\textwidth]{
-\includegraphics[width=.28\textwidth]{Figures/c5/ZZCR/ZZ/minMos_ZZ.pdf}
-\includegraphics[width=.28\textwidth]{Figures/c5/ZZCR/ZZ/M4l_ZZ.pdf}
-\includegraphics[width=.28\textwidth]{Figures/c5/WZCR/PtandMetCuts/minMos_WZ.pdf}
-\includegraphics[width=.28\textwidth]{Figures/c5/WZCR/PtandMetCuts/mt_minMos_WZ.pdf}}
+\includegraphics[width=.255\textwidth]{Figures/c5/ZZCR/ZZ/minMos_ZZ.pdf}
+\includegraphics[width=.255\textwidth]{Figures/c5/ZZCR/ZZ/M4l_ZZ.pdf}
+\includegraphics[width=.255\textwidth]{Figures/c5/WZCR/PtandMetCuts/minMos_WZ.pdf}
+\includegraphics[width=.255\textwidth]{Figures/c5/WZCR/PtandMetCuts/mt_minMos_WZ.pdf}}
 \caption{Comparison of data and MC in the ZZ control region (2 left
   plots) and in the WZ control region (2 right plots) for several kinematic variables, after normalization of the ZZ/WZ cross section.} 
 \label{fig:validation}
@@ -858,43 +834,38 @@ Figure \ref{fig:validation} shows the distribution of the three main variables u
 Events in which a virtual photon decays (internal conversion) or in
 which a  real photon converts into leptons by interacting with the
 detector material (external conversion) constitute one of the main backgrounds in the
- low mass part of the analysis, and in the low \mmin  and \mlll
+ low mass search bins, and in the low \mmin  and \mlll
   regions of the high mass search. The main contribution comes from
-  asymmetric conversions, in which the converting photon transfers
-  most of its \pt to one of its leptonic decay products. The softer
-  second lepton is then lost, leading to events with three leptons
- in the case of Z$\gamma$ production with a leptonically decaying
- Z. W$\gamma^{*}$ does not constitute a large contributions since the
+  asymmetric conversions. W$\gamma^{*}$ does not constitute a large contributions since the
  probability of both conversion decay products passing the analysis
  \pt cuts is rather small. Nonetheless it is important at very low
  masses, and vetoed in the low \mlll  part of the high mass search
- regions with OSSF pairs by vetoing events where an OSSF pair forming a mass below 5 \GeV is found.
+ regions with OSSF pairs by cutting out events where an OSSF pair has mass below 5\GeV.
 
 In order to normalize and validate this background we use a control
-region defined by the requirements that there has to be an OSSF pair
-and that \mlll  has to be compatible with the Z mass within a 15 \GeV
+region defined by the requirements first a OSSF pair
+secondly \mlll be compatible with the Z mass within a 15\GeV
 window. Additionally, the OSSF pair with the mass closest to that of Z
-is required to have a mass below 75 \GeV in order to remove the
+is required to have a mass below 75\GeV in order to remove the
 contribution of Drell-Yan and WZ to this control region. The Z$\gamma$
 cross section is normalized with respect to the data in this control
 region. The obtained scale factor is:
-$\frac{data_{\PZ\gamma}}{MC_{\PZ\gamma}} = 0.95_{-0.08}^{+0.08}$
+$data_{\PZ\gamma}/MC_{\PZ\gamma} = 0.95_{-0.08}^{+0.08}$
 
 The validation of the conversion background is shown in Fig.~\ref{fig:convvalidation}. Considering the good agreement between data and MC, we apply a flat 15\% systematic uncertainty to the modeling of conversions.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=.28\textwidth]{Figures/c5/convCR/combined/minMos_Xgamma.pdf}
-\includegraphics[width=.28\textwidth]{Figures/c5/convCR/combined/mt_minMos_Xgamma.pdf}
-\includegraphics[width=.28\textwidth]{Figures/c5/convCR/combined/ConePt_le_Xgamma.pdf}\\
+\includegraphics[width=.26\textwidth]{Figures/c5/convCR/combined/minMos_Xgamma.pdf}
+\includegraphics[width=.26\textwidth]{Figures/c5/convCR/combined/mt_minMos_Xgamma.pdf}
+\includegraphics[width=.26\textwidth]{Figures/c5/convCR/combined/ConePt_le_Xgamma.pdf}\\
 \caption{Comparison of data and MC in the conversion control region for the most important kinematic variables, after normalization of the Z$\gamma$ and W$\gamma$ cross sections.} 
 \label{fig:convvalidation}
 \end{figure}
 
 \subsection{Nonprompt background validation}
-While the data-driven prediction of the background due to nonprompt
-leptons described earlier was extensively tested in MC, we also want
-to validate it in data in two specific control regions: Drell-Yan
+In addition to the validation of the data-driven predictions done with MC closure tests, we also want
+to test it in data in two specific control regions: Drell-Yan
 enriched and \ttbar enriched CR.
 \paragraph{Drell-Yan enriched
   control region}
@@ -904,19 +875,21 @@ nonprompt. For this purpose we define a control region of events in
 which an OSSF pair with a mass within 15\GeV of that of the Z boson is
 found, and with \ptmiss $< 30$\GeV and $\MT < 30$\GeV . The latter
 cuts largely remove the contamination from WZ in this control
-region. The background prediction is then compared with data, and a
-pristine match is found, as shown in Fig.~\ref{fig:npvalidation}. 
+region. The background prediction is then compared with data, and an excellent match is found, as shown in Fig.~\ref{fig:npvalidation}. 
 
-\paragraph{\texorpdfstring{\ttbar}{ttbar} enriched
-  control region}
-The fake-rate for light-flavor and heavy-flavor jets is expected to be different because of their different structure, and possibilities to produce or fake hard leptons. In particular beauty quarks might decay semi-leptonically, resulting in a hard lepton. As shown and discussed earlier, the FO working point used in this analysis is tuned in such a way that the fake-rate is expected to be nearly identical for light- and heavy-flavor jets. If this is the case, the fake-rate should also predict the background due to \ttbar  in a control region enriched in this process. For this purpose we select events with at least one loosely b-tagged jet. For events with an OSSF pair, events within a 15 \GeV window around the Z-mass for both \mlll  and the best Z-candidate mass are vetoed. Additionally, these events are vetoed if they contain a loose OSSF pair of masses below 12 \GeV in order to suppress the contamination from W$\gamma^{*}$ and conversions. Good closure is observed in the shown distributions of Fig.~\ref{fig:npvalidation}, further strengthening our confidence in the data-driven prediction of the nonprompt background.s
+\paragraph{\texorpdfstring{\ttbar}{ttbar} enriched control region}
+The fake-rate for light-flavor and heavy-flavor jets is expected to be different because of their different structure, and possibilities to produce fake hard leptons. In particular beauty quarks might decay semi-leptonically, resulting in a harder leptons. As shown and discussed earlier, the FO working point used in this analysis is tuned in such a way that the fake-rate is expected to be nearly identical for light- and heavy-flavor jets. If this is the case, the fake-rate should also predict the background due to \ttbar  in a control region enriched in this process.
+For this purpose we select events with at least one loosely b-tagged jet. 
+For events with an OSSF pair, we exclude events within a 15\GeV window around the Z-mass for both \mlll  and the best Z-candidate mass. Additionally, these events are vetoed if they contain a loose OSSF pair with mass below 12\GeV in order to suppress the contamination from W$\gamma^{*}$ and conversions. Good closure is observed in the shown distributions of Fig.~\ref{fig:npvalidation}, further strengthening our confidence in the data-driven prediction of the nonprompt background.
 
 \begin{figure}[h]
 \noindent
-\makebox[\textwidth]{\includegraphics[width=.28\textwidth]{Figures/c5/DYCR/inclusive/minMos_DY.pdf}
-\includegraphics[width=.28\textwidth]{Figures/c5/DYCR/inclusive/mt_minMos_DY.pdf}
-\includegraphics[width=.28\textwidth]{Figures/c5/TTCR/convVeto/minMos_TT.pdf}
-\includegraphics[width=.28\textwidth]{Figures/c5/TTCR/convVeto/mt_minMos_TT.pdf}
+\makebox[\textwidth]{\includegraphics[width=.30\textwidth]{Figures/c5/DYCR/inclusive/minMos_DY.pdf}
+\includegraphics[width=.30\textwidth]{Figures/c5/DYCR/inclusive/mt_minMos_DY.pdf}}\\
+\noindent
+\makebox[\textwidth]{
+\includegraphics[width=.30\textwidth]{Figures/c5/TTCR/convVeto/minMos_TT.pdf}
+\includegraphics[width=.30\textwidth]{Figures/c5/TTCR/convVeto/mt_minMos_TT.pdf}
 }
 \caption{Comparison of data to background prediction in the Drell-Yan
   (2 left plots) and \ttbar (2 right plots) enriched control region,
@@ -924,14 +897,13 @@ The fake-rate for light-flavor and heavy-flavor jets is expected to be different
 \label{fig:npvalidation}
 \end{figure}
 
-Considering the results in both the \ttbar and Drell-Yan enriched control regions in which the nonprompt lepton background prediction was validated, we assign a flat 30\% uncertainty to this background prediction. 
-
+Considering the results in both the \ttbar and Drell-Yan enriched control regions, we assign a flat 30\% uncertainty to this background prediction. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
 \section{Systematic uncertainties}
-The analysis is prone to several sources of systematic uncertainties, listed below in table~\ref{tab:syst}. 
+The analysis is prone to several sources of systematic uncertainties which are listed below in table~\ref{tab:syst}. 
 
 The jet energy scale uncertainty varies between 0 and 3\%, depending on the search region. 
 This uncertainty affects other event quantities such as the b tag veto, $\ptmiss$, and $\mtmin$, 
@@ -945,6 +917,13 @@ The uncertainty in the integrated luminosity is 2.5\%~\cite{CMS-PAS-LUM-17-001}.
 
 All sources of systematics that are labeled as "shape" are computed by varying the yields across the search regions 
 bin-by-bin using the recommended procedures to assess the listed sources of systematic uncertainty.  
+
+The dominant uncertainty in the total background prediction is the statistical uncertainty in the nonprompt leptons background estimation,
+which comes from the limited number of events in the application region. The systematic uncertainty on the nonprompt prediction has
+a subleading value. 
+
+In the high-mass search regions with the OSSF pair present the dominant background is from \PW\PZ/\PW$\gamma^*$ process, hence
+the uncertainties on this process as well as MC-modeling uncertainties become more important.
 
 \begin{table}[h]
     \caption{Summary of systematic uncertainties in the event yields in the search regions and their treatment. 
@@ -980,40 +959,33 @@ $\PZ\PZ$ normalization & 25 & normalization\\\hline
 \end{tabular}  }
 \end{table}
 
-The dominant uncertainty in the total background prediction is the statistical uncertainty in the nonprompt leptons background estimation,
-which comes from the limited number of events in the application region. The systematic uncertainty on the nonprompt prediction has
-a subleading value. 
 
-In the high-mass search regions with the OSSF pair present the dominant background is from \PW\PZ/\PW$\gamma^*$ process, hence
-the uncertainties on this process as well as MC-modeling uncertainties become more important.
 
-\section{Results}
+\section{Results}\label{sec:result}
 
-The expected and observed yields in each of the \emph{low mass search}
+In the left part of Fig.~\ref{fig:allSRplotMuon}(top) it has been displayed 
+the expected and observed yields in each of the \emph{low mass search}
 regions, compared to the predicted yields of several HNL mass
-scenarios, with \mixpar = $10^{-5}$ of are shown in the left part of
-Fig.~\ref{fig:allSRplotMuon}. These yields, together with their
+scenarios, with \mixpar = $10^{-5}$. These yields, together with their
 statistical and systematic uncertainties can also be found in
-Table~\ref{tab:YieldsLowmass}. The first uncertainty always indicates the statistical uncertainty, while the second indicates the systematic.
-
-
-\begin{table}[tbh]
+Table~\ref{tab:YieldsLowmass}. 
+\begin{table}[h]
 \centering
 \caption{Observed (expected) event yields in the low-mass search region. The uncertainties
 contain both the statistical and systematic components. }
 \label{tab:YieldsLowmass}
-\includegraphics[width=0.6\linewidth]{Figures/c5/tables/CMS-EXO-17-012_Table_0A1.pdf}
+\includegraphics[width=0.7\linewidth]{Figures/c5/tables/CMS-EXO-17-012_Table_0A1.pdf}
 \end{table}
 
 The expected and observed yields in the \emph{high mass search regions},
 compared to several HNL mass scenarios at \mixpar = $10^{-2}$, for
-events with and without an OSSF pair are shown in Fig.~\ref{fig:allSRplotMuon}. All search region yields, with their separate statistical and systematic uncertainties are also listed in Tables~\ref{tab:YieldshighmassOSSF} and \ref{tab:YieldshighmassnoOSSF}. The first uncertainty always indicates the statistical uncertainty, while the second indicates the systematic.
-\begin{table}[tbh]
+events with and without an OSSF pair are shown in Fig.~\ref{fig:allSRplotMuon}. All search region yields, with their separate statistical and systematic uncertainties are also listed in Tables~\ref{tab:YieldshighmassOSSF} and \ref{tab:YieldshighmassnoOSSF}. 
+\begin{table}[h]
 \centering
 \caption{Observed (expected) event yields in the high-mass search region for events with no
 OSSF lepton pair. The uncertainties contain both the statistical and systematic components.}
 \label{tab:YieldshighmassOSSF}
-\includegraphics[width=0.7\linewidth]{Figures/c5/tables/CMS-EXO-17-012_Table_0A2.pdf}
+\includegraphics[width=0.75\linewidth]{Figures/c5/tables/CMS-EXO-17-012_Table_0A2.pdf}
 \end{table}
 
 \begin{table}[tbh]
@@ -1021,13 +993,13 @@ OSSF lepton pair. The uncertainties contain both the statistical and systematic 
 \caption{Observed (expected) event yields in the high-mass search region for events with an
 OSSF lepton pair. The uncertainties contain both the statistical and systematic components.}
 \label{tab:YieldshighmassnoOSSF}
-\includegraphics[width=0.7\linewidth]{Figures/c5/tables/CMS-EXO-17-012_Table_0A3.pdf}
+\includegraphics[width=0.75\linewidth]{Figures/c5/tables/CMS-EXO-17-012_Table_0A3.pdf}
 \end{table}
 
 A summary of all the search region definitions, the predicted yields for each background and the observed yields can be seen in figure~\ref{fig:allSRplotMuon}.
-\begin{figure}[th]
+\begin{figure}[h]
 \noindent
-\makebox[\textwidth]{\includegraphics[width=0.8\textwidth]{Figures/c5/expectedYields/CMS-EXO-17-012_Figure_001.pdf}}
+\makebox[\textwidth]{\includegraphics[width=0.9\textwidth]{Figures/c5/expectedYields/CMS-EXO-17-012_Figure_001.pdf}}
 \caption{Observed and expected event yields as a function of \mmin and
   \mtmin for events with
 at least two electrons (upper), and with at least two muons (lower). The contribution of each
@@ -1036,17 +1008,16 @@ while the rest display the high-mass region}
 \label{fig:allSRplotMuon}
 \end{figure}
 
-We see no evidence for an excess in data beyond the SM background.
+We see no evidence of an excess in data beyond the SM background.
 
 \clearpage
 \subsubsection{Interpretation}
- Using the expected signal and background yields, and the observed
- yields, the expected signal exclusion limits are calculated for
+ The expected signal exclusion limits are calculated for
  several mass points using a simultaneous fit to every search regions
  bin, together with the observed limit. This fit is done in the
  Asymptotic approximation. The upper limit set on the signal strength
- for each mass point using this procedure can then be interpreted as a
- limit on the effective coupling of the HNL to SM neutrinos, \mixpare
+ for each mass point can then be interpreted as a
+ limit on the effective couplings of the HNL to SM neutrinos, \mixpare
  and \mixparm. Limits were explicitly calculated for the available
  mass point simulations of 1, 2, 5, 10, 20, 30, 40, 50, 60, 80, 100,
  130, 150, 200, 400, 600, 800 and 1000 \GeV. Using linear
@@ -1056,10 +1027,10 @@ We see no evidence for an excess in data beyond the SM background.
  for almost every point, indicating that no significant excess beyond
  the SM expectation has been observed. 
 \begin{figure}[h]
-\noindent
-\makebox[\textwidth]{\includegraphics[width=.6\textwidth]{Figures/c5/limits/CMS-EXO-17-012_Figure_002-a.pdf}
-\includegraphics[width=.6\textwidth]{Figures/c5/limits/CMS-EXO-17-012_Figure_002-b.pdf}}\\
-\caption{Exclusion region at 95$\%$ CL in the \mixpare vs. $m_N$ (left) and \mixparm vs. $m_N$ (right) planes.
+\centering
+\includegraphics[width=.65\textwidth]{Figures/c5/limits/CMS-EXO-17-012_Figure_002-a.pdf}\\
+\includegraphics[width=.65\textwidth]{Figures/c5/limits/CMS-EXO-17-012_Figure_002-b.pdf}
+\caption{Exclusion region at 95$\%$ CL in the \mixpare vs. $m_N$ (top) and \mixparm vs. $m_N$ (bottom) planes.
 The dashed black curve is the expected upper limit, with one and two standard-deviation
 bands shown in dark green and light yellow, respectively. The solid black curve is the observed
 upper limit, while the dotted black curve is the observed limit in the approximation of
