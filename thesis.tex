@@ -49,9 +49,9 @@ headsepline, % Uncomment to get a line under the header
 \usepackage{subfig}
 \usepackage{graphicx}
 \usepackage{tikz}
+%\usepackage{scrextend}
 
-
-
+\usepackage{wrapfig}
 \usepackage{xspace} 
 \def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
 
@@ -66,19 +66,44 @@ headsepline, % Uncomment to get a line under the header
 \usepackage[utf8]{inputenc}
 \usepackage{cite}
 \usepackage[compat=1.0.0]{tikz-feynman}
+
 %----------------------------------------------------------------------------------------
 %	MARGIN SETTINGS
 %----------------------------------------------------------------------------------------
-
-\geometry{
-	paper=a4paper, % Change to letterpaper for US letter
-	inner=2.8cm, % Inner margin
-	outer=2.8cm, % Outer margin
-	bindingoffset=.5cm, % Binding offset
-	top=2.5cm, % Top margin
-	bottom=2.5cm, % Bottom margin
-	%showframe, % Uncomment to show how the type block is set on the page
+\usepackage{scrlayer-scrpage}% sets page style scrheadings 
+\newlength\ratio
+\setlength{\ratio}{2cm}
+\geometry{  % page layout modifications
+  paper=a4paper,  %  - use A4 paper size
+  foot=0cm,
+  bindingoffset=.5\ratio,  %  - binding correction
+  inner=1.25\ratio,  %  - total body: left margin (odd pages)
+  top=1.5\ratio,  %  - total body: top margin
+  outer=1.15\ratio,  %  - total body: right margin (odd pages)
+  bottom=1.5\ratio,  %  - total body: bottom margins
+  marginparwidth=0\ratio,  %  - width for side note
+  marginparsep=.25\ratio  %  - space between notes and body text (content)
+  % showframe,
 }
+
+\KOMAoptions{%
+  headwidth={\textwidth+\ratio},%
+  headsepline=.5pt:\textwidth+2.5\ratio,% extended by bindigoffset
+  olines,
+}
+% \ModifyLayer[addhoffset=\ifodd\value{page}\else -\fi 1.5\ratio]{scrheadings.foot.above.line}
+
+%\AddToLayerPageStyleOptions{scrheadings}{%
+ % oninit=\KOMAoptions{%
+  %   headsepline=.5pt:\textwidth+2\ratio,
+%  % }
+% }
+% \KOMAoptions{%
+%   headwidth={\textwidth+\ratio},%
+%   footwidth={\textwidth+\ratio}%
+% }
+
+
 
 %----------------------------------------------------------------------------------------
 %	THESIS INFORMATION
@@ -178,7 +203,7 @@ headsepline, % Uncomment to get a line under the header
 
 \include{Appendices/AppendixA}
 \include{Appendices/AppendixB}
-%\include{Appendices/AppendixC}
+\include{Appendices/AppendixC}
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY

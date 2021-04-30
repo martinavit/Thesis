@@ -1,6 +1,7 @@
 \chapter{Search for HNL in events with three charged prompt
-  leptons~\cite{Sirunyan:2018mtv}} \label{Chapter5}
-The first search on HNL using multilepton final state at CMS
+  leptons} \label{Chapter5}
+
+The first search~\cite{Sirunyan:2018mtv} on HNL using multilepton final state at CMS
 experiment is presented here. The targeted signature comprises 
 three prompt charged leptons in any flavor combination of electron
 and muons; furthermore the analysis strategy is built to be able to probe both
@@ -54,7 +55,7 @@ state, which includes N$\to\PW(\ell\nu)\ell$ and
 N$\to\PZ(\ell\ell)\nu$ decay modes of the N. The \hnl masses of the
 generated samples vary from 1\GeV to 1.2\TeV. 
 
-The luminosity scenario has a 25~ns bunch crossing separation with an average of about 25 pileup interactions per bunch crossing.
+The luminosity scenario has a 25~ns bunch crossing separation with an average of about 23 pileup interactions per bunch crossing~\cite{Sirunyan:2020foa}.
 
 \subsection{Signal compression and trigger strategy}\label{sec:compression}
 A challenging aspect of the signal under consideration is that the \pt spectrum of the resulting leptons is in general compressed except for very high masses. The degree of this compression, and which leptons are affected, depends on the mass of the produced HNL. The \pt spectrum of the three hardest generator-level charged leptons is shown in figure~\ref{fig:genPt} for different HNL mass scenarios, ranging from 5 to 200 \GeV . 
@@ -204,10 +205,29 @@ CMS see Chapter~\ref{Chapter2}, section~\ref{sec:reconstruction}.
 \subsubsection{Leptons}
 The base objects of this analysis are electrons and muons. Both electrons and muons have three selection working points, called "loose", "fakeable object" (FO) and "tight". The loose working point is used when cleaning electrons from overlap with muons, to be specific, electrons are not considered for selection if they fall within a cone of $\Delta \mathrm{R} = 0.05$ around a loose muon. The FO working point is slightly tighter than the loose one, and is extensively used for the estimation of the background due to non-prompt and fake leptons as described further in this text. The crucial property of the FO working point is that the probability for a non-prompt lepton passing the FO working point to also pass the tight working point is almost independent of the flavor of the jet or hadron from which the fake lepton originates. This property will prove essential for the non-prompt lepton background estimation as further specified. The full definitions of every selection working point, for respectively muons and electrons are shown in tables ~\ref{tab:muonIDs} and \ref{tab:eleIDs}.
 
-An isolation variable (\Irel) is computed as the ratio of the scalar 
-\pt sum of charged hadrons originating from the PV, neutral hadrons, and photons within a cone of 
-$\Delta R<0.3$ around the lepton candidate direction, and at denominator
-the transverse momentum $\pt^\ell$ of the lepton candidate. 
+Signal leptons are required to be isolated from any hadronic activity
+in the event.
+An isolation variable (\Irel) is computed as the scalar 
+\pt sum of charged hadrons originating from the PV, neutral hadrons,
+and photons within a cone of $\Delta R<0.3$ around the lepton
+candidate direction at the vertex,
+divided by the transverse momentum $\pt^\ell$ of the lepton candidate:
+\begin{linenomath}
+  \begin{equation}
+    \label{eq:irel}
+    \Irel = \frac{1}{\pt^\ell}
+    \left(\sum_{ch.hadr.}\pt^{\mathrm{PV}} +
+    \max{\left[0, \sum_{neu.hadr.}\pt + \sum_{pho.}\pt
+        - \rho\cdot A_{\mathrm{eff}}\right]}\right).
+  \end{equation}
+\end{linenomath}
+The term $\rho\cdot A_{\mathrm{eff}}$ is used to mitigate the
+contribution of pileup to the isolation calculation: the average
+transverse-momentum flow density $\rho$ is calculated in each event
+using a ``jet area'' method~\cite{CACCIARI2008119}, and the effective
+area $A_{\mathrm{eff}}$ is the geometric area of the isolation cone
+times an $\eta$-dependent correction factor that accounts for the
+residual dependence of the isolation on pileup.
 "Loose" and "fakeable object" leptons are required to have $\Irel < 0.6$. 
 "Tight" leptons must satisfy $\Irel < 0.1$.
 

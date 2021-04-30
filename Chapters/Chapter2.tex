@@ -27,5 +27,42 @@
 \subsection{Triggering and data acquisition} 
 \section{Event reconstruction}\label{sec:reconstruction}
 \subsection{Track reconstruction} 
+Electron reconstruction is based on the combination of tracker and
+ECAL information in a Gaussian Sum Filter (GSF)
+track~\cite{Khachatryan:2015hwa}, which accounts for possible
+bremsstrahlung from the electron.
+Electrons are reconstructed within the geometrical acceptance of the
+CMS tracking system, $|\eta|<2.5$.
+Identification criteria based on the electromagnetic shower shape, track
+quality, track impact parameters with respect to the primary vertex,
+and isolation are used to select signal electrons and reduce the rate
+of mis-identified and background electrons (referred to as ``fake
+electrons'' hereafter).
+
+Muons are reconstructed by combining the information of the tracker
+and of the muon
+spectrometer~\cite{Sirunyan:2018fpa}.
+The geometric compatibility between these separate measurements is
+used in the further selection of muons. Muons are required to have
+$\abseta<2.4$ to fall inside the geometric acceptance of the muon
+detector.
+All muons considered for analysis must pass the loose working point as
+specified by the MUO POG, in addition to a number
+of other loose criteria on isolation and their impact parameters with
+respect to the PV.
+It is also possible to require muons to be synchronized with the bunch
+crossing that has triggered, using the time measurements provided by
+the muon sub-detectors, the RPCs (``RPC time'' or $t_{\mathrm{RPC}}$)
+and the combined measurements of the DTs and CSCs (``combined time''
+or $t_{\mathrm{comb}}$)~\cite{muon_oot}.
+In particular, $t_{\mathrm{RPC}}$ ($t_{\mathrm{comb}}$) is only used
+if it is measured with more than 1 (7) degrees of freedom.
+If $t_{\mathrm{RPC}}$ and $t_{\mathrm{comb}}$ are both available,
+they must lie within $-10\ns$ and $+10\ns$.
+If only $t_{\mathrm{comb}}$ is available, then it must be within
+$-45\ns$ and $+20\ns$.
+If $t_{\mathrm{comb}}$ is unavailable, no timing requirement is
+applied.
+
 \subsection{Reconstruction performances}
 \clearpage

@@ -259,6 +259,8 @@
 	includefoot
 }
 
+
+
 \raggedbottom
 
 %----------------------------------------------------------------------------------------
@@ -267,7 +269,7 @@
 
 \doublehyphendemerits=10000 % No consecutive line hyphens
 \brokenpenalty=10000 % No broken words across columns/pages
-\widowpenalty=9999 % Almost no widows at bottom of page
+%\widowpenalty=9999 % Almost no widows at bottom of page
 \clubpenalty=9999 % Almost no orphans at top of page
 \interfootnotelinepenalty=9999 % Almost never break footnotes
 
@@ -294,6 +296,8 @@
 }
 \pagestyle{thesis}
 \ifbool{headsepline}{\KOMAoption{headsepline}{true}}{}
+%\ifbool{headsepline}{\KOMAoption{headwidth=head}}{}
+
 \PreventPackageFromLoading[\ClassError{\classname}{Package `fancyhdr' is
 incompatible\MessageBreak with this class}{The pagesyles are defined 
 	using package `scrlayer-scrpage', please consult the\MessageBreak 
