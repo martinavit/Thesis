@@ -217,7 +217,7 @@ shown in Figure~\ref{fig:detector}.
 \end{figure} 
 
 With CMS detector is possible to measure photons, electrons, muons and hadrons (neutral and charged). 
-In this optic, CMS is made of a system of subdetectors each of which contributes with
+To be able to acchieve such results, CMS is made of a system of subdetectors each of which contributes with
 measurements of specific properties and quantities of different 
 particles; the overlap and combination of all the
 informations from the subdetectors allow to identify and measure the
@@ -234,23 +234,123 @@ energies measured. Finally the muons, getting through the
 calorimeters, enter into the muon chambers where complete trajectory
 is then measured. 
 
+The subsystems of the CMS experiment are listed and briefly described
+in the following paragraphs.
 
+\subsubsection{The superonducting solenoid}
+The central part of CMS is a solenoid magnet of 6 m internal diameter
+which is made of a cylindrical coil of superconducting fibres
+provinding a magnetic field of 3.8 T. 
+\subsubsection{The tracking system}\label{tracking}
+The design of the CMS tracking system is optimized to
+effeciently and precisesly measure the trajectories of charged
+particles and to effectively reconstruct secondary vertices. This latter feature is of particular
+importance in the context of displeced vertices and lepton searches as
+described in Chapter~\ref{Chapter6}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.98\textwidth]{Figures/c2/las}\\
+\vspace{0.5cm}
+\includegraphics[width=0.68\textwidth]{Figures/c2/Phase1_Tracker_1Quarter.pdf}
+
+\caption{Top: a quarter of the CMS silicon tracker in an $r-z$
+  view. The strip tracker comprises several parts: the tracker inner
+  barrel (TIB), outer barrel (TOB), inner disks (TID) and endcaps
+  (TED)~\cite{Adam:1171503}. Bottom:
+sketch of one quarter of the current CMS tracking system in
+  r-z view, 2017-2018 data taking. The pixel detector is shown in
+  green with the additional modules~\cite{trackingPU}.}
+\label{fig:tracker}
+\end{figure} 
+Additionally the tracking system has to feature high granularity and
+fast response in order to correclty associate each reconstructed track
+to the respective bunch crossing and the primary interaction vertex.
+
+The CMS tracker consists of a pixel detector (pixel Tracker) and a
+silicon strip detector (strip Tracker), see Figure~\ref{fig:tracker}.
+The original pixel detector was made of three barrel
+layers at radii of 4.4, 7.3, and 10.2 cm and two endcaps modules in
+the forward region. 
+During the short shutdown between the data takings 2016 and 2017, it
+was installed an
+upgraded version of the pixel detector; the detector has currently four
+barrel layers at radii of 3.0, 6.8, 10.2, and
+16.0 cm and three layers in the forward region~\cite{Dominguez:1481838}. The
+recent innermost layer and modules
+are positioned closer to the beam pipe in order to improve the
+precision on the position of the interaction vertices.\\
+The silicon strip detector consists of many parts: the tracker inner and
+outer barrels (TIB and TOB), in total ten layers of strip modules in
+the barrel; the 6 tracker inner disks (TID), three each
+side; and the nine disks on each side of the tracker endcap (TEC).\\
+In total the tracking system is 5.8 m long and 2.6 m high,
+extending the coverage of the tracker up to $|\eta|$ = 2.5. The total
+amount of sensors is 66 million for the pixel and 124 million for the
+strip detector. 
+
+\subsubsection{The electromagnetic calorimeter}
+The ECAL detector is a fine-grainded and homogeneous calorimeter
+made up of lead
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \begin{center}
+    \includegraphics[clip,trim=1cm 1cm 1cm 1.5cm, width=0.48\textwidth]{Figures/c2/ecal}
+  \end{center}
+  \caption{Geometric view of one quarter of the ECAL~\cite{Benaglia_2014}.}
+\label{fig:ecal}
+\end{wrapfigure}
+ tungstate crystals. Those single crystals are extremely transparent
+ and ``scintillates''  when photons and electrons pass through
+ them; the light produced is proportional to the particle's energy
+ allowing a fast and very precise measurement of the momentum
+ property. The single crystal length in barrel region is 230 mm (220
+ mm in endcap) comparable to $\sim$26 (25) radiation lengths meaning it
+ absorbs more than 98\% of the energy deposited by the particle~\cite{Biino_2015}.\\
+A scheme of the ECAL is shown in Figure~\ref{fig:ecal}.
+ECAL modules are placed in the barrel ($\eta<$ 1.479) and endcap
+(1.635 $<\eta<$ 3.0) regions, and a preshower detector is located just
+before the endcap crystals. The preshower detectors help CMS to
+distinguish between single high-energy photons and the less
+interesting pairs of low-energy photons very close to each other, \ie
+coming from the decay of a $\pi^0$. 
+
+\subsubsection{The hadron calorimeter}
+The HCAL detector is a hermetic sampling calorimeter which means it
+consists of alternative layers of ``absorber'' and ``scintillator''
+materials that measure a particle’s position, energy and arrival time.
+The quantity of light in a given position is summed up over several
+layers of tiles in depth, called a “tower”, thus this total amount of
+light is a measure of a particle’s energy.\\
+The HCAL is located both inside the solenoid, the main part, and
+outside it, the outer barrel (HO). 
+Inside the magnet coil, the barrel (HB) and endcap parts (HE) cover
+respectively the pseudorapidity
+ranges $\eta<$ 1.3 and 1.3 $<\eta<$ 3.
+The forward region of pseudorapidity is covered by the forward hadron
+calorimeter (HF) up to $\eta<$ 5. It is made up of iron radiators and
+quartz-fibre sensors and it measures both the electromagnetic and the hadronic shower. 
+The outer barrel, HO, ensures no energy leaks out the
+back of the HB undetected.
+
+\subsubsection{The muon system}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.98\textwidth]{Figures/c2/cms_quadrant_run_ii.pdf}
+
+\caption{
+~\cite{muonsystemPU}. }
+\label{fig:muonsystem}
+\end{figure} 
 
 
 
 \clearpage
-The central part of CMS is a solenoid magnet of 6 m internal diameter
-which is made of a cylindrical coil of superconducting fibres
-provinding a magnetic field of 3.8 T. 
+
 %-----------------------------------
 %	SECTION 2
 %-----------------------------------
-\subsection{The solenoid magnet} 
-\subsection{The charged-particle tracker} 
-\subsection{The electromagnetic calorimeter} 
-\subsection{The hadronic calorimeter} 
-\subsection{The muon detector} 
-\subsection{Triggering and data acquisition} 
+
+\subsubsection{Triggering and data acquisition} 
 \section{Event reconstruction}\label{sec:reconstruction}
 \subsection{Track reconstruction} 
 Electron reconstruction is based on the combination of tracker and
