@@ -241,7 +241,7 @@ in the following paragraphs.
 The central part of CMS is a solenoid magnet of 6 m internal diameter
 which is made of a cylindrical coil of superconducting fibres
 provinding a magnetic field of 3.8 T. 
-\subsubsection{The tracking system}\label{tracking}
+\subsubsection{The tracking system}\label{sec:tracking}
 The design of the CMS tracking system is optimized to
 effeciently and precisesly measure the trajectories of charged
 particles and to effectively reconstruct secondary vertices. This latter feature is of particular
@@ -332,15 +332,66 @@ quartz-fibre sensors and it measures both the electromagnetic and the hadronic s
 The outer barrel, HO, ensures no energy leaks out the
 back of the HB undetected.
 
-\subsubsection{The muon system}
+\subsubsection{The muon system}\label{sec:muonsystem}
+The muon system is constructed to detect muons and to measure their trajectories.\\ 
+It is composed by three different kind of gaseous particle
+detectors inserted in the steel yoke. There are the drift tubes
+modules, DTs, the cathode strip chambers, CSCs and the resistive plate
+chambers, RPCs.\\
+The four layers of DTs are located in the barrel and they cover up to
+$\eta<$ 1.2 pseudorapidity range in the detector. The four layers of
+CSCs are installed in the endcap covering the pseudorapidity range 0.9
+$<\eta<$ 2.4. Finally there are the RPCs positionated both in barrel
+and endcap parts up to $\eta<$ 1.6. The whole pseudorapidity range of
+the muon system allow to measure muons up to $\eta<$ 2.4.
+
+
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.98\textwidth]{Figures/c2/cms_quadrant_run_ii.pdf}
-
-\caption{
+\includegraphics[width=0.99\textwidth]{Figures/c2/cms_quadrant_run_ii.pdf}
+\caption{Geometric view of one quadrant of CMS. The grey areas are
+  tracker, ECAL and HCAL systems, previously explained; the colored
+  areas show the muon system and its subsystem. The drift tube, DTs,
+  modules are labelled MB (muon barrel) and the cathode strip
+  chambers, CSCs, are labelled ME (muon endcap). Resistive plate
+  chambers, RPCs, are labelled RB and RE and they are mounted in both the barrel and endcaps of CMS
 ~\cite{muonsystemPU}. }
 \label{fig:muonsystem}
 \end{figure} 
+
+\subsubsection{The CMS trigger system}\label{sec:trigger}
+
+At center of the CMS detector, proton-proton collisions occour every
+25 ns which means a frequency of 40 MHz. However not every collision is
+necessarly of potential interest for the CMS physics program and
+moreover there are technical limitations on the rate the collision data can be
+saved on disk to be analyzed offline. Thus a trigger is needed to be
+able to sort between potentially interesting events and the extent of
+inelastic scattering events.
+Since the reading and storing time of the collision data is larger
+than the collision frequency the viable solution is
+to store the informations in pipelines that hold and process data
+from several collision at the same time.
+To work without mixing particles from two different events, it is
+required detectors have very good time
+resolution and the signal from the millions of channels of different
+systems to be synchronized and integrate.
+
+The CMS trigger has a two-stage architecture. The first level, L1 is
+implemented in custom hardware and uses informations from the 
+all muon systems and the calorimeters to identify events applying a fast
+basic identification of measured particles. The first step reduces the
+event rate to $\sim$100 kHz.\\
+The events sorted by the L1 are further refined by the
+high-level trigger, HLT. It is a software farm that employes informations from all subdetectors to perform a
+refined event reconstruction reducing the rate down to a few kHz. The 
+events are then saved for offline analysis.
+The trigger selection is a irreversible process, what was not selected
+by it is lost and it can not be recovered~\cite{Khachatryan_2017}.
+
+A complete sequence of L1
+and HLT selection criteria, including any prescale, is re- ferred to
+as a trigger path.
 
 
 
@@ -350,7 +401,6 @@ back of the HB undetected.
 %	SECTION 2
 %-----------------------------------
 
-\subsubsection{Triggering and data acquisition} 
 \section{Event reconstruction}\label{sec:reconstruction}
 \subsection{Track reconstruction} 
 Electron reconstruction is based on the combination of tracker and
