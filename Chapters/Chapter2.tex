@@ -1,26 +1,25 @@
 % Chapter Template
-\chapter{!!NOT DONE!! The LHC and the CMS Experiment, !!NOT DONE!!} \label{Chapter2} 
+\chapter{!!NOT DONE!! The CMS experiment at the LHC !!NOT DONE!!} \label{Chapter2} 
 
 
-\section{Introduction}
-This thesis' chapter outlines the main characteristics of the Large
-Hadron Collider (LHC) and of the Compact Muon Solenoid (CMS)
-detector. 
-``An accelerator propels charged particles, such as protons or electrons, at high speeds, close to the speed of light. They are then smashed either onto a target or against other particles circulating in the opposite direction. By studying these collisions, physicists are able to probe the world of the infinitely small.
 
-When the particles are sufficiently energetic, a phenomenon that
-defies the imagination happens: the energy of the collision is
-transformed into matter in the form of new particles, the most massive
-of which existed in the early Universe. This phenomenon is described
-by Einstein’s famous equation E=mc2, according to which matter is a
-concentrated form of energy, and the two are interchangeable.
+This chapter outlines the main characteristics of the Large
+Hadron Collider (LHC) in Section~\ref{lhc} and of the Compact Muon Solenoid (CMS)
+detector in Section~\ref{cms}. In Section~\ref{sec:reconstruction}, it is
+given an explaination of the recontruction alghoritm, called
+\emph{Particle flow}, and reconstruction performances are
+discussed. The main focus of Sections~\ref{cms}
+and~\ref{sec:reconstruction} will be on lepton (electrons and muons) identification and
+reconstruction in consideration of the multilepton final states which are
+discussed in Chapter~\ref{Chapter5} and~\ref{Chapter6} and thus are
+central to this dissertation.
 
-The Large Hadron Collider is the most powerful accelerator in the world. It boosts particles, such as protons, which form all the matter we know. Accelerated to a speed close to that of light, they collide with other protons. These collisions produce massive particles, such as the Higgs boson or the top quark. By measuring their properties, scientists increase our understanding of matter and of the origins of the Universe. These massive particles only last in the blink of an eye, and cannot be observed directly. Almost immediately they transform (or decay) into lighter particles, which in turn also decay. The particles emerging from the successive links in this decay chain are identified in the layers of the detector.''
+
 
 %----------------------------------------------------------------------------------------
 %	SECTION 1
 %----------------------------------------------------------------------------------------
-\section{The Large Hadron Collider}
+\section{The Large Hadron Collider}\label{lhc}
 
 The LHC~\cite{Brning2004LHCDR} is a circular particle accelerator
 located at the CERN laboratories in Geneva operating since 10
@@ -148,7 +147,7 @@ bunch crossing.
 %-----------------------------------
 %	SECTION 2
 %-----------------------------------
-\section{The Compact Muon Solenoid}
+\section{The Compact Muon Solenoid}\label{cms}
 
 The Compact Muon Solenoid (CMS) detector is located at one of the four
 collision points along the LHC ring, precisely at LHC P5 in Cessy in
@@ -205,7 +204,7 @@ are defined: the transverse momentum, $p_T$ and the transverse energy,
 $E_T$.
 
 
-\subsection{CMS detector} 
+\subsection{CMS detector}\label{sec:cmsdetector}
 The schematic representation of the CMS detector and its parts is
 shown in Figure~\ref{fig:detector}.
 \begin{figure}[h]
@@ -347,7 +346,7 @@ the muon system allow to measure muons up to $\eta<$ 2.4.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.99\textwidth]{Figures/c2/cms_quadrant_run_ii.pdf}
+\includegraphics[width=0.98\textwidth]{Figures/c2/cms_quadrant_run_ii.pdf}
 \caption{Geometric view of one quadrant of CMS. The grey areas are
   tracker, ECAL and HCAL systems, previously explained; the colored
   areas show the muon system and its subsystem. The drift tube, DTs,
@@ -358,7 +357,7 @@ the muon system allow to measure muons up to $\eta<$ 2.4.
 \label{fig:muonsystem}
 \end{figure} 
 
-\subsubsection{The CMS trigger system}\label{sec:trigger}
+\subsubsection{The CMS trigger system}\label{sec:triggersystem}
 
 At center of the CMS detector, proton-proton collisions occour every
 25 ns which means a frequency of 40 MHz. However not every collision is
@@ -392,15 +391,148 @@ A complete sequence of L1
 and HLT selection criteria, including any prescale, is re- ferred to
 as a trigger path.
 
-
-
 \clearpage
-
 %-----------------------------------
 %	SECTION 2
 %-----------------------------------
 
 \section{Event reconstruction}\label{sec:reconstruction}
+
+With the term ``event recontruction'' is meant the identification of
+all final state particles which are produced in a proton-proton
+collision. Particles are classified according to their distinct
+signatures they present in 
+the CMS detector, as displayed in Figure~\ref{fig:cmsslice}. The
+combination of the informations from all the CMS sub-detectors provides the particle
+kinematic properties.
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.98\textwidth]{Figures/c2/CMSslice.png}\\
+\caption{Geometric view of a slice of the CMS detector showing its sub-detectors and how particles interact with them~\cite{Barney:2120661}.}
+\label{fig:cmsslice}
+\end{figure} 
+
+This chapter details the approach and the relevant steps of the CMS
+event reconstruction algorithms, paying particular attention to the
+aspects pertinent to this thesis (i.e. light leptons). The track and vertex reconstruction 
+is presented in Section~\ref{sec:trackvertex} and particle-flow
+algorithm is described in Section~\ref{sec:PF}. Identification and
+performances of muons and electrons are presented in
+Sections~\ref{sec:trackmuon} and~\ref{sec:trackele}.
+
+
+\subsection{Track and vertices reconstruction}\label{sec:trackvertex}
+
+Be able to precisely reconstruct interaction vertices and charged
+particle tracks is a crucial element for an accurate measurement of
+charged particle momenta and properties. Tracks, vertices and their
+successive combination constitute an important input for pileup
+mitigation (Section~\ref{lhc}) and for the
+identification displaced vertices from which particles from long-lived
+particle decay orginate.
+Lastly tracks and vertices are fundamental inputs to the particle-flow (PF) agorithm (Section~\ref{sec:PF}).\\
+The tracking algorithms are devised to
+increase the track-finding efficiency while keeping small the
+contamination of fake tracks, \ie tracks constructed from uncorrelated hits or
+including false hits.\\
+ 
+The tracks are reconstructed starting from the hits in the pixel and
+strip tracker. The hit reconstruction follows two steps: the first,
+indicated as local recontruction, is a clustering of signals in the
+tracker sensors. Thus 
+the first estimate of the
+position of the hit is determined based on the geometry of the single
+pixel or strip while taking into consideration the Lorentz drift due
+to the magnetic field (more detailed info about local reconstruction
+can be found here:~\cite{CMS:particleflow}). The second step is a more
+sophisticated reconstruction which uses the informations about the
+irradiation status of the pixel and strip sensors. \\
+The hit efficiency is measured to be above the 99.5\%\footnote{The hit
+  efficiency depends on the
+$d\mathcal{L}/dt$ and on the trigger rate, in particulars in
+the first layer of the pixel sub-detector where the occupancy is greater.} for both pixel
+and tracker hits~\cite{CMS:particleflow}. According to the size of the
+cluster and the angle of
+incidence of the particle, the final resolution in the
+hit position is measured to be in the range of 20 (10) and 50 $\mu$m
+for the pixel (strip) tracker~\cite{CMS:particleflow}.\\
+An additional inputs for the track reconstruction are the identification
+of the LHC beam spot position, \ie the LHC luminous region's
+3D profile, and the position of the collision
+vertices. 
+
+The tracking algorithm used by CMS is called Combinatorial Track Finder (CTF).
+To lower the combinatorial complexity, it is applied an iterative
+procedure in distinct successive iterations, each with moderate
+effiency and loosened selection requirements on the track quality with
+respect to the step before. The method of Kalman
+filter~\cite{BILLOIR1990219} is used for the track-finding
+algorithm. While taking into account the multiple Coulomb scattering on the
+direction of the track, the Kalman filter makes use of track seeds to extrapolate the track
+trajectory to the successive detector module. Thus at each layer, new
+additional consistent hits
+are integrated into the trajectory and the track parameters are
+calculated again. The procedure starts again and the new resulting
+trajectory is extrapolated to the subsequent layer. At the end, tracks
+which do not fullfil goodness-of-fit requirements are rejected. Tracks
+which are ``easy'' to reconstruct, e.g. from particle with large \pt
+(which means less evident curvature) and produced in proximity to the
+interaction point, are reconstructed first. Therefore hits associated
+to these tracks are taken out making the subsequent iterations less
+complex. The reconstruction efficiency for tracks with \pt $>$ 1\GeV  is measured to be larger
+than 99\% for isolated muons for $|\eta| < $ 2.5 and between 80 and
+99\% for electrons and pions~\cite{CMS:particleflow}. The track \pt
+resolution depends on the \pt and $\eta$ of the tracks, and it is
+lower than 1\% for muons with \pt $\in [1,10]$\GeV~\cite{CMS:particleflow}.
+
+Vertices are reconstructed using the high-quality tracks which are
+compatible with originating in the beam spot. They are then clustered
+based on their coordinates along the \emph{z}-axis. An adaptive vertex
+fitting~\cite{Waltenberger_2007} developed as an iterative re-weighted Kalman filter
+is used to estimate the coordinates of the vertices. To each track it is assigned a
+weight between 0 and 1 according to the probability for that track to
+belong to a specific vertex. Thus vertex weights are appointed to each
+vertex as the sum of the weights of all the
+associated tracks, and the vertices with weights inferior predefined
+thresholds are rejected. The reconstruction efficiency depends on the
+number of tracks associated to the vertex and it is estimated to
+be close to 100\% for the cases with more than two tracks and around
+98\% for vertices with two tracks~\cite{CMS:particleflow}. The
+resolutions varies between 10 and 100 $\mu$m~\cite{CMS:particleflow}.\\
+The primary vertex (PV) is identified as the vertex with the largest $p^2_T$ sum for
+physics-objects associated to it. The other vertices are assigned as pileup
+vertices.
+
+\subsection{The particle-flow algorithm}\label{sec:PF}
+\subsection{Jet reconstruction and indetification of b jets}\label{sec:pfjet}
+\subsubsection{Tracking for electrons}\label{sec:trackele}
+\subsubsection{Tracking for muons}\label{sec:trackmuon}
+
+
+
+
+~\cite{CMS:particleflow}
+~\cite{Collaboration_2014_tracking}
+~\cite{Collaboration_2010_alligment}
+
+
+
+
+
+
+A brief overview of the reconstruction of PF elements" from the signals in individual subdetectors
+is given in sections 6.1.1 and 6.1.2. The combination of the different
+PF elements into a set of reconstructed particles is discussed in
+Section 6.1.3.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.88\textwidth]{Figures/c2/pfscheme}\\
+\caption{Geometric view of a slice of the CMS detector showing its sub-detectors and how particles interact with them~\cite{Petrucciani:2650974}.}
+\label{fig:pfscheme}
+\end{figure} 
+
+
 \subsection{Track reconstruction} 
 Electron reconstruction is based on the combination of tracker and
 ECAL information in a Gaussian Sum Filter (GSF)
