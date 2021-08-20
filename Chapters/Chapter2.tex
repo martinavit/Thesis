@@ -6,7 +6,7 @@
 This chapter outlines the main characteristics of the Large
 Hadron Collider (LHC) in Section~\ref{lhc} and of the Compact Muon Solenoid (CMS)
 detector in Section~\ref{cms}. In Section~\ref{sec:reconstruction}, it is
-given an explaination of the recontruction alghoritm, called
+given an explanation of the reconstruction algorithm, called
 \emph{Particle flow}, and reconstruction performances are
 discussed. The main focus of Sections~\ref{cms}
 and~\ref{sec:reconstruction} will be on lepton (electrons and muons) identification and
@@ -139,8 +139,8 @@ expands the physics reach of CMS and ATLAS because of
 the higher probability of an episode of a rare collision; however
 most of the PU interactions pollute the information of the
 event being mostly soft and less interesting to look for
-new physics models. Thus it is challening for the detector and the for
-the reconstruction algoritms to be able 
+new physics models. Thus it is challenging for the detector and the for
+the reconstruction algorithms to be able 
 to disentangle and reconstruct each single pp collision per single
 bunch crossing.
 
@@ -175,7 +175,7 @@ locating its center in
   \caption{A scheme of the coordinates system used by CMS~\cite{coordinate_cms}.}
 \label{fig:coordinates}
 \end{wrapfigure}
- the nominal interaction point,the
+ the nominal interaction point, the
 \emph{y}-axis is vertical pointing upwards, the \emph{x}-axis is
 radial pointing inward towards the center of the LHC ring and the
 \emph{z}-axis coincides with the direction of the beam
@@ -192,7 +192,7 @@ y \: = \: \frac{1}{2} \ln \frac{E + p_z}{E - p_z} \;\; \approx \;\;
 \eta \: = \: \frac{1}{2} \ln \frac{|\overrightarrow{p}| +
   p_z}{|\overrightarrow{p}| - p_z} \: = \: -\ln \tan (\frac{\theta}{2})
 \end{equation}
-The approzimation of the rapity with the pseudorapity is possible for
+The approximation of the rapidity with the pseudorapity is possible for
 relativistic particles with $p_{T} \gg m$. The rapidity is used to
 measured the angular distance between particles, $\Delta R =
 \sqrt{\Delta y ^2 + \Delta \phi ^2}$ which is Lorentz invariant under
@@ -216,19 +216,19 @@ shown in Figure~\ref{fig:detector}.
 \end{figure} 
 
 With CMS detector is possible to measure photons, electrons, muons and hadrons (neutral and charged). 
-To be able to acchieve such results, CMS is made of a system of subdetectors each of which contributes with
+To be able to achieve such results, CMS is made of a system of sub-detectors each of which contributes with
 measurements of specific properties and quantities of different 
 particles; the overlap and combination of all the
-informations from the subdetectors allow to identify and measure the
+informations from the sub-detectors allow to identify and measure the
 properties of the particles produced during the collision~\cite{Sirunyan_2017}. Beginning
 with the region at the immediate proximity to the interaction point, a
 particle meets first the tracker where its trajectory, if charged, is
 measured. This measure is possible thanks to the presence of the
 magnetic field, created by the solenoid, which bends charge particles
-and thus tracks reconstruction provides insigth on electric charge and
+and thus tracks reconstruction provides insight on electric charge and
 momenta of the particle itself. Subsequently there are the
 electromagnetic (ECAL) and hadronic (HCAL) calorimeters where
-electrons/photons and hadrons are repectivily absorbed and their
+electrons/photons and hadrons are receptively absorbed and their
 energies measured. Finally the muons, getting through the
 calorimeters, enter into the muon chambers where complete trajectory
 is then measured. 
@@ -236,15 +236,15 @@ is then measured.
 The subsystems of the CMS experiment are listed and briefly described
 in the following paragraphs.
 
-\subsubsection{The superonducting solenoid}
+\subsubsection{The superconducting solenoid}
 The central part of CMS is a solenoid magnet of 6 m internal diameter
-which is made of a cylindrical coil of superconducting fibres
-provinding a magnetic field of 3.8 T. 
+which is made of a cylindrical coil of superconducting fibers
+providing a magnetic field of 3.8 T. 
 \subsubsection{The tracking system}\label{sec:tracking}
 The design of the CMS tracking system is optimized to
-effeciently and precisesly measure the trajectories of charged
+efficiently and precisely measure the trajectories of charged
 particles and to effectively reconstruct secondary vertices. This latter feature is of particular
-importance in the context of displeced vertices and lepton searches as
+importance in the context of displaced vertices and lepton searches as
 described in Chapter~\ref{Chapter6}.
 
 \begin{figure}[h]
@@ -263,7 +263,7 @@ sketch of one quarter of the current CMS tracking system in
 \label{fig:tracker}
 \end{figure} 
 Additionally the tracking system has to feature high granularity and
-fast response in order to correclty associate each reconstructed track
+fast response in order to correctly associate each reconstructed track
 to the respective bunch crossing and the primary interaction vertex.
 
 The CMS tracker consists of a pixel detector (pixel Tracker) and a
@@ -340,7 +340,7 @@ chambers, RPCs.\\
 The four layers of DTs are located in the barrel and they cover up to
 $\eta<$ 1.2 pseudorapidity range in the detector. The four layers of
 CSCs are installed in the endcap covering the pseudorapidity range 0.9
-$<\eta<$ 2.4. Finally there are the RPCs positionated both in barrel
+$<\eta<$ 2.4. Finally there are the RPCs positioned both in barrel
 and endcap parts up to $\eta<$ 1.6. The whole pseudorapidity range of
 the muon system allow to measure muons up to $\eta<$ 2.4.
 
@@ -359,9 +359,9 @@ the muon system allow to measure muons up to $\eta<$ 2.4.
 
 \subsubsection{The CMS trigger system}\label{sec:triggersystem}
 
-At center of the CMS detector, proton-proton collisions occour every
+At center of the CMS detector, proton-proton collisions occur every
 25 ns which means a frequency of 40 MHz. However not every collision is
-necessarly of potential interest for the CMS physics program and
+necessarily of potential interest for the CMS physics program and
 moreover there are technical limitations on the rate the collision data can be
 saved on disk to be analyzed offline. Thus a trigger is needed to be
 able to sort between potentially interesting events and the extent of
@@ -381,14 +381,14 @@ all muon systems and the calorimeters to identify events applying a fast
 basic identification of measured particles. The first step reduces the
 event rate to $\sim$100 kHz.\\
 The events sorted by the L1 are further refined by the
-high-level trigger, HLT. It is a software farm that employes informations from all subdetectors to perform a
+high-level trigger, HLT. It is a software farm that employs informations from all sub-detectors to perform a
 refined event reconstruction reducing the rate down to a few kHz. The 
 events are then saved for offline analysis.
 The trigger selection is a irreversible process, what was not selected
 by it is lost and it can not be recovered~\cite{Khachatryan_2017}.
 
 A complete sequence of L1
-and HLT selection criteria, including any prescale, is re- ferred to
+and HLT selection criteria, including any prescale, is referred to
 as a trigger path.
 
 \clearpage
@@ -397,20 +397,61 @@ as a trigger path.
 %-----------------------------------
 
 \section{Event reconstruction}\label{sec:reconstruction}
-
-With the term ``event recontruction'' is meant the identification of
+With the term ``event reconstruction'' is meant the identification of
 all final state particles which are produced in a proton-proton
 collision. Particles are classified according to their distinct
 signatures they present in 
-the CMS detector, as displayed in Figure~\ref{fig:cmsslice}. The
-combination of the informations from all the CMS sub-detectors provides the particle
-kinematic properties.
+the CMS detector, as displayed in Figure~\ref{fig:cmsslice}.
+
+CMS detector is built with the idea of cylindrical detection layers
+which are wrapped around the beam axis. After the collision, starting
+from the point where the interaction occured, particles enter in the
+tracker. In the tracker charged-particle trajectories, \emph{tracks}
+and origins, \emph{vertices} are reconstructed using the information from
+electronic signals, \emph{hits}, in the detection layers. Subsequently
+electrons and photons are absorbed in the ECAL where they stop, and
+charged and neutral hadrons could start a hadronic shower in the ECAL
+already and being fully absorbed in the HCAL. Muons and neutrinos cross
+the full detector with little or zero interactions; the muons reaching the muon-system produce
+signal hits and they trajectory is finally defined. This simple
+event-view is graphically displayed in Figure~\ref{fig:cmsslice}.
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.98\textwidth]{Figures/c2/CMSslice.png}\\
-\caption{Geometric view of a slice of the CMS detector showing its sub-detectors and how particles interact with them~\cite{Barney:2120661}.}
+\includegraphics[width=0.78\textwidth]{Figures/c2/CMSslice.png}\\
+\caption{Geometric view of a transverse slice of the CMS detector showing its sub-detectors and how particles interact with them~\cite{Barney:2120661}.}
 \label{fig:cmsslice}
 \end{figure} 
+
+This approach has led to the practice of reconstructing \emph{physics
+objects} in the first place using the signals collected by a specific
+detector in the following way:
+\begin{itemize}
+\setlength\itemsep{-0.2em}
+\item \emph{jets} (hadron and photons): the energy can be measured by ECAL
+  and HCAL without any try to divide individual jet particles. Jet
+  reconstruction can happen without the input from the tracker. The
+  same idea applies to the \ptmiss;
+\item \emph{isolated photons and electrons}: the reconstruction interests the
+  ECAL;
+\item \emph{jet tagging}: it is possible tag jets with origin from hadronic $\tau$ decay and
+  from b quark hadronization. The tagging makes use of the properties of
+  the related charged particle tracks, hence mostly concerns the
+  tracker;
+\item \emph{muons}: the identification is primarily based on the information
+  from the muon-system.
+\end{itemize}
+
+An additional improvement on the event description is obtained by
+correlating (\emph{linking}) the basic \emph{elements} (\ie tracks and
+clusters) from all the sub-systems to classify each final-state
+particle and then by combining the measurements to be able to
+reconstruct the physics-object properties like mass and momentum. This
+integrated approach is called \emph{particle flow} (PF)
+\emph{reconstrution}~\cite{CMS:particleflow} and it is going to be
+explained later in Section~\ref{sec:PF}.
+
+
+
 
 This chapter details the approach and the relevant steps of the CMS
 event reconstruction algorithms, paying particular attention to the
@@ -429,8 +470,8 @@ charged particle momenta and properties. Tracks, vertices and their
 successive combination constitute an important input for pileup
 mitigation (Section~\ref{lhc}) and for the
 identification displaced vertices from which particles from long-lived
-particle decay orginate.
-Lastly tracks and vertices are fundamental inputs to the particle-flow (PF) agorithm (Section~\ref{sec:PF}).\\
+particle decay originate.
+Lastly tracks and vertices are fundamental inputs to the particle-flow (PF) algorithm (Section~\ref{sec:PF}).\\
 The tracking algorithms are devised to
 increase the track-finding efficiency while keeping small the
 contamination of fake tracks, \ie tracks constructed from uncorrelated hits or
@@ -438,7 +479,7 @@ including false hits.\\
  
 The tracks are reconstructed starting from the hits in the pixel and
 strip tracker. The hit reconstruction follows two steps: the first,
-indicated as local recontruction, is a clustering of signals in the
+indicated as local reconstruction, is a clustering of signals in the
 tracker sensors. Thus 
 the first estimate of the
 position of the hit is determined based on the geometry of the single
@@ -461,25 +502,35 @@ of the LHC beam spot position, \ie the LHC luminous region's
 3D profile, and the position of the collision
 vertices. 
 
-The tracking algorithm used by CMS is called Combinatorial Track Finder (CTF).
+The tracking algorithm used by CMS is called Combinatorial Track Finder (CTF)~\cite{Collaboration_2014_tracking}.
 To lower the combinatorial complexity, it is applied an iterative
 procedure in distinct successive iterations, each with moderate
-effiency and loosened selection requirements on the track quality with
+efficiency and loosened selection requirements on the track quality with
 respect to the step before. The method of Kalman
 filter~\cite{BILLOIR1990219} is used for the track-finding
 algorithm. While taking into account the multiple Coulomb scattering on the
-direction of the track, the Kalman filter makes use of track seeds to extrapolate the track
+direction of the track, the Kalman filter makes use of track
+seeds\footnote{``\emph{The seeds define the starting trajectory parameters and associated uncertainties of potential
+tracks. In the quasi-uniform magnetic field of the tracker, charged particles follow helical paths
+and therefore five parameters are needed to define a trajectory. Extraction of these five parameters
+requires either three 3-D hits, or two 3-D hits and a constraint on the origin of the trajectory
+based on the assumption that the particle originated near the beam
+spot}''~\cite{Collaboration_2014_tracking}.} 
+to extrapolate the track
 trajectory to the successive detector module. Thus at each layer, new
 additional consistent hits
 are integrated into the trajectory and the track parameters are
 calculated again. The procedure starts again and the new resulting
 trajectory is extrapolated to the subsequent layer. At the end, tracks
-which do not fullfil goodness-of-fit requirements are rejected. Tracks
+which do not fulfill goodness-of-fit requirements are rejected. Tracks
 which are ``easy'' to reconstruct, e.g. from particle with large \pt
 (which means less evident curvature) and produced in proximity to the
 interaction point, are reconstructed first. Therefore hits associated
 to these tracks are taken out making the subsequent iterations less
-complex. The reconstruction efficiency for tracks with \pt $>$ 1\GeV  is measured to be larger
+complex. To guarantee high efficiency, track-finding starts with
+trajectory seeds which are built in the innermost region of the
+tracker. 
+The reconstruction efficiency for tracks with \pt $>$ 1\GeV  is measured to be larger
 than 99\% for isolated muons for $|\eta| < $ 2.5 and between 80 and
 99\% for electrons and pions~\cite{CMS:particleflow}. The track \pt
 resolution depends on the \pt and $\eta$ of the tracks, and it is
@@ -504,9 +555,145 @@ physics-objects associated to it. The other vertices are assigned as pileup
 vertices.
 
 \subsection{The particle-flow algorithm}\label{sec:PF}
-\subsection{Jet reconstruction and indetification of b jets}\label{sec:pfjet}
+
+The PF algorithm~\cite{CMS:particleflow} is devised to cater a global event
+description by linking and combining information from CMS
+sub-detectors. 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.58\textwidth]{Figures/c2/pfscheme}\\
+\caption{The output of the PF is a list of candidates like
+  electrons, muons, photons and hadrons. The PF algorithm links
+  information from all the sub-system to give a global description of
+  the collision event~\cite{Petrucciani:2650974}.}
+\label{fig:pfscheme}
+\end{figure} 
+
+The input of the PF are the \emph{elements} tracks, vertices, tracks
+reconstructed from the muon system and
+calorimeter clusters. The output of the PF is a list of candidates
+like electrons, muons, photons and charged and neutral hadrons (see
+Figure~\ref{fig:pfscheme}). The indentification of leptons, the
+measurement of the \ptmiss and the categorization of the pileup tracks
+are improved by the usage of the PF algorithm. When linking
+information from tracker and calorimeters signals, noticeable gain is seen
+in the angular momentum resolution of jets~\cite{CMS:particleflow}.
+
+\subsubsection{Jet clustering and reconstruction}\label{sec:jetclustering}
+Jets reconstruction is performed with a recombination algorithm which
+is known as anti-$k_T$ algorithm (with distance parameter of cone size
+of $\Delta R = 0.4$). The detailed description of the anti-$k_T$ algorithm is not
+discussed in this work but all the information can be found in 
+references~\cite{Cacciari_2008,Cacciari_2012}.
+
+In order to reduce the number of jets rising from misreconstruction or
+detector noise, identification requirements are applied depending on the single elements of the
+jets meaning the number of particles and the amount of energy of the
+jet which comes from different type of PF candidates~\cite{CMS-PAS-JME-16-003}.
+The jet energy is set as the vectorial sum of the momenta of the
+particles constituting the jet. In order to alleviate the effect of
+pileup contribution in the jet reconstruction, charge hadrons
+associated to pileup vertices do not enter in the jet clustering. This
+scheme is known as ``charge hadron
+subtraction''~\cite{CMS-PAS-JME-14-001} and removes a
+considerable fraction of charged pileup particles.  
+Subsequently it is applied a correction to account for the
+contribution from neutral particles from pileup; the subtraction is
+based on the average transverse momentum, \pt, per unit area in the
+pileup jets~\cite{CACCIARI2008119, Cacciari_2008_area,
+  Sirunyan:2020foa}.
+
+Corrections on the jet energy are applied in order to correct for the
+remaining pileup energy contributions and for any discrepancies
+between jet properties in measured data and in simulated events. Those
+correction are obtained from the ratio between the \pt of a
+reconstructed jet and its corresponding generated jet and they are
+measured as function of \pt and $\eta$ and applied to data and
+simulation~\cite{Khachatryan_2017}. The jet \pt resolution is
+derived both in data and MC and the resolution in the simulation is
+fixed and smeared to match the one in the
+data~\cite{Khachatryan_2017}.
+
+\subsubsection{Tagging of jets originating from b
+  quarks}\label{sec:tagging}
+The identification of jets which originate from b quarks, called
+b jets, can be achieved using
+specific properties and features of heavy
+quarks inside the jet. This technique, usually called b tagging, is
+extremely important to discriminate between signal and background as
+it will be analyzed and explained in Chapters~\ref{Chapter5}
+and~\ref{Chapter6}.
+\begin{figure}{h}
+  \begin{center}
+    \includegraphics[clip,trim=0.3cm 0.5cm 0.3cm 0.3cm, width=0.50\textwidth]{Figures/c2/tagging}
+  \end{center}
+  \caption{Schematic view of a b jet with a SV from the decay of a b hadron resulting in tracks which are displaced with respect to the PV, and hence with a large impact parameter (IP) value~\cite{Sirunyan_2018_tagging}.}
+\label{fig:btagging}
+\end{figure}
+
+The b jets contain b hadron that have a lifetime of the order of 1.5
+ps and a mass of about
+5\GeV. Thus the b hadrons can propagate from
+the PV for a few mm up to a few cm before decaying. This results in
+a secondary vertices (SVs) which contain displaced tracks, see
+Figure~\ref{fig:btagging}. With respect to light jets (coming from
+u, d, s quarks or gluons) b jets have larger mass and harder hadronization which
+means that the decay products have larger momentum and larger number
+of tracks related with the jet. These signatures are exploited by the
+algorithms allowing to construct variables to separate b jets from
+light jets. The results of the b tagging are discriminator values for
+jets, see Figure~\ref{fig:taggingperformance}; large discriminator values coincide with higher probability for
+the jet to be a jet originating from b hadrons~\cite{CMS-DP-2017-013,
+  csv}.\\
+The b tagging performances are checked in terms of the b jet
+efficiency (which expresses the fraction of all b jets truly coming from b hadron
+that are identified as b jets) and of misidentification probability
+(which expresses the fraction of light jets or jets from c hadrons
+which are identified as b jets), see
+Figure~\ref{fig:taggingperformance}. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.49\textwidth]{Figures/c2/CMS-BTV-16-002_Figure_013-a.pdf}
+\includegraphics[width=.49\textwidth]{Figures/c2/PT30GeV.pdf}
+\caption{On the left, ``performance of the DeepCSV and DeepFlavour b
+  jet identification algorithms demonstrating the probability for
+  non-b jets to be misidentified as b jet, as a function of the
+  efficiency to correctly identify b jets. For comparison, the performance of DeepCSV
+  with the 2016 detector (Phase 0) are also shown.''~\cite{csv}. On
+  the right, ``Distribution of the DeepCSV P(b) discriminator values
+  for jets of different flavours in \ttbar events. Jets without a
+  selected track and without a secondary vertex are assigned a
+  discriminator value of 0. The distributions are normalized to unit area''~\cite{csv}.}
+\label{fig:taggingperformance}
+\end{figure}
+
+Here the two algorithms are known as DeepCSV~\cite{csv} and 
+DeepJet~\cite{deep}. The first is the \emph{deep combined secondary vertex}, DeepCSV,
+algorithm based on a fully-connected neural networks with a fixed set
+of input variables for preselected tracks and preselected SVs and
+kinematic features of the jets. The DeepJet~\cite{deep} is a improved
+version of the DeepCSV. It is based on a deep neural network
+architecture and it does not require any prior preselections and uses
+a bigger number of SVs, tracks and neutral hadrons.
+Looking at the right plot of Figure~\ref{fig:taggingperformance},
+fixing the misidentification probability the DeepCSV has lower b jet
+efficiency than DeepJet algorithm.\\
+The efficiencies are calculated both in data and MC and the
+corrections for the discrepancies observed between data and MC are
+applied to simulated events as per-jet scale factors~\cite{csv}.
+
+
+
+
+
+
 \subsubsection{Tracking for electrons}\label{sec:trackele}
 \subsubsection{Tracking for muons}\label{sec:trackmuon}
+
+
+\subsection{Jet reconstruction and indetification of b jets}\label{sec:pfjet}
+
 
 
 
@@ -520,17 +707,12 @@ vertices.
 
 
 
-A brief overview of the reconstruction of PF elements" from the signals in individual subdetectors
+A brief overview of the reconstruction of PF elements" from the signals in individual sub-detectors
 is given in sections 6.1.1 and 6.1.2. The combination of the different
 PF elements into a set of reconstructed particles is discussed in
 Section 6.1.3.
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.88\textwidth]{Figures/c2/pfscheme}\\
-\caption{Geometric view of a slice of the CMS detector showing its sub-detectors and how particles interact with them~\cite{Petrucciani:2650974}.}
-\label{fig:pfscheme}
-\end{figure} 
+
 
 
 \subsection{Track reconstruction} 
