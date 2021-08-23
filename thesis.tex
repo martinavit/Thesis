@@ -58,7 +58,8 @@ headsepline, % Uncomment to get a line under the header
 \usepackage{xspace} 
 \def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
 
-
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
 %\usepackage[backend=biber,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
 %\bibliographystyle{unsrt}
 %\usepackage[style=phys, articletitle=false,biblabel=brackets, chaptertitle=false,pageranges=false]{biblatex}
@@ -94,6 +95,9 @@ headsepline, % Uncomment to get a line under the header
   headsepline=.5pt:\textwidth+2.5\ratio,% extended by bindigoffset
   olines,
 }
+\usepackage{titlesec}
+\titleformat*{\section}{\LARGE\bfseries}
+
 % \ModifyLayer[addhoffset=\ifodd\value{page}\else -\fi 1.5\ratio]{scrheadings.foot.above.line}
 
 %\AddToLayerPageStyleOptions{scrheadings}{%

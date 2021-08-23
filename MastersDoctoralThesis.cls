@@ -25,6 +25,8 @@
 %	CLASS DEFINITION AND PARAMETERS
 %----------------------------------------------------------------------------------------
 
+
+
 \NeedsTeXFormat{LaTeX2e}[1996/12/01]
 \newcommand{\classname}{MastersDoctoralThesis}
 \ProvidesClass{\classname}[2017/08/27 v1.6 LaTeXTemplates.com]
@@ -642,6 +644,9 @@ KOMA-script documentation for details.}]{fancyhdr}
 \newcommand{\green}{\textcolor[rgb]{0.00,0.59,0.00}}
 \definecolor{ugblue}{rgb}{0.08, 0.38, 0.74}
 \definecolor{linkcolor_marty}{rgb}{0.00,0.3, 0.00}
+\newcommand{\dani}{Courtesy of D. Trocino.}
+\newcommand{\willem}{Courtesy of W. Verbeke.}
+
 
 
 %----------------------------------------------------------------------------------------

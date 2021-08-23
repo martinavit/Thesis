@@ -851,9 +851,100 @@ On the right, Medium ID efficiencies as function of $\eta$. The
 \end{figure}
 
 
-\subsubsection{Displaced muon reconstruction.}\label{sec:c2muondisplaced}
-~\cite{CMS-DP-2015-015}
+\subsubsection{Displaced muons
+  reconstruction.}\label{sec:c2muondisplaced}
+The search for Heavy Neutral leptons presented in
+Chapter~\ref{Chapter6} includes the long-lived neutrinos scenario with
+the presence  in the final
+state of displaced leptons, muons and electrons,. Although CMS detector was initially designed and optimized for prompt
+object reconstruction and identification, it appears to give
+promising performances even for displaced object
+reconstruction. Several studies and improvements on displaced muon
+reconstruction have been recently
+delivered, helping in the challenging effort of including long-lived
+exotic searches in the CMS results (few
+examples:~\cite{cmscollaboration2021search, Sirunyan_2019ll,
+  Sirunyan_2019ll2, Sirunyan_2020ll, Sirunyan_2021ll,CMS:2021tkn}).
 
+\begin{wrapfigure}{l}{0.5\textwidth}
+\includegraphics[width=.40\textwidth]{Figures/c6/object/tracking_M-4_V-0p00290516780927_rho.png}
+  \caption{Efficiency of reconstructed inner tracker tracks with
+    respect to generated muons. A HNL scenario with
+    $(\mhnl,\mixparm)=(4\GeV,8.44\times10^{-6})$ is used as
+    benchmark. \dani}
+  \label{fig:c2tracking}
+\end{wrapfigure}
+The analysis presented in Chapter~\ref{Chapter6} makes use of the
+standard reconstruction which
+ is explained in
+Section~\ref{sec:c2muonreco}. 
+Fig.~\ref{fig:c2tracking} shows the efficiency of
+reconstructing a muon track in the inner tracker. The efficiency is
+calculated as pure reconstruction efficiency with respect to the
+generated tracks. The variable which is used to display the reconstruction
+performance is the 2D distance between the PV and the secondary vertex
+which is one of the best proxies to estimate the point of orgin of the
+displaced muon. The efficiency worsens when trying to reconstruct
+muons which have created towards the external layers of the inner
+tracker. Figure.~\ref{fig:c2tracking2} shows, on the left, the sequential
+efficiencies of the plain PF Muon requirement, Loose ID, and
+valid tracker hit fraction requirement (refer to Section~\ref{sec:c2muonselection}), with respect to the reconstructed
+inner-tracker track. It is clear that the efficiency of
+this last selection falls rapidly with increasing of the PV-SV
+distance. 
+
+\begin{figure}[h]
+\centering
+  \includegraphics[width=0.40\textwidth]{Figures/c6/object/loose_validFraction_M-4_V-0p00290516780927_rho.png}
+  \includegraphics[width=0.40\textwidth]{Figures/c6/object/goodTrack_goodGlobal_M-4_V-0p00290516780927_rho.png}
+  \caption{On the left, the sequential
+efficiencies of the plain PF Muon requirement, Loose ID, and
+valid tracker hit fraction requirement is shown. On the right, the efficiency of the tracker-muon only and
+    global-muon only requirements is compared with their logical OR
+    efficiency (using already the custumized Medium ID). A HNL scenario with
+    $(\mhnl,\mixparm)=(4\GeV,8.44\times10^{-6})$ is used as
+    benchmark. \dani}
+  \label{fig:c2tracking2}
+\end{figure}
+
+The valid-hit fraction request is thus removed from the set of
+requirements of the Medium ID (refer to Section~\ref{sec:c2muonselection}), and is not applied in the following
+efficiencies. To mitigate the depreciation of the
+total efficiency for muons not emerging from the primary vertex, the
+Medium ID is then modified in the context of the analysis presented in
+Chapter~\ref{Chapter6}.
+\begin{wrapfigure}{r}{0.5\textwidth}
+\includegraphics[width=.40\textwidth]{Figures/c6/object/globalTrack_cuts_M-4_V-0p00290516780927_rho.png}
+  \caption{Efficiency of different Medium-ID selections with respect to tracks for displaced
+muons. A HNL scenario with
+    $(\mhnl,\mixparm)=(4\GeV,8.44\times10^{-6})$ is used as
+    benchmark. \dani}
+  \label{fig:c2tracking3}
+\end{wrapfigure}
+In Figure.~\ref{fig:c2tracking2}, on the
+right, it is shown the comparison between the efficiencies of the
+tracker-muon only and global-muon only and their logical OR (\ie, the full
+modified Medium ID). The main contribution to the efficiency comes
+from the tracker-muon selection, while the addition of the global-muon
+selection only increases the overall efficiency by few percent.\\
+Finally, Fig.~\ref{fig:c2tracking3} compares the efficiency of
+the full custumized Medium ID with the efficiencies obtained by removing
+individual requirements from the global-muon definition. None of these variables
+appears to hurt the overall efficiency significantly---the larger
+effect is observed for the segment-compatibility cut of 0.303, and it
+amounts to 1--2\%. Additionally, none of the cuts on the global-track
+variables depends on the displacement.
+
+
+
+
+
+
+
+
+
+~\cite{CMS-DP-2015-015}
+\clearpage
 \subsection{Tracking for electrons}\label{sec:trackele}
 
 
