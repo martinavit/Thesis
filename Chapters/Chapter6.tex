@@ -415,58 +415,10 @@ and must have \pt greater than 5\GeV.
 
 In addition, ``loose \displ muons'' or ``muon FOs'' are selected
 with identification criteria looser than those used for tight
-\displ muons, and are employed to determine the muon FR.
-
-\textbf{Modified Medium ID for \displ muons}.
-Figure~\ref{fig:modMedium_common}
-show the efficiency of the different selections included in the
-standard recommended Medium ID for all \displ muons from HNL
-decays (\ltwo and \lthree), for two typical signal scenarios
-($\mhnl=4$\GeV, $\mixparm=8.44\times10^{-6}$ and
-$\mhnl=8$\GeV, $\mixparm=3\times10^{-7}$),
-as a function of the transverse position of the dilepton vertex
-\Deltwod:
-
-$$\Deltwod = \sqrt{(x_{SV}-x_{PV})^{2} + (y_{SV}-y_{PV})^{2}}$$
-
-In particular, Fig.~\ref{fig:modMedium_common}(A) shows the efficiency of
-reconstructing a muon track in the inner tracker, while 
-Fig.~\ref{fig:modMedium_common}(B) shows the sequential
-efficiencies of the plain PF-Muon requirement, Loose ID selection, and
-valid tracker hit fraction cut, with respect to the reconstructed
-inner-tracker track. It is clear that the efficiency of
-this last requirement falls rapidly with increasing HNL
-displacement. The valid-hit fraction cut is thus removed from the
-\displ-muon Medium ID, and is not applied in the following
-efficiencies.
-Figure~\ref{fig:modMedium_common}(C) compares the efficiency of the
-tracker-muon and global-muon requirements (as described in
-Table~\ref{tab:muonSelection}) and their logical OR (\ie, the full
-modified Medium ID). The main contribution to the efficiency comes
-from the tracker-muon selection, while the addition of the global-muon
-selection only increases the overall efficiency by few percent.
-Finally, Fig.~\ref{fig:modMedium_common}(D) compares the efficiency of
-the full modified Medium ID with the efficiencies obtained by removing
-individual cuts from the global-muon definition. None of these cuts
-appears to hurt the overall efficiency significantly---the larger
-effect is observed for the segment-compatibility cut of 0.303, and it
-amounts to 1--2\%. Additionally, none of the cuts on the global-track
-variables depends on the displacement.
-\begin{figure}[h]
-\noindent
-\makebox[\textwidth]{  \subfloat[]{\includegraphics[width=.275\textwidth]{Figures/c6/object/tracking_M-4_V-0p00290516780927_rho.png}
-  \includegraphics[clip,trim=2cm 0 0 0,width=0.25\textwidth]{Figures/c6/object/tracking_M-8_V-0p000547722557505_rho.png}}
-  \subfloat[]{\includegraphics[clip,trim=2cm 0 0 0,width=0.25\textwidth]{Figures/c6/object/loose_validFraction_M-4_V-0p00290516780927_rho.png}
-  \includegraphics[clip,trim=2cm 0 0 0,width=0.25\textwidth]{Figures/c6/object/loose_validFraction_M-8_V-0p000547722557505_rho.png}}}\\
- \makebox[\textwidth]{ \subfloat[]{\includegraphics[width=.275\textwidth]{Figures/c6/object/goodTrack_goodGlobal_M-4_V-0p00290516780927_rho.png}
-  \includegraphics[clip,trim=2cm 0 0 0,width=0.25\textwidth]{Figures/c6/object/goodTrack_goodGlobal_M-8_V-0p000547722557505_rho.png}}
-\subfloat[]{\includegraphics[clip,trim=2cm 0 0 0,width=0.25\textwidth]{Figures/c6/object/globalTrack_cuts_M-4_V-0p00290516780927_rho.png}
-  \includegraphics[clip,trim=2cm 0 0 0,width=0.25\textwidth]{Figures/c6/object/globalTrack_cuts_M-8_V-0p000547722557505_rho.png}}}
-  \caption{Efficiency of different Medium-ID selections with respect
-    to tracks for \displ
-    muons in signal scenarios as a function \Deltwod.}
-  \label{fig:modMedium_common}
-\end{figure}
+\displ muons, and are employed to determine the muon FR.\\
+\textbf{Modified Medium ID for \displ muons}. Extensive studies and
+explanations are presented in Chapter~\ref{Chapter2_5}, in
+Sections~\ref{sec:c2muonselection} and~\ref{sec:c2muondisplaced}.\\
 
 \textbf{Jet selection and $\boldsymbol{p_{T}^{miss}}$}: the same selection as described in Sec.~\ref{sec:jet} is deployed.
 

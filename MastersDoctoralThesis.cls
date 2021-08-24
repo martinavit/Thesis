@@ -646,6 +646,8 @@ KOMA-script documentation for details.}]{fancyhdr}
 \definecolor{linkcolor_marty}{rgb}{0.00,0.3, 0.00}
 \newcommand{\dani}{Courtesy of D. Trocino.}
 \newcommand{\willem}{Courtesy of W. Verbeke.}
+\newcommand{\basile}{Courtesy of B. Vermassen.}
+\newcommand{\luka}{Courtesy of L. Lambrecht.}
 
 
 
