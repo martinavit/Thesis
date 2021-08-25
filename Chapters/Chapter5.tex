@@ -222,7 +222,7 @@ uncertainty.
 
 \subsection{Object selection}\label{sec:object}
 For the rigorous explanation of the single object reconstruction in
-CMS see Chapter~\ref{Chapter2}, section~\ref{sec:reconstruction}.
+CMS see Chapter~\ref{Chapter2_5}, section~\ref{sec:reconstruction}.
 
 \subsubsection{Leptons}
 The base objects of this analysis are electrons and muons. Both
@@ -240,37 +240,17 @@ tight working point should be independent
  of the flavor of its origin parton.
  This property will prove essential for the non-prompt lepton background estimation as further specified. The full definitions of every selection working point, for respectively muons and electrons are shown in tables ~\ref{tab:muonIDs} and \ref{tab:eleIDs}.
 
-Signal leptons are required to be isolated from any hadronic activity
-in the event.
-An isolation variable (\Irel) is computed as the scalar 
-\pt sum of charged hadrons originating from the PV, neutral hadrons,
-and photons within a cone of $\Delta R<0.3$ around the lepton
-candidate direction at the vertex,
-divided by the transverse momentum $\pt^\ell$ of the lepton candidate:
-\begin{linenomath}
-  \begin{equation}
-    \label{eq:irel}
-    \Irel = \frac{1}{\pt^\ell}
-    \left(\sum_{ch.hadr.}\pt^{\mathrm{PV}} +
-    \max{\left[0, \sum_{neu.hadr.}\pt + \sum_{pho.}\pt
-        - \rho\cdot A_{\mathrm{eff}}\right]}\right).
-  \end{equation}
-\end{linenomath}
-The term $\rho\cdot A_{\mathrm{eff}}$ is used to mitigate the
-contribution of pileup to the isolation calculation: the average
-transverse-momentum flow density $\rho$ is calculated in each event
-using a ``jet area'' method~\cite{CACCIARI2008119}, and the effective
-area $A_{\mathrm{eff}}$ is the geometric area of the isolation cone
-times an $\eta$-dependent correction factor that accounts for the
-residual dependence of the isolation on pileup.
-"Loose" and "fakeable object" leptons are required to have $\Irel < 0.6$. 
+Signal leptons are required to be isolated (refer to
+Section~\ref{sec:c2iso}) from any hadronic activity
+in the event. "Loose" and "fakeable object" leptons are required to have $\Irel < 0.6$. 
 "Tight" leptons must satisfy $\Irel < 0.1$.
 
 \begin{table}[h!]
 \centering
 {\scriptsize
 \caption{All the variables used in the table are introduced in
-  Chapter~\ref{Chapter2} in Section~\ref{sec:reconstruction}.
+  Chapter~\ref{Chapter2_5} in Sections~\ref{sec:reconstruction},~\ref{sec:c2muonselection}
+ and~\ref{sec:c2variables}.
 Requirements to pass each definition of the muon selection.}
 \label{tab:muonIDs}
 \begin{tabular}{c|c|c|c}
@@ -296,9 +276,8 @@ is Medium Muon & -- & \checkmark & \checkmark \\
 \centering
 {\scriptsize
 \caption{All the variables used in the table are introduced in
-  Chapter~\ref{Chapter2} in Section~\ref{sec:reconstruction}.
-Requirements for an electron to pass each of the defined working points. Two POG MVA thresholds are given for respectively 15, and 25\GeV . Electrons above 25\GeV$\:$or below 15\GeV$\:$are required to pass the corresponding working point, while a linearly decreasing cut between the two working points is applied to electrons with a \pt inbetween these values. For every MVA working point three values are given corresponding to electrons with $0 < |\eta| < 0.8$, $0.8 < |\eta| < 1.479$, and $1.479 < |\eta| < 2.5$.
-}
+  Chapter~\ref{Chapter2_5} in Sections~\ref{sec:reconstruction},~\ref{sec:c2keleid}
+ and~\ref{sec:c2variables}.}
 \label{tab:eleIDs}
 \resizebox{1.0\linewidth}{!}{
 \begin{tabular}{c|c|c|c}
@@ -341,28 +320,6 @@ to pass the thresholds of the baseline object selection.
  Aside from this, harsher \pt thresholds of 15 and 10\GeV $\:$are applied
  to the leading and subleading leptons in order to pass the employed
  triggers.
-
-\subsubsection{Jet selection and $p_{T}^{miss}$}\label{sec:jet}
-Particle-flow candidates are clustered into jets using the anti-$k_t$ algorithm~\cite{Cacciari_2008} with a distance parameter of 0.4, 
-as implemented in the \FASTJET package~\cite{CACCIARI200657,Cacciari_2012}. Jets are required to satisfy quality 
-requirements~\cite{Chatrchyan:2011ds,Khachatryan:2016kdb,CMS-PAS-JME-16-003} to remove those likely arising from anomalous energy deposits. 
-Charged hadrons are not considered if they do not originate from the selected primary vertex (PV).
-After the estimated contribution of neutral particles from additional \Pp interactions in the same or adjacent bunch crossings (pileup) 
-is subtracted by using the average amount of transverse energy in the event per unit area. 
-Only jets passing loose selection criteria and having \pt > 25\GeV and $|\eta| < 2.4$ are retained.
-
-To identify jets originating from b quarks, the combined secondary vertex algorithm 
-CSVv2~\cite{Chatrchyan:2012jua,CMS-PAS-BTV-15-001} is used. 
-Jets with \pt > 25\GeV and $|\eta| < 2.4$ are considered b quark jets ("b jets") if they satisfy the requirements 
-of the loose working point of the algorithm. 
-These requirements result in an efficiency of approximately 80\% for tagging a b quark jet, and a mistagging rate of 
-10\% for light-quark and gluon jets, and about 40\% for c quark jets
-as measured in \ttbar events. 
-
-%No requirements on the number of jets in an event are imposed, other than the b jet veto discussed above.
-
-The \ptmiss is obtained as the magnitude of the negative vector sum of the transverse momenta of 
-all reconstructed PF candidates and is further adjusted to account for jet energy corrections applied to the event~\cite{CMS-PAS-JME-16-004}.
 
 \section{Analysis strategy}\label{sec:analisi}
 All events entering the signal regions are required to have three light leptons passing the tight requirements as described in the section above (~\ref{sec:object}).
@@ -1137,7 +1094,16 @@ In the left part of Fig.~\ref{fig:allSRplotMuon}(top) are shown
 the expected and observed yields in each of the \emph{low mass search}
 regions, compared to the predicted yields of several HNL masses, with \mixpar = $10^{-5}$. These yields, together with their
 statistical and systematic uncertainties can also be found in
-Table~\ref{tab:YieldsLowmass}. 
+Table~\ref{tab:YieldsLowmass}.  \\
+The expected and observed yields in the \emph{high mass search regions},
+compared to several HNL mass scenarios at \mixpar = $10^{-2}$, for
+events with and without an OSSF pair are shown in
+Fig.~\ref{fig:allSRplotMuon}. All search region yields, with their
+separate statistical and systematic uncertainties are also listed in
+Tables~\ref{tab:YieldshighmassOSSF} and
+\ref{tab:YieldshighmassnoOSSF}. \\
+We see no evidence of an excess in data beyond the SM background.
+\small{
 \begin{table}[h]
 \centering
 \caption{Observed (expected) event yields in the low-mass search region. The uncertainties
@@ -1145,10 +1111,6 @@ contain both the statistical and systematic components. }
 \label{tab:YieldsLowmass}
 \includegraphics[width=0.7\linewidth]{Figures/c5/tables/CMS-EXO-17-012_Table_0A1.pdf}
 \end{table}
-
-The expected and observed yields in the \emph{high mass search regions},
-compared to several HNL mass scenarios at \mixpar = $10^{-2}$, for
-events with and without an OSSF pair are shown in Fig.~\ref{fig:allSRplotMuon}. All search region yields, with their separate statistical and systematic uncertainties are also listed in Tables~\ref{tab:YieldshighmassOSSF} and \ref{tab:YieldshighmassnoOSSF}. 
 \begin{table}[h]
 \centering
 \caption{Observed (expected) event yields in the high-mass search region for events with no
@@ -1156,18 +1118,17 @@ OSSF lepton pair. The uncertainties contain both the statistical and systematic 
 \label{tab:YieldshighmassOSSF}
 \includegraphics[width=0.75\linewidth]{Figures/c5/tables/CMS-EXO-17-012_Table_0A2.pdf}
 \end{table}
-
-\begin{table}[tbh]
+\begin{table}[h]
 \centering
 \caption{Observed (expected) event yields in the high-mass search region for events with an
 OSSF lepton pair. The uncertainties contain both the statistical and systematic components.}
 \label{tab:YieldshighmassnoOSSF}
 \includegraphics[width=0.75\linewidth]{Figures/c5/tables/CMS-EXO-17-012_Table_0A3.pdf}
 \end{table}
-
+}
 \begin{figure}[h]
 \noindent
-\makebox[\textwidth]{\includegraphics[width=0.9\textwidth]{Figures/c5/expectedYields/CMS-EXO-17-012_Figure_001.pdf}}
+\makebox[\textwidth]{\includegraphics[width=1\textwidth]{Figures/c5/expectedYields/CMS-EXO-17-012_Figure_001.pdf}}
 \caption{Observed and expected event yields as a function of \mmin and
   \mtmin for events with
 at least two electrons (upper), and with at least two muons (lower). The contribution of each
@@ -1175,8 +1136,6 @@ background source is shown. The first 8 bins of each figure correspond to the lo
 while the rest display the high-mass region}
 \label{fig:allSRplotMuon}
 \end{figure}
-
-We see no evidence of an excess in data beyond the SM background.
 
 \clearpage
 \subsubsection{Interpretation}

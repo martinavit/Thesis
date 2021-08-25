@@ -214,64 +214,37 @@ with a tag-and-probe method (see Sec.~\ref{sec:triggereff}).
 
 \subsection{Object selection}\label{sec:llobject}
 For the rigorous explanation of the single object reconstruction in
-CMS see Chapter~\ref{Chapter2}, section~\ref{sec:reconstruction}.
-In the coming subsections, using the HNL-signal MC samples we will
-present the efficiency of the object selection tuned for displaced
-object. \\
+CMS see Chapter~\ref{Chapter2}, section~\ref{sec:reconstruction}.\\
+In Sections~\ref{sec:c2keleid} and~\ref{sec:c2muonselection} the
+prompt lepton identification criteria are presented.\\
+For displaced
+leptons and SVs there are detailed dedicated explanations in
+Sections~\ref{sec:c2muondisplaced} (displaced
+muons),~\ref{sec:c2dispele} (displaced electrons) and~\ref{sec:c2sv}
+(displaced SV reconstruction).\\
 
-Signal leptons coming from the \PW\ boson are required to originate
-from the event's primary $\Pp$ interaction vertex (PV), defined as
-the reconstructed vertex with the highest sum of squared transverse
-momenta of associated charged particles, plus the \ptmiss.
-The distance of closest approach of the lepton track from the event's
-PV (impact parameter, IP) is used to evaluate three variables:
-the projection of the IP onto the plane transverse to the beam line
-(\textbf{transverse impact parameter} $\boldsymbol{\dxy}$),
-the projection of the IP along the beam line (\textbf{longitudinal impact
-parameter} $\boldsymbol{\dz}$),
-and the significance of the IP
-($\mathrm{SIP} = \mathrm{IP}/\sigma_{\mathrm{IP}}$,
-where $\sigma_{\mathrm{IP}}$ is the uncertainty associated to IP). Signal leptons coming from the HNL decay are selected by requiring a
-minimum \dxy value, and do not have additional constraints on \dz nor
-on the IP significance (see Tables~\ref{tab:electronSelection} and
-\ref{tab:muonSelection}).
-
-The three leptons are required to be isolated from any hadronic activity
-in the event, see Sec.~\ref{sec:object}, Eq.~\ref{eq:irel} as reference for the relative isolation variable. 
-"Loose" displaced leptons are required to have $\Irel < 2.0$. 
-"Tight" leptons must satisfy $\Irel < 0.1$ while "tight-displaced" leptons must have $\Irel < 0.2$.
+In the following sections, they are listed and motivated only the selections circumscribed
+to this specific scenario.
 
 \subsubsection{Electrons}\label{sec:llelectron}
-Electrons are reconstructed within the geometrical acceptance of the
-CMS tracking system, $|\eta|<2.5$.
-Identification criteria based on the electromagnetic shower shape, track
-quality, track impact parameters with respect to the primary vertex,
-and isolation are used to select signal electrons and reduce the rate
-of mis-identified and background electrons (referred to as ``fake
-electrons'').
 The electron selection criteria are summarized in
 Table~\ref{tab:electronSelection}. 
 Different criteria are applied to identify prompt and \displ
 electrons.
-\subparagraph {Prompt electrons}
+
+\textbf {Prompt electrons.}
 Prompt electrons are identified using a multi-variate discriminator with identification efficiency above 90\%
 (90\% working point MVA ID),
 must have \pt greater than 30 (32, 32)\GeV in the 2016 (2017, 2018)
-data set,
-and must be matched to a ``trigger electron'' (see
-Sec.~\ref{sec:trigger}).
+data set.
 The offline \pt threshold is driven by the trigger \pt threshold in
 each data set, such that the offline cut always falls in the plateau
-of the trigger efficiency turn-on curve.
+of the trigger efficiency curve.
 Prompt electrons passing this selection will be referred to as ``tight
 prompt electrons'' hereafter.
-\subparagraph {Displaced electrons}
-\Displ electrons are identified using a cut-based selection (``EGM
-POG cut-based Loose ID''), but removing the veto
-on photon conversions and the requirement on the maximum number of
-missing inner hits, which could affect the efficiency for electrons
-not emerging from the primary vertex.
-\Displ electrons passing this selection will be referred to as
+
+\textbf {Displaced electrons.}
+\Displ electrons passing their selection will be referred to as
 ``tight \displ electrons''.
 They must have \pt greater than 7\GeV.
 Samples enriched in fake electrons are selected with
@@ -282,18 +255,7 @@ mis-identified as signal electrons (``fake rate'' or FR).
 \begin{table}[h!]
   \centering
   \caption{\label{tab:electronSelection} Requirements for an electron
-    to pass each of the defined selection working points.
-    Where three values are given for a single variable, they
-    correspond to electrons with $\abseta< 0.8$, $0.8<\abseta<1.479$,
-    and $1.479<\abseta<2.5$. The cut on the prompt electron MVA
-    discriminator depends on the electron \sigeta and \pt. }
-  %  \(f(\sigeta,\pt) = \min{\left\{ x_{15}(\sigeta),\,
-   %   \max{\left\{x_{25}(\sigeta),\,x_{15}(\sigeta) +
-   %     0.1\cdot(x_{25}(\sigeta)-x_{15}(\sigeta)) \cdot
-     %   (\pt-15\GeV)\right\}}\right\}},\)\\
-   % where $x_{15}(\sigeta) = (0.77,\,0.56,\,0.48)$ and
-    %$x_{25}(\sigeta) = (0.52,\,0.11,\,-0.01)$, with the three values
-   % applying to the same \abseta bins defined above.}
+    to pass each of the defined selection working points.}
   \resizebox{1.0\textwidth}{!}{
     \begin{tabular}{c|c|c|c}
       %% \hline
@@ -321,50 +283,36 @@ mis-identified as signal electrons (``fake rate'' or FR).
       \hline
     \end{tabular}
     }
-
 \end{table}
 
 \subsubsection{Muons}\label{sec:llmuon}
 Muons are required to have
 $\abseta<2.4$ to fall inside the geometric acceptance of the muon
 detector.
-All muons considered for analysis must pass the loose working point as
-specified by the MUO POG, in addition to a number
+All muons considered for analysis must pass the \emph{Loose ID} (refer
+to Section~\ref{sec:c2muonselection}) in addition to a number
 of other loose criteria on isolation and their impact parameters with
-respect to the PV.
-It is also possible to require muons to be synchronized with the bunch
-crossing that has triggered, using the time measurements provided by
-the muon sub-detectors, the RPCs (``RPC time'' or $t_{\mathrm{RPC}}$)
-and the combined measurements of the DTs and CSCs (``combined time''
-or $t_{\mathrm{comb}}$)~\cite{muon_oot}.
-In particular, $t_{\mathrm{RPC}}$ ($t_{\mathrm{comb}}$) is only used
-if it is measured with more than 1 (7) degrees of freedom.
-If $t_{\mathrm{RPC}}$ and $t_{\mathrm{comb}}$ are both available,
-they must lie within $-10\ns$ and $+10\ns$.
-If only $t_{\mathrm{comb}}$ is available, then it must be within
-$-45\ns$ and $+20\ns$.
-If $t_{\mathrm{comb}}$ is unavailable, no timing requirement is
-applied.
-This timing requirement is found to be fully efficient for signal
-muons. However, we also find that the background from out-of-time
-muons is effectively removed by other muon and event selections (as
-described in this section and in Section~\ref{sec:llbaselinesel}), thus
-making the timing requirement redundant. For this reason, it is not
-applied.  
+respect to the PV.\\
 Muon selection criteria are summarized in
 Table~\ref{tab:muonSelection}.
 
 Different selections are applied to prompt and \displ muons.
-\subparagraph {Prompt muons}
-Prompt muons must pass identification criteria based on track quality
-and matching of the inner tracker track with the measurements in the
-muon detectors (``MUO POG Medium ID''), must have \pt greater than
-25 (28, 25)\GeV in the 2016 (2017, 2018) data set, and must be matched
-to a ``trigger muon'' (see Sec.~\ref{sec:dataset}).
-As in the case of electrons, the offline \pt cut is driven in each
-data set by the trigger \pt threshold.
+
+\textbf {Prompt muons.}
+Prompt muons must pass \emph{Medium ID} (refer
+to Section~\ref{sec:c2muonselection}) criteria. They must have \pt greater than
+25 (28, 25)\GeV in the 2016 (2017, 2018) data set.
 Prompt muons passing this selection will be referred to as ``tight
 prompt muons'' hereafter.
+
+\textbf {Displaced muons.}
+\Displ muons which pass the displaced ID criteria
+(~\ref{sec:c2muondisplaced}) will be referred to as ``tight \displ
+muons''. The displaced muon are required to have \pt greater than 5\GeV.\\
+In addition, ``loose \displ muons'' or ``muon FOs'' are selected
+with identification criteria looser than those used for tight
+\displ muons, and are employed to determine the muon FR.
+
 \begin{table}[h!]
   \centering
   \caption{\label{tab:muonSelection} Requirements for a muon
@@ -406,21 +354,6 @@ prompt muons'' hereafter.
     }
 \end{table}
 
-\subparagraph {Displaced muons}\label{sec:c6muons}
-\Displ muons must pass requirements similar to the Medium ID, but
-removing all selections that may reduce the efficiency for muons not
-emerging from the primary vertex.
-These \displ muons will be referred to as ``tight \displ muons''
-and must have \pt greater than 5\GeV.
-
-In addition, ``loose \displ muons'' or ``muon FOs'' are selected
-with identification criteria looser than those used for tight
-\displ muons, and are employed to determine the muon FR.\\
-\textbf{Modified Medium ID for \displ muons}. Extensive studies and
-explanations are presented in Chapter~\ref{Chapter2_5}, in
-Sections~\ref{sec:c2muonselection} and~\ref{sec:c2muondisplaced}.\\
-
-\textbf{Jet selection and $\boldsymbol{p_{T}^{miss}}$}: the same selection as described in Sec.~\ref{sec:jet} is deployed.
 
 
 \section{Analysis strategy}\label{sec:llanalisi}
@@ -463,31 +396,21 @@ These features, along with the possible displacement of \ltwo and
 decay.
 
 \begin{figure}[h]
-\noindent
-\makebox[\textwidth]{  \subfloat[]{\includegraphics[width=.25\textwidth]{Figures/c6/selection/genE_vs_pt_sortby_prov_m4.png}
-  \includegraphics[width=.25\textwidth]{Figures/c6/selection/genE_vs_eta_sortby_prov_m4.png}}
-  \subfloat[]{\includegraphics[width=.25\textwidth]{Figures/c6/selection/l2l3_mass_gen.png}
-  \includegraphics[width=.25\textwidth]{Figures/c6/selection/l2l3_mass_rec.png}}}\\
- \makebox[\textwidth]{ \subfloat[]{\includegraphics[width=.25\textwidth]{Figures/c6/selection/l2l3_dR_gen.png}
-  \includegraphics[width=.25\textwidth]{Figures/c6/selection/l2l3_dR_rec.png}}
-\subfloat[]{\includegraphics[width=.25\textwidth]{Figures/c6/selection/l1l3_dPhi_gen.png}
-  \includegraphics[width=.25\textwidth]{Figures/c6/selection/l1l3_dPhi_rec.png}}}
-  \caption{A) Generated lepton \pt (left) and \sigeta (right), separately
+\centering
+\includegraphics[width=.35\textwidth]{Figures/c6/selection/genE_vs_pt_sortby_prov_m4.png}
+\includegraphics[width=.35\textwidth]{Figures/c6/selection/l2l3_mass_gen.png}\\
+\includegraphics[width=.35\textwidth]{Figures/c6/selection/l2l3_dR_gen.png}
+\includegraphics[width=.35\textwidth]{Figures/c6/selection/l1l3_dPhi_gen.png}
+  \caption{For the HNL scenario:HNL of mass
+    $\mhnl=4$\GeV and $\mixpar=10^{-4}$. Top left) Generated lepton \pt, separately
     for \lone (``from \PW''), \ltwo (``from \hnl''), and \lthree
-    (``from $\hnl\PW$''), produced in the decay of a HNL of mass
-    $\mhnl=4\GeV$ and $\mixpar=10^{-4}$.\\
-B) Invariant mass of \ltwo
+    (``from $\hnl\PW$'').
+Top right) Invariant mass of \ltwo
     and \lthree 
-    at generator level (left) and at reconstructed level (right), for
-    a HNL of mass $\mhnl=4$\GeV or 10\GeV, and $\mixpar=10^{-4}$.
-    Events in these distributions are pre-selected requiring the
-    presence of three reconstructed leptons, as defined in
-    Tables~\ref{tab:electronSelection} and \ref{tab:muonSelection},
-    with the prompt lepton firing a single-lepton trigger, as per
-    Table~\ref{tab:sgnlTriggers}.
-C) \DR\ between \ltwo 
+    at generator level.
+Bottom left) \DR\ between \ltwo 
     and \lthree.
-D) \Dphi between \lone
+Bottom right) \Dphi between \lone
     and \lthree.}
   \label{fig:llfeatures}
 \end{figure}
@@ -530,105 +453,14 @@ This selection strategy correctly identifies the one prompt and two
 \displ leptons in more than 99\% of signal events (99.9\% of
 signal events that pass the full analysis selection, described in
 Section~\ref{sec:llbaselinesel}).
-\newpage
-\subsection{Secondary vertex fit and lepton extrapolation}
+
+\subsubsection{Secondary vertex fit}
 
 Once \ltwo and \lthree have been identified, we can reconstruct their
-common vertex of origin, \ie the decay vertex of the HNL. This is done
-by fitting the two tracks to a common point with a Kalman-filter
-approach~\cite{kvfTwiki},
-using the
-\texttt{KalmanVertexFitter} class implemented in \texttt{CMSSW} framework.
-The class returns the least-$\chi^2$ estimator of the two-track vertex
-position and covariance matrix, along with the $\chi^2$ of the fit, as
-an indicator of its goodness.
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=.4\textwidth]{Figures/c6/selection/leptons_fromN_fromNW_vtx_r_pull.png}
-  \includegraphics[width=.4\textwidth]{Figures/c6/selection/leptons_fromN_fromNW_vtx_rho_pull.png}
-  \caption{Pull distributions of the three-dimensional (left) and
-    transverse (right) distance of the fitted secondary vertex from
-    the PV of the interaction, for HNL masses from 1 to 4\GeV,
-    all with $\mixpar=10^{-4}$. The red curve overlaid to the blue
-    histogram shows a Gaussian fit to the core of the \mhnl= 2\GeV
-    distribution.}
-  \label{fig:svPulls}
-\end{figure}
-
-Figure~\ref{fig:svPulls} shows the pulls of the distance of the fitted
-secondary vertex (SV) from the PV of the interaction, in three
-dimensions (denoted as $R$ in the left figure) or projected on the
-transverse plane (denoted as $\rho$ in the right figure). The pulls
-are computed as the difference between the measured distance ($R$ or
-$\rho$) and its true value from simulation, divided by the uncertainty
-on the measured value. A standard deviation of about 1.2 is found from
-a Gaussian fit to the pull distributions, revealing a slight
-underestimation of the uncertainties.
-
-\vspace{5cm}
-Figure~\ref{fig:svResidVsRho_all} shows the residuals of the
-transverse PV--SV distance $\rho$ with respect to the true generated
-value, $\Delta\rho(\mathrm{gen,rec})$ (left), and the relative residuals
-$\Delta\rho(\mathrm{gen,rec})/\rho(\mathrm{gen})$ (right), as a
-function of the true $\rho$, for signal events satisfying the final
-signal selection that will be described in
-Section~\ref{sec:llbaselinesel} and summarized in
-Table~\ref{tab:baselinesel}. No significant biases are observed and
-the tails are small: the fraction of events with
-$\Delta\rho(\mathrm{gen,rec})/\rho(\mathrm{gen})$ larger than
-10\%---indicated by the dashed horizontal lines in
-Fig.~\ref{fig:svResidVsRho_all} (right)---is about 2.6\% for
-transverse displacement $\rho$ < 0.5cm, and less than 1\% for larger
-displacements.
-Figure~\ref{fig:svResidVsRho_all}(A-B-C) shows the same
-$\Delta\rho(\mathrm{gen,rec})$ distribution in different dilepton \pt
-ranges for all flavor combinations: 15--20\GeV (A), 20--30\GeV
-(B), and $>30\GeV$ (C).
-Figure~\ref{fig:svResidVsRho_all}(D) shows the
-$\Delta\rho(\mathrm{gen,rec})$ profiles for different flavor final
-states ($\Pe\Pe$, $\Pe\PGm$, $\PGm\PGm$) for any dilepton transverse
-momentum.
-No large biases are observed at any dilepton \pt, nor for
-any dilepton flavor.
-\begin{figure}[t]
-  \noindent
-\makebox[\textwidth]{ 
-  \includegraphics[width=.38\textwidth]{Figures/c6/selection/genvtx_recvtx_Drho_vs_rho_afterSel_zoom.pdf}
-  \includegraphics[width=.38\textwidth]{Figures/c6/selection/genvtx_recvtx_RelDrho_vs_rho_afterSel_zoom.pdf}}\\
-\makebox[\textwidth]{  \subfloat[]{
-  \includegraphics[width=.38\textwidth]{Figures/c6/selection/pt15to20_genvtx_recvtx_Drho_vs_rho_afterSel_zoom.pdf}}
-  \subfloat[]{\includegraphics[width=.38\textwidth]{Figures/c6/selection/pt20to30_genvtx_recvtx_Drho_vs_rho_afterSel_zoom.pdf}}}\\
-\makebox[\textwidth]{  \subfloat[]{
-  \includegraphics[width=.38\textwidth]{Figures/c6/selection/pt30toInf_genvtx_recvtx_Drho_vs_rho_afterSel_zoom.pdf}}\hspace{7mm}
-  \subfloat[]{\includegraphics[width=.32\textwidth]{Figures/c6/selection/finalstates_genvtx_recvtx_Drho_vs_rho_afterSel_zoom.pdf}}}
-  \caption{A) Residuals (left) and relative residuals (right) of the
-    transverse distance $\rho$ between the fitted secondary vertex and
-    the PV of the interaction, as a function of the true $\rho$ value
-    from simulation. All lepton flavors are included.
-    The red graph shows the mean value of the
-    residuals in each $\rho$ bin and the uncertainty on the mean
-    value. The dashed green line in the left plot indicates the
-    distance between the generated primary and secondary vertices: any
-    reconstructed vertex below this line would lie in the ``wrong''
-    hemisphere, opposite to the direction of flight of the HNL.
-    The horizontal dashed lines in the right plot delimit the region
-    where $\Delta\rho(\mathrm{gen,rec})$ is less than 10\% of
-    $\rho(\mathrm{gen})$. 
-    The three plots A-B-C correspond to
-    different values of the dilepton \pt (thus different average
-    opening angles of the two leptons), for all lepton flavors:
-    15--20\GeV (A), 20--30\GeV (B), and $>$30\GeV
-    (C). The bottom right plot shows separate profiles for
-    the three flavor final states ($\Pe\Pe$, $\Pe\PGm$, $\PGm\PGm$),
-    for any dilepton \pt.
-    To have enough statistics in all the $\rho$ bins, a combination of
-    all the signal samples (2018 only) is used.}
-  \label{fig:svResidVsRho_all}
-\end{figure}
+common vertex of origin, \ie the decay vertex of the HNL. \\
+For the SV reconstruction it is used the procedure described in Section~\ref{sec:c2sv}.
 The fitted SV estimates the production vertex of \ltwo and \lthree.
 
-\clearpage
 \subsection{Event kinematics and baseline selection}
 \label{sec:llbaselinesel}
 
@@ -958,12 +790,11 @@ in the following way:
 \end{itemize}
 
 \begin{figure}[h]
-  \noindent
-  \makebox[\textwidth]{
-  \includegraphics[width=.26\textwidth]{Figures/c6/selection/18/e_DeltaPV_SV_2D_zomm__final.pdf}
-  \includegraphics[width=.26\textwidth]{Figures/c6/selection/18/mu_DeltaPV_SV_2D_zomm__final.pdf}
-  \includegraphics[width=.26\textwidth]{Figures/c6/selection/18/e_M_ll_l2_l3_zoom__final.pdf}
-  \includegraphics[width=.26\textwidth]{Figures/c6/selection/18/mu_M_ll_l2_l3_zoom__final.pdf}}
+  \centering
+  \includegraphics[width=.36\textwidth]{Figures/c6/selection/18/e_DeltaPV_SV_2D_zomm__final.pdf}
+  \includegraphics[width=.36\textwidth]{Figures/c6/selection/18/mu_DeltaPV_SV_2D_zomm__final.pdf}\\
+  \includegraphics[width=.36\textwidth]{Figures/c6/selection/18/e_M_ll_l2_l3_zoom__final.pdf}
+  \includegraphics[width=.36\textwidth]{Figures/c6/selection/18/mu_M_ll_l2_l3_zoom__final.pdf}
   \caption{\Deltwod (left), and $M_{\ltwo \lthree}$ (right) in events
     passing the baseline selection of Table~\ref{tab:baselinesel}}
   \label{fig:reco_displ}

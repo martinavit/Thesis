@@ -6,9 +6,7 @@
 This chapter outlines the main features of the CMS event
 reconstruction. In Section~\ref{sec:reconstruction}, it is
 given an explanation of the reconstruction algorithm, called
-\emph{Particle flow}, and reconstruction performances are
-discussed. The main focus of Sections~\ref{cms}
-and~\ref{sec:reconstruction} will be on lepton (electrons and muons) identification and
+\emph{Particle flow}, then they are discussed the reconstruction performances. The main focus of Section~\ref{sec:reconstruction} will be on lepton (electrons and muons) identification and
 reconstruction in consideration of the multilepton final states which are
 discussed in Chapter~\ref{Chapter5} and~\ref{Chapter6} and thus are
 central to this dissertation.
@@ -21,27 +19,28 @@ collision. Particles are classified according to their distinct
 signatures they present in 
 the CMS detector, as displayed in Figure~\ref{fig:cmsslice}.
 
-CMS detector is built with the idea of cylindrical detection layers
-which are wrapped around the beam axis. After the collision, starting
-from the point where the interaction occurred, particles enter in the
-tracker. In the tracker charged-particle trajectories, \emph{tracks}
-and origins, \emph{vertices} are reconstructed using the information from
-electronic signals, \emph{hits}, in the detection layers. Subsequently
-electrons and photons are absorbed in the ECAL where they stop, and
-charged and neutral hadrons could start a hadronic shower in the ECAL
-already and being fully absorbed in the HCAL. Muons and neutrinos cross
-the full detector with little or zero interactions; the muons reaching the muon-system produce
-signal hits and they trajectory is finally defined. This simple
-event-view is graphically displayed in Figure~\ref{fig:cmsslice}.
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.78\textwidth]{Figures/c2/CMSslice.png}\\
+\includegraphics[width=0.88\textwidth]{Figures/c2/CMSslice.png}\\
 \caption{Geometric view of a transverse slice of the CMS detector showing its sub-detectors and how particles interact with them~\cite{Barney:2120661}.}
 \label{fig:cmsslice}
 \end{figure} 
+CMS detector is built with the idea of cylindrical detection layers
+which are wrapped around the beam axis. After the collision, starting
+from the point where the interaction occurred, particles enter in the
+tracker. In the tracker, the charged-particle trajectories, \emph{tracks}
+and their origins, \emph{vertices} are reconstructed using the information from
+electronic signals, \emph{hits}, in the detection layers. Subsequently
+electrons and photons are absorbed and stopped in the ECAL, while
+charged and neutral hadrons, after eventually starting a hadronic
+shower already in the ECAL, are fully absorbed in the HCAL. Finally muons and neutrinos cross
+the full detector with little or zero interactions. The muons 
+produce in the the muon-system signal hits and they trajectory is finally defined. This simple
+event-view is graphically displayed in Figure~\ref{fig:cmsslice}.
 
-This approach has led to the practice of reconstructing \emph{physics
-objects} in the first place using the signals collected by a specific
+
+This approach has led to the practice of reconstructing, in the first place, \emph{physics
+objects} using the signals collected by a specific
 detector in the following way:
 \begin{itemize}
 \setlength\itemsep{-0.2em}
@@ -51,7 +50,7 @@ detector in the following way:
   same idea applies to the \ptmiss;
 \item \emph{isolated photons and electrons}: the reconstruction interests the
   ECAL;
-\item \emph{jet tagging}: it is possible tag jets with origin from hadronic $\tau$ decay and
+\item \emph{jet tagging}: it is possible to tag jets with origin from hadronic $\tau$ decay and
   from b quark hadronization. The tagging makes use of the properties of
   the related charged particle tracks, hence mostly concerns the
   tracker;
@@ -61,14 +60,15 @@ detector in the following way:
 
 An additional improvement on the event description is obtained by
 correlating (\emph{linking}) the basic \emph{elements} (\ie tracks and
-clusters) from all the sub-systems to classify each final-state
-particle and then by combining the measurements to be able to
-reconstruct the physics-object properties like mass and momentum. This
+clusters) from all the sub-systems. Thus each final-state
+particle is classified and then the physics-object properties like
+mass and momentum are reconstructed by combining the information from
+the sub-systems. This
 integrated approach is called \emph{particle flow} (PF)
 \emph{reconstruction}~\cite{CMS:particleflow} and it is going to be
 explained later in Section~\ref{sec:PF}.
 
-
+\vspace{0.7cm}
 
 
 This chapter details the approach and the relevant steps of the CMS
@@ -77,25 +77,29 @@ aspects pertinent to this thesis (i.e. light leptons). The track and vertex reco
 is presented in Section~\ref{sec:trackvertex} and particle-flow
 algorithm is described in Section~\ref{sec:PF}. Identification and
 performances of muons and electrons are presented in
-Sections~\ref{sec:trackmuon} and~\ref{sec:trackele}.
+Sections~\ref{sec:trackmuon} and~\ref{sec:c2ele}.\\
+Furthermore, some
+effort is dedicated to the displaced lepton reconstruction in
+Sections~\ref{sec:c2muondisplaced} and~\ref{sec:c2dispele} which is going to be central for the
+analysis overview presented in Chapter~\ref{Chapter6}.
 
 
 \subsection{Track and vertices reconstruction}\label{sec:trackvertex}
 
-Be able to precisely reconstruct interaction vertices and charged
+Precise reconstruction of interaction vertices and charged
 particle tracks is a crucial element for an accurate measurement of
-charged particle momenta and properties. Tracks, vertices and their
+charged particle momenta and properties. Moreover tracks, vertices and their
 successive combination constitute an important input for pileup
 mitigation (Section~\ref{lhc}) and for the
-identification displaced vertices from which particles from long-lived
-particle decay originate.
-Lastly tracks and vertices are fundamental inputs to the particle-flow (PF) algorithm (Section~\ref{sec:PF}).\\
+identification of displaced vertices where long-lived particles decay.
+Finally tracks and vertices are fundamental inputs to the
+particle-flow (PF) algorithm (Section~\ref{sec:PF}). \\
+
 The tracking algorithms are devised to
 increase the track-finding efficiency while keeping small the
 contamination of fake tracks, \ie tracks constructed from uncorrelated hits or
 including false hits.\\
- 
-The tracks are reconstructed starting from the hits in the pixel and
+ The tracks are reconstructed starting from the hits in the pixel and
 strip tracker. The hit reconstruction follows two steps: the first,
 indicated as local reconstruction, is a clustering of signals in the
 tracker sensors. Thus 
@@ -108,24 +112,24 @@ sophisticated reconstruction which uses the informations about the
 irradiation status of the pixel and strip sensors. \\
 The hit efficiency is measured to be above the 99.5\%\footnote{The hit
   efficiency depends on the
-$d\mathcal{L}/dt$ and on the trigger rate, in particulars in
+$d\mathcal{L}/dt$ and on the trigger rate, in particular in
 the first layer of the pixel sub-detector where the occupancy is greater.} for both pixel
 and tracker hits~\cite{CMS:particleflow}. According to the size of the
 cluster and the angle of
 incidence of the particle, the final resolution in the
 hit position is measured to be in the range of 20 (10) and 50 $\mu$m
 for the pixel (strip) tracker~\cite{CMS:particleflow}.\\
-An additional inputs for the track reconstruction are the identification
+An additional inputs for the track reconstruction is the identification
 of the LHC beam spot position, \ie the LHC luminous region's
 3D profile, and the position of the collision
-vertices. 
+vertices. \\
 
 The tracking algorithm used by CMS is called Combinatorial Track Finder (CTF)~\cite{Collaboration_2014_tracking}.
 To lower the combinatorial complexity, it is applied an iterative
 procedure in distinct successive iterations, each with moderate
 efficiency and loosened selection requirements on the track quality with
-respect to the step before. The method of Kalman
-filter~\cite{BILLOIR1990219} is used for the track-finding
+respect to the step before. The Kalman
+filter method~\cite{BILLOIR1990219} is used for the track-finding
 algorithm. While taking into account the multiple Coulomb scattering on the
 direction of the track, the Kalman filter makes use of track
 seeds\footnote{``\emph{The seeds define the starting trajectory parameters and associated uncertainties of potential
@@ -144,7 +148,7 @@ which do not fulfill goodness-of-fit requirements are rejected. Tracks
 which are ``easy'' to reconstruct, e.g. from particle with large \pt
 (which means less evident curvature) and produced in proximity to the
 interaction point, are reconstructed first. Therefore hits associated
-to these tracks are taken out making the subsequent iterations less
+to these tracks are taken out, making the subsequent iterations less
 complex. To guarantee high efficiency, track-finding starts with
 trajectory seeds which are built in the innermost region of the
 tracker. 
@@ -152,7 +156,7 @@ The reconstruction efficiency for tracks with \pt $>$ 1\GeV  is measured to be l
 than 99\% for isolated muons for $|\eta| < $ 2.5 and between 80 and
 99\% for electrons and pions~\cite{CMS:particleflow}. The track \pt
 resolution depends on the \pt and $\eta$ of the tracks, and it is
-lower than 1\% for muons with \pt $\in [1,10]$\GeV~\cite{CMS:particleflow}.
+lower than 1\% for muons with \pt $\in [1,10]$\GeV~\cite{CMS:particleflow}.\\
 
 Vertices are reconstructed using the high-quality tracks which are
 compatible with originating in the beam spot. They are then clustered
@@ -160,16 +164,17 @@ based on their coordinates along the \emph{z}-axis. An adaptive vertex
 fitting~\cite{Waltenberger_2007} developed as an iterative re-weighted Kalman filter
 is used to estimate the coordinates of the vertices. To each track it is assigned a
 weight between 0 and 1 according to the probability for that track to
-belong to a specific vertex. Thus vertex weights are appointed to each
+belong to a specific vertex. Thus, vertex weights are appointed to each
 vertex as the sum of the weights of all the
-associated tracks, and the vertices with weights inferior predefined
+associated tracks, and the vertices with weights inferior with respect
+to predefined
 thresholds are rejected. The reconstruction efficiency depends on the
 number of tracks associated to the vertex and it is estimated to
 be close to 100\% for the cases with more than two tracks and around
 98\% for vertices with two tracks~\cite{CMS:particleflow}. The
 resolutions varies between 10 and 100 $\mu$m~\cite{CMS:particleflow}.\\
-The primary vertex (PV) is identified as the vertex with the largest $p^2_T$ sum for
-physics-objects associated to it. The other vertices are assigned as pileup
+The primary vertex (PV) is identified as the vertex with the largest
+$p^2_T$ sum of all the physics-objects associated to it. The other vertices are assigned as pileup
 vertices.
 
 \subsection{The particle-flow algorithm}\label{sec:PF}
@@ -187,7 +192,7 @@ sub-detectors.
 \label{fig:pfscheme}
 \end{figure} 
 
-The input of the PF are the \emph{elements} tracks, vertices, tracks
+The input of the PF are the \emph{elements} such as tracks, vertices, tracks
 reconstructed from the muon system and
 calorimeter clusters. The output of the PF is a list of candidates
 like electrons, muons, photons and charged and neutral hadrons (see
@@ -199,14 +204,14 @@ in the angular momentum resolution of jets~\cite{CMS:particleflow}.
 
 \subsubsection{Jet clustering and reconstruction}\label{sec:jetclustering}
 Jets reconstruction is performed with a recombination algorithm which
-is known as anti-$k_T$ algorithm (with distance parameter of cone size
+is known as anti-$k_T$ algorithm (with distance parameter of the cone size
 of $\Delta R = 0.4$). The detailed description of the anti-$k_T$ algorithm is not
-discussed in this work but all the information can be found in 
+discussed in this work but the information can be found in 
 references~\cite{Cacciari_2008,Cacciari_2012}.
 
 In order to reduce the number of jets rising from mis-reconstruction or
 detector noise, identification requirements are applied depending on the single elements of the
-jets meaning the number of particles and the amount of energy of the
+jets \ie the number of particles and the amount of energy of the
 jet which comes from different type of PF candidates~\cite{CMS-PAS-JME-16-003}.
 The jet energy is set as the vectorial sum of the momenta of the
 particles constituting the jet. In order to alleviate the effect of
@@ -223,7 +228,7 @@ pileup jets~\cite{CACCIARI2008119, Cacciari_2008_area,
 
 Corrections on the jet energy are applied in order to correct for the
 remaining pileup energy contributions and for any discrepancies
-between jet properties in measured data and in simulated events. Those
+between jet properties in data and in simulated events. Those
 correction are obtained from the ratio between the \pt of a
 reconstructed jet and its corresponding generated jet and they are
 measured as function of \pt and $\eta$ and applied to data and
@@ -235,16 +240,16 @@ data~\cite{Khachatryan_2017}.
 \subsubsection{Tagging of jets originating from b
   quarks}\label{sec:tagging}
 The identification of jets which originate from b quarks, called
-b jets, can be achieved using
+\emph{b jets}, can be achieved using
 specific properties and features of heavy
-quarks inside the jet. This technique, usually called b tagging, is
+quarks inside the jet. This technique, usually called \emph{b tagging}, is
 extremely important to discriminate between signal and background as
-it will be analyzed and explained in Chapters~\ref{Chapter5}
+it will be explained in Chapters~\ref{Chapter5}
 and~\ref{Chapter6}.
-\begin{figure}{h}
-  \begin{center}
+
+\begin{figure}[h]
+\centering
     \includegraphics[clip,trim=0.3cm 0.5cm 0.3cm 0.3cm, width=0.50\textwidth]{Figures/c2/tagging}
-  \end{center}
   \caption{Schematic view of a b jet with a SV from the decay of a b hadron resulting in tracks which are displaced with respect to the PV, and hence with a large impact parameter (IP) value~\cite{Sirunyan_2018_tagging}.}
 \label{fig:btagging}
 \end{figure}
@@ -258,9 +263,8 @@ Figure~\ref{fig:btagging}. With respect to light jets (coming from
 u, d, s quarks or gluons) b jets have larger mass and harder hadronization which
 means that the decay products have larger momentum and larger number
 of tracks related with the jet. These signatures are exploited by the
-algorithms allowing to construct variables to separate b jets from
-light jets. The results of the b tagging are discriminator values for
-jets, see Figure~\ref{fig:taggingperformance}; large discriminator values coincide with higher probability for
+algorithms building variables to separate b jets from
+light jets. The results of the b tagging are discriminator values, see Figure~\ref{fig:taggingperformance}; large discriminator values coincide with higher probability for
 the jet to be a jet originating from b hadrons~\cite{CMS-DP-2017-013,
   csv}.\\
 The b tagging performances are checked in terms of the b jet
@@ -304,8 +308,8 @@ applied to simulated events as per-jet scale factors~\cite{csv}.
 
 \subsection{Muon reconstruction}\label{sec:trackmuon}
 This paragraph primarily describes the prompt muon reconstruction (~\ref{sec:c2muonselection}) and
-identification (~\ref{sec:c2muonreco}). It will follow a short description of the displaced
-case and the improved algorithms which have been designed for these specific
+identification (~\ref{sec:c2muonreco}). It will follow a description of the displaced
+case and of the new improved algorithms which have been designed for these specific
 scenarios (~\ref{sec:c2muondisplaced},~\cite{CMS-DP-2015-015}).
 
 \subsubsection{Muon track reconstruction}\label{sec:c2muonreco}
@@ -315,8 +319,8 @@ inner tracker gives a precise measurement of the muon momentum; the
 muon system identifies muon objects over a wide acceptance with high efficiency. A high purity in muons is obtained
 thanks to the upstream ECAL and HCAL which absorb other particles
 (except neutrinos). \\
-According to the tracking algorithms which are used, three kinds of muon
-candidates are defined~\cite{Sirunyan_2018_muon}:
+Three kinds of muon
+candidates are defined according to the tracking algorithms which are used,~\cite{Sirunyan_2018_muon}:
 \begin{itemize}
 \setlength\itemsep{-0.2em}
 \item \textbf{standalone muon}. The tracks are built from the
@@ -329,10 +333,10 @@ Kalman filter technique. The outcome of the fitting is called a
 \item \textbf{tracker muon}. These tracks are formed
   ``inside-out''. They are extrapolated from the inner
   tracker to the muon system with loose matching to DT and CSC
-  segments -- each inner track that has \pt$>0.5$\GeV and total
+  segments. Each inner track that has \pt$>0.5$\GeV and total
   momentum $>2.5$\GeV is extrapolated to the muon chambers and if at
   least one muon system segment matches that track than the muon track is defined as \emph{tracker
-  muon track} --. 
+  muon track}. 
 \item \textbf{global muon}. These tracks are built
   ``outside-in''. They the results of the matching between
   standalone-muon tracks and tracker tracks. The matching is performed by
@@ -371,10 +375,10 @@ to the candidates which have been reconstructed with standalone, track
 and global muon algorithms. 
 
 \subsubsection{Muon identification}\label{sec:c2muonselection}
-According to the desired compromise, for each CMS search, between efficiency and purity, a
-set of different variables and selections is defined~\cite{Sirunyan_2018_muon}.\\
+According to the desired compromise between efficiency and purity, it
+is defined a set of different variables and selections definitions~\cite{Sirunyan_2018_muon}.\\
 This level of details, here described, is going to be recalled and
-used in Chapter~\ref{Chapter6} where a customized and mindful selection is needed
+used in Chapters~\ref{Chapter5} and in particular~\ref{Chapter6} where a customized and mindful selection is needed
 for the displaced muon case (specifically Section~\ref{sec:c6muons}).
 
 Some variables are related to the muon reconstruction itself. We can
@@ -424,7 +428,7 @@ other constraints to target an overall efficiency of 99.5\% for muons from simul
 \end{itemize}
 There are other two identification types of muons, \emph{soft muon ID}
 and \emph{high momentum muon ID} which are not used in the context of
-this thesis analysis and therefore are not detailed in this section. 
+this thesis and therefore are not detailed in this section. 
 
 
 \paragraph{Tracking and reconstruction
@@ -465,7 +469,7 @@ leptons is defined relative to its \pt as the scalar
 sum of the energy of all the PF candidates emitted around the
 direction of the muon in the cones, $\Delta R = \sqrt{(\Delta
   \phi)^2+(\Delta \eta)^2}$, surrounding the object. Detailed
-information in Section~\ref{sec:c2variables}.\\
+information on isolation definition and isolation corrections are in Section~\ref{sec:c2variables}.\\
 
 
 Figure~\ref{fig:dimuon}, from reference~\cite{Sirunyan_2018_muon}, shows $M_{\mu \mu}$, the invariant mass distribution of dimuon pairs selected by
@@ -480,7 +484,7 @@ identify particles that decay into muons over a broad mass range.
 
  \begin{figure}[h]
 \centering
-\includegraphics[clip,trim=1.2cm 0.1cm 0.5cm 0.3cm, width=.68\textwidth]{Figures/c2/dimuon}
+\includegraphics[clip,trim=1.2cm 0.1cm 0.5cm 0.3cm, width=.65\textwidth]{Figures/c2/dimuon}
 \caption{``The dimuon invariant mass distribution reconstructed by the CMS HLT. Data were
 collected in 2015 with the inclusive double-muon trigger algorithm (gray), as well as triggers
 dedicated to selecting resonances at low masses.''~\cite{Sirunyan_2018_muon}.}
@@ -508,8 +512,7 @@ promising performances even for displaced object
 reconstruction. Several studies and improvements on displaced physics object
 reconstruction have been recently
 delivered, helping in the challenging effort of including long-lived
-exotic searches in the CMS results (few
-examples:~\cite{cmscollaboration2021search, Sirunyan_2019ll,
+exotic searches in the CMS results (~\cite{cmscollaboration2021search, Sirunyan_2019ll,
   Sirunyan_2019ll2, Sirunyan_2020ll, Sirunyan_2021ll,CMS:2021tkn}).\\
 
 The analysis presented in Chapter~\ref{Chapter6} makes use of the
@@ -544,9 +547,7 @@ valid tracker hit fraction requirement is shown. On the right, the efficiency of
   \label{fig:c2tracking2}
 \end{figure}
 2D distance between the PV and the secondary vertex (SV)
-which is one of the best proxies to estimate the point of orgin of the
-displaced muon ($\Deltwod = \sqrt{(x_{SV}-x_{PV})^{2} +
-  (y_{SV}-y_{PV})^{2}}$).
+which is a proxy to estimate the point of orgin of
 \begin{wrapfigure}{r}{0.5\textwidth}
 \includegraphics[width=.4\textwidth]{Figures/c6/object/globalTrack_cuts_M-4_V-0p00290516780927_rho.png}
   \caption{Efficiency of different Medium-ID selections with respect to tracks for displaced
@@ -555,7 +556,8 @@ muons. A HNL scenario with
     benchmark. \dani}
   \label{fig:c2tracking3}
 \end{wrapfigure} 
-The efficiency worsens for muons created towards the external layers of the inner
+ the
+displaced muon (details in Section~\ref{sec:c2variables}). The efficiency worsens for muons created towards the external layers of the inner
 tracker.
 Figure.~\ref{fig:c2tracking2} shows, on the left, the sequential
 efficiencies of the plain PF Muon requirement,
@@ -566,19 +568,16 @@ this last selection
 falls rapidly with increasing of the PV-SV
 distance. 
 The valid-hit fraction request is thus removed from the set of
-requirements of the Medium ID (refer to Section~\ref{sec:c2muonselection}), and is not applied in the following
-efficiencies. To mitigate the depreciation of the
+requirements of the Medium ID (refer to Section~\ref{sec:c2muonselection}). To mitigate the depreciation of the
 total efficiency for muons not emerging from the primary vertex, the
 Medium ID is then modified in the context of the analysis presented in
-Chapter~\ref{Chapter6}.\\
-In Figure.~\ref{fig:c2tracking2}, on the
+Chapter~\ref{Chapter6}. In Figure.~\ref{fig:c2tracking2}, on the
 right, it is shown
 the comparison between the efficiencies of the
 tracker-muon only and global-muon only and their logical OR (\ie, the full
 customize Medium ID). The main contribution to the efficiency comes
 from the tracker-muon selection, while the addition of the global-muon
-selection only increases the overall efficiency by few percent.\\
-Finally, Fig.~\ref{fig:c2tracking3} compares the efficiency of
+selection only increases the overall efficiency by few percent. Finally, Fig.~\ref{fig:c2tracking3} compares the efficiency of
 the full customized Medium ID with the efficiencies obtained by removing
 individual requirements from the global-muon definition. None of these variables
 appears to hurt the overall efficiency significantly---the larger
@@ -660,17 +659,15 @@ crossing the tracker material~\cite{CMS:particleflow}. The bremsstrahlung radiat
 by organizing into a supercluster the ECAL clusters which are
 reconstructed in a narrow window in $\eta$ and a wider window in $\phi$ along the electron direction (azimuthal
 bending in the magnetic field).
-
- \begin{wrapfigure}{r}{0.5\textwidth}
-\includegraphics[width=.4\textwidth]{Figures/c2/eleecal}
+\begin{wrapfigure}{r}{0.5\textwidth}
+\includegraphics[width=.48\textwidth]{Figures/c2/eleecal}
   \caption{It is shown the electron seeding efficiency for electrons (triangles) and pions (circles) as a
 function of \pt. They are shown both the efficiencies for ECAL-based
 seeding only (hollow symbols) and with the tracker-based seeding added
 (solid symbols)~\cite{CMS:particleflow}.}
   \label{fig:c2ele}
 \end{wrapfigure} 
-
-For small \pt electrons, the ECAL-supercluster approach can give
+For small \pt electrons, the ECAL supercluster approach can give
 incorrect information regarding the total energy. The soft tracks are
 significantly bent in the tracker by the magnetic field and the
 radiated energy is dispersed over an extended area that the energy
@@ -698,8 +695,8 @@ of the electrons from $\gamma$ conversions
 in the tracker material becomes crucial for background description. In
 the analyses presented in
 Chapters~\ref{Chapter5} and~\ref{Chapter6}, the so-called
-``conversion'' background has a major contribution and the correct
-understanding and prediction is critical for good background
+``conversion'' background has a major contribution and its correct
+understanding is critical for good background
 predictions.
 
 Electrons are reconstructed within the geometrical acceptance of the
@@ -761,6 +758,7 @@ Chapter~\ref{Chapter6}. They are circumscribed
 to this specific scenario and they are not optimized for a more extended
 implementation.  \\
 
+
 \Displ electrons are identified using the \emph{cut-based loose ID}
 but with fewer requirements. Two criteria have been removed because
 they could affect the efficiency for electrons
@@ -769,24 +767,125 @@ It is excluded the conversion veto requirement which identifies
 secondary vertices where $e^{-}$-$e^{+}$ pairs 
 originate from $\gamma$ conversions in the tracker material.\\
 Finally the request of the on the maximum number of
-missing inner tracker hits it is removed in order to accomodate 
-eventual larger displacements. 
+missing inner tracker hits it is removed in order to accommodate 
+eventual larger displacements. \\
+In Figure~\ref{fig:basileele}, on the left, it is shown the pure
+identification efficiency with respect to the
+reconstructed tracks. It is estimated as function of the flight
+distance, $L_{xy}$ of the long-lived particle. In the right figure
+(~\ref{fig:basileele}), the ID efficiency is convoluted with the
+reconstruction efficiency of the GSF tracks; hence the values are
+computed with respect to the number of
+generated tracks. For this specific case, three heavy neutral lepton
+benchmark models are used with different neutrino masses (3, 5 and
+12\GeV) and different lifetime values.
+
+\begin{figure}[h]
+\centering
+  \includegraphics[width=0.4\textwidth]{Figures/c2/_e_l2id_Lxy_eff.png}
+  \includegraphics[width=0.4\textwidth]{Figures/c2/el_l2full_Lxy_eff.png}
+  \caption{On the left, it is shown the pure ID efficiency with
+    respect to GSF reconstructed tracks. On the right the efficiency
+    of reconstructed and identified electrons with
+    respect to generated electrons. \basile}
+  \label{fig:basileele}
+\end{figure}
 
 
-\clearpage
+
+\section{Secondary vertex reconstruction} \label{sec:c2sv}
+
+For the long-lived analysis presented in
+Chapter~\ref{Chapter6}, supplementary and
+tailored treatment of the secondary vertex reconstruction and
+identification is necessary. The SV is the decay vertex of the Heavy
+neutral lepton and it is the point of origin of the decay products.\\
+
+In this specific case (~\ref{sec:llanalisi}), exactly two leptons, muon and/or electron, are
+expected to
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \includegraphics[width=.45\textwidth]{Figures/c2/leptons_fromN_fromNW_vtx_rho_pull.png}
+  \caption{Pull distributions of the
+    transverse distance of the fitted SV from
+    the PV of the interaction, for HNL masses from 1 to 4\GeV,
+    all with $\mixpar=10^{-4}$. The red curve overlaid to the blue
+    histogram shows a Gaussian fit to the core of the $\mhnl=2\GeV$
+    distribution. \dani}
+  \label{fig:svPulls}
+\end{wrapfigure} 
+ originate from the SV. The SV reconstruction is done a
+posteriori after the identification of the two lepton candidates which
+are believed to be displaced. \\
+The SV is found by fitting the two tracks to a common point with a Kalman-filter
+approach~\cite{BILLOIR1990219}, using the \texttt{KalmanVertexFitter}
+class implemented in the CMS reconstruction software (\texttt{CMSSW}).
+The class returns the least-$\chi^2$ estimator of the two-track vertex
+position and covariance matrix, along with the $\chi^2$ of the fit, as
+an indicator of its goodness.
+Figure~\ref{fig:svPulls} shows the pulls of the distance of the fitted
+secondary vertex (SV) from the PV of the interaction projected on the
+transverse plane (denoted as $\rho$). The pulls
+are computed as the difference between the measured distance, $\rho$
+and its true value from simulation, divided by the uncertainty
+on the measured value. A standard deviation of about 1.2 is found from
+a Gaussian fit to the pull distributions, revealing a slight
+underestimation of the uncertainties.\\
+To verify the accuracy of the reconstructed SV position, it is checked the residuals of the
+transverse PV--SV distance $\rho$ with respect to the true generated
+value, $\Delta\rho(\mathrm{gen,rec})$ and the relative residuals
+$\Delta\rho(\mathrm{gen,rec})/\rho(\mathrm{gen})$, as a
+function of the true $\rho$. The results are shown in
+Figure~\ref{fig:svResidVsRho_all}.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=.4\textwidth]{Figures/c6/selection/genvtx_recvtx_Drho_vs_rho_afterSel_zoom.pdf}
+  \includegraphics[width=.4\textwidth]{Figures/c6/selection/genvtx_recvtx_RelDrho_vs_rho_afterSel_zoom.pdf}
+  \caption{Residuals (left) and relative residuals (right) of the
+    transverse distance $\rho$ between the fitted secondary vertex and
+    the PV of the interaction, as a function of the true $\rho$ value
+    from simulation. 
+    The red graph shows the mean value of the
+    residuals in each $\rho$ bin and the uncertainty on the mean
+    value. The dashed green line in the left plot indicates the
+    distance between the generated primary and secondary vertices: any
+    reconstructed vertex below this line would lie in the ``wrong''
+    hemisphere, opposite to the direction of flight of the HNL.
+    The horizontal dashed lines in the right plot delimit the region
+    where $\Delta\rho(\mathrm{gen,rec})$ is less than 10\% of
+    $\rho(\mathrm{gen})$. This region contains more than 99\% of
+    the events for $\rho>0.5$cm, and about 97.4\% for $\rho<0.5$cm.
+    \dani}
+  \label{fig:svResidVsRho_all}
+\end{figure}
+
+No significant biases are observed and
+the tails are small: the fraction of events with
+$\Delta\rho(\mathrm{gen,rec})/\rho(\mathrm{gen})$ larger than
+10\%---indicated by the dashed horizontal lines in
+Fig.~\ref{fig:svResidVsRho_all} (right)---is about 2.6\% for $\rho<0.5\cm$, and less than 1\% for larger
+displacements.
+
+The quality of the reconstructed SVs is checked with specific
+variables described in Section~\ref{sec:c2IP} such as the fit
+probability and $\chi^2$ of the fit. 
+
+The efficiency for this two-tracks-SV reconstruction is nearly 100\%.
+
+
 \section{PF object and event identification
   variables}\label{sec:c2variables}
 Aside from the variables introduced beforehand, there are additional
-ones which is worth introducing at this stage of this work. 
-The list of variables presented in the next two sections, is
-contingents on the specification and parameters of the two heavy
+ones which is worth introducing at this stage of this dissertation. 
+The list of variables presented in the next two sections is
+contingent on the specification and parameters of the two heavy
 neutral leptons analysis presented in Chapters~\ref{Chapter5}
 and~\ref{Chapter6}.\\
 There is a number of variables which are referred specifically to light
-leptons, electrons and muons and in particular to the position in the
-detector with
+leptons, electrons and muons and in particular to the position with
 respect to the PV where they have been created. \\
 A second set consists in a few event-based observables. 
+
 
 
 \subsection*{Light leptons
@@ -817,14 +916,14 @@ In the context of this thesis work, the following variables are used:
   uncertainty; 
 \item $\boldsymbol{\Delta_{2D}}$, the 2D distance between the PV and
   the SV. It is an optimal proxy to estimate the point of origin of the
-displaced muon and the heavy neutral lepton decay length. It is
+displaced lepton and the heavy neutral lepton decay length. It is
 computed as $\Deltwod = \sqrt{(x_{SV}-x_{PV})^{2} + (y_{SV}-y_{PV})^{2}}$;
 \item $\boldsymbol{ S(\Delta_{2D})}$, the significance of the transverse distance
   between PV and SV, defined as the ratio of the transverse PV-SV
   distance $\Delta_{2D}$ and its uncertainty;
 \item $\boldsymbol{ p_{SV}}$, SV probability. The quality of the reconstructed SV
   necessarily correlates with the precision on the track parameters of
-  \ltwo and \lthree, as well as the spatial separation between their
+  the two leptons in the SV, as well as the spatial separation between their
   trajectories at the intersection point. The SV quality is estimated as a probability based on the
 $\chi^2$~fit from the kinematic vertex fitter;
 \item $\boldsymbol{d}$, displacement. It is used to parametrized the
@@ -850,15 +949,21 @@ direction of the lepton in the cones, $\Delta R = \sqrt{(\Delta
     \Irel = \frac{1}{\pt^\ell}
     \left(\sum_{ch.hadr.}\pt^{\mathrm{PV}} +
     \max{\left[0, \sum_{neu.hadr.}\pt + \sum_{pho.}\pt
-        - \pt^{\text{neutral \ pileup}}\right]}\right)
+        - \rho\cdot A_{\mathrm{eff}}\right]}\right)
   \end{equation}
 \end{linenomath}
 For the estimation of the PF isolation~\cite{CMS:particleflow}, it is computed the sum of the
 \pt of charge hadrons and the \pt of neutral particles (hadrons
 and photons) originating from the PV. Typical values used for  $\Delta
 R$ are 0.3 and 0.4.\\
-A correction is applied to account for the contribution from pileup to the
+The term $\rho\cdot A_{\mathrm{eff}}$ is used to mitigate the
+contribution of pileup to the isolation calculation: the average
+transverse-momentum flow density $\rho$ is calculated in each event
+using a ``jet area'' method~\cite{CACCIARI2008119}, and the effective
+area $A_{\mathrm{eff}}$ is the geometric area of the isolation cone
+times an $\eta$-dependent correction factor. This correction factor is applied to account for the contribution from pileup to the
 neutral particles component~\cite{Sirunyan_2018_muon}.
+
 
 \subsection*{General observables} \label{sec:c2observables}
 \paragraph{Missing transverse momentum,
