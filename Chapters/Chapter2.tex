@@ -72,7 +72,7 @@ searches for extra dimensions
 and dark matter. \\
 
 There are a few parameters which are accelerator-dependent but worth
-mentioning becauses are also very important for the
+mentioning because are also very important for the
 physics analyses. They are the instantaneous and integrated luminosity, the
 number, in the same bunch crossing, of simultaneous collisions and the
 center-of-mass energy of the proton-proton collisions.\\
@@ -223,7 +223,7 @@ with the region at the immediate proximity to the interaction point, a
 particle meets first the tracker where its trajectory, if charged, is
 measured. This measure is possible thanks to the presence of the
 magnetic field, created by the solenoid, which bends the charge
-particle trakcs. Subsequently there are the
+particle tracks. Subsequently there are the
 electromagnetic (ECAL) and hadronic (HCAL) calorimeters where
 electrons/photons and hadrons are receptively absorbed and their
 energies measured. Finally the muons, getting through the
@@ -239,11 +239,33 @@ The central part of CMS is a solenoid magnet of 6 m internal diameter
 which is made of a cylindrical coil of superconducting fibers. It 
 provides a magnetic field of 3.8 T. 
 \subsubsection{The tracking system}\label{sec:tracking}
-The design of the CMS tracking system is optimized to
+The particle energy measurement is a critical information to build up the full
+picture of the event happening at center of CMS detector. One way to
+estimate the momentum is to track the particle course through a
+magnetic field; the more bent the trajectory, the less energy the
+particle has. The CMS tracking system registers the course taken by
+charged objects passing through by spotting their location at a few
+fixed points which are the tracker layers. \\
+Thus the system can measure the trajectories of muons, electrons,
+charged hadrons and tracks originating from the secondary vertex decay of long-lived
+particles.
+
+The tracker modules need to have relative fast responses, good
+accuracy as well as be lightweight in terms of radiation lengths in
+order to disturb the particle path as little as possible. Furthermore
+the layers closer to the beam pipe receive
+the largest volume of particles thus the construction materials should
+have high radiation hardness to resist radiations over time.
+
+Hence the design of the CMS tracking system is optimized to
 efficiently and precisely measure the trajectories of charged
-particles and to effectively reconstruct secondary vertices. This latter feature is of particular
-importance in the context of displaced vertices and lepton searches presented
-in Chapter~\ref{Chapter6}.
+particles and to effectively reconstruct secondary vertices.\\
+This latter feature is of particular
+importance in the context of displaced vertices search presented
+in Chapter~\ref{Chapter6}. The vertex position resolution and track
+reconstruction efficiency play a major role in the analysis acceptance,
+and thus in the analysis sensitivity. Those parameters are going to be
+described in detail in Section~\ref{sec:trackvertex}.
 
 \begin{figure}[h]
 \centering
@@ -265,7 +287,10 @@ fast response features to correctly associate each reconstructed track
 to the respective bunch crossing and the primary interaction vertex.
 
 The CMS tracker consists of a pixel detector (pixel Tracker) and a
-silicon strip detector (strip Tracker), see Figure~\ref{fig:tracker}.
+silicon strip detector (strip Tracker), see
+Figure~\ref{fig:tracker}. While a particle travels through the tracker the pixels and
+strips create very small electric signals which get amplified and
+detected.\\
 The original pixel detector was made of three barrel
 layers at radii of 4.4, 7.3, and 10.2 cm and two endcaps modules in
 the forward region. 
@@ -289,18 +314,28 @@ strip detector.
 \subsubsection{The electromagnetic calorimeter}
 The ECAL detector is a fine-grainded and homogeneous calorimeter
 made up of lead
-\begin{wrapfigure}{r}{0.5\textwidth}
+\begin{wrapfigure}{r}{0.6\textwidth}
   \begin{center}
-    \includegraphics[clip,trim=1cm 1cm 1cm 1.5cm, width=0.48\textwidth]{Figures/c2/ecal}
+    \includegraphics[clip,trim=1cm 1cm 1cm 1.5cm, width=0.58\textwidth]{Figures/c2/ecal}
   \end{center}
   \caption{Geometric view of one quarter of the ECAL~\cite{Benaglia_2014}.}
 \label{fig:ecal}
 \end{wrapfigure}
  tungstate crystals. Those single crystals are extremely transparent
- and ``scintillates''  when photons and electrons pass through
- them; the light produced is proportional to the particle's energy
+ and \emph{scintillate} when photons and electrons pass through
+ them. \emph{Scintillation} occurs when in an excited atom, after given
+ energy, an electron which went to an higher orbit falls back and
+ releases energy in the form of a photon. The CMS ECAL's crystals
+ receive energy from the showers of electrons, positrons and photon
+ generated from the interaction between high energy photons/electron and
+ dense matter. Afterwards the crystal atoms ``relax'' and each
+ excited electron, ``falling back'',
+ emits energy as a photon in the blue light spectrum.
+The light produced is proportional to the particle's energy
  allowing a fast and very precise measurement of the momentum
- property. The single crystal length in barrel region is 230 mm (220
+ property. 
+
+The single crystal length in barrel region is 230 mm (220
  mm in endcap) comparable to $\sim$26 (25) radiation lengths meaning it
  absorbs more than 98\% of the energy deposited by the particle~\cite{Biino_2015}.\\
 A scheme of the ECAL is shown in Figure~\ref{fig:ecal}.
@@ -309,12 +344,22 @@ ECAL modules are placed in the barrel ($\eta<$ 1.479) and endcap
 before the endcap crystals. The preshower detectors help CMS to
 distinguish between single high-energy photons and the less
 interesting pairs of low-energy photons very close to each other, \ie
-coming from the decay of a $\pi^0$. 
+coming from the decay of a $\pi^0$. \\
+For the analyes presented in Chapters~\ref{Chapter5}
+and~\ref{Chapter6} the electron energy correctness is crucial for the
+proper electron reconstruction and identification in the final
+state. 
 
 \subsubsection{The hadron calorimeter}
 The HCAL detector is a hermetic sampling calorimeter which means it
 consists of alternative layers of ``absorber'' and ``scintillator''
 materials that measure a particle’s position, energy and arrival time.
+At the moment a hadron collides with a absorber layer, brass or steel
+in this case, an interaction occurs generating several secondary
+particles. Subsequently these bunch of particles hit a successive layers
+of absorber interacting again and agin and creating a shower of particles.
+This shower passes through the layers of scintillators
+causing them to emit photons in the blue-violet light spectrum.
 The quantity of light in a given position is summed up over several
 layers of tiles in depth, called a “tower”, thus this total amount of
 light is a measure of a particle’s energy.\\
@@ -330,21 +375,55 @@ The outer barrel, HO, ensures no energy leaks out the
 back of the HB undetected.
 
 \subsubsection{The muon system}\label{sec:muonsystem}
-The muon system is constructed to detect muons and to measure their trajectories.\\ 
-It is composed by three different kind of gaseous particle
-detectors inserted in the steel yoke. There are the drift tubes
+The muon system is constructed to detect muons and to measure their
+trajectories. Muons can be created in the decay of numerous particles,
+like Higgs Boson decay ($H \rightarrow \mu \mu \mu \mu$) or 
+RH neutrino decay as described in
+Chapters~\ref{Chapter4}, ~\ref{Chapter5} and~\ref{Chapter6}. For this
+reason they
+appear to be one of the clearest and golden ``signatures" for many
+searches becoming the crucial element of the CMS reconstruction
+and identification.\\
+Since the muons can penetrate various meters of iron in the CMS return
+yoke without interacting, the modules to detect muons are located at
+the very edge of the detector where they are likely the only particles
+which are able to register a signal.\\
+The muon system is composed by three different kind of gaseous particle
+detectors inserted in the steel yoke. All three sub-detector are
+based on the confined ionization of a small gas volume within the detector
+module due to the transit of an ionizing particle.
+There are the drift tubes
 modules, DTs, the cathode strip chambers, CSCs and the resistive plate
-chambers, RPCs.\\
+chambers, RPCs.
 The four layers of DTs are located in the barrel and they cover up to
-$\eta<$ 1.2 pseudorapidity range in the detector. The four layers of
+$\eta<$ 1.2 pseudorapidity range in the detector. \\
+The rates in the forward region are higher than in the
+barrel region, so a faster detector is needed there; this is the
+reason for the CSCs instead of the DTs (shorter drift distance than DTs).
+The four layers of
 CSCs are installed in the endcap covering the pseudorapidity range 0.9
-$<\eta<$ 2.4. Finally there are the RPCs positioned both in barrel
+$<\eta<$ 2.4. \\
+A part from an optimal spatial resolution given by the CSDs and DTs
+combination, the muon system is required to have a time resolution of
+the order of 1 ns. This is accomplish by adding the RPCs in the system
+which grant for almost univocal identification of the proper bunch
+crossing and for excellent info of the time coincidence of track
+segments (refer to Section~\ref{sec:trackvertex}) from the distinct
+muon sub-modules. 
+The RPCs are positioned both in barrel
 and endcap parts up to $\eta<$ 1.6. The whole pseudorapidity range of
 the muon system allow to measure muons up to $\eta<$ 2.4.
 
+Combining both the great spatial resolution of DTs and CSCs and the
+high time resolution from the RPCs,
+ the CMS muon system exhibits two
+complementary and crucial inputs for the trigger system. 
+
+
+
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.78\textwidth]{Figures/c2/cms_quadrant_run_ii.pdf}
+\includegraphics[width=0.98\textwidth]{Figures/c2/cms_quadrant_run_ii.pdf}
 \caption{Geometric view of one quadrant of CMS. The grey areas are
   tracker, ECAL and HCAL systems; the colored
   areas show the muon system and its subsystem. The drift tube, DTs,
