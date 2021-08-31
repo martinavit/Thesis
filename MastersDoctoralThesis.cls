@@ -541,6 +541,14 @@ KOMA-script documentation for details.}]{fancyhdr}
 \newcommand{\ie}{i.e.\xspace}
 \newcommand{\eg}{e.g.\xspace}
 
+\newcommand{\lo}{\textsc{loose}\xspace}
+\newcommand{\fo}{\textsc{FO}\xspace}
+\newcommand{\ti}{\textsc{tight}\xspace}
+\newcommand{\ttol}{\textsc{tight-to-loose}\xspace}
+\newcommand{\fr}{\textsc{fake-rate}\xspace}
+
+
+
 \newcommand{\PGt}{\ensuremath{\tau}\xspace}
 \newcommand{\ttbar}{\ensuremath{t\bar{t}}\xspace}
 \newcommand{\PGg}{\ensuremath{\gamma}\xspace}
