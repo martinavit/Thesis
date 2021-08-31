@@ -546,7 +546,11 @@ KOMA-script documentation for details.}]{fancyhdr}
 \newcommand{\ti}{\textsc{tight}\xspace}
 \newcommand{\ttol}{\textsc{tight-to-loose}\xspace}
 \newcommand{\fr}{\textsc{fake-rate}\xspace}
+\newcommand{\Dfr}{\textsc{double-fake-rate}\xspace}
 
+\newcommand{\tP}{\textsc{tight prompt}\xspace}
+\newcommand{\tD}{\textsc{tight displaced}\xspace}
+\newcommand{\lD}{\textsc{loose displaced}\xspace}
 
 
 \newcommand{\PGt}{\ensuremath{\tau}\xspace}
@@ -656,6 +660,8 @@ KOMA-script documentation for details.}]{fancyhdr}
 \newcommand{\willem}{Courtesy of W. Verbeke.}
 \newcommand{\basile}{Courtesy of B. Vermassen.}
 \newcommand{\luka}{Courtesy of L. Lambrecht.}
+\newcommand{\kirill}{Courtesy of K. Skovpen.}
+\newcommand{\tom}{Courtesy of T. Cornelis.}
 
 
 
