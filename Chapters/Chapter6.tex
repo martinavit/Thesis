@@ -1416,7 +1416,7 @@ unknown, as a proxy for its displacement we use the following
 variable~\cite{convz}:
 
 \begin{align}
-\vcenter{\hbox{\includegraphics[clip,trim=0cm 0cm 0.5cm 0cm, width=.42\textwidth]{Figures/c6/efficiencies/figs_Displacement.png}}}
+\vcenter{\hbox{\includegraphics[clip,trim=0cm 0cm 0.5cm 0cm, width=.32\textwidth]{Figures/c6/efficiencies/figs_Displacement.png}}}
 &\qquad
 \begin{aligned}
 \mathrm{d = \sqrt{2Rd_{xy}+d_{xy}^2}};
@@ -1439,33 +1439,49 @@ scale-factor with respect to unity is considered as an uncertainty.
 A similar effect was also observed in a study where we use $K_s^0$  and $\lambda$ mesons, which we use to calibrate \displ muon reconstruction efficiencies. See Section~\ref{sec:displacedvertex}.
 The details on how the scale factors and the systematics from each of these studies implemented in the analysis can be found in Sec.~\ref{sec:nonpromptleptoneffsysts}.
 
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=.45\textwidth]{Figures/c6/efficiencies/Convz/Nonprompt1DisplCoarse_lle_2016.pdf}
-  \includegraphics[width=.45\textwidth]{Figures/c6/efficiencies/Convz/Nonprompt1DisplCoarse_lle_2017.pdf}\\
-  \includegraphics[width=.45\textwidth]{Figures/c6/efficiencies/Convz/Nonprompt1DisplCoarse_lle_2018.pdf}
-  \caption{The displacement of the \Displ electron in data
-  and simulation measured in $\PZ\to\ell^-\ell^+\Pe$ events, 
-  for 2016 (left), 2017 (middle) and 2018 (right)~\cite{convz}.}
-  \label{fig:convdispl}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.45\textwidth]{Figures/paper/convDisplacement-crop.pdf}
+    \includegraphics[width=0.45\textwidth]{Figures/paper/convM4l-crop.pdf} \\
+    \includegraphics[width=0.45\textwidth]{Figures/paper/convPVSV4l-crop.pdf}
+    \caption{\label{fig:convdispl}
+        Comparison between the observed number of events in data and
+        simulation for converted photons.
+        Events are selected in the final states with three (upper left) or
+        four (upper right right, lower) leptons,
+        with one (or two) of the leptons identified as nonprompt
+        electron(s). The distributions are shown for the nonprompt electron displacement
+        (upper left) and reconstructed invariant mass of four leptons (upper
+        right). Additionally, the
+        distance between the reconstructed PV and fitted
+        SV is presented (lower).
+        The simulated events correspond to the processes with external
+        conversions, $\PZ\gamma^{(\ast)}$; internally converted photons,
+        $\PZ(\PGg^{\ast})$; and other processes
+        with the production of vector bosons and top quarks.
+	The hashed band represents the statistical uncertainty
+	in the simulation.}
 \end{figure}
+
 
 
 \subsection{\Displ tracking and vertexing efficiency}
 \label{sec:displacedvertex}
 
 In this subsection, we investigate the discrepancy between simulation
-and data concerning heavily displaced track and vertex
+and data concerning heavily
+\begin{wrapfigure}{r}{0.35\textwidth}
+   \includegraphics[width=0.8\linewidth]{Figures/c6/efficiencies/diagram_ks}
+   \caption{Diagrams for the decays of \PKzS studied in this method.}
+    \label{fig:svdiagrams}
+\end{wrapfigure}
+ displaced track and vertex
 reconstruction. 
 The method is based on the displaced decay of the
 neutral hadrons \PKzS to two charged particles (see
-Fig.~\ref{fig:diagrams}), giving the signature of two displaced tracks
+Fig.~\ref{fig:svdiagrams}), giving the signature of two displaced tracks
 originating from a common vertex.
-\begin{wrapfigure}{r}{0.4\textwidth}
-    \includegraphics[width=0.9\linewidth]{Figures/c6/efficiencies/diagram_ks}
-    \caption{Diagrams for the decays of \PKzS studied in this method.}
-    \label{fig:diagrams}
-\end{wrapfigure}
+
  Here we will discuss the methodology
 (briefly) and the most important results. More information can be found at~\cite{AN-20-111_KshortStudy}.
 
@@ -1477,76 +1493,99 @@ The \PKzS hadrons are reconstructed in simulation and data focusing on $Z\righta
     \item exact 2 muons in the event;
     \item the leading muon must have a \pt of at least 30 \GeV, the trailing muon of at least 25 \GeV;
     \item the selected muon invariant mass is required to be within 10 GeV of the $Z$-boson mass;
-    \item Events containing one or more loosely tagged $b$-jet are vetoed.
+    \item events containing one or more loosely tagged $b$-jet are vetoed.
 \end{itemize}
-
-\paragraph{Vertex fitting}
-\label{sec:vertexfitting}
 
 The vertex reconstruction algorithm developed for this study closely
 resembles the built-in $V^0$-vertex fitter in the CMS software (where
-$V^0$ is used to refer to \PKzS vertex), with however some small
-alterations to account for the fact that we are
-\begin{wrapfigure}{r}{0.45\textwidth}
-    \includegraphics[clip,trim=0 0 16cm 0, width=0.9\linewidth]{Figures/c6/efficiencies/invmass_mumuskim}
-    \caption{\PKzS candidate spectrum with linear background fit and
-      double gaussian signal fit. Note that in these plots the result for the full 2017E data taking period is shown.}
-    \label{fig:invmass_mumuskim}
-\end{wrapfigure}
- working on MINIAOD level instead of RECO.
- Furthermore, we re-optimized some of the cut
+$V^0$ is used to refer to \PKzS vertex), for details refer to
+Sections~\ref{sec:trackvertex} and~\ref{sec:c2sv}.
+Furthermore, we re-optimized some of the cut
 values in order to retain more $V^0$ candidates at small radial
 displacements from the primary vertex, at the cost of a slightly
 larger overall background. This design choice was inspired by the need
 for a large number of candidates close to the primary vertex, as these
 will be used for normalization (see further on). 
 
-As a check of the vertex fitting algorithm, we plot the invariant mass
-distributions of the reconstructed \PKzS in
-Fig.~\ref{fig:invmass_mumuskim}.
+The number of \PKzS~mesons in data and simulation
+are estimated by a template fit to the invariant mass distribution of the $\pi^{\pm}\pi^{\mp}$
+pairs; the combinatorial background is subtracted. The results of this
+validation are presented in four \Deltwod ranges
+from ``almost prompt'' to very displaced in Fig.~\ref{fig:invmass_mumuskim}.
 
-\noindent
-\paragraph{Methodology}\label{sec:methodology}
-The yields of reconstructed $V^0$-particles is compared between data and simulation, binned in radial distance from the primary vertex. As a first remark, we plot the yield of \PKzS particles, using a relatively fine binning in Fig.~\ref{fig:2017_detector}. Notice how the pixel detector layout has a clear structural influence on the yield, both in simulation and data.
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
-    \includegraphics[width=0.40\textwidth]{Figures/c6/efficiencies/2017E_detector}
-    \caption{Results for \PKzS particles using a fine binning and linear $y$-axis scale with the radial distances of the pixel detector layers superimposed. Note that in this plot, the total number of \PKzS particles in simulation was normalized to that in data as we merely wanted to perform a shape comparison.}
-    \label{fig:2017_detector}
+    \includegraphics[width=0.35\textwidth]{Figures/paper/ksinvmass_run2_fig_0.pdf}
+    \includegraphics[width=0.35\textwidth]{Figures/paper/ksinvmass_run2_fig_1.pdf} \\
+    \includegraphics[width=0.35\textwidth]{Figures/paper/ksinvmass_run2_fig_2.pdf}
+    \includegraphics[width=0.35\textwidth]{Figures/paper/ksinvmass_run2_fig_3.pdf} \\
+    \caption{\label{fig:invmass_mumuskim}
+        The invariant mass distribution of the \PKzS candidates reconstructed using the $\pi^{\pm}\pi^{\mp}$ tracks for various displacement regions. The fitted \PKzS candidate mass in data in each region is also shown. \luka}
 \end{figure}
 
-In the following, we normalize the yield in simulation to the yield in
-data at small radial distances.This approach allows us to correct for
+It is extracted a normalization factor for the event yield in
+simulation to the corresponding yield in data at very small radial
+distances (0--0.5\cm). It represents an overall
+normalization correction for possible MC mismodeling of the
+\PKzS production in \PZ~boson events. This approach allows us to correct for
 overall mis-modeling effects of $V^0$-particles
 and to isolate the effect under consideration, \ie a systematic
 difference in vertex reconstruction efficiency due to its being
-displaced. The exact range for normalization was chosen to be 0 - 0.5
-cm for $K^0$. Furthermore, a fit to the sidebands in the invariant mass spectrum per bin of radial distance was used to subtract the background contribution.
-\vspace{3cm}
-\subparagraph{Main results and conclusions}\label{sec:mainresults}
-The obtained data-to-simulation ratio plots for the three data taking
-years of Run II are shown in Fig.~\ref{fig:1dplots_2016_2017_2018}. \\
-Note that the discrepancy is very large in the last bin for 2016 data. This can be explained by the reduced tracking performance in eras 2016 B to 2016 F due to the HIP-effect, which in the end turned out to be caused by a saturation effect in the electronics \cite{hipeffect}. The electronics were reconfigured between run 2016 F and 2016 G. It can be checked in the dedicated note ~\cite{AN-20-111_KshortStudy} that the simulation to data agreement is in fact much better for eras 2016 G and H. \\ \\
-In Fig.~\ref{fig:2dplots}, we extend these results by performing a two-dimensional binning: the $x$-axis again represents the radial distance from the primary vertex, while the $y$-axis now holds the reconstructed transverse momentum of the particle. 
+displaced. \\
+As a first remark, we plot the yield of \PKzS particles, using a
+relatively fine binning in Fig.~\ref{fig:2017_detector} (left). Notice how the pixel detector layout has a clear structural influence on the yield, both in simulation and data.
 
-\begin{figure}[h]
-\noindent
-\makebox[\textwidth]{
-		\includegraphics[width=0.33\textwidth]{Figures/c6/efficiencies/1dplots/2016tot/ksnorm3small}
-		\includegraphics[width=0.33\textwidth]{Figures/c6/efficiencies/1dplots/2017tot/ksnorm3small}
-		\includegraphics[width=0.33\textwidth]{Figures/c6/efficiencies/1dplots/2018tot/ksnorm3small}}
-	\caption{Data to simulation ratio for data taking year 2016
-          (left), 2017 (middle) and 2018 (right). The error bars on data points and error bands on simulated results represent statistical errors only.}
-	\label{fig:1dplots_2016_2017_2018}
+The validation scale factors for SV efficiencies are
+measured in bins of \Deltwod, as
+well as in bins of the \pt of the lepton
+for each data taking period.
+
+In Fig.~\ref{fig:2017_detector} (right), it is shown the comparison of data to simulation for the full
+Riun2 and all \pt ranges is shown as a function of \Deltwod.
+In events with either two displaced muons or one displaced muon, these results are used to
+extract correction factors for MC signal
+event acceptances in bins of displacement, as well as the corresponding systematic
+uncertainties for displaced track and vertex reconstruction.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.40\textwidth]{Figures/c6/efficiencies/2017E_detector}
+    \includegraphics[width=0.40\textwidth]{Figures/paper/K_short_Displacement.pdf}
+    \caption{Results for \PKzS particles using a fine binning and
+      linear $y$-axis scale with the radial distances of the pixel
+      detector layers superimposed. Note that in this plot, the total
+      number of \PKzS particles in simulation was normalized to that
+      in data as we merely wanted to perform a shape comparison.
+      The right plot shows the \PKzS candidate yield after subtracting
+      the background in data and in simulation, as well as their
+      ratio, as a function of radial distance of the \PKzS vertex to
+      the PV. \luka}
+    \label{fig:2017_detector}
 \end{figure}
 
-\begin{figure}[h]
+In Fig.~\ref{fig:2dplots}, we extend these results by performing a
+two-dimensional binning: the $x$-axis again represents the radial
+distance from the primary vertex, while the $y$-axis now holds the
+reconstructed transverse momentum of the particle. 
+Note that the discrepancy is very large in the last bin for 2016
+data. This can be explained by the reduced tracking performance in
+eras 2016 B to 2016 F due to the HIP-effect, which in the end turned
+out to be caused by a saturation effect in the electronics
+\cite{hipeffect}. The electronics were reconfigured between run 2016 F
+and 2016 G. It can be checked in the dedicated note
+~\cite{AN-20-111_KshortStudy} that the simulation to data agreement is
+in fact much better for eras 2016 G and H. 
+
+\begin{figure}[h!]
 	\centering	
-	\includegraphics[width=0.49\textwidth]{Figures/c6/efficiencies/2dplots/2016tot/smallrange}
-	\includegraphics[width=0.49\textwidth]{Figures/c6/efficiencies/2dplots/2017tot/smallrange}
-	\\
-	\includegraphics[width=0.49\textwidth]{Figures/c6/efficiencies/2dplots/2018tot/smallrange}
-	\caption{Uncertainty factors per bin in radial distance and transverse momentum. The red-coloured band overlaying the figure shows the normalization range, i.e. 0 - 0.5 cm. Note that an error of $\pm 0.00$ indicates that the (statistical) error is smaller than 0.005.}
+	\includegraphics[width=0.45\textwidth]{Figures/c6/efficiencies/2dplots/2016tot/smallrange}
+	\includegraphics[width=0.45\textwidth]{Figures/c6/efficiencies/2dplots/2017tot/smallrange}\\
+	\includegraphics[width=0.45\textwidth]{Figures/c6/efficiencies/2dplots/2018tot/smallrange}
+	\caption{Uncertainty factors per bin in radial distance and
+          transverse momentum. The red-coloured band overlaying the
+          figure shows the normalization range, i.e. 0 - 0.5 cm. Note
+          that an error of $\pm 0.00$ indicates that the (statistical)
+          error is smaller than 0.005. \luka}
 	\label{fig:2dplots}
 \end{figure}
 
@@ -1559,17 +1598,13 @@ Fig.~\ref{fig:systematics_all}.
 Most of the experimental uncertainties are relatively small (less than
 a few \%), where in some search regions the uncertainties are
 dominated by the ones due to the limited signal MC samples statistics. 
-{\color{red}
-  $\leftarrow$ this
-  will change with the new re-weithing procedure which quadruple the
-  stat and reduce the stat error on the signal samples}
 
 \begin{figure}[h]
 \noindent
-\makebox[\textwidth]{  \includegraphics[clip,trim=0 0 2cm 0,width=.51\textwidth]{{Figures/c6/systematics/2018/e_ele/M-6.0_V-0.0019949937_normalized}.pdf}
-  \includegraphics[clip,trim=0 0 2cm 0,width=.51\textwidth]{{Figures/c6/systematics/2018/mu_muo/M-6.0_V-0.0019949937_normalized}.pdf}}
+\makebox[\textwidth]{  \includegraphics[clip,trim=0 0 2cm 0,width=.40\textwidth]{{Figures/c6/systematics/2018/e_ele/M-6.0_V-0.0019949937_normalized}.pdf}
+  \includegraphics[clip,trim=0 0 2cm 0,width=.40\textwidth]{{Figures/c6/systematics/2018/mu_muo/M-6.0_V-0.0019949937_normalized}.pdf}}
   \caption{Relative up and down variation from the nominal yields for
-    the signal sample with $\mhnl=6\GeV$ and
+    the signal sample with $\mhnl=6$\GeV and
     $\mixpar=4\times10^{-6}$. 
     The variation is shown for each of the search regions for
     electrons (left) and muons (right), for the 2018 data taking year.}
@@ -1644,27 +1679,7 @@ comes from \PKzS study. The \Displ-muon reconstruction and ID
 efficiency (~\ref{sec:eff_disp_muon}) is added per muon in 
 $\PGm\PGm$ and $\Pe\PGm$ events on top of the corrections for the displaced
 track and vertex reconstruction.
-\begin{table}[h]
-  \centering
-{\footnotesize
-  \caption{\label{tab:summary_SVl} {\color{red}
-  $\rightarrow$ these
-  values have to be checked again} Summary of the application of the
-    efficiencies and systematic uncertainties related to \displ leptons and displaced vertices. The impact for each year is roughly stated.}
-  \begin{tabular}{l|c|c|c|c|c}
-    \hline
-    \ltwo, \lthree    & efficiency & uncert. & 2016  & 2017 &2018    \\
-    \hline
-    \hline
-   $\Pe\Pe$           & per $\Pe$ ID/track eff-cy ($\PZ\gamma$ study(~\ref{sec:eff_disp_ele}))          & $\pm$1/2 SF    & $< 20 \%$  & $< 5 \%$  & $< 10 \%$\\
-   $\PGm\PGm$   &per $\mu$ (ID eff-cy) $\times$ SV eff-cy (\PKzS\ study(~\ref{sec:vertexfitting}))                      & $\pm$1/2 SF    & $< 30 \%$  & $< 10 \%$  & $< 5 \%$\\
-   $\PGm\Pe$       & per $\Pe$ ($\PZ\gamma$ study) $\times$ per $\mu$ (ID
-                     eff-cy) $\times$ $\sqrt{SV_{eff-cy}}$                 & $\pm$1/2 SF    & $< 20 \%$  & $< 7 \%$  & $< 7 \%$\\
-    \hline
-    \hline
-  \end{tabular}
-}
-\end{table}
+
 
 The uncertainties in the final yields in the different search regions
 and data taking periods are calculated by varying the MC event weights
@@ -1680,7 +1695,20 @@ the \displ-muon tracks. For \pt below 200\GeV, the muon momentum
 estimate is fully dominated by the tracker-only fit. It is easy to
 prove that the muon momentum resolution $\sigma(\pt)/\pt$ is
 approximately equal to the dimuon mass resolution
-$\sigma(M_{2\ell})/M_{2\ell}$. The Gaussian fits to the \PKzS\ mass
+$\sigma(M_{2\ell})/M_{2\ell}$.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=.30\textwidth]{Figures/c6/systematics/scale_displMu.png}
+  \includegraphics[width=.30\textwidth]{Figures/c6/systematics/resolution_displMu.png}
+  \caption{Values of the \PKzS\ mass peak (left) and width (right) as
+    a function of the transverse displacement \Deltwod, in data and
+    simulation, for the three data taking years. The mass peak and
+    width are estimated, respectively, by the $\mu$ and smaller
+    $\sigma$ parameters of the double-Gaussian fit to the
+    \PKzS\ mass profile (\eg, see Fig.~\ref{fig:invmass_mumuskim}). \dani}
+  \label{fig:displMuScaleResol}
+\end{figure}
+ The Gaussian fits to the \PKzS\ mass
 profiles, such as Fig.~\ref{fig:invmass_mumuskim}, can thus be used to
 estimate the momentum scale and resolution through the
 fit parameters $\mu$ and $\sigma/\mu$, respectively. The width of the
@@ -1689,26 +1717,10 @@ $\sigma_2$, whereas the larger $\sigma$ represents the mass tails.
 Figure~\ref{fig:displMuScaleResol} shows the values of the \PKzS\ mass
 peak and width as a function of the transverse displacement \Deltwod,
 in data and simulation, for the three data taking years.
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width=.4\textwidth]{Figures/c6/systematics/scale_displMu.png}
-  \includegraphics[width=.4\textwidth]{Figures/c6/systematics/resolution_displMu.png}
-  \caption{Values of the \PKzS\ mass peak (left) and width (right) as
-    a function of the transverse displacement \Deltwod, in data and
-    simulation, for the three data taking years. The mass peak and
-    width are estimated, respectively, by the $\mu$ and smaller
-    $\sigma$ parameters of the double-Gaussian fit to the
-    \PKzS\ mass profile (\eg, see Fig.~\ref{fig:invmass_mumuskim}).}
-  \label{fig:displMuScaleResol}
-\end{figure}
-
-As can be seen, the differences between data and simulation are
-relatively small. Table~\ref{tab:displMuResolA} reports the relative
-data-MC difference in the scale parameter ($\mu$). The difference is
-at the per-mil level, thus negligible. 
-\begin{table}[h]
+\begin{table}[h!]
+\centering
 \caption{}
-{\scriptsize
+{\tiny
 \subfloat[\label{tab:displMuResolA} Relative difference in mass (or
     momentum) scale between data and simulation, estimated as
     $(\mu_\mathrm{data}-\mu_\mathrm{sim})/\mu_\mathrm{sim}$.]{\begin{tabular}{l|c|c|c}
@@ -1748,7 +1760,10 @@ at the per-mil level, thus negligible.
   \end{tabular}}
 }
 \end{table}
-
+As can be seen, the differences between data and simulation are
+relatively small. Table~\ref{tab:displMuResolA} reports the relative
+data-MC difference in the scale parameter ($\mu$). The difference is
+at the per-mil level, thus negligible.
 Table~\ref{tab:displMuResolB} reports the difference (in quadrature) in
 resolution between data and simulation, where the resolution is
 estimated as $\sigma/\mu$. The mass (or momentum) resolution is below
@@ -1763,16 +1778,7 @@ corresponding to the sum in quadrature of the MC event weights, is
 therefore taken as a systematic uncertainty on the shape of the
 distributions used in the analysis.
 
-\paragraph{Uncertainty on signal MC cross section}{\color{red}
-  $\rightarrow$ does this part have to be in Chapter 4??? } 
-The heavy Neutrino model used for generation of Monte Carlo HNL events does not allow for NLO QCD calculations. The simulation of HNL events happens therefore at LO, resulting in large theoretical uncertainties on the cross section (up to $15\%$) that have to cover the effect of the missing higher order QCD corrections and PDF uncertainties.
 
-Instead of relying on these LO uncertainties, a general correction factor for the cross section from LO to NNLO can be derived based on the SM production of \PW\ $\rightarrow$ $\ell$ $\bar{\nu}$ . In HNL production, the only difference from this SM process is the exchange of the SM neutrino by a HNL. The effect of the mass and coupling of the HNL can be factorized in the calculation of the HNL cross section and is not affected by the PDF and scale variations. The dominant effect of these uncertainties appears at the production of the \PW boson, therefore it can be studied in the SM process \PW\ $\rightarrow$ $\ell$ $\bar{\nu}$ , for which recommended values for the cross section at NNLO exist with their corresponding theory uncertainties. Our approach is to get a LO cross section for \PW\ $\rightarrow$ $\ell$ $\bar{\nu}$ calculated with Madgraph using the same exact conditions as the HNL MC production. A correction factor from LO to NNLO can be derived based on this and can then be applied on HNL MC. The PDF and scale uncertainties at NNLO are applied as flat systematic uncertainties to cover the remaining uncertainty on the MC cross section.
-
-It has been checked and verified that the generator conditions are similar between our MC production and the centrally produced W+jets samples, from which the recommended NNLO cross section was taken. The small differences that are present have no significant effect on the cross section calculation. Additionally, lepton universality will allow us to apply the scale factor and uncertainty across all HNL samples, regardless of which lepton flavor(s) they couple with.
-
-The resulting LO cross section for \PW\ $\rightarrow$ $\ell$
-$\bar{\nu}$ ($\ell$ = \Pe\ , \PGm\ , \PGt\ ) is 56500 pb. The recommended NNLO value is $61526.7^{+497.1}_{-264.6}\pm 2312.7$ pb where the quoted uncertainties are respectively scale and PDF uncertainties. Assuming uncorrelated uncertainties and taking the maximum of the two asymmetric errors, the combined uncertainty is $61526.7 \pm 2365.5$ pb, an effect of $3.86\%$. This gives a final scale factor of $1.089 \pm 0.042$.
 
 \paragraph{Other minor systematic uncertainties}
 \textbf{JEC and JER}
@@ -1823,6 +1829,122 @@ If no events are observed in the sideband region, we consider, as error, the sta
 
 \clearpage
 \section{Results}\label{sec:llresults}
+The two variables which are used to classify the selected events are \Deltwod and
+\mtwol.\\
+In Figure.~\ref{fig:datadriven_2displaced}
+it is shown 
+the comparison between the number of observed data events and their background
+predictions.
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=.4\textwidth]{Figures/paper/e_ele_displacement-crop.pdf}
+    \includegraphics[width=.4\textwidth]{Figures/paper/mu_muo_displacement-crop.pdf}\\
+    \includegraphics[width=.4\textwidth]{Figures/paper/e_ele_massl2l3-crop.pdf}
+    \includegraphics[width=.4\textwidth]{Figures/paper/mu_muo_massl2l3-crop.pdf}
+    \caption{\label{fig:datadriven_2displaced}
+        Comparison between the number of observed events in data and their background
+        predictions (shaded histograms, stacked) for the \Deltwod variable in
+        \eex (top-left) and \mmx (top-right) final states and for the \mtwol variable in
+        \eex (bottom-left) and \mmx (bottom-right) final states.
+        Predictions for signal events are shown for several benchmark hypotheses for Majorana HNL:
+        \HNLtwo, \HNLsix, \HNLtwelve. Events in the overflow bin are included in the last bin.
+    }
+\end{figure}
+
+The predictions and observations in each of the search regions are
+shown in Fig.~\ref{fig:finalyields_majorana_datacards}.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=.75\textwidth]{Figures/paper/e_ele_SR-crop.pdf} \\
+    \includegraphics[width=.75\textwidth]{Figures/paper/mu_muo_SR-crop.pdf}
+    \caption{\label{fig:finalyields_majorana_datacards}
+        Predicted and observed yields in the different search
+        regions for (upper) \eex and (lower) \mmx final states,
+        compared to one HNL signal scenario with nonzero \mixpare and
+        \mixparm parameter, respectively. The predictions for signal
+        process are obtained assuming Majorana HNL.
+        Predictions for signal events are shown for several benchmark hypotheses:
+        \HNLtwo, \HNLsix, \HNLtwelve.
+        The uncertainty band assigned to the background prediction includes
+        statistical and systematic contributions.
+    }
+\end{figure}
+
+Only cases where the HNL mixes with a SM neutrino
+flavor per time are considered in this scenario, \ie, only one of \mixpare and \mixparm is
+nonzero, refer to Section~\ref{sec:c4hnl}.
+Thus, the \eex~channels (\EEE, \EEMos, and
+\EEMss) are sensitive to the \mixpare mixing
+parameter, while the \mmx~channels (\MMM, \MMEos, and
+\MMEss) are sensitive to \mixparm.
+
+The yields of observed events in data show a good agreement comparing with the
+SM background expectations. The agreement is within the statistical
+and systematic uncertainties and it was not found any significant
+excess with respect to the SM background predictions. The number of
+events for both observed data and background yields is shown in
+Tables~\ref{tab:compee} and~\ref{tab:compmm}.
+
+
+\begin{table}[h!]
+    \footnotesize
+    \renewcommand{\arraystretch}{1.3}
+    \centering
+    \caption{\label{tab:compee}
+        Number of predicted and observed events
+        in the \eex final states. The quoted uncertainties include
+        statistical and systematic uncertainties.
+    }
+    \input{tabs/bgk_sum_error_ele_combined.tex}
+\end{table}
+
+\begin{table}[h!]
+    \footnotesize
+    \renewcommand{\arraystretch}{1.3}
+    \centering
+    \caption{\label{tab:compmm}
+        Number of predicted and observed events
+        in the \mmx final states. The quoted uncertainties include
+        statistical and systematic uncertainties.
+    }
+    \input{tabs/bgk_sum_error_muon_combined.tex}
+\end{table}
+The yields of expected HNL signal events for a set of benchmark signal models are listed in Tables~\ref{tab:ele_yield} and~\ref{tab:mu_yield}.
+\begin{table}[h!]
+    \footnotesize
+    \renewcommand{\arraystretch}{1.1}
+    \centering
+    \caption{\label{tab:ele_yield}
+        Number of predicted signal events in the \eex final states.
+        The results are presented for several benchmark signal hypotheses for Majorana HNL:
+        \HNLtwo, \HNLsix, \HNLtwelve.
+        The quoted uncertainties include statistical and systematic uncertainties.
+    }
+    \cmsTable{\input{tabs/2_signal_sum_error_ele_combined.tex}}
+\end{table}
+
+\begin{table}[h!]
+    \footnotesize
+    \renewcommand{\arraystretch}{1.1}
+    \centering
+    \caption{\label{tab:mu_yield}
+        Number of predicted signal events in the \mmx final states.
+        The results are presented for several benchmark signal hypotheses for Majorana HNL:
+        \HNLtwo, \HNLsix, \HNLtwelve.
+        The quoted uncertainties include statistical and systematic uncertainties.
+    }
+    \cmsTable{\input{tabs/2_signal_sum_error_muon_combined.tex}}
+\end{table}
+
+
+\vspace{10cm}
+
+
+
+\subsection{Interpretation}
 At this stage, it is relevant to recall the distinction between
 \emph{Majorana} and \emph{Dirac} particles explained
 here~\ref{sec:majo_dirac}: ``a \emph{Majorana} particle is defined as
@@ -1830,73 +1952,23 @@ a particle that is its own antiparticle; a Dirac particle has an
 antiparticle that is distinctly different from it''.
 The second important feature which is different between the two
 neutrinos concerns the decay widths (as explained
-here~\ref{sec:decay_width}): $\Gamma^{Tot, \: Majorana}_{N_{I}} = 2 \times \Gamma^{Tot, \: Dirac}_{N_{I}}
-$ and then consequently $c\:\tau^{Tot, \: Majorana}_{N_{I}} = \frac{1}{2} \times c\:\tau^{Tot, \: Dirac}_{N_{I}}
+here~\ref{sec:decay_width}): $\Gamma^{Tot, \: Majorana}_{\hnl} = 2 \times \Gamma^{Tot, \: Dirac}_{\hnl}
+$ and then consequently $c\:\tau^{Tot, \: Majorana}_{\hnl} = \frac{1}{2} \times c\:\tau^{Tot, \: Dirac}_{\hnl}
 $.\\
 This last difference has a direct impact on the final signal yields is
 two unambiguous ways; first, if Dirac scenario, the bins with LNV events ($\mu^{\pm}\mu^{\pm} e$ and $e^{\pm}e^{\pm}\mu$)
 have zero signal events while LVC bins
 ($\mu^{\pm}\mu^{\mp} e$ and $e^{\pm}e^{\mp}\mu$) have double the
-number of signal events wrt Majorana scenario. Secondly, HNL-Dirac SVs
+number of signal events with respect to Majorana scenario. Secondly, HNL-Dirac SVs
 are more displaced which leads to smaller acceptance, due to lower
 reconstruction efficiency, although it also leads to a shift of signal
 events from small displacement bins to larger displacement bins,
 increasing the $S/B$ ratio.
 
 Two distinct treatments between
-\emph{Majorana} and \emph{Dirac} interpretations become then unavoidable. 
-
-\subsection{Majorana interpretation}\label{subsec:majorana}
-As explained in Sec.~\ref{sec:llbaselinesel}, two variables are used to categorized 
-the events: \Deltwod and \mtwol. In the following figure (Fig.~\ref{fig:datadriven_2displaced}) the distributions of those are
-shown.
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=.40\textwidth]{Figures/c6/results/_final/majorana/M-2_V-0p011225_e_ele_disp_datacard_combined_displacement.pdf}
-  \includegraphics[width=.40\textwidth]{Figures/c6/results/_final/majorana/M-2_V-0p011225_mu_muo_disp_datacard_combined_displacement.pdf}\\
-  \includegraphics[width=.40\textwidth]{Figures/c6/results/_final/majorana/M-2_V-0p011225_e_ele_mass_datacard_combined_massl2l3.pdf}
-  \includegraphics[width=.40\textwidth]{Figures/c6/results/_final/majorana/M-2_V-0p011225_mu_muo_mass_datacard_combined_massl2l3.pdf}\\
-  \includegraphics[width=.65\textwidth]{Figures/c6/results/_final/majorana/M-2_V-0p011225_e_ele_datacard_combined_SR}\\
-   \includegraphics[width=.65\textwidth]{Figures/c6/results/_final/majorana/M-2_V-0p011225_mu_muo_datacard_combined_SR}\\
-    \caption{\Deltwod and $\mtwol$ distributions with simulated
-      backgrounds (shaded histograms, stacked),
-  and predicted background
-    using the FullRun2 data and MC samples,
-    in \eex (left) and \mmx (right) final states. Signal models for different values of \mhnl and \mixpar
-    are shown as empty histograms. Conversion $\rightarrow$
-    $Z\gamma^{*}$, $X\gamma$. The uncertainty band around the background prediction includes
-    statistical and systematic components.}
-     \label{fig:datadriven_2displaced}
-\end{figure}
-
-The expected and observed yields in each of the search regions are
-shown 
-for \eex and \mmx final states, separately.
-Only scenarios where the HNL mixes with a single neutrino
-flavor are considered.
-In particular, the \eex channels are sensitive to the \mixpare mixing
-parameter, while the \mmx channels are sensitive to \mixparm; for muon coupling $\mu\mu\mu$,  $\mu^{\mp}\mu^{\pm} e$ 
-and $\mu^{\pm}\mu^{\pm}e$; in case of electron coupling $eee$,  $e^{\mp}e^{\pm}\mu$ and $e^{\pm}e^{\pm}\mu$. 
-\clearpage
-\subsection{Dirac interpretation}\label{subsec:dirac}
-\begin{figure}[h]
-  \centering
-   \includegraphics[width=.30\textwidth]{Figures/c6/results/_final/dirac/M-2_V-0p011225_e_Dirac_ele_disp_datacard_combined_displacement.pdf}
-  \includegraphics[width=.30\textwidth]{Figures/c6/results/_final/dirac/M-2_V-0p011225_mu_Dirac_muo_disp_datacard_combined_displacement.pdf}\\
-  \includegraphics[width=.30\textwidth]{Figures/c6/results/_final/dirac/M-2_V-0p011225_e_Dirac_ele_mass_datacard_combined_massl2l3.pdf}
-  \includegraphics[width=.30\textwidth]{Figures/c6/results/_final/dirac/M-2_V-0p011225_mu_Dirac_muo_mass_datacard_combined_massl2l3.pdf}\\
-  \includegraphics[width=.51\textwidth]{Figures/c6/results/_final/dirac/M-2_V-0p011225_e_Dirac_ele_datacard_combined_SR}\\
-   \includegraphics[width=.51\textwidth]{Figures/c6/results/_final/dirac/M-2_V-0p011225_mu_Dirac_muo_datacard_combined_SR}\\
-    \caption{Predicted and observed yields 
-    compared to Dirac HNL signal 
-    in the fullRun2 data sets.
-    The uncertainty band includes
-    statistical and systematic components.}
-  \label{fig:datadriven_2displaced_dirac}
-\end{figure}
-\clearpage
-\subsection{Statistical analysis}
+\emph{Majorana} and \emph{Dirac} interpretations become then
+unavoidable. 
+\subsubsection{Statistical analysis}
 Given the expected background yields and the observed yields in all
 search regions, we can test the exclusion of different HNL signal 
 scenarios by computing the excluded cross section
@@ -1905,7 +1977,7 @@ In order to obtain the correct excluded regions in the
 $(\mhnl,\mixpar)$ parameter space, however, we need to extrapolate the
 calculated limits among different points in the
 $\mixpar$ axis.
-As explained in Chapter.~\ref{Chapter4}, varying the mass and mixing
+As explained in Chapter~\ref{Chapter4}, Section~\ref{sec:reweighting}, varying the mass and mixing
 probability of the HNL does not only change its production cross
 section, but also its kinematics and acceptance.
 Therefore the excluded signal strength computed for a given
@@ -1914,13 +1986,13 @@ $(\mhnl,\mixpar)$ value
 whether that specific point is excluded ($\mu\leq 1$) or not
 ($\mu>1$), but it cannot be interpreted as an excluded cross section.
 Instead, we need to employ the event-by-event re-weighting method
-described in Sec.~\ref{sec:signal} to emulate HNLs of same mass and
+described in Sec.~\ref{sec:reweighting} to emulate HNLs of same mass and
 different \mixpar, until we find the exact \mixpar value for which
 $\mu=1$.\\
 
 Limits are calculated with the modified frequentist construction
 CL$_{\mathrm{S}}$ with a binned profile likelihood
-test statistics, using the bins of Figs.~\ref{fig:datadriven_2displaced} and \ref{fig:datadriven_2displaced_dirac}.
+test statistics, using the bins of Figs.~\ref{fig:finalyields_majorana_datacards}.
 This fit is performed in the asymptotic approximation~\cite{cowan}.
 The likelihood is constructed using the observed data yields and the
 signal and background expectations obtained from simulation or from
@@ -1928,37 +2000,39 @@ data-driven methods, along with nuisance parameters that encode the
 effect of the systematic uncertainties associated with the estimated
 yields, including possible effects on the shapes of the kinematic
 distributions.
-
-SR plots and tables with the signal yields at the exclusion curve can be found after the limits plots in Appendix.~\ref{AppendixC}.
-\subsection{Limits on $V_{Nl}$: Majorana HNL}
+\paragraph{Limits on $V_{Nl}$: Majorana HNL.}
 Limits on \mixpare and \mixparm as a function of \mhnl for a Majorana HNL in
 Fig.~\ref{fig:limits_Maj} for FullRun2 dataset.
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=.49\textwidth]{Figures/c6/results/limits/majorana/comb/signalStrength_e_ele_limits.pdf}
-  \hfill{}
-  \includegraphics[width=.49\textwidth]{Figures/c6/results/limits/majorana/comb/signalStrength_mu_muo_limits.pdf}
-  \caption{Limits on \mixpare (left) and \mixparm (right) as a
-    function of \mhnl for a Dirac HNL, using the full Run-2 data set
-    (2016, 2017, 2018).}
-  \label{fig:limits_Maj}
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=.48\textwidth]{Figures/paper/majorana_ele.pdf}
+    \hfill
+    \includegraphics[width=.48\textwidth]{Figures/paper/majorana_muo.pdf}
+    \caption{\label{fig:limits_Maj}
+        Limits on \mixpare (left) and \mixparm (right) as
+        functions of \mhnl for a Majorana HNL. Results from the DELPHI~\cite{Abreu:1996pa}
+        and the CMS~\cite{Sirunyan:2018xiv,Sirunyan:2018mtv} Collaborations are shown for reference.
+    }
 \end{figure}
-
-\subsection{Limits on $V_{Nl}$: Dirac HNL}
-
+\paragraph{Limits on $V_{Nl}$: Dirac HNL.}
 Limits on \mixpare and \mixparm as a function of \mhnl for a Dirac HNL in
 Fig.~\ref{fig:limits_Dir} for FullRun2 dataset.
 
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=.49\textwidth]{Figures/c6/results/limits/dirac/comb/signalStrength_e_Dirac_ele_limits.pdf}
-  \hfill{}
-  \includegraphics[width=.49\textwidth]{Figures/c6/results/limits/dirac/comb/signalStrength_mu_Dirac_muo_limits.pdf}
-  \caption{Limits on \mixpare (left) and \mixparm (right) as a
-    function of \mhnl for a Dirac HNL, using the full Run-2 data set
-    (2016, 2017, 2018).}
-  \label{fig:limits_Dir}
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=.48\textwidth]{Figures/paper/dirac_ele.pdf}
+    \hfill
+    \includegraphics[width=.48\textwidth]{Figures/paper/dirac_muo.pdf}
+    \caption{\label{fig:limits_Dir}
+        Limits on \mixpare (left) and \mixparm (right) as
+        functions of \mhnl for a Dirac HNL. Results from the DELPHI~\cite{Abreu:1996pa}
+        and the CMS~\cite{Sirunyan:2018xiv,Sirunyan:2018mtv} Collaborations are shown for reference.
+    }
 \end{figure}
+
+
+
+
 
 
 

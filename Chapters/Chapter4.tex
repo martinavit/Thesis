@@ -546,7 +546,15 @@ As can be seen, differences are small in all bins.
 \end{figure}
 
 
+\subsubsection{Uncertainty on LL-signal MC cross section}\label{sec:c4lo}
+The heavy Neutrino model used for generation of Monte Carlo HNL events does not allow for NLO QCD calculations. The simulation of HNL events happens therefore at LO, resulting in large theoretical uncertainties on the cross section (up to $15\%$) that have to cover the effect of the missing higher order QCD corrections and PDF uncertainties.
 
+Instead of relying on these LO uncertainties, a general correction factor for the cross section from LO to NNLO can be derived based on the SM production of \PW\ $\rightarrow$ $\ell$ $\bar{\nu}$ . In HNL production, the only difference from this SM process is the exchange of the SM neutrino by a HNL. The effect of the mass and coupling of the HNL can be factorized in the calculation of the HNL cross section and is not affected by the PDF and scale variations. The dominant effect of these uncertainties appears at the production of the \PW boson, therefore it can be studied in the SM process \PW\ $\rightarrow$ $\ell$ $\bar{\nu}$ , for which recommended values for the cross section at NNLO exist with their corresponding theory uncertainties. Our approach is to get a LO cross section for \PW\ $\rightarrow$ $\ell$ $\bar{\nu}$ calculated with Madgraph using the same exact conditions as the HNL MC production. A correction factor from LO to NNLO can be derived based on this and can then be applied on HNL MC. The PDF and scale uncertainties at NNLO are applied as flat systematic uncertainties to cover the remaining uncertainty on the MC cross section.
+
+It has been checked and verified that the generator conditions are similar between our MC production and the centrally produced W+jets samples, from which the recommended NNLO cross section was taken. The small differences that are present have no significant effect on the cross section calculation. Additionally, lepton universality will allow us to apply the scale factor and uncertainty across all HNL samples, regardless of which lepton flavor(s) they couple with.
+
+The resulting LO cross section for \PW\ $\rightarrow$ $\ell$
+$\bar{\nu}$ ($\ell$ = \Pe\ , \PGm\ , \PGt\ ) is 56500 pb. The recommended NNLO value is $61526.7^{+497.1}_{-264.6}\pm 2312.7$ pb where the quoted uncertainties are respectively scale and PDF uncertainties. Assuming uncorrelated uncertainties and taking the maximum of the two asymmetric errors, the combined uncertainty is $61526.7 \pm 2365.5$ pb, an effect of $3.86\%$. This gives a final scale factor of $1.089 \pm 0.042$.
 
 \section{Data sets}\label{sec:c4data}
 
