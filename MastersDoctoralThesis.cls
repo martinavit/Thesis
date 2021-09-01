@@ -662,7 +662,25 @@ KOMA-script documentation for details.}]{fancyhdr}
 \newcommand{\luka}{Courtesy of L. Lambrecht.}
 \newcommand{\kirill}{Courtesy of K. Skovpen.}
 \newcommand{\tom}{Courtesy of T. Cornelis.}
+\newcommand{\ten}{$\times 10$}
 
+
+\newcommand{\HNLtwo}{$\mhnl=2$\GeV and $\mixpar=0.8$\ten{$^{-4}$} (HNL2)\xspace}
+\newcommand{\HNLsix}{$\mhnl=6$\GeV and $\mixpar=1.3$\ten{$^{-6}$} (HNL6)\xspace}
+\newcommand{\HNLtwelve}{$\mhnl=12$\GeV and $\mixpar=1.0$\ten{$^{-6}$} (HNL12)\xspace}
+\newcommand{\EEE}{\ensuremath{\Pe\Pe\Pe}\xspace}
+\newcommand{\EEMos}{\ensuremath{\Pepm\Pemp\PGmpm}\xspace}
+\newcommand{\EEMss}{\ensuremath{\Pepm\Pepm\PGmmp}\xspace}
+\newcommand{\MMM}{\ensuremath{\PGm\PGm\PGm}\xspace}
+\newcommand{\MMEos}{\ensuremath{\PGmpm\PGmmp\Pepm}\xspace}
+\newcommand{\MMEss}{\ensuremath{\PGmpm\PGmpm\Pemp}\xspace}
+\newcommand{\Cee}{\ensuremath{\Pe\Pe}\xspace}
+\newcommand{\Cmm}{\ensuremath{\PGm\PGm}\xspace}
+\newcommand{\Cem}{\ensuremath{\Pe\PGm}\xspace}
+
+\providecommand{\cmsTable}[1]{\resizebox{\textwidth}{!}{#1}}
+\newlength\cmsTabSkip\setlength{\cmsTabSkip}{1ex}
+\newcommand{\cmsColSkip}{\hskip 3\tabcolsep}
 
 
 %----------------------------------------------------------------------------------------

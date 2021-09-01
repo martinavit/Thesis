@@ -1211,8 +1211,8 @@ is done in a fully orthogonal region wrt to signal region. \\
 \begin{figure}[h]
   \noindent
   \makebox[\textwidth]{
-  \includegraphics[width=.51\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/SideBandPlusBjet/M-3_V-0p00707813534767_mu_muo_datacard_combined_SR-crop.pdf}
-  \includegraphics[width=.51\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/SideBandPlusBjet/M-3_V-0p00707813534767_e_ele_datacard_combined_SR-crop.pdf}}\\
+  \includegraphics[width=.51\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/SideBandPlusBjet/mu_cr.pdf}
+  \includegraphics[width=.51\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/SideBandPlusBjet/ele_cr.pdf}}\\
 \noindent
   \makebox[\textwidth]{
   \includegraphics[width=.33\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/SideBandPlusBjet/M-6_V-0p00202484567313_mu_muo_mass3_datacard_combined_mass3.pdf}
@@ -1839,10 +1839,10 @@ predictions.
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=.4\textwidth]{Figures/paper/e_ele_displacement-crop.pdf}
-    \includegraphics[width=.4\textwidth]{Figures/paper/mu_muo_displacement-crop.pdf}\\
-    \includegraphics[width=.4\textwidth]{Figures/paper/e_ele_massl2l3-crop.pdf}
-    \includegraphics[width=.4\textwidth]{Figures/paper/mu_muo_massl2l3-crop.pdf}
+    \includegraphics[width=.4\textwidth]{Figures/c6/results/ele_disp.pdf}
+    \includegraphics[width=.4\textwidth]{Figures/c6/results/mu_disp.pdf}\\
+    \includegraphics[width=.4\textwidth]{Figures/c6/results/ele_mass.pdf}
+    \includegraphics[width=.4\textwidth]{Figures/c6/results/mu_mass.pdf}
     \caption{\label{fig:datadriven_2displaced}
         Comparison between the number of observed events in data and their background
         predictions (shaded histograms, stacked) for the \Deltwod variable in
@@ -1858,8 +1858,8 @@ shown in Fig.~\ref{fig:finalyields_majorana_datacards}.
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=.75\textwidth]{Figures/paper/e_ele_SR-crop.pdf} \\
-    \includegraphics[width=.75\textwidth]{Figures/paper/mu_muo_SR-crop.pdf}
+    \includegraphics[width=.75\textwidth]{Figures/c6/results/ele_sr.pdf} \\
+    \includegraphics[width=.75\textwidth]{Figures/c6/results/mu_sr.pdf}
     \caption{\label{fig:finalyields_majorana_datacards}
         Predicted and observed yields in the different search
         regions for (upper) \eex and (lower) \mmx final states,
@@ -2030,11 +2030,34 @@ Fig.~\ref{fig:limits_Dir} for FullRun2 dataset.
     }
 \end{figure}
 
+The simulated samples of the Dirac HNL scenarios are retrieved from
+the samples adopted for the Majorana HNL interpretation, by
+applying appropriate lifetime corrections, as explained in Section~\ref{sec:c4diracmajo}.
+As a result, the Majorana and Dirac HNL simulations used for the limit
+computation are statistically correlated, which brings to
+similar statistical fluctuations in the exclusion curves in the two
+interpretations.
+
+In the Dirac HNL scenario, we exclude electron (muon) couplings of 1.0\ten{$-4$} (2.0\ten{$-5$}) and higher for an HNL mass of 2\GeV, and of 0.7\ten{$-7$} (2.5\ten{$-8$}) for an HNL mass of 12\GeV.
+In the Majorana HNL scenario, the exclusion limits are slightly less stringent.
+For the case of muon couplings, the limits in both scenarios improve
+significantly with respect to the results of the
+DELPHI~\cite{Abreu:1996pa} and
+CMS~\cite{Sirunyan:2018xiv,Sirunyan:2018mtv} Collaborations.
+For the case of electron couplings, the limits improve withs
+respect to the DELPHI results for masses above about 3.5\GeV.
 
 
-
-
-
-
-\section{Conclusions}
-\emph{to be written later}
+\section{Summary}
+A search for heavy neutral leptons (HNLs) in final states
+with three leptons is performed using data from the CMS experiment
+corresponding to an integrated luminosity of 137\fbinv. The analysis uses
+dedicated methods to identify displaced leptons associated with
+HNL decays. Several novel methods were developed to obtain estimates
+for the relevant background processes from control samples in data, representing one of the important
+challenges in this type of search at the LHC. No significant deviation
+from the standard model predictions is observed in data. The 95\% confidence
+level are set on HNL masses and coupling strengths of
+these particles to standard model neutrinos. These results represent
+the most stringent limits to date on this type of processes in the
+explored parameter space of the HNL production at the LHC.
