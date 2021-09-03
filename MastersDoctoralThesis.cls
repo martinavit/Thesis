@@ -584,7 +584,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 \newcommand{\MeV}{\xspace MeV\xspace}
 \newcommand{\eV}{\xspace eV\xspace}
 
-\newcommand{\fbinv}{\ensuremath{fb^{-1}}\xspace}
+\newcommand{\fbinv}{\xspace fb$^{-1}$\xspace}
 \newcommand{\ptmiss}{\ensuremath{p_{T}^{miss}}\xspace}
 \newcommand{\Pp}{\ensuremath{pp}\xspace}
 \newcommand{\pt}{\ensuremath{p_T}\xspace}
@@ -602,10 +602,10 @@ KOMA-script documentation for details.}]{fancyhdr}
 %\newcommand{\displ}{nonprompt\xspace}
 \newcommand{\hnl}{\ensuremath{\mathrm{N}}\xspace}
 \newcommand{\mhnl}{\ensuremath{M_{\hnl}}\xspace}
-\newcommand{\mixpar}{\ensuremath{\mathrm{|V_{\hnl\ell}|^2}}\xspace}
-\newcommand{\mixpare}{\ensuremath{\mathrm{|V_{\hnl\Pe}|^2}}\xspace}
-\newcommand{\mixparm}{\ensuremath{\mathrm{|V_{\hnl\PGm}|^2}}\xspace}
-\newcommand{\mixpart}{\ensuremath{\mathrm{|V_{\hnl\PGt}|^2}}\xspace}
+\newcommand{\mixpar}{\ensuremath{\mathrm{|V_{\ell\hnl}|^2}}\xspace}
+\newcommand{\mixpare}{\ensuremath{\mathrm{|V_{\Pe \hnl}|^2}}\xspace}
+\newcommand{\mixparm}{\ensuremath{\mathrm{|V_{\PGm \hnl}|^2}}\xspace}
+\newcommand{\mixpart}{\ensuremath{\mathrm{|V_{\PGt \hnl}|^2}}\xspace}
 \newcommand{\eex}{\ensuremath{\Pe\Pe\mathrm{X}}\xspace}
 \newcommand{\mmx}{\ensuremath{\PGm\PGm\mathrm{X}}\xspace}
 \newcommand{\ttx}{\ensuremath{\PGt\PGt\mathrm{X}}\xspace}
