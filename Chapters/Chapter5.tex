@@ -1145,11 +1145,11 @@ while the rest display the high-mass region. \willem}
  we obtain the exclusion limits shown in Fig.~\ref{fig:limits}. It can be seen that the expected and
  observed limits agree well, within less than one standard deviation
  for almost every point, indicating that no significant excess beyond
- the SM expectation has been observed. 
+ the SM expectations has been observed. 
 \begin{figure}[h]
 \centering
-\includegraphics[width=.65\textwidth]{Figures/c5/limits/CMS-EXO-17-012_Figure_002-a.pdf}\\
-\includegraphics[width=.65\textwidth]{Figures/c5/limits/CMS-EXO-17-012_Figure_002-b.pdf}
+\includegraphics[width=.80\textwidth]{Figures/c5/limits/CMS-EXO-17-012_Figure_002-a.pdf}\\
+\includegraphics[width=.80\textwidth]{Figures/c5/limits/CMS-EXO-17-012_Figure_002-b.pdf}
 \caption{Exclusion region at 95$\%$ CL in the \mixpare vs. $m_N$ (top) and \mixparm vs. $m_N$ (bottom) planes.
 The dashed black curve is the expected upper limit, with one and two standard-deviation
 bands shown in dark green and light yellow, respectively. The solid black curve is the observed
@@ -1159,25 +1159,131 @@ in L3~\cite{ACHARD200167}, DELPHI~\cite{Abreu:1996pa}, ATLAS~\cite{Aad_2015}, an
 \label{fig:limits}
 \end{figure}
 
+\clearpage
 \section{Summary}
-These are the first direct limits for N
-masses above 500\GeV and the first
-limits obtained at a hadron collider for N
-lifetime masses below 40\GeV.
+In this chapter the search for heavy neutral leptons in events with three
+charged leptons is presented. The analysis
+results were published in Physical Review Letters in early 2018~\cite{Sirunyan:2018mtv}.
 
+The signature consists of three prompt charged leptons in any flavor combination of electrons
+and muons.
+It was not observed any statistically significant excess of signal events over the expected
+SM background. At 95\% confidence level upper limits were set on the mixing
+parameters \mixpare and \mixparm. The excluded values are in the
+ranges between $1.2\times 10^{-5}$ and $1.8$ for masses included
+between 1\GeV $< m_\hnl <$ 1.2\TeV. 
 
-\emph{My contributions to the analysis presented here are the following: I designed the analysis in the
-high-mass region and parts of the analysis in the low-mass region, and developed the procedure for
-correcting the exclusion limits for the sterile neutrino lifetime. In addition I produced the final results
-in the search regions, and control regions, made all of the published plots, wrote the bulk of the
-internal CMS documentation relating to the analysis, and was the main editor of the resulting paper.
-Several other people made large contributions to the analysis presented here:
-Lesya Shchutska initially started the analysis effort, partially designed the low mass search regions,
-and advised me throughout my work on this topic. Lesya also contributed to the design of the lifetime
-correction procedure, and in the editing of the paper.
-Tom Cornelis made all simulations of N production events. In particular he trailblazed the simulation
-of sterile neutrinos with a significant lifetime, which was nontrivial to implement in practice.
-Without these simulations, the analysis would have been impossible. Tom also helped with the estimation
-of the trigger effciencies. Martina Vit performed the measurement of the lepton fake rate. This facilitates the prediction of
-the most important background in the analysis. She was also involved in the design of the analysis in
-the low-mass region.}
+The results were posivitely received by the community and highly appreciated
+for the big effort was put into widening the mass range and
+improving the present sensitivity at the time of the publication.
+These were the first direct limits for HNL masses above 500\GeV and the first
+limits obtained at hadron colliders for HNL masses below 40\GeV.
+At large HNL masses, the results improved those previously published
+by the ATLAS~\cite{Aad_2015} and CMS~\cite{Khachatryan_2015,Sirunyan:2018xiv}
+experiments. In particular with respect to the ATLAS search the mass
+range was substantially extended towards values below the \PW boson
+mass. The previous CMS searches were carried out with the data
+collected in 2012 at $\sqrt{s} = 8$\TeV which corresponds to an
+integrated luminosity of 19.7\fbinv. 
+For the first time at hadron colliders, this search focuses on low HNL mass ranges
+($ m_\hnl < $ 40\GeV) increasing the sensitivity reached by the
+L3~\cite{ACHARD200167} and DELPHI~\cite{Abreu:1996pa} Collaborations
+in the prompt case scenario.\\
+
+The specification for the prompt case scenario is necessary taking
+into account what is known about the correlation between \mixpar, $
+m_\hnl $ and \hnl lifetime which is: $c\:\tau_{N}
+\propto\mathrm{m_{N}^{-5}|V_{\ell N}|^{-2}}$ (for references and
+details see Section~\ref{sec:promptll}). This implies that an HNL with
+mass and mixing parameter small enough has a lifetime that
+is not inconsequential with respect to reconstruction limitations and 
+analysis acceptance. The presented search expressly targets prompt
+HNL decays through the selection of light leptons with 
+limited impact parameters. Thus it is appropriate to addressed the impact of the
+prompt selection on the displaced leptons selection
+efficiency. Taking in mind that displaced leptons occur as decay
+products of long-lived HNLs. As example for $m_\hnl = 3$\GeV, if
+\mixparm $= 1.0\times 10^{-5}$ is the excluded value, it means a travel distance
+of about 3 m. By requiring $d_{xy}$ and $d_z$ to
+be smaller than 0.05 cm and 0.1 cm respectively, we indirectly reduce
+the selection acceptance. If 3\GeV HNLs would be created with
+coupling \mixparm $= 1.0\times 10^{-5}$, the analysis as it is
+designed would not select them and hence probe them. This led to the conviction that the final
+exclusion limits have to be adjusted for the HNL lifetime. This was
+discussed and fixed with the re-weighting procedure as presented in
+Chapter~\ref{Chapter4}. The corrected observed upper limits were
+computed for masses from 1\GeV to 20\GeV above which the lifetime
+becomes so small that corrections do not have to be applied.\\
+From there on, it was so natural to start thinking about a dedicated
+analysis specifically designed to be optimal for moderate displaced scenarios. It
+was the premise for the considerable leap towards the
+challenging long-lived HNL search. We wanted to span all the
+low mass phase spaces while aspiring to be competitive with the DELPHI
+long-lived results~\cite{Abreu:1996pa} and touching upon the domain of
+fixed target experiments. With this drive the analysis presented in
+the next chapter began and it became the 4 years main topic of my PhD
+project.\\
+
+An extra pending point of the presented results is the lacking of
+upper limits on \mixpart. At the moment of the drafting of this
+thesis, only DELPHI Collaboration~\cite{Abreu:1996pa}  
+provided exclusion limits on the mixing parameter between HNL and
+$\nu_{\tau}$ (Figure~\ref{fig:HNL_bc8_pbc_2}) in the studied phase
+space. Considering the main process to be
+$\PW
+\rightarrow \tau \hnl
+\rightarrow \tau \tau \ell \nu_{\ell}$, the tau channel could be
+probed either via leptonic or hadronic $\tau$ decays. Both cases
+presented quite considerable challenges. Tau leptons decay $\sim 65\%$
+of the cases hadronically~\cite{pdgw}; thus the exploitation of the
+easier leptonic decay channels -- $2 \times 17.8\%$ decays --
+is greatly limited. Regarding the abundant hadronic-tau events, the
+main test comes from large \pt trigger thresholds for
+tau objects. To give the a reference point singleTau trigger is about
+120\GeV and diTau triggers start from $\sim 40$\GeV. The
+tau-HNL analysis is absolutely demanding and therefore it constitutes
+an analysis of its own which is currently carried out by my colleague
+Liam Wezenbeek. More details on the relevance of \mixpart limits and on its
+framework and context will be given in the conclusion
+Chapter~\ref{Chapter7}.\\
+
+\vspace{3cm}
+
+Several people were involved in the completion of the HNL prompt
+analysis.\\
+Personally, I have contributed in the design of the analysis in the low-mass
+region. I performed the measurement of the lepton \fr and its
+validations in MC.\\
+Additionally, I gave the pre-approval presentation of the analysis.\\
+Willem Verbeke was the main analyzer. He designed the analysis strategy in the
+high-mass region and built the procedure to
+correct the exclusion limits taking into account the sterile neutrino
+lifetime. He produced all the published plots and he was the principal
+editor of the publication.\\
+Tom Cornelis took care of preparing the HNL simulation base-files and
+he generated the MC signal samples. Tom also provided the estimation
+of the trigger efficiencies. 
+
+\subsubsection*{Conference talks and posters}
+On behalf of CMS Collaboration, I have presented these results at
+various conferences:
+\begin{itemize}
+\item ``(YSF talk) Search for heavy neutral leptons (sterile
+  neutrinos) with the CMS detector", plenary at La Thuile 2018, 25
+  Feb-3 Mar 2018 (Italy);
+\item ``Search for Heavy Neutral Leptons with CMS detector'', poster at
+  EPS-HEP2019, 10-17 Jul 2019 (Belgium);
+\item ``Search for Heavy Neutral Leptons with CMS detector'', poster at
+  LP2019, 5-10 Aug 2019, University of Toronto (Canada);
+\item ``HNL experimental overview'', plenary at EOS winter Solstice
+  meeting, 19 Dec 2019, Brussels (Belgium);
+\item 	``Search for heavy neutral leptons at CMS'', parallel at
+  ICHEP2020, 28 Jul-6 Aug 2020 (Virtual World).
+\end{itemize}
+The poster presented at EPS-HEP2019 was awarded with ``poster prize of
+the EPS High Energy and Particle Physics Division and the EPS HEP 2019
+Conference''.\\
+As outreach activity, the results were presented during the talk
+``Search for exotic particles at the CMS experiment'' at the webinar
+Fisica y Microsistemas which virtually took place at the Galileo Universidad,
+Guatemala, on the 10th of November 2020.
