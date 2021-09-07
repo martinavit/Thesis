@@ -69,7 +69,7 @@ silicon tracker, it is associated with little energy deposited in the
 calorimeters and it does not show hits in the muon detectors~\cite{Sirunyan_2020disapp}. 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.85\textwidth]{Figures/c6/antonelli_skech.pdf}
+\includegraphics[clip,trim=0cm 0.cm 0.cm 1.6cm, width=0.85\textwidth]{Figures/c6/antonelli_skech.pdf}
 \caption{Didactic sketch, by J. Antonelli, showing the numerous
   Long-lived scenarios which could be seen and probed inside the CMS tracker. }
 \label{fig:c6antonelli}
@@ -2011,7 +2011,7 @@ Fig.~\ref{fig:limits_Maj} for FullRun2 dataset.
     \caption{\label{fig:limits_Maj}
         Limits on \mixpare (left) and \mixparm (right) as
         functions of \mhnl for a Majorana HNL. Results from the DELPHI~\cite{Abreu:1996pa}
-        and the CMS~\cite{Sirunyan:2018xiv,Sirunyan:2018mtv} Collaborations are shown for reference.
+        and the CMS~\cite{Sirunyan:2018mtv} Collaborations are shown for reference.
     }
 \end{figure}
 \paragraph{Limits on $V_{Nl}$: Dirac HNL.}
@@ -2026,7 +2026,7 @@ Fig.~\ref{fig:limits_Dir} for FullRun2 dataset.
     \caption{\label{fig:limits_Dir}
         Limits on \mixpare (left) and \mixparm (right) as
         functions of \mhnl for a Dirac HNL. Results from the DELPHI~\cite{Abreu:1996pa}
-        and the CMS~\cite{Sirunyan:2018xiv,Sirunyan:2018mtv} Collaborations are shown for reference.
+        and the CMS~\cite{Sirunyan:2018mtv} Collaborations are shown for reference.
     }
 \end{figure}
 
@@ -2038,29 +2038,105 @@ computation are statistically correlated, which brings to
 similar statistical fluctuations in the exclusion curves in the two
 interpretations.
 
-In the Dirac HNL scenario, we exclude electron (muon) couplings of 1.0\ten{$-4$} (2.0\ten{$-5$}) and higher for an HNL mass of 2\GeV, and of 0.7\ten{$-7$} (2.5\ten{$-8$}) for an HNL mass of 12\GeV.
+In the Dirac HNL scenario, we exclude electron (muon) couplings of 1.0\ten{$^{-4}$} (2.0\ten{$^{-5}$}) and higher for an HNL mass of 2\GeV, and of 0.7\ten{$^{-7}$} (2.5\ten{$^{-8}$}) for an HNL mass of 12\GeV.
 In the Majorana HNL scenario, the exclusion limits are slightly less stringent.
 For the case of muon couplings, the limits in both scenarios improve
 significantly with respect to the results of the
 DELPHI~\cite{Abreu:1996pa} and
-CMS~\cite{Sirunyan:2018xiv,Sirunyan:2018mtv} Collaborations.
+CMS~\cite{Sirunyan:2018mtv} Collaborations.
 For the case of electron couplings, the limits improve with
 respect to the DELPHI results for masses above about 3.5\GeV.
 
 \clearpage
 \section{Summary}
-A search for heavy neutral leptons (HNLs) in final states
-with three leptons is performed using data from the CMS experiment
-corresponding to an integrated luminosity of 137\fbinv. The analysis uses
-dedicated methods to identify displaced leptons associated with
-HNL decays. Several novel methods were developed to obtain estimates
-for the relevant background processes from control samples in data, representing one of the important
-challenges in this type of search at the LHC. No significant deviation
-from the standard model predictions is observed in data. The 95\% confidence
-level are set on HNL masses and coupling strengths of
-these particles to standard model neutrinos. These results represent
-the most stringent limits to date on this type of processes in the
-explored parameter space of the HNL production at the LHC.
+In this chapter the search for long-lived heavy neutral leptons with displaced
+vertices is presented. The analysis is completed using data collected from the
+CMS experiment in years 2016 -- 18 corresponding to an integrated
+luminosity of 137\fbinv.\\
+At the moment of this thesis drafting, the results have been made
+public and the publication is going to be submitted soon to Journal
+of High Energy Physics (JHEP). The public results can be accessed in
+Ref.~\cite{CMS-PAS-EXO-20-009}.
+
+The signature consists of one prompt charged lepton and two displaced
+charged leptons in any flavor combination of electrons
+and muons. Two interpretations are proposed considering on one hand uniquely the
+Dirac HNL nature, on the other hand the Majorana HNL nature. 
+No statistically significant deviation from the expected
+SM background was observed. At 95\% confidence level limits were set on the mixing
+parameters \mixpare and \mixparm.
+The excluded values are in the
+ranges between $3\times 10^{-7}$ and $1\times 10^{-3}$ for masses included
+between 1\GeV $< m_\hnl <$ 15\GeV. 
+
+The analysis makes use of dedicated techniques and devices to select
+leptons associated with long-lived HNL decays. Great effort was given
+to quantify the reconstruction efficiency and the acceptance phase space
+for displaced leptons and secondary vertices. Several innovative
+methods were exploited to get proper predictions
+of the significant background processes from control samples in
+data. Background estimation undeniably represents one of the decisive challenges in this
+type of search at the hadron collider.\\
+Cases with LNV and LNC events are handled in separate ways in order to
+formulate the final limits
+ \begin{wrapfigure}{l}{0.5\textwidth}
+\centering
+    \includegraphics[clip,trim=0.3cm 0cm 1.cm 2cm, width=.48\textwidth]{Figures/c6/results/dirac_mu_with_ATLAS.pdf}
+\caption{ Limits on \mixparm as
+        functions of \mhnl for a Dirac HNL. Results from the
+        DELPHI~\cite{Abreu:1996pa}, the CMS~\cite{Sirunyan:2018mtv}
+        and ATLAS~\cite{atlas_ll} Collaborations are shown for reference.}
+\label{fig:atlas}
+\end{wrapfigure}
+ in Majorana and Dirac scenarios. By
+applying appropriate lifetime corrections, the simulated samples of
+the Dirac HNL scenarios are fetched from the samples adopted for the
+Majorana HNL interpretation.\\
+
+
+At the time of the writing, these current results are the most
+stringent limits on this type of processes in the
+explored parameter space of the HNL production at the LHC. \\
+The two direct comparisons are the DELPHI~\cite{Abreu:1996pa} and
+ATLAS~\cite{atlas_ll} results. \\
+DELPHI Collaboration performed HNL searches 
+  using the data corresponding to $3.3
+  \times 10^6$ hadronic $Z_0$ decays at LEP1, see Section~\ref{sec:c3directHNL}. This set of results 
+  includes both the short-lived HNL
+ and the long-lived HNL outlines and all three lepton flavor
+ couplings. For the long-lived HNL case it was looked for detectable secondary vertices or calorimeter clusters.
+ Upper limits were set for the branching ratio $BR (\: Z_0\rightarrow$ \hnl) of
+ about $1.3 \times 10^{-6}$ at 95\% C.L. for \hnl masses between 1 and
+ 15\GeV for a mean decay length of 100 cm for a $m_\hnl = 3$\GeV.
+
+The second comparison occurs with the relatively recent ATLAS
+results~\cite{atlas_ll} which are marked in chartreuse in
+Figure~\ref{fig:atlas} for an easier juxtaposition. The search used
+data corresponding to an integrated
+luminosity of 32.9\fbinv; it looked for HNLs produced through mixing with
+muon neutrinos only. The desired signature consists of one prompt muon and SVs
+with either $\mu \mu$ or $\mu e$ pairs. The considered displacements
+are located in the transverse plane by 4-300 mm from the PV. The
+results set limits on the \mixparm for HNL masses 4.5-50\GeV. Novel
+with respect to standard ATLAS analyses is the employment of a
+dedicated algorithm called Large-radius tracking, LRT, which is run on
+a smaller dataset of pre-selected events.\\
+Some techniques of the ATLAS's analysis gave us several useful
+insights regarding the displaced tracking and vertexing
+efficiency. The use of $K_S^{0} \rightarrow \pi \pi$ events was also
+adopted by CMS analysis to model of displaced tracks
+and SV reconstruction, see Section~\ref{sec:displacedvertex}.\\
+
+As for the prompt HNL analysis presented in Chapter~\ref{Chapter5},
+the exclusion limits on \mixpart are missing. As opposed to what
+previously explained, the analysis with hadronic tau channel appears
+to be extremely challenging in the displaced case. It would require
+first a
+dedicated displaced jets strategy and furthermore the expected SM background would almost
+for sure be way larger than the signal.
+At the same time, the leptonic tau decay channel encounters the
+problem to have very small
+signal efficiency.
 
 
 \vspace{3cm}
@@ -2090,8 +2166,6 @@ regions. My contributions can be found also in the Majorana-Dirac
 emulation idea and in the writing of internal documentations. I also
 gave most of the internal presentations on the topic, including the
 so-called pre-approval and approval talks.\\
-
-
 
 
 
