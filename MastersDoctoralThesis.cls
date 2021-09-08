@@ -256,7 +256,7 @@
 
 \RequirePackage{geometry}
 \geometry{
-	headheight=4ex,
+	headheight=3ex,
 	includehead,
 	includefoot
 }
@@ -285,7 +285,8 @@
 	\automark[chapter]{chapter}
 	\ihead{\headmark}% Inner header
 	\ohead[\pagemark]{\pagemark}% Outer header
-}
+	}
+\setlength{\headsep}{0.4in}	
 \ifoot{}% Inner footer
 \ofoot{}% Outer footer
 \pagestyle{thesisSimple}

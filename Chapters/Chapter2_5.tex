@@ -601,18 +601,6 @@ introduced trying to include also displaced objects among
 the PF elements. The most important feature is the removal of constraints in muon reconstruction
 on interaction point~\cite{CMS-DP-2015-015, steven_slide}.
 
-\begin{figure}[h]
-\centering
-  \includegraphics[width=0.48\textwidth]{Figures/c2/newreco.pdf}
-  \includegraphics[width=0.48\textwidth]{Figures/c2/newreco2.pdf}
-  \caption{Left, standard algorithms for muon-only (black) and tracker+muon (red) reconstruction,
-compared with the new algorithms for displaced-muon reconstruction: Displaced
-Standalone (blue) and Displaced Global
-(magenta). Right, the resolution for the Displaced Standalone algorithm (blue) is shown in comparison
-with that of the Displaced Global algorithm (magenta)~\cite{CMS-DP-2015-015}.}
-  \label{fig:newreco}
-\end{figure}
-
 The two algorithms are the following:
 \begin{itemize}
 \setlength\itemsep{-0.2em}
@@ -633,6 +621,19 @@ The two algorithms are the following:
   (~\ref{sec:trackvertex}) and is seeded by the Displaced Standalone Muons and does
   not use any constraints to the interaction point neither in the pattern recognition or in the track fit.
 \end{itemize}
+
+\begin{figure}[h!]
+\centering
+  \includegraphics[clip,trim=0cm 0cm 0cm 2cm, width=0.48\textwidth]{Figures/c2/newreco.pdf}
+  \includegraphics[clip,trim=0cm 0cm 0cm 2cm, width=0.48\textwidth]{Figures/c2/newreco2.pdf}
+  \caption{Left, standard algorithms for muon-only (black) and tracker+muon (red) reconstruction,
+compared with the new algorithms for displaced-muon reconstruction: Displaced
+Standalone (blue) and Displaced Global
+(magenta). Right, the resolution for the Displaced Standalone algorithm (blue) is shown in comparison
+with that of the Displaced Global algorithm (magenta)~\cite{CMS-DP-2015-015}.}
+  \label{fig:newreco}
+\end{figure}
+
 In Figure~\ref{fig:newreco} (left), it is shown the muon reconstruction
 efficiency for the two new algorithms in comparison with respect to
 the standard ones. The comparison is done in 
