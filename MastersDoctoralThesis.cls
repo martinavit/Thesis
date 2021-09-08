@@ -585,6 +585,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 \newcommand{\MeV}{\xspace MeV\xspace}
 \newcommand{\eV}{\xspace eV\xspace}
 
+\newcommand{\abinv}{\xspace ab$^{-1}$\xspace}
 \newcommand{\fbinv}{\xspace fb$^{-1}$\xspace}
 \newcommand{\ptmiss}{\ensuremath{p_{T}^{miss}}\xspace}
 \newcommand{\Pp}{\ensuremath{pp}\xspace}
