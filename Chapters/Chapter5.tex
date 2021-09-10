@@ -520,11 +520,12 @@ mass scenarios with yields normalized to those of the background.
 
 \begin{figure}[h!]
 \centering
-\includegraphics[ width=0.4\textwidth]{Figures/c5/distribution/mt_minMos_highM_3lOSSF_withSignal.pdf}
-\includegraphics[ width=.4\textwidth]{Figures/c5/distribution/minMos_highM_3lOSSF_withSignal.pdf}
-\includegraphics[width=.4\textwidth]{Figures/c5/distribution/minMos_highM_3lnoOSSF_withSignal.pdf}
-\caption{The distributions of \mtmin and \mmin for
-  events with an OSSF pair (top) and without an OSSF pair (bottom). \willem} 
+\includegraphics[ width=0.4\textwidth]{Figures/c5/distribution/SR/ConePt_le_baseline_3lnoOSSF_withSignal_sigNormToBkg_log.pdf}
+\includegraphics[ width=.4\textwidth]{Figures/c5/distribution/SR/ConePt_le_baseline_3lOSSF_withSignal_sigNormToBkg_log.pdf}\\
+\includegraphics[width=.4\textwidth]{Figures/c5/distribution/SR/mt_minMos_baseline_3lnoOSSF_withSignal_sigNormToBkg_log.pdf}
+\includegraphics[width=.4\textwidth]{Figures/c5/distribution/SR/mt_minMos_baseline_3lOSSF_withSignal_sigNormToBkg_log.pdf}
+\caption{The distributions of \ptcone and \mtmin for
+  events without an OSSF pair (left) and with an OSSF pair (right). \willem} 
 \label{fig:mtminmm3lOSSF}
 \end{figure}
 
@@ -594,10 +595,13 @@ Sec.~\ref{sec:result}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Background estimation}\label{sec:bgk}
+An overview of the principal background contributions is shown in
+Figure~\ref{fig:willem3L}.
 The main sources of backgrounds (refer to Section~\ref{sec:c4sm} for
-an extensive overview) present in the final search regions can be divided into the following categories:
+an extensive overview) present 
+in the final search regions can be divided into the following categories:
 \begin{itemize}
-\setlength\itemsep{-0.1em}
+\setlength\itemsep{-0.2em}
 \item {\bf WZ production:} when both $\PW$ and $\PZ$ bosons decay
   leptonically, these events produce the same signature as the new
   physics scenarios targeted by this analysis: three energetic and
@@ -633,7 +637,16 @@ with an OSSF pair. Further details in Section~\ref{sec:conversion}.
 \end{itemize}
 
 The background from non-prompt light leptons is estimated by using the \ttol ratio method. 
-The probability for a loosely defined light lepton to pass the full set of selection criteria is measured in a multi-jet sample in data enriched in non-prompt leptons, called the measurement region. 
+The probability for a loosely defined light lepton to pass the full
+set of
+ \begin{wrapfigure}{r}{0.4\textwidth}
+\centering
+    \includegraphics[width=.38\textwidth]{Figures/c5/distribution/SR/M3l_baseline_3lOSSF_noSignal_lin.pdf}
+\caption{Observed and expected yields as a function of $\mlll$
+for events with an OSSF lepton pair. \willem}
+\label{fig:willem3L}
+\end{wrapfigure}
+ selection criteria is measured in a multi-jet sample in data enriched in non-prompt leptons, called the measurement region. 
 Once measured, this probability is applied in a sample of events which
 pass the full kinematic selection, but where at least one of the
 leptons fails the nominal selection but passes the \lo requirements
@@ -854,11 +867,11 @@ smaller than 30\%.
 \begin{figure}[h]
 \noindent
 \makebox[\textwidth]{
-\includegraphics[width=.43\textwidth]{Figures/c5/FAKE/e_closuresMll.pdf}
-\includegraphics[width=.43\textwidth]{Figures/c5/FAKE/e_closuresMlll.pdf}}\\
+\includegraphics[width=.33\textwidth]{Figures/c5/FAKE/e_closuresMll.pdf}
+\includegraphics[width=.33\textwidth]{Figures/c5/FAKE/e_closuresMlll.pdf}}\\
 \makebox[\textwidth]{
-\includegraphics[width=.43\textwidth]{Figures/c5/FAKE/mu_closuresMll.pdf}
-\includegraphics[width=.43\textwidth]{Figures/c5/FAKE/mu_closuresMlll.pdf}}
+\includegraphics[width=.33\textwidth]{Figures/c5/FAKE/mu_closuresMll.pdf}
+\includegraphics[width=.33\textwidth]{Figures/c5/FAKE/mu_closuresMlll.pdf}}
 \caption{Closure test on $\ttbar$ for electrons (top) and for muons
   (bottom) with the \fr extracted from nonprompt leptons in QCD MC. Red lines are the predicted nonprompt $\ttbar$ events, black dots the observed number of nonprompt $\ttbar$ events using MC-truth information.}
 \label{fig:closures2_ele}
@@ -888,14 +901,11 @@ For this purpose we select events with at least one loosely b-tagged jet.
 For events with an OSSF pair, we exclude events within a 15\GeV window around the Z-mass for both \mlll  and the best Z-candidate mass. Additionally, these events are vetoed if they contain a \lo OSSF pair with mass below 12\GeV in order to suppress the contamination from W$\gamma^{*}$ and conversions. Good closure is observed in the shown distributions of Fig.~\ref{fig:npvalidation}, further strengthening our confidence in the data-driven prediction of the nonprompt background.
 
 \begin{figure}[h]
-\noindent
-\makebox[\textwidth]{\includegraphics[width=.30\textwidth]{Figures/c5/DYCR/inclusive/minMos_DY.pdf}
-\includegraphics[width=.30\textwidth]{Figures/c5/DYCR/inclusive/mt_minMos_DY.pdf}}\\
-\noindent
-\makebox[\textwidth]{
-\includegraphics[width=.30\textwidth]{Figures/c5/TTCR/convVeto/minMos_TT.pdf}
-\includegraphics[width=.30\textwidth]{Figures/c5/TTCR/convVeto/mt_minMos_TT.pdf}
-}
+\centering
+\includegraphics[width=.27\textwidth]{Figures/c5/DYCR/inclusive/minMos_DY.pdf}
+\includegraphics[width=.27\textwidth]{Figures/c5/DYCR/inclusive/mt_minMos_DY.pdf}\\
+\includegraphics[width=.27\textwidth]{Figures/c5/TTCR/convVeto/minMos_TT.pdf}
+\includegraphics[width=.27\textwidth]{Figures/c5/TTCR/convVeto/mt_minMos_TT.pdf}
 \caption{Comparison of data to background prediction in the Drell-Yan
   (2 left plots) and \ttbar (2 right plots) enriched control region,
   for \mmin and \mtmin. \willem} 
@@ -971,12 +981,12 @@ search regions in which WZ is the dominant background.
 \begin{figure}[h]
 \noindent
 \makebox[\textwidth]{
-\includegraphics[width=.30\textwidth]{Figures/c5/ZZCR/ZZ/minMos_ZZ.pdf}
-\includegraphics[width=.30\textwidth]{Figures/c5/ZZCR/ZZ/M4l_ZZ.pdf}
-\includegraphics[width=.30\textwidth]{Figures/c5/ZZCR/ZZ/mt_minMos_ZZ.pdf}}\\
-\makebox[\textwidth]{\includegraphics[width=.30\textwidth]{Figures/c5/WZCR/PtandMetCuts/minMos_WZ.pdf}
-\includegraphics[width=.30\textwidth]{Figures/c5/WZCR/PtandMetCuts/Ptrel_le_WZ.pdf}
-\includegraphics[width=.30\textwidth]{Figures/c5/WZCR/PtandMetCuts/mt_minMos_WZ.pdf}}
+\includegraphics[width=.27\textwidth]{Figures/c5/ZZCR/ZZ/minMos_ZZ.pdf}
+\includegraphics[width=.27\textwidth]{Figures/c5/ZZCR/ZZ/M4l_ZZ.pdf}
+\includegraphics[width=.27\textwidth]{Figures/c5/ZZCR/ZZ/mt_minMos_ZZ.pdf}}\\
+\makebox[\textwidth]{\includegraphics[width=.27\textwidth]{Figures/c5/WZCR/PtandMetCuts/minMos_WZ.pdf}
+\includegraphics[width=.27\textwidth]{Figures/c5/WZCR/PtandMetCuts/Ptrel_le_WZ.pdf}
+\includegraphics[width=.27\textwidth]{Figures/c5/WZCR/PtandMetCuts/mt_minMos_WZ.pdf}}
 \caption{Comparison of data and MC in the ZZ control region (top) and in the WZ control region (bottom) for several kinematic variables, after normalization of the ZZ/WZ cross section. \willem} 
 \label{fig:validation}
 \end{figure}
@@ -1009,9 +1019,9 @@ $p^{leading}_{T}$ we apply an additional 15\% systematic uncertainty to the mode
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=.30\textwidth]{Figures/c5/convCR/combined/minMos_Xgamma.pdf}
-\includegraphics[width=.30\textwidth]{Figures/c5/convCR/combined/mt_minMos_Xgamma.pdf}
-\includegraphics[width=.30\textwidth]{Figures/c5/convCR/combined/ConePt_le_Xgamma.pdf}\\
+\includegraphics[width=.27\textwidth]{Figures/c5/convCR/combined/minMos_Xgamma.pdf}
+\includegraphics[width=.27\textwidth]{Figures/c5/convCR/combined/mt_minMos_Xgamma.pdf}
+\includegraphics[width=.27\textwidth]{Figures/c5/convCR/combined/ConePt_le_Xgamma.pdf}\\
 \caption{Comparison of data and MC in the conversion control region for the most important kinematic variables, after normalization of the Z$\gamma$ and W$\gamma$ cross sections. \willem} 
 \label{fig:convvalidation}
 \end{figure}
