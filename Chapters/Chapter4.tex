@@ -73,7 +73,7 @@ each year of data-taking which correspond to different detector
 conditions for each period. 
  
 
-\section{Standard model processes}\label{sec:c4sm}
+\section{Standard Model processes}\label{sec:c4sm}
 In this section an overview is given of the SM processes (refer to Figure~\ref{fig:crosssection}) which
 compose the background in the multilepton final state. The focus is
 specifically on three light leptons final states, which is the
@@ -455,7 +455,7 @@ exhibiting less statistical fluctuations than the individual samples.
 
 Figure~\ref{fig:newReweightRec} shows distributions of the
 reconstructed dilepton mass (\mtwol) and secondary-vertex transverse
-displacement (\Deltwod (~\ref{sec:c2IP})) for an HNL scenario with
+displacement (\Deltwod (~\ref{sec:c2IP})) for a HNL scenario with
 $\mhnl=4$\GeV and $\mixparm = 6.31\cdot 10^{-6}$ in 2018,
 modeled using either a single sample with the re-weighting of
 Eq.~\ref{eq:ctauReweightingSingle} (black histograms), or the sum of
@@ -475,7 +475,7 @@ refer to Section~\ref{sec:llanalisi}.
   \includegraphics[width = .32\textwidth]{Figures/c4/reweighting/reweighting_M4p0_V0p00251197_mu_18.pdf}
   \caption{Distributions of the reconstructed dilepton mass \mtwol
     (left), secondary-vertex transverse displacement \Deltwod (middle), and final signal-region yields described in
-    Section~\ref{sec:llbaselinesel} (right), for an HNL scenario with
+    Section~\ref{sec:llbaselinesel} (right), for a HNL scenario with
     $\mhnl=4\GeV$ and $\mixparm = 6.31\cdot 10^{-6}$ in the 2018
     simulation. The black histograms are modeled
     using a single sample with the re-weighting of
@@ -495,24 +495,24 @@ The resonance width for a Majorana HNL, on the other hand, is exactly
 twice the width of a Dirac HNL with same \mhnl--\mixpar values, due to
 the additional charge-conjugated (LNV) decay channels (refer to Figure~\ref{fig:dirac_majo}).
 As a consequence, the average lifetime of a Dirac HNL is twice that of
-a Majorana HNL with same $(\mhnl,\mixpar)$. For all the details refer
+a Majorana HNL with same $(\mhnl,\mixpar)$. Refer
 to Section~\ref{sec:c3majo_dirac}.
 \begin{figure}[h!]
 \centering
  \includegraphics[clip,trim=0cm 7cm 0cm 3cm, width=0.65\textwidth]{Figures/c4/dirac_majo2}
-  \caption{Clear visualization of the LNV and LVC cases. Majorana HNL
-    can decay in both cases while Dirac HNL can only have LNC decay.}
+  \caption{Visualization of the LNV and LVC cases. Majorana HNLs
+    can decay in both cases while Dirac HNLs can only have LNC decay.}
   \label{fig:dirac_majo}
 \end{figure}
 
-While for the prompt analysis (Chapter~\ref{Chapter5}) there is no any
-need to produce separately Dirac and Majorana MC samples since there is
-not any difference except the final state combinations, for the
-long-lived scenario separate samples would be necessary.
+For the prompt analysis (Chapter~\ref{Chapter5}) there is no 
+need to produce distinct Dirac and Majorana MC samples since there is
+no difference between them except the final state combinations. For the
+long-lived scenario separate samples are necessary.
 
-After the lesson learned with the emulation procedure described just
+After the lesson learned with the emulation procedure described 
 above in Section~\ref{sec:reweighting}, a similar idea and strategy
-was adopted also for the Dirac-Majorana case.\\
+was also adopted for the Dirac-Majorana case.\\
 To optimize computing resources and in the interest of time,
 high-statistics MC samples were produced on a large scale for Majorana
 HNL scenarios only.
@@ -522,7 +522,7 @@ steps:
 \begin{itemize}
 \setlength\itemsep{-0.2em}
 \item from a Majorana HNL sample, select only the LNC events by
-  looking at the PDG ID of the generated particles;
+  looking at the unique ID number of the generated particles;
 \item re-weight each LNC event to emulate the correct lifetime of the
   Dirac HNL, by using Eq.~\ref{eq:ctauReweightingSingle} with
   $\tau_{\mathrm{T}}=2\tau_0$;
@@ -565,9 +565,9 @@ As can be seen, differences are small in all bins.
     (left), of the transverse displacement of the reconstructed
     HNL decay vertex \Deltwod (middle), and event yields in the
     different analysis categories (right) for a Dirac HNL with
-    $\mhnl=2\GeV$ and $\mixparm=2.47\times 10^{-4}$ in 2018
+    $\mhnl=2$\GeV and $\mixparm=2.47\times 10^{-4}$ in 2018
     simulation, using three models: a Dirac HNL sample (black), or a
-    set of Majorana HNL samples with $\mhnl=2\GeV$ and various
+    set of Majorana HNL samples with $\mhnl=2$\GeV and various
     $\mixparm$ values, reweighted to emulate the Dirac scenario with
     $\mixparm=2.47\times 10^{-4}$, using LNC events only (blue) or all
     events (red). \dani} 
@@ -576,9 +576,9 @@ As can be seen, differences are small in all bins.
 
 
 \subsubsection{Uncertainty on LL-signal MC cross section}\label{sec:c4lo}
-The heavy Neutrino model used for generation of Monte Carlo HNL events does not allow for NLO QCD calculations. The simulation of HNL events happens therefore at LO, resulting in large theoretical uncertainties on the cross section (up to $15\%$) that have to cover the effect of the missing higher order QCD corrections and PDF uncertainties.
+The \texttt{heavyN} model used for generation of Monte Carlo HNL events does not allow for NLO QCD calculations. The simulation of HNL events happens therefore at LO, resulting in large theoretical uncertainties on the cross section (up to $15\%$) that have to cover the effect of the missing higher order QCD corrections and PDF uncertainties.
 
-Instead of relying on these LO uncertainties, a general correction factor for the cross section from LO to NNLO can be derived based on the SM production of \PW\ $\rightarrow$ $\ell$ $\bar{\nu}$ . In HNL production, the only difference from this SM process is the exchange of the SM neutrino by a HNL. The effect of the mass and coupling of the HNL can be factorized in the calculation of the HNL cross section and is not affected by the PDF and scale variations. The dominant effect of these uncertainties appears at the production of the \PW boson, therefore it can be studied in the SM process \PW\ $\rightarrow$ $\ell$ $\bar{\nu}$ , for which recommended values for the cross section at NNLO exist with their corresponding theory uncertainties. Our approach is to get a LO cross section for \PW\ $\rightarrow$ $\ell$ $\bar{\nu}$ calculated with Madgraph using the same exact conditions as the HNL MC production. A correction factor from LO to NNLO can be derived based on this and can then be applied on HNL MC. The PDF and scale uncertainties at NNLO are applied as flat systematic uncertainties to cover the remaining uncertainty on the MC cross section.
+Instead of relying on these LO uncertainties, a general correction factor for the cross section from LO to NNLO can be derived based on the SM production of \PW\ $\rightarrow$ $\ell$ $\bar{\nu}$ . In HNL production, the only difference from this SM process is the exchange of the SM neutrino by a HNL. The effect of the mass and coupling of the HNL can be factorized in the calculation of the HNL cross section and is not affected by the PDF and scale variations. The dominant effect of these uncertainties appears at the production of the \PW boson, therefore it can be studied in the SM process \PW\ $\rightarrow$ $\ell$ $\bar{\nu}$ , for which recommended values for the cross section at NNLO exist with their corresponding theory uncertainties. Our approach is to get a LO cross section for \PW\ $\rightarrow$ $\ell$ $\bar{\nu}$ calculated with Madgraph using the same exact conditions as the HNL MC production. A correction factor from LO to NNLO can be derived based on this and can then be applied to HNL MC. The PDF and scale uncertainties at NNLO are applied as flat systematic uncertainties to cover the remaining uncertainty on the MC cross section.
 
 It has been checked and verified that the generator conditions are similar between our MC production and the centrally produced W+jets samples, from which the recommended NNLO cross section was taken. The small differences that are present have no significant effect on the cross section calculation. Additionally, lepton universality will allow us to apply the scale factor and uncertainty across all HNL samples, regardless of which lepton flavor(s) they couple with.
 
@@ -587,22 +587,21 @@ $\bar{\nu}$ ($\ell$ = \Pe\ , \PGm\ , \PGt\ ) is 56500 pb. The recommended NNLO v
 
 \section{Data sets}\label{sec:c4data}
 
-For each CMS analysis a certain number and type of primary datasets is used
-according to the desired objects which are needed to be considered,
-\ie according to the final state.\\
+For each CMS analysis according to the final states we 
+select, a specific type of primary datasets (PDs) is used.\\
 The definition of the primary datasets (PDs) is intrinsically connected to
 the HLT trigger paths (~\ref{sec:triggersystem}). The PD design is centered
 around particles reconstructed in the event by the HLT, and follows one simple principle:
 grouping together events with similar physics content; for instance, there are
-single leptons dataset and double leptons datasets.
+single lepton datasets and double leptons datasets.
 Since an event can pass more than one HLT path,
-it can enter in more than one primary dataset. At a practical level, possible overlaps among different data sets are
+it can enter in more than one primary dataset. At a practical level, possible overlaps among different datasets are
 removed by checking run, lumi-section, and event numbers in order to not have twice the same event coming from different PDs.\\
 
 
 The analysis presented in Chapter~\ref{Chapter5} includes
 \texttt{SingleElectron}, \texttt{SingleMuon}, \texttt{DoubleEG},
-\texttt{DoubleMuon} and \texttt{Muon-e$\gamma$} primary datasets; the choice was driven by the
+\texttt{DoubleMuon} and \texttt{MuonEG} primary datasets; the choice was driven by the
 multiple trigger requests, both single lepton trigger and
 dilepton triggers in order to maximize the trigger efficiency.
 
@@ -622,14 +621,14 @@ The first analysis presented in the following chapters used only
 by the CMS experiment at center-of-mass energy of 13\TeV
 in 2016, corresponding to an integrated luminosity of 35.92\fbinv.\\
 
-The long-lived HNL analysis uses three sets (2016-2017-2018 data
-taking) of \Pp collision data at a
+The long-lived HNL analysis uses three sets of \Pp collision data
+corresponding to three years of data-taking at a
 center-of-mass energy of 13\TeV, corresponding to integrated
 luminosities of 35.92\fbinv (2016), 41.53\fbinv (2017), and 59.97\fbinv
 (2018). 
 
 \section{Summary}\label{sec:summaryC4}
-In this chapter an overview of the simulated samples and of data sets
+In this chapter an overview of the simulated samples and the data sets
 samples is presented.\\
 We first introduced the different ``ingredients'' that compose the
 background of the analyses presented in Chapters~\ref{Chapter5}
@@ -641,7 +640,7 @@ mimic the signal signatures while having a sizable branching
 ratio and large production cross-sections. 
 
 We described the HNL model adopted in the context of this thesis. The
-main features were presented with a lot of attention paid to the
+main features were presented with a large focus on
 displaced case. In this framework the re-weighting procedure was
 introduced, which is going to be a key point for the 
 interpretation of the results in both the prompt and displaced heavy neutral lepton
