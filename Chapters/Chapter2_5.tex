@@ -386,6 +386,16 @@ to the candidates which have been reconstructed with standalone, track
 and global muon algorithms. 
 
 \subsubsection{Muon identification}\label{sec:c2muonselection}
+
+Disparate sources of muons aside from the
+prompt ones produced in the hard scattering collision can be spotted.
+Muons can be
+originated from either decay of heavy-flavor
+hadrons or or cosmic-ray muons going through CMS detector, they can also appear from out-of-time pileup, beam
+backgrounds and chamber noise which can compromise the reconstruction.
+Implementing a selection based on quality and 
+kinematic parameters is desirable in order to discriminate between different sources and to identify the
+prompt muons from the hard scattering.\\
 According to the desired compromise between efficiency and purity, it
 is defined a set of different variables and selections definitions~\cite{Sirunyan_2018_muon}.\\
 This level of details, here described, is going to be recalled and
@@ -504,10 +514,10 @@ identify particles that decay into muons over a broad mass range.
 
 
 \subsubsection{Displaced muon
-  reconstruction}\label{sec:c2muondisplaced}
+  reconstruction and identification}\label{sec:c2muondisplaced}
 The search for Heavy Neutral leptons presented in
 Chapter~\ref{Chapter6} includes the long-lived heavy
- neutrinos scenario with
+ neutrino scenario with
 displaced leptons, muons and electrons, in the final
 state. Although CMS detector was initially designed and optimized for prompt
 object reconstruction and identification, it appears to give
@@ -523,11 +533,6 @@ standard reconstruction which
  is explained in
 Section~\ref{sec:c2muonreco}.
 
-In the following we present the studies of displaced muon
-reconstruction and identification in the specific context of Heavy
-neutral leptons search (refer to
-Chapters~\ref{Chapter3},~\ref{Chapter4},~\ref{Chapter5},~\ref{Chapter6}).
-
 \begin{wrapfigure}{l}{0.5\textwidth}
 \centering
 \includegraphics[width=.40\textwidth]{Figures/c6/object/tracking_M-4_V-0p00290516780927_rho.png}
@@ -537,35 +542,24 @@ Chapters~\ref{Chapter3},~\ref{Chapter4},~\ref{Chapter5},~\ref{Chapter6}).
     benchmark. \dani}
   \label{fig:c2tracking}
 \end{wrapfigure}
-
+In the following we present the studies of displaced muon
+reconstruction and identification in the specific context of Heavy
+neutral lepton search (refer to
+Chapters~\ref{Chapter3},~\ref{Chapter4},~\ref{Chapter5},~\ref{Chapter6}).\\
 These studies are performed with simulated samples containing
-displaced muons. The simulated sample used as
-benchmark model is characterized by having low \pt displaced muons with an
+ low \pt displaced muons. 
+The signal samples are characterized by HNLs with an
 average life time of 57 mm ($c\tau$), which corresponds to an average
 displacement of 633 cm ($\beta \gamma c \tau$).
 
 Fig.~\ref{fig:c2tracking} shows the efficiency of
 reconstructing a muon track in the inner tracker. The efficiency is
 calculated as pure reconstruction efficiency with respect to the
-generated tracks. The variable which is used to display the reconstruction
-performance is the 2D distance between the PV and the secondary vertex (SV)
-which is a proxy to estimate the point of orgin of the
+generated tracks. The variable that is used to display the reconstruction
+performance is the 2-dimentional (2D) distance between the PV and the secondary vertex (SV)
+and is a proxy to estimate the flight distance of the
 displaced muon (details in Section~\ref{sec:c2variables}). The efficiency worsens for muons created towards the external layers of the inner
 tracker.
-Figure.~\ref{fig:c2tracking2} shows, on the left, the sequential
-efficiencies of the plain PF Muon requirement,
-Loose ID, and
-valid tracker hit fraction requirement (refer to
-Section~\ref{sec:c2muonselection}), with respect to the reconstructed inner-tracker tracks. It is clear that the efficiency of
-this last selection 
-falls rapidly with increasing of the PV-SV
-distance. 
-The valid-hit fraction request is thus removed from the set of
-requirements of the Medium ID (refer to Section~\ref{sec:c2muonselection}). To mitigate the depreciation of the
-total efficiency for muons not emerging from the primary vertex, the
-Medium ID is then modified in the context of the analysis presented in
-Chapter~\ref{Chapter6}. 
-
 \begin{figure}[h!]
 \centering
   \includegraphics[width=0.4\textwidth]{Figures/c6/object/loose_validFraction_M-4_V-0p00290516780927_rho.png}
@@ -580,9 +574,17 @@ valid tracker hit fraction requirement is shown. On the right, the efficiency of
   \label{fig:c2tracking2}
 \end{figure}
 
-In Figure.~\ref{fig:c2tracking2}, on the
-right, it is shown
-the comparison between the efficiencies of
+Figure.~\ref{fig:c2tracking2} shows, on the left, the sequential
+efficiencies of the plain PF Muon requirement,
+Loose ID, and
+valid tracker hit fraction requirement (refer to
+Section~\ref{sec:c2muonselection}), with respect to the reconstructed inner-tracker tracks. It is clear that the efficiency of
+this last selection 
+falls rapidly as the PV-SV
+distance increases. 
+The valid-hit fraction request is thus removed from the set of
+requirements of the Medium ID (refer to
+Section~\ref{sec:c2muonselection}). 
 \begin{wrapfigure}{r}{0.5\textwidth}
 \centering
 \includegraphics[width=.4\textwidth]{Figures/c6/object/globalTrack_cuts_M-4_V-0p00290516780927_rho.png}
@@ -591,10 +593,16 @@ muons. A HNL scenario with
     $(\mhnl,\mixparm)=(4\GeV,8.44\times10^{-6})$ is used as
     benchmark. \dani}
   \label{fig:c2tracking3}
-\end{wrapfigure} 
- the
+\end{wrapfigure}  
+To mitigate the depreciation of the
+total efficiency for muons not emerging from the primary vertex, the
+Medium ID is then modified in the context of the analysis presented in
+Chapter~\ref{Chapter6}. 
+In Figure.~\ref{fig:c2tracking2}, on the
+right, 
+the comparison between the efficiencies of the
 tracker-muon only and global-muon only and their logical OR (\ie, the full
-customize Medium ID). The main contribution to the efficiency comes
+customize Medium ID) is shown. The main contribution to the efficiency comes
 from the tracker-muon selection, while the addition of the global-muon
 selection only increases the overall efficiency by few percent.\\
 Finally, Fig.~\ref{fig:c2tracking3} compares the efficiency of
@@ -605,7 +613,7 @@ effect is observed for the segment-compatibility cut of 0.303, and it
 amounts to 1--2\%. Additionally, none of the cuts on the global-track
 variables depends on the displacement.\\
 
-As extensively explained in Section~\ref{sec:trackvertex}, the track
+As explained in Section~\ref{sec:trackvertex}, the track
 reconstruction is done with the clear 
 constraint on the start of the trajectory based on the assumption that the
 particle is created in proximity of the beam
@@ -614,7 +622,7 @@ quite strong limitation on the displaced lepton analysis outlook. As
 shown in Figure~\ref{fig:c2tracking}, the reconstruction efficiency
 suffers from it and it goes almost to null values at large
 displacements. \\
-For Run-2, new reconstruction algorithms have been
+For 2016-to-2018 datataking, new reconstruction algorithms have been
 introduced trying to include also displaced objects among
 the PF elements. The most important feature is the removal of constraints in muon reconstruction
 on interaction point~\cite{CMS-DP-2015-015, steven_slide}.
@@ -652,13 +660,14 @@ with that of the Displaced Global algorithm (magenta)~\cite{CMS-DP-2015-015}.}
   \label{fig:newreco}
 \end{figure}
 
-In Figure~\ref{fig:newreco} (left), it is shown the muon reconstruction
+Figure~\ref{fig:newreco} (left) showns the muon reconstruction
 efficiency for the two new algorithms in comparison with respect to
 the standard ones. The comparison is done in 
 simulated samples~\footnote{Simulated signal process: PYTHIA8 stop 
   pair ($\tilde{t}\tilde{t}$) production, $M(\tilde{t}) = 200$\GeV and
 $c\tau=1$m. Decay $\tilde{t} \rightarrow b + \ell$} with displaced and
-delayed muons, measuring the efficiency as function of the production radius, for muons from
+delayed~\footnote{Out-of-time or delayed muons indicate muons with significant delay with respect to the time of the
+interaction.} muons, measuring the efficiency as function of the production radius, for muons from
 the direct decay $\tilde{t} \rightarrow b + \ell$. A noticeable
 improvement can be appreciated in the efficiency for displaced muons
 using the new algorithms. In Figure~\ref{fig:newreco} (right) it is
@@ -677,18 +686,19 @@ based on the combination of tracker tracks and energy clusters in the
 ECAL, taking into consideration the sizeable fraction
 of electron energy which is emitted in the form of bremsstrahlung photons while
 crossing the tracker material~\cite{CMS:particleflow}. The bremsstrahlung radiation is collected
-by organizing into a supercluster the ECAL clusters which are
-reconstructed in a narrow window in $\eta$ and a wider window in $\phi$ along the electron direction (azimuthal
-bending in the magnetic field).
+by organizing
 \begin{wrapfigure}{r}{0.5\textwidth}
 \centering
 \includegraphics[width=.48\textwidth]{Figures/c2/eleecal}
-  \caption{It is shown the electron seeding efficiency for electrons (triangles) and pions (circles) as a
-function of \pt. They are shown both the efficiencies for ECAL-based
+  \caption{The electron seeding efficiency for electrons (triangles) and pions (circles) as a
+function of \pt are shown. Both the efficiencies for ECAL-based
 seeding only (hollow symbols) and with the tracker-based seeding added
-(solid symbols)~\cite{CMS:particleflow}.}
+(solid symbols) are shown~\cite{CMS:particleflow}.}
   \label{fig:c2ele}
 \end{wrapfigure} 
+ into a supercluster the ECAL clusters which are
+reconstructed in a narrow window in $\eta$ and a wider window in $\phi$ along the electron direction (azimuthal
+bending in the magnetic field).
 For small \pt electrons, the ECAL supercluster approach can give
 incorrect information regarding the total energy. The soft tracks are
 significantly bent in the tracker by the magnetic field and the
@@ -697,9 +707,9 @@ deposits are not all
 included in the supercluster. The missed deposits distort the correct
 position of the supercluster and impede the proper match between
 supercluster and corresponding hits in the innermost tracker layers.
-Thus it is introduced the \emph{tracker-based} electron seeding
-method~\cite{CMS:particleflow} to complement and improve the
-ECAL-based approach. Figure~\ref{fig:c2ele} shows the increase in efficiency caused by the tracker-based approach for electrons in b quark jets.\\
+Thus the \emph{tracker-based} electron seeding
+method~\cite{CMS:particleflow} is introduced to complement and improve
+the ECAL-based approach. Figure~\ref{fig:c2ele} shows the increase in efficiency caused by the tracker-based approach for electrons in b quark jets.\\
 The final electron tracks are built using the Gaussian Sum Filter
 (GSF) fitting (details in references~\cite{CMS:particleflow, Adam_2005}) which is more optimal to electrons than the Kalman-filter used
 in the iterative tracking (refer to
@@ -767,8 +777,8 @@ electrons originating from heavy-flavor hadron decays.
   identification}\label{sec:c2dispele}
 \begin{figure}[h]
 \centering
-  \includegraphics[width=0.4\textwidth]{Figures/c2/_e_l2id_Lxy_eff.png}
-  \includegraphics[width=0.4\textwidth]{Figures/c2/el_l2full_Lxy_eff.png}
+  \includegraphics[width=0.45\textwidth]{Figures/c2/_e_l2id_Lxy_eff.png}
+  \includegraphics[width=0.45\textwidth]{Figures/c2/el_l2full_Lxy_eff.png}
   \caption{On the left, it is shown the pure ID efficiency with
     respect to GSF reconstructed tracks. On the right the efficiency
     of reconstructed and identified electrons with
@@ -795,9 +805,9 @@ implementation.
 but with fewer requirements. Two criteria have been removed because
 they could affect the efficiency for electrons
 not emerging from the primary vertex. \\
-It is excluded the conversion veto requirement which identifies
+The conversion veto requirement which identifies
 secondary vertices where $e^{-}$-$e^{+}$ pairs 
-originate from $\gamma$ conversions in the tracker material.\\
+originate from $\gamma$ conversions in the tracker material is excluded.\\
 Finally the request of the on the maximum number of
 missing inner tracker hits it is removed in order to accommodate 
 eventual larger displacements. \\
@@ -812,11 +822,17 @@ generated tracks. For this specific case, three heavy neutral lepton
 benchmark models are used with different neutrino masses (3, 5 and
 12\GeV) and different lifetime values.
 
-
+\clearpage
 \section{Secondary vertex reconstruction} \label{sec:c2sv}
+
+For the search for long-lived HNLs, presented in
+Chapter~\ref{Chapter6} supplementary and
+tailored treatment of the secondary vertex reconstruction and
+identification is necessary. The SV is the decay vertex of the heavy
+neutral lepton and it is the point of origin of its decay products.
 \begin{wrapfigure}{r}{0.5\textwidth}
 \centering
-  \includegraphics[clip,trim=1.cm 0cm .5cm 1.5cm, width=.38\textwidth]{Figures/c2/leptons_fromN_fromNW_vtx_rho_pull.png}
+  \includegraphics[clip,trim=1.cm 0cm .5cm 1.3cm, width=.38\textwidth]{Figures/c2/leptons_fromN_fromNW_vtx_rho_pull.png}
   \caption{Pull distributions of the
     transverse distance of the fitted SV from
     the PV, for HNL masses from 1 to 4\GeV,
@@ -824,11 +840,6 @@ benchmark models are used with different neutrino masses (3, 5 and
     histogram shows a Gaussian fit. \dani}
   \label{fig:svPulls}
 \end{wrapfigure} 
-For the long-lived analysis presented in
-Chapter~\ref{Chapter6}, supplementary and
-tailored treatment of the secondary vertex reconstruction and
-identification is necessary. The SV is the decay vertex of the Heavy
-neutral lepton and it is the point of origin of the decay products.\\
 
 In this specific case (~\ref{sec:llanalisi}), exactly two leptons, muon and/or electron, are
 expected to originate from the SV. The SV reconstruction is done a
@@ -847,14 +858,7 @@ are computed as the difference between the measured distance, $\rho$
 and its true value from simulation, divided by the uncertainty
 on the measured value. A standard deviation of about 1.2 is found from
 a Gaussian fit to the pull distributions, revealing a slight
-underestimation of the uncertainties.\\
-To verify the accuracy of the reconstructed SV position, it is checked the residuals of the
-transverse PV--SV distance $\rho$ with respect to the true generated
-value, $\Delta\rho(\mathrm{gen,rec})$ and the relative residuals
-$\Delta\rho(\mathrm{gen,rec})/\rho(\mathrm{gen})$, as a
-function of the true $\rho$. The results are shown in
-Figure~\ref{fig:svResidVsRho_all}.
-
+underestimation of the uncertainties.
 \begin{figure}[h!]
   \centering
   \includegraphics[width=.4\textwidth]{Figures/c6/selection/genvtx_recvtx_Drho_vs_rho_afterSel_zoom.pdf}
@@ -877,6 +881,13 @@ Figure~\ref{fig:svResidVsRho_all}.
   \label{fig:svResidVsRho_all}
 \end{figure}
 
+To verify the accuracy of the reconstructed SV position, the residuals of the
+transverse PV--SV distance $\rho$ with respect to the true generated
+value, $\Delta\rho(\mathrm{gen,rec})$ and the relative residuals
+$\Delta\rho(\mathrm{gen,rec})/\rho(\mathrm{gen})$ are studied as a
+function of the true $\rho$. The results are shown in
+Figure~\ref{fig:svResidVsRho_all}.
+
 No significant biases are observed and
 the tails are small: the fraction of events with
 $\Delta\rho(\mathrm{gen,rec})/\rho(\mathrm{gen})$ larger than
@@ -893,39 +904,38 @@ The efficiency for this two-tracks-SV reconstruction is nearly 100\%.
 
 \section{PF object and event identification
   variables}\label{sec:c2variables}
-Aside from the variables introduced beforehand, there are additional
-ones which is worth introducing at this stage of this dissertation. 
+Aside from the variables introduced up to this point, there are additional
+ones which are worth introducing at this stage of this dissertation. 
 The list of variables presented in the next two sections is
-contingent on the specification and parameters of the two heavy
-neutral leptons analysis presented in Chapters~\ref{Chapter5}
+contingent on the specification and parameters of the two data analyses presented in Chapters~\ref{Chapter5}
 and~\ref{Chapter6}.\\
-There is a number of variables which are referred specifically to light
-leptons, electrons and muons and in particular to the position with
-respect to the PV where they have been created. \\
-A second set consists in a few event-based observables. 
+There are a number of variables which are referred specifically to light
+leptons, electrons and muons, in particular those that are indicative
+of the HNL flight distance.\\
+A second set consists of a few event-based observables. 
 
 
 
-\subsection*{Light leptons
+\subsection*{Light lepton
   identification} \label{sec:c2leptonvariables}
 
 \paragraph{Vertices and impact parameter variables.} \label{sec:c2IP}
 Prompt leptons originate from the PV of the pp collision, hence they
 are expected to have very modest impact parameters with respect to the
 PV. On the contrary, nonprompt leptons and displaced leptons have
-quite considerable impact parameters due to the decay length of the
+quite considerably large impact parameters due to the decay length of the
 corresponding parent particles (partons or heavy neutral leptons).
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering
-  \includegraphics[clip,trim=1cm 0cm 3cm 4cm, width=0.48\textwidth]{Figures/c2/grafico.pdf}
+  \includegraphics[clip,trim=1cm 0cm 3cm 4cm, width=0.58\textwidth]{Figures/c2/grafico.pdf}
   \caption{Schematic representation of the impact parameters variables.}
   \label{fig:impact}
 \end{figure}
 
 In the context of this thesis work, the following variables are used:
 \begin{itemize}
-%\setlength\itemsep{-0.2em}
+%\setlength\itemsep{-0.1em}
 \item $\boldsymbol{d_{xy}}$, impact parameter in the $x-y$ plane;
 \item $\boldsymbol{d_z}$, impact parameter component in the the
   longitudinal direction, $z$-axis;
@@ -944,9 +954,10 @@ computed as $\Deltwod = \sqrt{(x_{SV}-x_{PV})^{2} + (y_{SV}-y_{PV})^{2}}$;
   the two leptons in the SV, as well as the spatial separation between their
   trajectories at the intersection point. The SV quality is estimated as a probability based on the
 $\chi^2$~fit from the kinematic vertex fitter;
-\item $\boldsymbol{d}$, displacement. It is used to parametrized the
-  efficiency of a photon to convert in the material of the
-  detector. It is computed as: $d = \sqrt{2R d_{xy}+d_{xy}^2}$ where $R$ is the radius of curvature of
+\item $\boldsymbol{d}$, displacement. It is used to study the electron
+  reconstruction performance where electrons originate from convert
+  photon.
+It is computed as: $d = \sqrt{2R d_{xy}+d_{xy}^2}$ where $R$ is the radius of curvature of
   the path of the nonprompt electron in magnetic field. This variable represents a suitable
   proxy to the actual displacement of the converted photon with
 respect to the PV, and is also correlated with the $\Delta_{2D}$ variable.
@@ -986,8 +997,7 @@ neutral particles component~\cite{Sirunyan_2018_muon}.
 \subsection*{General observables} \label{sec:c2observables}
 \paragraph{Missing transverse momentum,
   $\boldsymbol{\ptmiss}$.}\label{sec:c2ptmiss}
-Neutral leptons produced either in the pp collision or originated from
-the decays of other particles do not interact with any material of the CMS
+Neutral leptons do not interact with any material of the CMS
 sub-detectors, thus they leave the detector unseen. Nevertheless they
 carry momentum energy which have to be estimated or else it would
 create a sizable momentum imbalance in the transverse plane. The
@@ -1014,34 +1024,29 @@ jet energy corrections applied to the event~\cite{CMS-PAS-JME-16-004}.
 In this chapter the event reconstruction and lepton identification are discussed.\\
 With a clear focus on light leptons, we described the reconstruction
 of physics objects by using combined information from all the CMS
-subsystems. We illustrated what an electron, a muon, a
-neutrino, a photon a jet is for the CMS detector. In this context we
-described in details the PF algorithm with its input as output such as
+subsystems. In this context we
+described in details of the PF algorithm with its input as output such as
 leptons. \\
 We addressed the identification and characterization aspects of the
 reconstructed physics objects. We listed the main identification
 variables and the related levels of tagging efficiencies.
 According to the desired compromise between efficiency and purity, 
-it is defined for electrons and muons a set of different variables and selections definitions
-which are going to be recalled and used in the Chapters~\ref{Chapter5}
-and~\ref{Chapter6}.\\
+for electrons and muons a set of different variables and selections definitions
+are defined.
 
-In this chapter it is essential the description of the displaced objects
-reconstruction. Extensive attention is paid 
+In this chapter extensive attention is paid 
 to detail the algorithms and strategies adopted to
 correctly reconstruct and identify displaced vertices, muons and
 electrons. \\
 The CMS centralized displaced object algorithms are
 described as well as the specific IDs and methods which were developed in
-the context of this thesis. This latter work was realized by Daniele
-Trocino and by myself for the analysis presented in
-Chapter~\ref{Chapter6}. The second year of my PhD was dedicated
+the context of this thesis. I have contributed to this latter part. The second year of my PhD was dedicated
 exclusively to the study, understanding and identification of
 displaced objects. In particular, I have contributed to the
 decision of valuable variables and features to selected displaced muons with
 high efficiency and low misidentification rates. The exotica long-lived working group was the
 setting for these developments and several improvements were presented
-and discussed there by either me or Daniele. The comprehensive
+and discussed there by myself. The comprehensive
 insights acquired during the analysis process were crucial during the
 paper review and helped to formulate the interpretation of the
 long-lived heavy neutral lepton results.\\
@@ -1049,6 +1054,6 @@ The displaced object descriptions are going to be central to grasp the
 scope and the challenges of the analysis presented in
 Chapter~\ref{Chapter6}. \\
 
-A list of PF objects and event identification variables is added at
-the end of the chapter; each of the variable will be found later on
+A list of PF objects and event identification variables are added at
+the end of this Chapter~\ref{Chapter2_5}; each of the variable will be found later on
 the text.
