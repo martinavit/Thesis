@@ -2,9 +2,11 @@
 \chapter{Data and simulated datasets} \label{Chapter4} 
 
 
-Nearly all of the signals which can be studied at CMS are
-expected to have their potential backgrounds in which standard
-processes sporadically have fluctuations that make them appear more exotic than they truly are.
+Nearly all of new physics signals which can be studied at CMS are
+expected to have their potential backgrounds in which SM
+processes sporadically have fluctuations that make them appear more
+exotic than they truly are, or backgrounds arising from detector noise
+or mis-measurements.
 For example, an isolated high \pt electron can be a ``smoking gun'' for
 a few rare processes. At the same time an electron contained in a b
 jet is hardly ever isolated, but since the total b jet cross section
@@ -28,7 +30,7 @@ fundamental underlying theory (SM).
 
 
 
-\section{Event simulation}\label{sec:c4eventsimulation}
+\section{Simulation of pp collision events}\label{sec:c4eventsimulation}
 
 The event simulation is based on the Monte Carlo (MC)
 method~\cite{mc}. The simulated events
@@ -67,22 +69,23 @@ The full simulation chain is divided in separate generation stages:
   is mimicked. 
 \end{itemize}
 
+While analysing the simulated samples the kinematics and all
+properties of the produced primary particles are available in addition
+to the detector signals just like in real collision data. This
+possibility makes the simulations a corner stone of the detector and
+algorithm performance studies.
+
 The events in the simulated samples appear in the same format as the
 one used in data-taking. Furthermore there are single year campaigns for
 each year of data-taking which correspond to different detector
 conditions for each period. 
- 
+
+
 
 \section{Standard Model processes}\label{sec:c4sm}
-In this section an overview is given of the SM processes (refer to Figure~\ref{fig:crosssection}) which
-compose the background in the multilepton final state. The focus is
-specifically on three light leptons final states, which is the
-signature given by HNL decaying either into \PZ or into \PW where the bosons
-decay leptonically; this final state is presented in
-Chapters~\ref{Chapter5} and~\ref{Chapter6}.
 \begin{figure}[h]
 \centering
-  \includegraphics[width=0.95\textwidth]{Figures/c4/SigmaNew_v0.pdf}
+  \includegraphics[width=0.85\textwidth]{Figures/c4/SigmaNew_v0.pdf}
   \caption{Summaries of cross sections measurements by CMS~\cite{cmspublic} for
     different center-of-mass energies compared to the theory
     predictions (gray). The plot gives hints about the
@@ -90,13 +93,27 @@ Chapters~\ref{Chapter5} and~\ref{Chapter6}.
     relative rates with respect the signal expected yields.}
   \label{fig:crosssection}
 \end{figure}
+In this section we give an overview of the SM processes that form
+sizeable backgrounds to the HNL searches performed in this thesis. The
+focus is specifically on processes that can lead to three light
+lepton final states, which is the
+signature given by HNL decaying either into \PZ or into \PW where the bosons
+decay leptonically; this final state is presented in
+Chapters~\ref{Chapter5} and~\ref{Chapter6}.
+
+In Figure~\ref{fig:crosssection} a summary of cross sections
+measurements by CMS is presented. The measured values are compared
+with the theory predictions showing outstanding agreements.
 
 Almost all of the backgrounds are estimated from simulation using the
-MC samples. The non-prompt background is the only exception and it is
+MC samples. The nonprompt lepton background is the only exception and it is
 discussed for each analysis separately in Sections~\ref{sec:tight_loose_method}
 and~\ref{sec_llfakelepton}. 
 
-\paragraph{Diboson production, WZ and ZZ.}\label{sec:c4wz_zz}
+In the next paragraphs the SM processes that contribute the most as 
+backgrounds to the HNL searches are listed and explained.
+
+\paragraph{WZ and ZZ production}\label{sec:c4wz_zz}
 In case both bosons decay leptonically, the associated production of
 WZ bosons produces three prompt leptons ($\PZ \rightarrow \ell^{+}
 \ell^{-}$, $\PW \rightarrow \ell \nu$) and \ptmiss.
@@ -109,63 +126,71 @@ analysis presented in Chapter~\ref{Chapter5}.
 
 \begin{figure}[h!]
 \centering
-  \includegraphics[height = 4cm]{Figures/c4/dia/WZjj-production.jpeg}
-\hspace{1cm}
-  \includegraphics[height = 4cm]{Figures/c4/dia/Lowest-order-Feynman-diagrams-for-ZZ-production.jpeg}
-  \caption{WZ associated production diagrams (left), ZZ associated
-    production diagrams (right)~\cite{diagram}.}
+  \includegraphics[clip,trim=0.cm 0.5cm 0cm 0cm, height =4cm]{Figures/c4/dia/wz.jpeg}\\
+  \includegraphics[clip,trim=0.cm 6cm 15cm 0cm, height =
+  3cm]{Figures/c4/dia/Lowest-order-Feynman-diagrams-for-ZZ-production.jpeg}
+\includegraphics[clip,trim=0.cm 0.cm 15cm 6.5cm, height =3cm]{Figures/c4/dia/Lowest-order-Feynman-diagrams-for-ZZ-production.jpeg}
+  \includegraphics[clip,trim=15.cm 6.cm 0cm 0cm, height = 3cm]{Figures/c4/dia/Lowest-order-Feynman-diagrams-for-ZZ-production.jpeg}
+  \caption{WZ associated production diagrams (top), ZZ associated
+    production diagrams (bottom)~\cite{diagram}.}
   \label{fig:c41}
 \end{figure}
 The associated production of two \PZ bosons can enter as background in
 the three lepton final states when one of the leptons fails
-reconstruction or ID requirements. The events present low \ptmiss
+reconstruction or identification requirements. The events present low \ptmiss
 values and they have just a few jets and zero b jets. 
 
-
 \paragraph{W/Z and photon radiation.}\label{sec:c4photon}
-As shown in Figure~\ref{fig:c43}, events where a boson is produced
-together with a photon can extensively contribute to the background in three leptons
-final states. This is the case when when a virtual photon decays (internal conversion) or in which a real photon
-converts into leptons by interacting with the detector material
-(external conversion). The photon undergoes an
+In an event, real or virtual photons can appear due to initial state
+radiation (ISR) or final state radiation (FSR). In the first case,
+partons in the incoming protons emit low energy/collinear radiation
+prior to the hard scattering process. For FSR, collinear photons are emitted by
+the final states particles.\\
+Events (Figure~\ref{fig:c43}) presenting a W of Z boson in association with a real or virtual
+photon from ISR or FSR can extensively contribute to
+the background in three lepton final states.\\
+This is the case when when a virtual photon decays (internal
+conversion) or in which a real photon converts into leptons by interacting with the detector material
+(external conversion). The photon can undergo an
 asymmetric internal or external conversion in which one of the leptons
 has very low $\pt$. This soft lepton has a high probability of failing
 the selection criteria of the analysis, leading to a reconstructed
 two- (in case of a $\PW$ boson) or three-lepton (in case of a $\PZ$
 boson) final state. This background mostly contributes to categories
 with an OSSF pair.\\
-For the displaced leptons analysis presented in Chapter~\ref{Chapter6}
+For the displaced lepton analysis presented in Chapter~\ref{Chapter6}
 the external conversion is a ``nasty'' background because it can mimic
 a HNL decay vertex where $e^{+}e^{-}$ is produced. In order
-to reduce this background a material veto can be applied which rejects all the SV
+to reduce this background either requirements on the kinematic
+properties of the event or a material veto can be applied. The latter
+helps in rejecting all the SV
 which are located in proximity either of a detector layer or of an inert material.
 
 \begin{figure}[h!]
 \centering
-  \includegraphics[width=0.2\textwidth]{Figures/c4/dia/40000101.pdf}
-  \includegraphics[width=0.2\textwidth]{Figures/c4/dia/40000104.pdf}
-  \includegraphics[width=0.2\textwidth]{Figures/c4/dia/40000111.pdf}
-  \includegraphics[width=0.2\textwidth]{Figures/c4/dia/40000114.pdf}
-  \caption{\PW or \PZ plus $\gamma$ production diagrams~\cite{diagram}.}
+  \includegraphics[width=0.23\textwidth]{Figures/c4/dia/40000101.pdf}
+  \includegraphics[width=0.23\textwidth]{Figures/c4/dia/40000111.pdf}
+  \includegraphics[width=0.23\textwidth]{Figures/c4/dia/40000104.pdf}
+  \includegraphics[width=0.23\textwidth]{Figures/c4/dia/40000114.pdf}
+  \caption{\PW or \PZ plus $\gamma$ production diagrams. The two
+    diagrams on the left rapresent an initial state
+radiation event in association with W/Z production. The two on the
+right show an final state
+radiation susequent to W/Z production~\cite{diagram}.}
   \label{fig:c43}
 \end{figure}
 
 \paragraph{Drell-Yan production.}\label{sec:c4dy}
 The Drell-Yan process happens when a quark from one of the initial
-protons annihilates with an anti-quark from a proton traveling in the
-opposite direction. The quarks are converted into a $\gamma^{*}$ or
-\PZ, which decays into two leptons.
+protons annihilates with an anti-quark from leading to a virtual
+photon, $\gamma^{*}$ or
+\PZ, which then decays into two leptons.
 
 \begin{figure}[h!]
 \centering
-  \includegraphics[height =
-  6cm]{Figures/c4/dia/The-Feynman-graphs-for-Drell-Yan-pair-production-at-the-Oa-and-Oaa-s-orders_W640.jpeg}
-\hspace{1cm}
-  \includegraphics[height = 6cm]{Figures/c4/dia/Figure_001-a.pdf}
-  \caption{On the left, the typical DY production
-    diagrams~\cite{diagram}. On the right, distributions of the
-    invariant mass, $M_{\mu \mu}$, of dimuon events. The \PZ resonance
-    is clear at $M=91.2$\GeV~\cite{CMS-PAS-SMP-20-003}.}
+  \includegraphics[clip,trim=2cm 4.9cm 2cm 0cm, width=0.45\textwidth]{Figures/c4/dia/The-Feynman-graphs-for-Drell-Yan-pair-production-at-the-Oa-and-Oaa-s-orders_W640.jpeg}
+ \caption{The typical DY production
+    diagrams~\cite{diagram}.}
   \label{fig:c44}
 \end{figure}
 Drell-Yan events contribute in three prompt leptons final states when
@@ -184,38 +209,45 @@ where they originate from semi-leptonic b quark decay and lepton \PW decay.
 
 \begin{figure}[h!]
 \centering
- \includegraphics[width=0.25\textwidth]{Figures/c4/dia/60100003.pdf}
-  \includegraphics[width=0.25\textwidth]{Figures/c4/dia/60100001.pdf}\\
-  \includegraphics[width=0.4\textwidth]{Figures/c4/dia/Figure_001-a_tt.png} 
+ \includegraphics[clip,trim=0cm 3cm 0cm 3cm, width=0.45\textwidth]{Figures/c4/dia/tt.pdf}
   \caption{Diagrams for single top production and $t\bar{t}$ production.~\cite{diagram}}
   \label{fig:c46}
 \end{figure}
 
 
 \subsection{Long-lived particles}\label{sec:c4LLbgk}
-The analysis presented in Chapter~\ref{Chapter6} looks for displaced
+Long-lived HNL search looks for displaced
 vertices and displaced leptons produced relatively far from the PV.
 This kind of signature happens to be very different with respect the
 very well known SM processes. Along these lines, the backgrounds
 are not the conventional ones and
-therefore special care has to be used in understanding them.\\
-In Figure~\ref{fig:c4LLbgk} the phase space of long-lived HNLs is
-superimposed with potentially important backgrounds coming from
-long-lived meson decays. The figure shows the crowded area as function
-of HNL mass and life time.
-
+therefore special care has to be used in understanding them.
 \begin{figure}[h!]
 \centering
- \includegraphics[clip,trim=0.5cm 0.5cm 2cm 2cm, width=0.7\textwidth]{Figures/c4/resonances.pdf}
+ \includegraphics[clip,trim=0.5cm 0.5cm 2cm 2cm, width=0.75\textwidth]{Figures/c4/resonances.pdf}
   \caption{HNL \mixpar (red lines) superimposed with potentially important SM backgrounds
 (blue dots) as function of HNL mass and life time~\cite{Drewes_2020_jan}.}
   \label{fig:c4LLbgk}
 \end{figure}
 
-As is evident from Figure~\ref{fig:c4LLbgk}, the resonance and
-meson backgrounds can be rejected with proper selection criteria on
-the invariant mass of the decay products and on
-the displacement. This strategy will be presented in
+
+In Figure~\ref{fig:c4LLbgk} the phase space of long-lived HNLs is
+superimposed with potentially important backgrounds coming from
+long-lived meson decays. The figure shows the crowded area as function
+of HNL mass and life time.\\
+It is clear from Figure~\ref{fig:c4LLbgk} that the resonances and
+meson backgrounds can be rejected with proper criteria according to
+the phase space we are investigating.
+The top-right corner of Figure~\ref{fig:c4LLbgk} is
+background free because marks a region with very displaced particles
+with relative high masses; in this region we will not need to implement
+any selection to remove B and D meson contribution. In the central
+region of Figure~\ref{fig:c4LLbgk}, $m_\hnl \sim 1$\GeV, we find several
+baryons with relative small lifetimes. In this cases, implementing a 
+veto on a narrow mass window only for those events with small
+displacement could help in rejecting them. The same mass veto is redundant
+for events with larger displacement in the same mass region.
+This strategy will be presented in
 Chapter~\ref{Chapter6} where carefully selected mass windows are removed
 to avoid background contamination.
 
@@ -249,14 +281,16 @@ which are singlets under the SM gauge symmetry.
 The mass and mixing parameters of the HNL can be defined for each
 scenario to probe.
 
-The HNL production is simulated via charged current (CC) Drell-Yan
+The HNL production via charged current (CC) Drell-Yan
 process,~\ref{fid:hnl_production}(a), via gluon
 fusion,~\ref{fid:hnl_production}(b), and via $\PW \gamma$
-fusion,~\ref{fid:hnl_production}(c). 
+fusion,~\ref{fid:hnl_production}(c) is simulated. 
 \begin{figure}[h!]
 \centering
  \includegraphics[clip,trim=0cm 0cm 0cm 1cm, width=0.70\textwidth]{Figures/c4/hnl_production}
-  \caption{Diagrams for heavy neutrino production mechanisms at LHC~\cite{Pascoli_2019}}
+  \caption{Diagrams for heavy neutrino production mechanisms at
+    LHC~\cite{Pascoli_2019}. Each color corresponds to a different
+    particle (black = \hnl, yellow = leptons/neutrinos)}
   \label{fid:hnl_production}
 \end{figure}
 
@@ -384,8 +418,8 @@ exactly 1 which means we found the exclusion limits. It is clear that
 this kind of approach is not sustainable due to the limited computing
 time and power available. A smarter correction procedure is needed.
 
-To this purpose, it is used instead a per-event re-weighting technique
-based on the HNL lifetime, which properly accounts for all the
+To this purpose, a per-event re-weighting technique
+based on the HNL lifetime is used instead, which properly accounts for all the
 variations in kinematics and acceptance.
 First, it is noticed that the average kinematics of a HNL decay
 is entirely defined by the HNL mass \mhnl, its momentum
@@ -439,7 +473,7 @@ excellent agreement is observed, with the re-weighted summed sample
 exhibiting less statistical fluctuations than the individual samples.
 \begin{figure}[h!]
   \centering
-  \includegraphics[width = .55\textwidth]{Figures/c4/reweighting/ctau_genLevel_unskimmed.png}
+  \includegraphics[width = .5\textwidth]{Figures/c4/reweighting/ctau_genLevel_unskimmed.png}
   \caption{Distribution of the proper decay length $ct$ for three HNL
     samples of $\mhnl=4\GeV$ and different mean lifetimes (points withs
     error bars),
@@ -451,22 +485,6 @@ exhibiting less statistical fluctuations than the individual samples.
     length of the three samples. \dani}
   \label{fig:newReweightGen}
 \end{figure}
-
-
-Figure~\ref{fig:newReweightRec} shows distributions of the
-reconstructed dilepton mass (\mtwol) and secondary-vertex transverse
-displacement (\Deltwod (~\ref{sec:c2IP})) for a HNL scenario with
-$\mhnl=4$\GeV and $\mixparm = 6.31\cdot 10^{-6}$ in 2018,
-modeled using either a single sample with the re-weighting of
-Eq.~\ref{eq:ctauReweightingSingle} (black histograms), or the sum of
-three samples with different $\mixparm$ values and the re-weighting of
-Eq.~\ref{eq:ctauReweighting} (red histograms). The two models are compatible.\\
-The histograms
-presented in Figure~\ref{fig:newReweightRec} are filled with events
-which pass the event selection specifically designed for the
-long-lived analysis presented in Chapter~\ref{Chapter6}, for details
-refer to Section~\ref{sec:llanalisi}. 
-
 
 \begin{figure}[h!]
   \centering
@@ -484,6 +502,35 @@ refer to Section~\ref{sec:llanalisi}.
     re-weighting of Eq.~\ref{eq:ctauReweighting}. \dani}
   \label{fig:newReweightRec}
 \end{figure}
+Figure~\ref{fig:newReweightRec} shows distributions of the
+reconstructed dilepton mass (\mtwol) and secondary-vertex transverse
+displacement (\Deltwod (~\ref{sec:c2IP})) for a HNL scenario with
+$\mhnl=4$\GeV and $\mixparm = 6.31\cdot 10^{-6}$ in 2018,
+modeled using either a single sample with the re-weighting of
+Eq.~\ref{eq:ctauReweightingSingle} (black histograms), or the sum of
+three samples with different $\mixparm$ values and the re-weighting of
+Eq.~\ref{eq:ctauReweighting} (red histograms). The two models are compatible.\\
+The histograms
+presented in Figure~\ref{fig:newReweightRec} are filled with events
+which pass the event selection specifically designed for the
+long-lived analysis presented in Chapter~\ref{Chapter6}, for details
+refer to Section~\ref{sec:llanalisi}. \\
+
+Figure~\ref{fig:hnlSamples} shows the total number of HNL signal
+events available for each $(\mhnl,\mixparm)$ point which have been
+generated specifically for the long-live HNL search. For each HNL
+mass, all the samples produced with different lifetimes
+$\{\tau_i\}$ have been used to emulate the $\tau_{\mathrm T}$ scenario.
+
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.58\textwidth]{Figures/c4/ll_hnl_samples_mu.pdf}
+  \caption{Total number of signal MC events available for each
+    $(\mhnl,\mixparm)$ point, considering both private and central CMS
+    productions. The picture can be mirrored for $(\mhnl,\mixpare)$ scenario.}
+  \label{fig:hnlSamples}
+\end{figure}
 
 
 
@@ -500,19 +547,23 @@ to Section~\ref{sec:c3majo_dirac}.
 \begin{figure}[h!]
 \centering
  \includegraphics[clip,trim=0cm 7cm 0cm 3cm, width=0.65\textwidth]{Figures/c4/dirac_majo2}
-  \caption{Visualization of the LNV and LVC cases. Majorana HNLs
-    can decay in both cases while Dirac HNLs can only have LNC decay.}
+  \caption{Visualization of the LNV and LVC cases. HNL with a Majorana
+    nature contributes to both diagrams, while Dirac type HNL can only
+    lead to right side diagram. These diagrams show the specific case
+    when \hnl mixes with $\nu_\mu$ only resulting in having $\mu_{1}$
+    and $\mu_{2}$. The same diagrams can be made for $e_{1}$
+    and $e_{2}$ as well.}
   \label{fig:dirac_majo}
 \end{figure}
 
-For the prompt analysis (Chapter~\ref{Chapter5}) there is no 
+For the HNL analysis with three prompt leptons (Chapter~\ref{Chapter5}) there is no 
 need to produce distinct Dirac and Majorana MC samples since there is
 no difference between them except the final state combinations. For the
 long-lived scenario separate samples are necessary.
 
-After the lesson learned with the emulation procedure described 
-above in Section~\ref{sec:reweighting}, a similar idea and strategy
-was also adopted for the Dirac-Majorana case.\\
+After the lessons learned with the emulation procedure described 
+above, a similar idea and strategy
+was also adopted for obtaining HNL signal sample for the scenario where HNL has a Dirac nature using the sample where HNL is a Majorana particle.\\
 To optimize computing resources and in the interest of time,
 high-statistics MC samples were produced on a large scale for Majorana
 HNL scenarios only.
@@ -522,7 +573,7 @@ steps:
 \begin{itemize}
 \setlength\itemsep{-0.2em}
 \item from a Majorana HNL sample, select only the LNC events by
-  looking at the unique ID number of the generated particles;
+  looking at the unique identity number of the generated particles;
 \item re-weight each LNC event to emulate the correct lifetime of the
   Dirac HNL, by using Eq.~\ref{eq:ctauReweightingSingle} with
   $\tau_{\mathrm{T}}=2\tau_0$;
@@ -555,7 +606,7 @@ Majorana HNL samples in the Dirac HNL interpretation.\\
 Figure~\ref{fig:majToDirReweighting} shows a comparison between Dirac
 HNL samples and Majorana HNL samples corrected to emulate Dirac
 scenarios, employing both strategies outlined above.
-As can be seen, differences are small in all bins.
+As can be seen, differences are small accros the most relevant observables  for defining the search strategy.
 \begin{figure}[h!]
   \centering
   \includegraphics[width = .32\textwidth]{Figures/c4/reweighting/diracReweighting_M-2_V-0p0157162336455_mu_mass_18.pdf}
@@ -576,7 +627,7 @@ As can be seen, differences are small in all bins.
 
 
 \subsubsection{Uncertainty on LL-signal MC cross section}\label{sec:c4lo}
-The \texttt{heavyN} model used for generation of Monte Carlo HNL events does not allow for NLO QCD calculations. The simulation of HNL events happens therefore at LO, resulting in large theoretical uncertainties on the cross section (up to $15\%$) that have to cover the effect of the missing higher order QCD corrections and PDF uncertainties.
+The \texttt{heavyN} model used for generation of HNL events does not allow for NLO QCD calculations. The simulation of HNL events happens therefore at LO, resulting in large theoretical uncertainties on the cross section (up to $15\%$) that have to cover the effect of the missing higher order QCD corrections and PDF uncertainties.
 
 Instead of relying on these LO uncertainties, a general correction factor for the cross section from LO to NNLO can be derived based on the SM production of \PW\ $\rightarrow$ $\ell$ $\bar{\nu}$ . In HNL production, the only difference from this SM process is the exchange of the SM neutrino by a HNL. The effect of the mass and coupling of the HNL can be factorized in the calculation of the HNL cross section and is not affected by the PDF and scale variations. The dominant effect of these uncertainties appears at the production of the \PW boson, therefore it can be studied in the SM process \PW\ $\rightarrow$ $\ell$ $\bar{\nu}$ , for which recommended values for the cross section at NNLO exist with their corresponding theory uncertainties. Our approach is to get a LO cross section for \PW\ $\rightarrow$ $\ell$ $\bar{\nu}$ calculated with Madgraph using the same exact conditions as the HNL MC production. A correction factor from LO to NNLO can be derived based on this and can then be applied to HNL MC. The PDF and scale uncertainties at NNLO are applied as flat systematic uncertainties to cover the remaining uncertainty on the MC cross section.
 
@@ -593,7 +644,7 @@ The definition of the primary datasets (PDs) is intrinsically connected to
 the HLT trigger paths (~\ref{sec:triggersystem}). The PD design is centered
 around particles reconstructed in the event by the HLT, and follows one simple principle:
 grouping together events with similar physics content; for instance, there are
-single lepton datasets and double leptons datasets.
+single-lepton datasets and double-leptons datasets.
 Since an event can pass more than one HLT path,
 it can enter in more than one primary dataset. At a practical level, possible overlaps among different datasets are
 removed by checking run, lumi-section, and event numbers in order to not have twice the same event coming from different PDs.\\
@@ -606,9 +657,10 @@ multiple trigger requests, both single lepton trigger and
 dilepton triggers in order to maximize the trigger efficiency.
 
 The analysis presented in Chapter~\ref{Chapter6} includes only
-\texttt{SingleElectron} and \texttt{SingleMuon}; \texttt{DoubleEG} and
+\texttt{SingleElectron} and \texttt{SingleMuon} for signal search,
+while \texttt{DoubleEG} and
 \texttt{DoubleMuon} primary datasets are used for background
-predictions measurement only. For this specific case the choice was
+measurements. For this specific case the choice was
 made considering the limitations due to the presence of displaced
 leptons in the final states.
 Since (most of) the CMS leptonic triggers are
@@ -628,20 +680,19 @@ luminosities of 35.92\fbinv (2016), 41.53\fbinv (2017), and 59.97\fbinv
 (2018). 
 
 \section{Summary}\label{sec:summaryC4}
-In this chapter an overview of the simulated samples and the data sets
+In this chapter an overview of the simulated signal and main background samples and the data sets
 samples is presented.\\
 We first introduced the different ``ingredients'' that compose the
 background of the analyses presented in Chapters~\ref{Chapter5}
 and~\ref{Chapter6}. We tried to explain which SM processes can
-contribute and contaminate the signal region falling inside the object and event
-selection.  Taking into account the three prompt
+contribute and contaminate the signal region accidentally passing the object and event selection criteria. Taking into account the three prompt
 leptons final state scenario, we listed the processes that better
 mimic the signal signatures while having a sizable branching
 ratio and large production cross-sections. 
 
 We described the HNL model adopted in the context of this thesis. The
 main features were presented with a large focus on
-displaced case. In this framework the re-weighting procedure was
+long-lived HNL case. In this framework the re-weighting procedure was
 introduced, which is going to be a key point for the 
 interpretation of the results in both the prompt and displaced heavy neutral lepton
 analyses of Chapters~\ref{Chapter5}
