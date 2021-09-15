@@ -2,7 +2,7 @@
 with three leptons and displaced vertex} \label{Chapter6} 
 
 \section{Change of scenario}
-While the SM is in excellent agreement with the LHC measurements, many problems of it are still unsolved.\\
+
 So far an explicit signal of New Physics from either direct or indirect
 searches at the LHC, or direct detection of Dark Matter is
 missing. Furthermore, theory presents no clear direction on the New Physics scale.
@@ -15,15 +15,15 @@ settings and analysis.
 Among the plethora of possible new physics theories, quite eccentric
 possibilities of new particles could be long-lived particles (LLPs)
 decaying in the detector or long-lived detector-stable particles which decay outside the detector volume. 
-These two require a change of scenario with respect to the usual SM
-prompt searches probed till these days and they do require the
+These two require a change of scenario with respect to the usual
+searches for new physics probed until some years ago and they do require the
 inclusion of unconventional signature searches.
 
 Long-lived particles could be foreseen by several models due to:
 \begin{itemize}
 \setlength\itemsep{-0.1em}
-\item \emph{small coupling constants} -- \ie RPV SUSY (R-parity violating
-  SUSY scenario), HNL, etc;
+\item \emph{small coupling constants} -- \ie HNLs, RPV SUSY (R-parity violating
+  SUSY scenario), etc;
 \item \emph{very off-shell intermediate decay products} -- \ie split SUSY where
 heavy intermediate squarks enhance
 the gluino lifetime~\cite{ATLAS-CONF-2019-006,2020135114};
@@ -71,15 +71,15 @@ calorimeters and it does not show hits in the muon detectors~\cite{Sirunyan_2020
 \centering
 \includegraphics[clip,trim=0cm 0.cm 0.cm 1.6cm, width=0.85\textwidth]{Figures/c6/antonelli_skech.pdf}
 \caption{Didactic sketch, by J. Antonelli, showing the numerous
-  Long-lived scenarios which could be seen and probed inside the CMS tracker. }
+  experimental signatures in the CMS tracker from various hypothetical particles proposed in long-lived models. }
 \label{fig:c6antonelli}
 \end{figure}
 
 These are just few examples of the almost endless configurations which can
-be studied including the \emph{long-lived} signatures in the
+be studied including the \emph{long-lived} particle signatures in the
 current particle physics searches. 
 
-\subsubsection{Long-lived HNL}
+\subsubsection{HNL with long lifetime}
 Along these lines, extending the HNL search described in
 Chapter~\ref{Chapter5} including the long-lived HNL decays it feels like a logical
 continuation. 
@@ -92,14 +92,14 @@ As a result, the kinematics and the acceptance of HNLs with masses
 below about 20\GeV are significantly affected by their long lifetimes,
 and must be accounted for in the signal simulation and in the results'
 interpretation.
-If $\hnl$ has a long lifetime, in particular, its decay products
-($\ell^{\pm\prime}$, $\ell^{\mp\prime\prime}$, $\nu_{\ell^{\prime\prime}}$ or
-$\nu_{\ell^{\prime}}$, $\ell^{\pm\prime\prime}$, $\ell^{\mp\prime\prime}$)
-emerge from a secondary vertex, spatially displaced with respect to
-the primary vertex of the process, and distinguishable from it.\\
+If $\hnl$ has a long lifetime, then a secondary vertex formed by the decay products of the HNL ($\ell^{\pm\prime}$, $\ell^{\mp\prime\prime}$, $\nu_{\ell^{\prime\prime}}$ or
+$\nu_{\ell^{\prime}}$, $\ell^{\pm\prime\prime}$,
+$\ell^{\mp\prime\prime}$) which is spatially displaced with respect to
+the primary pp collision vertex of the process and can be experimentally identified. 
 
-We present here the search of long-lived heavy neutral leptons Leptons in final states
-with three charged leptons and displaced vertices. \\
+We present here the search of long-lived heavy neutral leptons in final states
+with three charged leptons and displaced vertices. Please note that
+the neutrino emerging in the decay chain of HNL in the in the final state is not used in the analysis.\\
 The analysis strategy we follow here shares some similarities with the
 prompt HNL search (~\cite{Sirunyan:2018mtv}-Chapter~\ref{Chapter5})
 and uses the lessons learned from that
@@ -132,9 +132,6 @@ The current analysis uses three sets of $pp$ collision data at a
 center-of-mass energy of 13\TeV, corresponding to integrated
 luminosities of 35.92 \fbinv (2016), 41.53 \fbinv (2017), and 59.97 \fbinv
 (2018). \\
-The luminosity scenario has a 25 ns bunch crossing separation with an
-average of about 23/32/32 (16/17/18)  pileup interactions per bunch crossing, for details refer to Section~\ref{lhc}.
-
 A number of signal samples were used for the optimization of the
 selection and the interpretation of the results, using the modeling
 described in Section~\ref{sec:c4eventsimulation}.
@@ -189,18 +186,18 @@ with a tag-and-probe method (see Section~\ref{sec:triggereff}).
 
 \subsection{Object selection}\label{sec:llobject}
 For the rigorous explanation of the single object reconstruction in
-CMS see Chapter~\ref{Chapter2}, section~\ref{sec:reconstruction}.\\
+CMS see Chapter~\ref{Chapter2_5}, section~\ref{sec:reconstruction}.\\
 In Sections~\ref{sec:c2keleid} and~\ref{sec:c2muonselection} the
 prompt lepton identification criteria are presented.\\
 For displaced
-leptons and SVs there are detailed dedicated explanations in
+leptons and SVs there are detailed explanations in
 Sections~\ref{sec:c2muondisplaced} (displaced
 muons),~\ref{sec:c2dispele} (displaced electrons) and~\ref{sec:c2sv}
 (displaced SV reconstruction).\\
 
-In the following sections, they are listed and motivated only the
+In the following sections, only the
 additional selections circumscribed
-to this specific scenario.
+to this specific scenario are listed and motivated.
 
 \subsubsection{Electrons}\label{sec:llelectron}
 The electron selection criteria are summarized in
@@ -210,11 +207,11 @@ electrons.
 
 \textbf {Prompt electrons.}
 Prompt electrons are identified using a multi-variate discriminator with identification efficiency above 90\%
-(90\% working point MVA ID),
+(90\% working point MVA ID). Prompt electrons
 must have \pt greater than 30 (32, 32)\GeV in the 2016 (2017, 2018)
 data set.
 The offline \pt threshold is driven by the trigger \pt threshold in
-each data set, such that the offline cut always falls in the plateau
+each data set, such that the offline criteria always falls in the plateau
 of the trigger efficiency curve.
 Prompt electrons passing this selection will be referred to as \tP electrons~\footnote{
 N.B. these working points do not necessarily coincide with the ones
@@ -227,8 +224,8 @@ and~\ref{sec:c2keleid}. For these latter the italic style is used.} hereafter.
 They must have \pt greater than 7\GeV.
 Samples enriched in fake electrons are selected with
 identification criteria looser than those used for \tD
-electrons. These looser electrons referred as \fo
-(FO) electrons are employed to determine the rate of fake electrons
+electrons. These looser electrons referred as \fo electrons (from
+fekable object) are employed to determine the rate of fake electrons
 mis-identified as signal electrons (\fr or FR).
 \begin{table}[h!]
   \centering
@@ -286,7 +283,7 @@ and~\ref{sec:c2keleid}. For these latter the italic style is used.} muons hereaf
 \textbf {Displaced muons.}
 \Displ muons which pass the displaced ID criteria
 (~\ref{sec:c2muondisplaced}) will be referred to as \tD
-muons. The displaced muon are required to have \pt greater than 5\GeV.\\
+muons. The displaced muons are required to have \pt greater than 5\GeV.\\
 In addition, looser muons referred as \fo muons are selected
 with identification criteria looser than those used for \tD muons, and are employed to determine the muon FR.
 
@@ -330,7 +327,8 @@ with identification criteria looser than those used for \tD muons, and are emplo
 \section{Analysis strategy}\label{sec:llanalisi}
 Signal events are
 characterized by the presence of a prompt lepton (in the following
-often referred to as \lone, or ``\lept from \PW'' in some figures),
+often referred to as \lone, or ``\lept from \PW'' in some of the
+figures presented in this thesis),
 two \displ leptons (\ltwo and \lthree, or
 ``\lept from \hnl'' and ``\lept from $\hnl\to\PW^\ast$'' in some
 figures), and a neutrino, see Figure~\ref{fig:c6llsketch}.
@@ -346,7 +344,7 @@ figures), and a neutrino, see Figure~\ref{fig:c6llsketch}.
 \end{figure}
 
 In the following sections, events are split into  
-final states in which \lone and at least one of \ltwo or \lthree are
+categories in which \lone and at least one of \ltwo or \lthree are
 electrons (\eex) or muons (\mmx).
 
 Figure~\ref{fig:llfeatures} illustrates some
@@ -429,17 +427,16 @@ Section~\ref{sec:llbaselinesel}).
 
 Once \ltwo and \lthree have been identified, we can reconstruct their
 common vertex of origin, \ie the decay vertex of the HNL. \\
-For the SV reconstruction it is used the procedure described in Section~\ref{sec:c2sv}.
+For the SV reconstruction the procedure described in Section~\ref{sec:c2sv} is used.
 The fitted SV estimates the production vertex of \ltwo and \lthree.
 
 \subsection{Event kinematics and baseline selection}
 \label{sec:llbaselinesel}
 
-Starting from all the events with one prompt lepton and two \displ
-leptons forming a SV (following the definitions and strategies
-described above), the kinematic properties and particle content of
+Starting from all events with one prompt lepton and two \displ
+leptons forming a SV, the kinematic properties and particle content of
 typical HNL signal events are used to suppress the background
-contributions, more details in the following Section~\ref{sec:llbackground}.
+contributions (more details in the following Section~\ref{sec:llbackground}).
 
 The baseline selection includes the following requirements, summarized
 in Table~\ref{tab:baselinesel}. Please
@@ -476,7 +473,8 @@ opening angle, given the small mass and relatively large momentum of
 the HNL. As can be seen in
 Figure.~\ref{fig:selection_electrons} (top-left),
 the variable \DRtwol discriminates the signal from all background
-processes. To retain high signal efficiency, we select events with
+processes. To retain high signal efficiency and reduce backgrounds
+where two leptons are relatively seperated from each other, we select events with
 $\boldsymbol{\DRtwol<1}$.
 \vspace{2mm}
 
@@ -494,14 +492,14 @@ momentum carried away by the neutrino, \mlll tends to peak just
 below the \PW mass, with a steep fall above 80\GeV and a larger tail
 at lower masses. We select
 events with $\boldsymbol{\mlll}$ values \textbf{between 50 and 80\GeV}. This requirement
-proves particularly effective against the \Zgs background, where the
+proves particularly effective against the Z$\gamma^{(\ast)}$ background, where the
 photon radiated by one of the leptons from the \PZ decay undergoes an
 asymmetric conversion: one of the leptons receives most of the \PGg
 momentum, while the other is too soft to be detected or
-identified. This explains the peak at about 91\GeV in the \mthreel
+identified. Such events manifest themselves as a peak at about 91\GeV in the \mthreel
 spectrum. \\
 
-Events with a \PQb jet (see Section~\ref{sec:object}) with \pt greater
+Events with a b jet (see Section~\ref{sec:object}) with \pt greater
 than 25\GeV are rejected, in order to substantially reduce the
 background from the top processes.\\
 
@@ -513,7 +511,7 @@ The decay products of the HNL, however, are emitted at small opening
 angles with respect to the HNL direction. We can thus expect the
 vector sum of the \ltwo and \lthree momenta to follow closely, though
 not exactly, the direction of the
-HNL. Figure~\ref{fig:selection_muons} shows a distribution of the cosine of the angle between the SV
+HNL. Figure~\ref{fig:selection_electrons} shows a distribution of the cosine of the angle between the SV
 position, which estimates the direction of flight of the HNL before
 decaying, and the vector sum of the \ltwo and \lthree momenta
 (``back-pointing angle''):
@@ -534,7 +532,7 @@ $+1$.\\
 
 The quality of the secondary vertex ($\boldsymbol{ p_{SV}}$) necessarily correlates with the precision of the trajectories from \ltwo and \lthree as well as how close they are at the intersection point. It is represented as a probability based on the maximum likelihood fit from the kinematic vertex fitter. One can observe that for low probability values, the background dominates. This motivates a requirement of the \textbf{probability to be larger than 0.001}. \\
 
-The quality of the SV fit is used as well as discriminating variable against random vertices. The significance of the distance between PV and SV, $\boldsymbol{ S(\Delta_{2D})}$ is shown in Figure~\ref{fig:selection_muons}. The requirement of the \textbf{significance to be larger than 20} is applied.\\
+The quality of the SV fit is used as well as discriminating variable against random vertices. The significance of the distance between PV and SV, $\boldsymbol{ S(\Delta_{2D})}$ is shown in Figure~\ref{fig:selection_electrons}. The requirement of the \textbf{significance to be larger than 20} is applied.\\
 
 The dilepton (\ltwo, \lthree) transverse momentum  is required to be
 larger than 15\GeV, since the low-\pt region is heavily dominated by
@@ -618,8 +616,8 @@ When there are both MC and data-driven predictions:
 
 
 \clearpage
-The following plots are a summary view of the entire selection
-(~\ref{tab:baselinesel}) showing two different kind of "cutflow". The
+Figures~\ref{fig:cutflow1} and~\ref{fig:cutflow2} are a summary view of the entire selection
+step by step showing two different kind of "cutflow". The
 first set, fig~\ref{fig:cutflow1}, is the classic cutflow where each
 bin displays the number of left events after each selection and it goes in a
 "cascade" way (one after the other). The second one,
@@ -642,7 +640,8 @@ where at least one electron comes from conversion. In such events
   \caption{Cutflow plots showing the full selection applied in simulated backgrounds using the 2018 MC samples,
     in \eex (left) and \mmx (right) final states.
     Signal models for different values of \mhnl and \mixpar
-    are shown as empty histograms.}
+    are shown as empty histograms. For illustration purposes we show
+    only the predictions corresponding to 2018 data-taking and luminosity.}
   \label{fig:cutflow1}
 \end{figure}
 
@@ -653,7 +652,8 @@ where at least one electron comes from conversion. In such events
   \caption{
    $N-1$ plots but showing the impact in percentage of the single cut (each bin is $yield_{bin}/yield_{full\:selection}$).
     Signal models for different values of \mhnl and \mixpar
-    are shown as empty histograms.}
+    are shown as empty histograms. For illustration purposes we show
+    only the predictions corresponding to 2018 data-taking and luminosity.}
   \label{fig:cutflow2}
 \end{figure}
 \vspace{2mm}
@@ -661,7 +661,8 @@ where at least one electron comes from conversion. In such events
 
 Figure~\ref{fig:reco_displ} shows the transverse
 distance of the SV from the PV, \Deltwod, for events
-passing the full baseline selection.
+passing the full baseline selection. \Deltwod is the most important
+experimental observable to discriminate signal from background.
 
 In the region of large displacement, the sensitivity of the analysis
 greatly increases, with a relatively low abundance of nonprompt lepton
@@ -693,7 +694,8 @@ Therefore we select four event categories, based on the value of
 scenarios:
 $\Deltwod<0.5$\cm (fully background dominated), $0.5<\Deltwod<1.5$\cm,
 $1.5<\Deltwod<4$\cm and $\Deltwod>4$\cm.\\
-In addition, the events are split into 3 different final states. In case 
+In addition, the events are split into three different categories
+according to lepton flavors. In case 
 the muon coupling is been probed the 3 final states are $\mu\mu\mu$,  $\mu^{\mp}\mu^{\pm} e$ 
 and $\mu^{\pm}\mu^{\pm}e$; in case of electron coupling the 3 final states
 are: $eee$,  $e^{\mp}e^{\pm}\mu$ and $e^{\pm}e^{\pm}\mu$. This latter categorization
@@ -703,7 +705,7 @@ The different categories are also characterized by different
 background levels and composition, thus providing different
 sensitivities.
 
-Finally we notice that the top background processes, where \ltwo and
+Finally, we notice that the top background processes, where \ltwo and
 \lthree are typically produced in the semi-leptonic decay of $B$
 hadrons, populate a region of $\mtwol<4$\GeV, and are basically absent
 at higher dilepton masses. Therefore we further split the data into

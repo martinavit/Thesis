@@ -517,8 +517,8 @@ KOMA-script documentation for details.}]{fancyhdr}
 
 %particles
 \newcommand{\PZ}{\ensuremath{Z}\xspace}
-\newcommand{\Zg}{\ensuremath{\PZ+\gamma}\xspace}
-\newcommand{\Zgs}{\ensuremath{\PZ+\gamma^{(\ast)}}\xspace}
+\newcommand{\Zg}{\ensuremath{\PZ\gamma}\xspace}
+\newcommand{\Zgs}{\ensuremath{\PZ\gamma^{(\ast)}}\xspace}
 \newcommand{\Pe}{\ensuremath{e}\xspace}
 \newcommand{\PW}{\ensuremath{W}\xspace}
 \newcommand{\PH}{\ensuremath{H}\xspace}
@@ -619,8 +619,8 @@ KOMA-script documentation for details.}]{fancyhdr}
 \newcommand{\DRtwol}{\ensuremath{\Delta R(\ltwo,\lthree)}\xspace}
 \newcommand{\Dphi}{\ensuremath{\Delta\phi}\xspace}
 \newcommand{\minDphi}{\ensuremath{\min{\Delta\phi(\lone,\ltwothree)}}\xspace}
-\newcommand{\Xg}{\ensuremath{X+\gamma}\xspace}
-\newcommand{\Xgs}{\ensuremath{X+\gamma^{(\ast)}}\xspace}
+\newcommand{\Xg}{\ensuremath{X\gamma}\xspace}
+\newcommand{\Xgs}{\ensuremath{X\gamma^{(\ast)}}\xspace}
 
 
 %\newcommand{\costheta}{\ensuremath{\cos{\left(\vec{r}_{\mathrm{SV}},\vec{p}_{\mathrm{\ltwothree}}\right)}}\xspace}
