@@ -20,9 +20,9 @@ The Large Hadron Collider (LHC)~\cite{Brning2004LHCDR} –- the last step in thi
 located at the CERN laboratories in Geneva operating since 10
 September 2008. It is
 designed to accelerate hadrons (like protons, Lead-ions, Xenon-ions) and to
-operate at the centre-of-mass energy up to 14\TeV.
+operate at the centre-of-mass energies up to 14\TeV.
 The circular ring is installed in a tunnel of a 27 kilometers where
-the Large Electron Positron collider~\cite{Lep:designReport} was
+the Large Electron Positron (LEP) collider~\cite{Lep:designReport} was
 previously located. Several other accelerators in the succession have
 their own experimental areas where beams are used for experiments at lower energies.
 A graphic representation of CERN accelerator
@@ -139,7 +139,7 @@ expands the physics reach of CMS and ATLAS because of
 the higher probability of an episode of a rare collision; however
 most of the PU interactions pollute the information of the
 event being mostly low energy and less interesting to look for
-new physics models. Thus it is challenging for the detector and for
+new physics models. Thus it is a challenging task for the detector and for
 the reconstruction algorithms to be able 
 to disentangle and reconstruct each single pp collision per single
 bunch crossing.
@@ -228,7 +228,7 @@ measured. This measurement is possible thanks to the presence of the
 magnetic field, created by the solenoid, which bends the charged
 particle tracks. Subsequently there are the
 electromagnetic (ECAL) and hadronic (HCAL) calorimeters where
-electrons/photons and hadrons are receptively absorbed and their
+electrons/photons and hadrons are respectively absorbed and their
 energies measured. Finally the muons, getting through the
 calorimeters, enter into the muon chambers where the whole trajectories
 are measured~\cite{CMS:particleflow}. The full reconstruction
@@ -250,13 +250,13 @@ delineate the accurate chart.
 The particle energy measurement is a critical information to build up the full
 picture of the event happening at center of CMS detector. One way to
 estimate the momentum is to track the particle course through a
-magnetic field; the more bent the trajectory, the less momentum the
+magnetic field; the more bent the trajectory is, the less momentum the
 particle has. The CMS tracking system registers the course taken by
 charged objects passing through by spotting their location at a few
-fixed points which are the tracker layers. \\
-Thus the system can measure the trajectories of muons, electrons,
-charged hadrons and tracks originating from the secondary vertex decay of long-lived
-particles.
+fixed points which are the tracker layers. 
+Thus, the system is able to measure the trajectories of muons,
+electrons and
+charged hadrons.
 
 \begin{figure}[h]
 \centering
@@ -280,8 +280,7 @@ accuracy as well as be lightweight in terms of radiation lengths in
 order to disturb the particle path as little as possible. Furthermore
 the layers closer to the beam pipe receive
 the largest volume of particles thus the construction materials should
-have high radiation hardness to resist radiations over time.
-
+have high radiation hardness to resist radiations over time.\\
 Hence the design of the CMS tracking system is optimized to
 efficiently and precisely measure the trajectories of charged
 particles and to effectively reconstruct secondary vertices.\\
@@ -291,31 +290,29 @@ long lifetime leading to displaced vertices. It is a very central phenomenon
 to this thesis work presented in Chapter~\ref{Chapter6}. The vertex position resolution and track
 reconstruction efficiency play a major role in the analysis acceptance,
 and thus in the analysis sensitivity. Those parameters are going to be
-described in detail in Section~\ref{sec:trackvertex}.
-
-
+described in detail in Section~\ref{sec:trackvertex}.\\
 Additionally the tracking system exhibits high granularity and
 fast response features to correctly associate each reconstructed track
-to the respective bunch crossing and the primary interaction point.
+to the respective bunch crossing and to the primary interaction point.
 
 The CMS tracker consists of a pixel detector (pixel Tracker) and a
 silicon strip detector (strip Tracker), see
-Figure~\ref{fig:tracker}. While a particle travels through the tracker the pixels and
-strips create very small electric signals which get amplified and
+Figure~\ref{fig:tracker}. While a particle travels through the tracker
+the crossed and hit modules create small electric signals which get amplified and
 detected.\\
 The original pixel detector was made of three barrel
 layers at radii of 4.4, 7.3, and 10.2 cm and two endcaps modules in
 the forward region. 
-During the short shutdown between the data takings 2016 and 2017, 
+During the short shutdown between the data-takings 2016 and 2017, 
 an
 upgraded version of the pixel detector was installed. The detector has currently four
 barrel layers at radii of 3.0, 6.8, 10.2, and
 16.0 cm and three layers in the forward region~\cite{Dominguez:1481838}. The
-recent innermost layer and modules
+recent innermost modules
 are positioned closer to the beam pipe in order to improve the
 precision on the position of the interaction vertices.\\
 The silicon strip detector consists of many parts: the tracker inner and
-outer barrels (TIB and TOB), in total ten layers of strip modules in
+outer barrels (TIB and TOB) making in total ten layers of strip modules in
 the barrel; the 6 tracker inner disks (TID), three each
 side; and the nine disks on each side of the tracker endcap (TEC).\\
 In total the tracking system is 5.8 m long and 2.6 m high,
@@ -328,7 +325,7 @@ The ECAL detector is a fine-grained and homogeneous calorimeter
 made up of lead
 \begin{wrapfigure}{r}{0.6\textwidth}
   \begin{center}
-    \includegraphics[clip,trim=1cm 1cm 1cm 1.5cm, width=0.58\textwidth]{Figures/c2/ecal}
+    \includegraphics[clip,trim=1cm 1cm 1cm 1.9cm, width=0.58\textwidth]{Figures/c2/ecal}
   \end{center}
   \caption{Geometric view of one quarter of the ECAL~\cite{Benaglia_2014}.}
 \label{fig:ecal}
@@ -341,8 +338,8 @@ made up of lead
  photon showers are generated from the interaction between high energy photons/electron and
  dense matter. The showers give energy to the CMS ECAL's crystals by
  exciting crystal atoms. Afterwards the crystal atoms ``relax'' and each
- excited electron, ``falling back'',
- emits energy as a photon in the blue light spectrum.
+ excited electron
+ emits energy ``falling back'' as a photon in the blue light spectrum.
 The amount of light produced is proportional to the particle's energy
  allowing a fast and very precise measurement of the momentum
  property. 
@@ -359,21 +356,19 @@ interesting pairs of low-energy photons very close to each other, \ie
 coming from the decay of a $\pi^0$. \\
 For the analyses presented in Chapters~\ref{Chapter5}
 and~\ref{Chapter6} the electron energy correctness is crucial for the
-proper electron reconstruction and identification in the final
-state. 
+proper electron reconstruction and identification.
 
 \subsubsection{The hadron calorimeter}
 The HCAL detector is a hermetic sampling calorimeter which means it
 consists of alternative layers of ``absorber'' and ``scintillator''
 materials that measure a particle’s position, energy and arrival time.
-At the moment a hadron collides with a absorber layer, brass or steel
-in this case, an interaction occurs generating several secondary
+At the moment a hadron collides with an absorber layer (made by brass or steel) an interaction occurs generating several secondary
 particles. Subsequently these bunch of particles hit successive layers
-of absorber interacting again and agin and creating a shower of particles.
-This shower passes through the layers of scintillators
+of absorber interacting again and again and creating particle showers.
+These showers pass through the layers of scintillators
 causing them to emit photons in the blue-violet light spectrum.
 The quantity of light in a given position is summed up over several
-layers of tiles in depth, called a “tower”, thus this total amount of
+layers of tiles in depth, called a “tower”. The total amount of
 light is a measure of a particle’s energy.\\
 The HCAL is located both inside the solenoid, the main part, and
 outside it, the outer barrel (HO). 
@@ -381,29 +376,27 @@ Inside the magnet coil, the barrel (HB) and endcap parts (HE) cover
 respectively the pseudorapidity
 ranges $\eta<$ 1.3 and 1.3 $<\eta<$ 3.
 The forward region of pseudorapidity is covered by the forward hadron
-calorimeter (HF) up to $\eta<$ 5. It is made up of iron radiators and
+calorimeter (HF) up to $\eta<$ 5. HF is made up of iron radiators and
 quartz-fibre sensors and it measures both the electromagnetic and the hadronic shower. 
 The outer barrel, HO, ensures no energy leaks out the
 back of the HB undetected.
 
 \subsubsection{The muon system}\label{sec:muonsystem}
 The muon system is constructed to identify muons and to measure their
-trajectories. Muons can be created in the decay of numerous particles,
-like Higgs Boson decay ($H \rightarrow \mu \mu \mu \mu$) or 
-RH neutrino decay as described in
+trajectories. Muons can be created in the decays of numerous particles,
+like Higgs Boson decays ($H \rightarrow \mu \mu \mu \mu$) or 
+RH neutrino decays as described in
 Chapters~\ref{Chapter4},~\ref{Chapter5} and~\ref{Chapter6}. For this
 reason they
 appear to be one of the clearest and golden ``signatures" for many
 searches becoming the crucial element of the CMS reconstruction
 and identification.\\
-Since muons can penetrate various meters of iron in the CMS return
-yoke with minimal interaction, the modules to detect muons are located at
+Muons can penetrate various meters of the CMS return yoke iron with
+minimal interactions. Therefore, the modules to detect them are located at
 the very edge of the detector where they are likely to be the only particles
 able to register a signal.\\
 The muon system is composed of three different kinds of gaseous particle
-detectors inserted in the steel yoke. All three sub-detector are
-based on the confined ionization of a small gas volume within the detector
-module due to the transit of an ionizing particle.
+detectors inserted in the steel yoke. 
 There are the drift tubes
 modules, DTs, the cathode strip chambers, CSCs and the resistive plate
 chambers, RPCs.
@@ -431,19 +424,18 @@ CSCs are installed in the endcap covering the pseudorapidity range 0.9
 $<\eta<$ 2.4. \\
 In addition to an optimal spatial resolution given by combining the
 measurements from CSCs and DTs, the muon system is required to have a time resolution of
-the order of 1 ns. This is accomplished by adding the RPCs in the system
-which grant for almost univocal identification of the proper bunch
-crossing and for excellent info of the time coincidence of track
-segments (refer to Section~\ref{sec:trackvertex}) from the distinct
-muon sub-modules. 
-The RPCs are positioned both in barrel
-and endcap parts up to $\eta<$ 1.6. The whole pseudorapidity range of
-the muon system allow to measure muons up to $\eta<$ 2.4.
-
+the order of 1 ns. This is accomplished by adding the RPCs to the
+system. The addition grants for almost univocal identification of the proper bunch
+crossing and for excellent information of the time coincidence of track
+segments from distinct
+muon sub-modules (refer to Section~\ref{sec:trackvertex}). 
 Combining both the great spatial resolution of DTs and CSCs and the
 high time resolution from the RPCs,
  the CMS muon system exhibits two
-complementary and crucial inputs for the trigger system. 
+complementary and crucial inputs for the trigger system. \\
+The RPCs are positioned both in barrel
+and endcap parts up to $\eta<$ 1.6. The whole pseudorapidity range of
+the muon system allows to measure muons up to $\eta<$ 2.4.
 
 \clearpage
 \subsubsection{The CMS trigger system}\label{sec:triggersystem}
@@ -457,12 +449,14 @@ able to sort between potentially interesting events and the extent of
 inelastic scattering events.
 Since the reading and storing time of the collision data is larger
 than the collision frequency the viable solution is
-to store the informations in pipelines that hold and process data
+to store the information in pipelines that hold data
 from several collision at the same time.
-To work without mixing particles\footnote{There is substantial
+Hence, to distinguish and single out particles from two consecutive pp collisions without
+mixing them\footnote{There is substantial
 overlap between signals in consecutive events. It is referred to as
 out-of-time pileup (OOTPU). With in-time pileup, we refer to number of
-pp collisions per bunch crossing and it is shown in Figure~\ref{fig:lumi}.} from two consecutive pp collisions, it is
+pp collisions per bunch crossing and it is shown in
+Figure~\ref{fig:lumi}.}, it is
 required that detectors have very good time
 resolution and the signal from the millions of channels of different
 systems to be synchronized and integrate.
@@ -475,7 +469,7 @@ event rate to $\sim$100 kHz. The events sorted by the L1 are further refined by 
 high-level trigger, HLT. It is a software farm that employs informations from all sub-detectors to perform a
 refined event reconstruction reducing the rate down to a few kHz. The 
 events are then saved for offline analysis.
-The trigger selection is a irreversible process, what was not selected
+The trigger selection is an irreversible process, what is not selected
 by it is lost and it can not be recovered~\cite{Khachatryan_2017}.
 
 A complete sequence of L1
@@ -492,8 +486,8 @@ single-electron and single-muon triggers (refer to
 Table~\ref{tab:sgnlTriggers}).\\
 Among the countless available trigger paths, we picked for both
 analyses those with prescales equal to 1 and those with the
-lowest possible \pt thresholds. This choice was driven by the specific signatures
-that are characterized by the presence of very low energy leptons.
+lowest possible \pt thresholds. This choice was driven by the specific
+signature features characterized by the presence of very low energy leptons.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
@@ -515,7 +509,7 @@ trigger system.\\
 We explored the detector subsystems: the tracker made up of pixel and
 strip parts, the electromagnetic
 and hadronic calorimeters and finally the muon system. For each of
-those, we briefly list some details on the detection principle,
+those, we briefly listed some details on the detection principle,
 the geometry, and overall performances. \\
 
 I have personally taken part in the 2017 data-taking while performing
@@ -523,15 +517,15 @@ shifts as RPC ``detector-expert-on-call''. This activity gave me the
 opportunity to comprehend the complexity of the CMS detector in its
 completeness. In the detector control-room located at P5, there is the
 monitoring center of all detector inputs from the gas-mixtures
-for the muon-system's sub-detectors to the cooling system of the
-solenoid and the high voltage monitoring for the high powered
+for the muon-system sub-detectors to the cooling system of the
+solenoid and the high voltage monitoring for the powered
 modules. At the same time the online performances of the different layers
 are checked as the occupancy of the modules and the dead-time of each
 detector. Simultaneously from the control room it is possible to oversee the LHC
 delivered instantaneous luminosity, the related pileup number of
 vertices and the L1 and HLT instant rates. \\
 Being at P5 shows firsthand the importance of an attentive
-data-taking for the subsequent data quality. All the electronic
+data-taking for an high data quality. All the electronic
 signals recorded during each run are going to be stored as raw data
 and then used for the offline event
-reconstruction which is the subject of the next Chapter.
+reconstruction which is the subject of the next chapter.
