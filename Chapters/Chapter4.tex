@@ -8,7 +8,7 @@ processes sporadically have fluctuations that make them appear more
 exotic than they truly are, or backgrounds arising from detector noise
 or mis-measurements.
 For example, an isolated high \pt electron can be a ``smoking gun'' for
-a few rare processes. At the same time an electron contained in a b
+a few rare new physics processes. At the same time an electron contained in a b
 jet is hardly ever isolated, but since the total b jet cross section
 is extremely large, even a small portion can be critical. It becomes
 crucial to have a sort of ``litmus test'' to cross-check the observed
@@ -35,7 +35,7 @@ fundamental underlying theory (SM).
 The event simulation is based on the Monte Carlo (MC)
 method~\cite{mc}. The simulated events
  are grouped in a specific
-sample for each physics process which are called MC samples.\\
+sample for each physics process and they are called MC samples.\\
 The full simulation chain is divided in separate generation stages:
 \begin{itemize}
 \setlength\itemsep{-0.1em}
@@ -45,11 +45,11 @@ The full simulation chain is divided in separate generation stages:
   partonic interaction.
  For the signal samples produced specifically for this thesis and for
   most SM processes here presented, the software
-  \texttt{MadGraph5\_aMC@NLO}~\cite{Alwall_2014} is used. For a few other background processes it
+  \texttt{MadGraph5\_aMC@NLO}~\cite{Alwall_2014} is used. For a few other background processes 
   the \texttt{POWHEG}~\cite{Alioli_2010} software is used. Both
   softwares have LO and NLO accuracy in QCD. For proton PDFs, in both
   generators, the NNPDF3.0~\cite{Ball_2015} and
-  NNPDF3.1~\cite{Ball_2017} PDFs are used as inputs.
+  NNPDF3.1~\cite{Ball_2017} PDFs are used as input.
 \item \textbf{Parton shower simulation.} The simulation is done with
   the \texttt{PYTHIA 8}~\cite{Sj_strand_2008, Sj_strand_2015}
   software. The parton shower step is necessary to address some aspects
@@ -73,10 +73,8 @@ While analyzing the simulated samples the kinematics and all
 properties of the produced primary particles are available in addition
 to the detector signals just like in real collision data. This
 possibility makes the simulations a corner stone of the detector and
-algorithm performance studies.
-
-The events in the simulated samples appear in the same format as the
-one used in data-taking. Furthermore there are single year campaigns for
+algorithm performance studies.\\
+Furthermore there are single year campaigns for
 each year of data-taking which correspond to different detector
 conditions for each period. 
 
@@ -126,11 +124,11 @@ analysis presented in Chapter~\ref{Chapter5}.
 
 \begin{figure}[h!]
 \centering
-  \includegraphics[clip,trim=0.cm 0.5cm 0cm 0cm, height =4cm]{Figures/c4/dia/wz.jpeg}\\
+  \includegraphics[clip,trim=0.cm 0.5cm 0cm 0cm, height =2.5cm]{Figures/c4/dia/wz.jpeg}\\
   \includegraphics[clip,trim=0.cm 6cm 15cm 0cm, height =
-  3cm]{Figures/c4/dia/Lowest-order-Feynman-diagrams-for-ZZ-production.jpeg}
-\includegraphics[clip,trim=0.cm 0.cm 15cm 6.5cm, height =3cm]{Figures/c4/dia/Lowest-order-Feynman-diagrams-for-ZZ-production.jpeg}
-  \includegraphics[clip,trim=15.cm 6.cm 0cm 0cm, height = 3cm]{Figures/c4/dia/Lowest-order-Feynman-diagrams-for-ZZ-production.jpeg}
+  2cm]{Figures/c4/dia/Lowest-order-Feynman-diagrams-for-ZZ-production.jpeg}
+\includegraphics[clip,trim=0.cm 0.cm 15cm 6.5cm, height =2cm]{Figures/c4/dia/Lowest-order-Feynman-diagrams-for-ZZ-production.jpeg}
+  \includegraphics[clip,trim=15.cm 6.cm 0cm 0cm, height =2cm]{Figures/c4/dia/Lowest-order-Feynman-diagrams-for-ZZ-production.jpeg}
   \caption{WZ associated production diagrams (top), ZZ associated
     production diagrams (bottom)~\cite{diagram}.}
   \label{fig:c41}
@@ -149,7 +147,7 @@ the final states particles.\\
 Events (Figure~\ref{fig:c43}) presenting a W of Z boson in association with a real or virtual
 photon from ISR or FSR can extensively contribute to
 the background in three lepton final states.\\
-This is the case when when a virtual photon decays (internal
+This is the case when a virtual photon decays (internal
 conversion) or in which a real photon converts into leptons by interacting with the detector material
 (external conversion). The photon can undergo an
 asymmetric internal or external conversion in which one of the leptons
@@ -182,15 +180,14 @@ radiation subsequent to W/Z production~\cite{diagram}.}
 
 \paragraph{Drell-Yan production.}\label{sec:c4dy}
 The Drell-Yan process happens when a quark from one of the initial
-protons annihilates with an anti-quark from leading to a virtual
-photon, $\gamma^{*}$ or
-\PZ, which then decays into two leptons.
+protons annihilates with an anti-quark from the other proton leading to a virtual
+photon, $\gamma^{*}$ or to a
+\PZ boson, which then decays into two leptons.
 
 \begin{figure}[h!]
 \centering
-  \includegraphics[clip,trim=2cm 4.9cm 2cm 0cm, width=0.45\textwidth]{Figures/c4/dia/The-Feynman-graphs-for-Drell-Yan-pair-production-at-the-Oa-and-Oaa-s-orders_W640.jpeg}
- \caption{The typical DY production
-    diagrams~\cite{diagram}.}
+  \includegraphics[clip,trim=0cm 10cm 8.8cm 0cm, width=0.25\textwidth]{Figures/c4/dia/dy.pdf}
+ \caption{Drell–Yan dilepton production~\cite{diagram}.}
   \label{fig:c44}
 \end{figure}
 Drell-Yan events contribute in three prompt leptons final states when
@@ -210,11 +207,11 @@ where they originate from semi-leptonic b quark decay and lepton \PW decay.
 \begin{figure}[h!]
 \centering
  \includegraphics[clip,trim=0cm 3cm 0cm 3cm, width=0.45\textwidth]{Figures/c4/dia/tt.pdf}
-  \caption{Diagrams for single top production and $t\bar{t}$ production.~\cite{diagram}}
+  \caption{Diagram for $t\bar{t}$ production.~\cite{diagram}}
   \label{fig:c46}
 \end{figure}
 
-
+\vspace{10mm}
 \subsection{Long-lived particles}\label{sec:c4LLbgk}
 Long-lived HNL search looks for displaced
 vertices and displaced leptons produced relatively far from the PV.
@@ -233,10 +230,10 @@ therefore special care has to be used in understanding them.
 
 In Figure~\ref{fig:c4LLbgk} the phase space of long-lived HNLs is
 superimposed with potentially important backgrounds coming from
-long-lived meson decays. The figure shows the crowded area as function
+long-lived meson and baryon decays. The figure shows the crowded area as function
 of HNL mass and life time.\\
-It is clear from Figure~\ref{fig:c4LLbgk} that the resonances and
-meson backgrounds can be rejected with proper criteria according to
+It is clear from Figure~\ref{fig:c4LLbgk} that the resonance
+backgrounds can be rejected with proper criteria according to
 the phase space we are investigating.
 The top-right corner of Figure~\ref{fig:c4LLbgk} is
 background free because marks a region with very displaced particles
@@ -259,7 +256,7 @@ to avoid background contamination.
 This section is strictly relevant to the signal model used in
 Chapters~\ref{Chapter5} and~\ref{Chapter6}. The model is circumscribed to the
 CMS results only and it is not adopted for ATLAS's
-results(~\cite{atlasintro2}) which are often used for comparison
+results (~\cite{atlasintro2}) which are often used for comparison
 purposes with the CMS results.
 
 
@@ -316,8 +313,8 @@ processes~\cite{PhysRevD.44.1593,WILLENBROCK1985429} which include
 gluon fusion, $gg \rightarrow \PZ^{*}/H^{*} \rightarrow \hnl \nu \ell$
 can even surpass CC DY cross section for large HNL masses~\cite{PhysRevD.96.055042,
   Pascoli_2019}. Refer to Figure~\ref{fig:hnl_lhc_graph} for
-references.\\
-For the high mass \hnl samples made for the search described in
+reference.\\
+For the high mass HNL samples used in the search described in
 Chapter~\ref{Chapter5}, both gluon
 fusion and $\PW \gamma$
 fusion are added as production mechanisms. 
@@ -327,11 +324,14 @@ fusion uses the LUXqed plus PDF4LHC15 NNLO 100
 PDF set~\cite{PhysRevLett.117.242002}.\\
 For all the signal MC samples the parton showering and hadronization are simulated with PYTHIA. \\
 
-For signal simulation, samples with HNLs masses from 
-$\mhnl = 1$\GeV to $\mhnl = 1.2$\TeV are produced. The simulated HNL couple
-exclusively to one of the three SM neutrino families with different
-mixing probabilities, typically in a range $\mixpar = 10^{-6}$ -- 1,
-depending on the mass. The mixing parameters are:
+Samples with HNLs masses from 
+$\mhnl = 1$\GeV to $\mhnl = 1.2$\TeV are produced for signal simulation. The simulated HNLs couple
+exclusively to one of the three SM neutrino families at a time with 
+mixing probabilities typically in a range $\mixpar = 10^{-6}$ -- 1,
+depending on the mass. For this thesis work only the mixing processes between
+$\nu_e$--\hnl and $\nu_{\mu}$--\hnl are considered and they are
+assumed to be different from zero while the
+$\nu_{\tau}$--\hnl is set at zero. The mixing parameters are:
 \begin{linenomath}
 \begin{equation}
   \mathbf{V}_{\hnl\ell} =
@@ -390,8 +390,7 @@ according to a decay probability distribution
   \label{eq:dndt}
 \end{linenomath}
 where $t$ is the
-\emph{proper} lifetime, measured in the HNL rest frame.
-
+\emph{proper} lifetime, measured in the HNL rest frame.\\
 As explained in Section~\ref{sec:promptll}, the values of \mhnl
 and \mixpar do not only determine the HNL production cross section,
 but also its mean lifetime and, consequently, its kinematics,
@@ -416,11 +415,10 @@ same \mhnl but larger \mixpar has to be simulated. This iteration can
 be repeated with steps smaller and smaller until the signal strength is
 exactly 1 which means we found the exclusion limits. It is clear that
 this kind of approach is not sustainable due to the limited computing
-time and power available. A smarter correction procedure is needed.
-
+time and available computing power. A smarter correction procedure is needed.\\
 To this purpose, a per-event re-weighting technique
 based on the HNL lifetime is used instead, which properly accounts for all the
-variations in kinematics and acceptance.
+variations in kinematics and acceptance.\\
 First, it is noticed that the average kinematics of a HNL decay
 is entirely defined by the HNL mass \mhnl, its momentum
 $p_\hnl=\beta\gamma\mhnl$, and its decay length,
@@ -465,8 +463,8 @@ the complete event weight is
   \label{eq:ctauReweighting}
   \end{equation}
 \end{linenomath}
-Figure~\ref{fig:newReweightGen} compares the proper decay length $ct$
-distributions for three samples of $\mhnl=4$\GeV and different mean
+Figure~\ref{fig:newReweightGen} compares the proper decay length ($ct$)
+distributions for three samples of $\mhnl=4$\GeV with different mean
 lifetimes, and the corresponding models built from the sum of the
 three samples by re-weighting with Eq.~\ref{eq:ctauReweighting}. An
 excellent agreement is observed, with the re-weighted summed sample
@@ -485,7 +483,6 @@ exhibiting less statistical fluctuations than the individual samples.
     length of the three samples. \dani}
   \label{fig:newReweightGen}
 \end{figure}
-
 \begin{figure}[h!]
   \centering
   \includegraphics[width = .32\textwidth]{Figures/c4/reweighting/reweighting_mass_M4p0_V0p00251197_mu_18.pdf}
@@ -513,7 +510,7 @@ Eq.~\ref{eq:ctauReweighting} (red histograms). The two models are compatible.\\
 The histograms
 presented in Figure~\ref{fig:newReweightRec} are filled with events
 which pass the event selection specifically designed for the
-long-lived analysis presented in Chapter~\ref{Chapter6}, for details
+long-lived HNL analysis presented in Chapter~\ref{Chapter6}, for details
 refer to Section~\ref{sec:llanalisi}. \\
 
 Figure~\ref{fig:hnlSamples} shows the total number of HNL signal
@@ -523,13 +520,13 @@ mass, all the samples produced with different lifetimes
 $\{\tau_i\}$ have been used to emulate the $\tau_{\mathrm T}$ scenario.
 
 
-\begin{figure}
+\begin{figure}[h!]
   \centering
   \includegraphics[clip,trim=0.7cm 0cm 0cm 0cm ,width=1\textwidth]{Figures/c4/mu.pdf}
   \caption{Total number of signal MC events available for each
     $(\mhnl,\mixparm)$ point, considering both private and central CMS
     productions. The number of events can be read with color code
-    using the palette on the right; the range from 100 to 1000 events. The picture can be mirrored for $(\mhnl,\mixpare)$ scenario.}
+    using the palette on the right; the range is from 100 to 1000 events. The picture can be mirrored for $(\mhnl,\mixpare)$ scenario.}
   \label{fig:hnlSamples}
 \end{figure}
 
@@ -586,8 +583,7 @@ steps:
 This method provides a good modeling of the Dirac HNL signal, but
 uses only half the events from the Majorana HNL MC samples. With a
 simple extra assumption, it is possible to make use of the full
-statistical power of our MC production.
-
+statistical power of our MC production.\\
 As explained in the Section~\ref{sec:llresults}, the signal selection is the
 same for LNC and LNV events. Just in the final stage of the analysis,
 events are split into same-lepton-charge and opposite-lepton-charge
@@ -628,7 +624,7 @@ As can be seen, differences are small accros the most relevant observables  for 
 
 
 \subsubsection{Uncertainty on LL-signal MC cross section}\label{sec:c4lo}
-The \texttt{heavyN} model used for generation of HNL events does not allow for NLO QCD calculations. The simulation of HNL events happens therefore at LO, resulting in large theoretical uncertainties on the cross section (up to $15\%$) that have to cover the effect of the missing higher order QCD corrections and PDF uncertainties.
+The \texttt{heavyN} model used for generation of long-lived HNL events does not allow for NLO QCD calculations. The simulation of HNL events happens therefore at LO, resulting in large theoretical uncertainties on the cross section (up to $15\%$) that have to cover the effect of the missing higher order QCD corrections and PDF uncertainties.
 
 Instead of relying on these LO uncertainties, a general correction factor for the cross section from LO to NNLO can be derived based on the SM production of \PW\ $\rightarrow$ $\ell$ $\bar{\nu}$ . In HNL production, the only difference from this SM process is the exchange of the SM neutrino by a HNL. The effect of the mass and coupling of the HNL can be factorized in the calculation of the HNL cross section and is not affected by the PDF and scale variations. The dominant effect of these uncertainties appears at the production of the \PW boson, therefore it can be studied in the SM process \PW\ $\rightarrow$ $\ell$ $\bar{\nu}$ , for which recommended values for the cross section at NNLO exist with their corresponding theory uncertainties. Our approach is to get a LO cross section for \PW\ $\rightarrow$ $\ell$ $\bar{\nu}$ calculated with Madgraph using the same exact conditions as the HNL MC production. A correction factor from LO to NNLO can be derived based on this and can then be applied to HNL MC. The PDF and scale uncertainties at NNLO are applied as flat systematic uncertainties to cover the remaining uncertainty on the MC cross section.
 
@@ -641,7 +637,7 @@ $\bar{\nu}$ ($\ell$ = \Pe\ , \PGm\ , \PGt\ ) is 56500 pb. The recommended NNLO v
 
 For each CMS analysis according to the final states we 
 select, a specific type of primary datasets (PDs) is used.\\
-The definition of the primary datasets (PDs) is intrinsically connected to
+The definition of the primary datasets is intrinsically connected to
 the HLT trigger paths (~\ref{sec:triggersystem}). The PD design is centered
 around particles reconstructed in the event by the HLT, and follows one simple principle:
 grouping together events with similar physics content; for instance, there are
