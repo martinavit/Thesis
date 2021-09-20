@@ -127,7 +127,7 @@ data-driven technique.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Analysis setup}
 \subsection{Data and simulation samples}
-The current analysis uses three sets of $pp$ collision data at a
+The current analysis uses three sets of pp collision data at a
 center-of-mass energy of 13\TeV, corresponding to integrated
 luminosities of 35.92 \fbinv (2016), 41.53 \fbinv (2017), and 59.97 \fbinv
 (2018). \\
@@ -337,7 +337,7 @@ electrons (\eex) or muons (\mmx).
 \caption{Diagram for the production of a long-lived HNL (left) with colors
   underlining the nomenclature adopted in the following
   sections. Prompt lepton referred to as \lone and two \displ leptons (\ltwo and \lthree). Didactic sketch on the right showing the usual signature with
- \lone back-to-back wrt \ltwo and \lthree which form a SV.}
+ \lone back-to-back with respect to \ltwo and \lthree which form a SV.}
 \label{fig:c6llsketch}
 \end{figure}
 
@@ -435,7 +435,7 @@ contributions (more details in the following Section~\ref{sec:llbackground}).
 The baseline selection includes the following requirements, summarized
 in Table~\ref{tab:baselinesel}. Please
 consider Figure~\ref{fig:c6llsketch} as reference for lepton
-nomenclature. The distributions of all the variebles used for the
+nomenclature. The distributions of all the variables used for the
 selection are shown in Figure~\ref{fig:selection_electrons}.
 {\footnotesize
 \begin{table}[h!]
@@ -468,7 +468,7 @@ the HNL. As can be seen in
 Figure.~\ref{fig:selection_electrons} (top-left),
 the variable \DRtwol discriminates the signal from all background
 processes. To retain high signal efficiency and reduce backgrounds
-where two leptons are relatively seperated from each other, we select events with
+where two leptons are relatively separated from each other, we select events with
 $\boldsymbol{\DRtwol<1}$.
 \vspace{2mm}
 
@@ -764,31 +764,36 @@ classified as follows.
   unidentified conversions of photons in jets
   can mimic the \displ leptons from the HNL decay, \ltwo and
   \lthree.
-  This background is dominated by top-quark and Drell--Yan processes,
+  This background is dominated by top--quark and Drell--Yan processes,
   and is measured with the data-driven method described in
   Section~\ref{sec_llfakelepton}.\\
-  Fake nonprompt lepton backgrounds can be split into two categories:
+In most of the analyses --like the one presented in Chapter~\ref{Chapter5}-- this
+background consists of events where one lepton is fake. 
+In this search, the particular event selection leads to the two
+displaced leptons being fake as the majority of this background and thus, it needs to be handled properly.
+Therefore fake nonprompt lepton
+backgrounds are split into two categories:
   \begin{itemize}
-  \item single fake nonprompt leptons:
+  \item \textbf{single fake nonprompt leptons}:
     a single reconstructed lepton produced via one of the above
     mechanisms, \eg the (semi-)leptonic decay of a meson.
     Multiple single-fake leptons can be found in an event,
     produced in the independent decays of different mesons.
     In this case, the probabilities to select different fake nonprompt
     leptons for the analysis can be treated as uncorrelated.
-  \item double fake nonprompt leptons:
+  \item \textbf{double fake nonprompt leptons}:
     a pair of reconstructed leptons produced in the decay chain of the
     same hadron, typically a $B$ meson (\eg via
     $b\to\ell^-\bar{\PGn}_{\ell}\PQc\to\ell^-\bar{\PGn}_{\ell}\ell^{\prime+}\PGn_{\ell^{\prime}}\PQs$)
     or a quarkonium state (\eg $\JPsi\to\ell^-\ell^+$).
     In such decays the two leptons are manifestly not independent and
-    their selection probabilities are correlated.
+    their selection probabilities are strongly correlated.
     Therefore, the lepton pair must be treated as a single system.
   \end{itemize}
 \item \textbf{Photon conversions:} this background was extensively
   introduced in Sections~\ref{sec:c4photon} and~\ref{sec:bgk}.\\
   It is estimated from simulation and verified in control regions with
-  three leptons peaking at the \PZ mass (Section~\ref{sec:conversion}).
+  three leptons forming a \PZ mass (Section~\ref{sec:conversion}).
   Such conversions are considered as a
   source of a background, as well as an excellent probe for nonprompt
   lepton efficiency
@@ -801,8 +806,8 @@ The fake-lepton background is estimated using the \ttol
 method.
 A general description of the fake-rate method can be found in
 Section~\ref{sec:tight_loose_method}.\\
-For the displaced analysis, the probability for 
-a fake lepton to pass the \tD (Tables~\ref{tab:electronSelection} and \ref{tab:muonSelection}) and isolation requirements is estimated by using event yields with two leptons where at least one lepton fails to satisfy \tD 
+For this search, the probability for 
+a fake lepton to pass the \tD (Tables~\ref{tab:electronSelection} and \ref{tab:muonSelection}) and isolation requirements is estimated by using event yields where at least one lepton fails to satisfy \tD 
 selection criteria but passes
 \fo ones~\footnote{We all agree that \ttol naming is not optimal when the
   ratio happens between \tD and \fo leptons. For ``historical'' and ``traditional''
@@ -812,7 +817,8 @@ selection criteria but passes
 The main difference with respect to the prompt HNL analysis
 (Chapter~\ref{Chapter5}) comes from the different sources of fake
 leptons; here fake leptons are typically found in the proximity of a
-jet which is in common for both \ltwo and \lthree. Each \fo
+jet which is in common for both \ltwo and \lthree, and their
+experimental properties are correlated. Each \fo
 lepton is therefore associated to the jet of $\pt>10$\GeV closest in
 \DR, \ie $\DR<0.4$.
 If two \fo leptons 
@@ -831,8 +837,9 @@ account of the much higher probability for fake \ltwo and \lthree to
 pass the tight \displ selection. This assumption has been verified in
 MC using the information at generated level (MC truth); at the
 beginning of the selection only 1\textperthousand\ background
-events have nonprompt \lone, at the end of the selection all \lone
-leptons are prompt leptons. 
+events have fake nonprompt \lone, at the end of the selection all \lone
+leptons are prompt leptons, which ensures that the contribution from
+pure QCD processes is negligible. 
 For this reason, the contribution from fake \lone is neglected.
 
 \subsubsection{Estimation of double-fake background}
@@ -841,7 +848,8 @@ For this reason, the contribution from fake \lone is neglected.
 Events in the application region are classified as double-fake
 background if the two fake leptons are either associated to the same
 jet or the distance between them is $\DR<0.45$, and at least one of them is \fo.
-In the first case (same jet associated), \ptm is estimated using the \pt of the associated
+In the first case (same jet associated), the \pt of the mother parton, \ptm from
+which the fake leptons originate is estimated using the \pt of the associated
 jet, $\ptm=\ptj$, calibrated using jet energy corrections (JEC, see
 Section~\ref{sec:jetclustering}) after subtracting the \pt of the two leptons:
 \begin{linenomath}
@@ -864,7 +872,7 @@ where the $p^{jet,i}$ is the jet associated to the lepton \emph{i} and then corr
 \begin{linenomath}
   \begin{equation}
     \label{eq:ptjet_45_single}
-    p^{jet,i} = \left(\pt^{\mathrm{raw\,jet_i}}-\pt^{\ell_{i}}\right)\times\mathrm{JEC}\;+\; \pt^{\ell_i} .
+    p_T^{jet,i} = \left(\pt^{\mathrm{raw\,jet_i}}-\pt^{\ell_{i}}\right)\times\mathrm{JEC}\;+\; \pt^{\ell_i} .
   \end{equation}
 \end{linenomath}
 
@@ -912,7 +920,7 @@ which zero, one, or both can be \tD.
 \end{table}
 
 The \Dfr, \dfr is defined as the fraction of events in this
-region where both fake leptons are \tD.
+region where both \fo leptons pass \tD selection.
 Figure~\ref{fig:dFR_ptjet_16} (top) shows
 the measured values of \dfr for events with two electrons, an electron
 and a muon, and two muons, respectively, as a function of \ptj.
@@ -931,7 +939,7 @@ which is the dependance of the \dfr with respect to the displacement of the SV o
 \makebox[\textwidth]{\includegraphics[width=.33\textwidth]{Figures/c6/backgrounds/FR/dFR/16/c_displacement_SR___eta_FR1.pdf}
   \includegraphics[width=.33\textwidth]{Figures/c6/backgrounds/FR/dFR/17/c_displacement_SR___eta_FR1.pdf}
   \includegraphics[width=.33\textwidth]{Figures/c6/backgrounds/FR/dFR/18/c_displacement_SR___eta_FR1.pdf}}
-  \caption{Double fake-lepton rates measured in 2016/17/18 (left,
+  \caption{\Dfr (\dfr) measured in 2016/17/18 (left,
     middle, right) data as a function of \ptj (top) and \Deltwod (bottom),
     for events with two electrons (black), with
     an electron and a muon (red), and with two muons (blue).}
@@ -956,7 +964,7 @@ where the sum runs over all the events in the application region, with jet trans
 \subsubsection{Estimation of single-fake background}
 \label{sec:singleFakeBkg}
 
-The measurement of the single-fake, \sfr background follows the exact same
+The measurement of the single-fakerate (\fr), \sfr background follows the exact same
 procedure as the one explained in Section~\ref{sec:singleFR}. Thus, to
 avoid repetitions, only the final measured \fr are presented here.
 
@@ -967,14 +975,21 @@ respectively, as a function of \ptc and in different \abseta bins.
   \centering
   \includegraphics[height=5cm, width=5.4cm]{Figures/c6/backgrounds/FR/sFR/data/electrons.pdf}
   \includegraphics[height=5cm, width=5.4cm]{Figures/c6/backgrounds/FR/sFR/data/muons.pdf}\\
-  \caption{Single fake rates measured in 2016 data for electrons (left) and
-    muons (right) as a function of \ptc, for \abseta ranges $[0,0.8]$
-    (top), $[0.8,1.479]$ (middle), and $[1.479,2.5]$ (bottom).}
+  \caption{\fr (\sfr) measured in 2016 data for electrons (left) and
+    muons (right) as a function of \ptc, for \abseta ranges $[0,0.8]$, $[0.8,1.479]$, and $[1.479,2.5]$.}
   \label{fig:sfr_data}
 \end{figure}
 
-Figures~\ref{fig:sfr_dxy} show that \sfr values are fairly independent
-of the lepton \dxy.
+Several studies in simulation are performed to ensure that different origins of fake leptons lead to
+similar \fr values (refer to Section~\ref{sec:tight_loose_method} for
+all the detailed motivations). To good extend no strong dependence on
+\dxy is
+observed as well as for different origins of fake leptons. Thus, the 
+the parametrization of the \sfr is made to depend only on \ptc and \abseta and the
+dependence on \dxy is ignored. 
+Figure~\ref{fig:sfr_dxy} shows that \sfr values are fairly independent
+of the lepton \dxy which is used as proxy for the displacement. 
+
 \begin{figure}[h!]
   \centering
   \includegraphics[width=.32\textwidth]{Figures/c6/backgrounds/FR/sFR/QCD/dxy_ele_eta1_FR2.pdf}
@@ -1023,8 +1038,15 @@ and \ref{sec:doubleFakeBkg}, combined in the red histogram.
 We notice that the double-fake background contributes mostly to
 the large-\Deltwod and low-\mtwol regions. We can conclude that the
 fake-rate background estimations correctly reproduce the expected
-single- and double-fake backgrounds, both the overall yields and the
-kinematic spectra.
+single- and double-fake lepton backgrounds, both the overall yields and the
+kinematic spectra. 
+Although in some places as in \mtwol distribution
+(middle plot in Figure~\ref{fig:mcClosure}) around 4\GeV the transition region between
+single- and double-fake lepton background shows some discrepancies, in the
+actual SR bins (right plot of Figure~\ref{fig:mcClosure}) the agreement is
+reasonable. Nevertheless we value the validation tests in data
+control regions more than the one in simulation which is subject to
+various defects. \\
 \begin{figure}[h!]
   \centering
   \includegraphics[clip,trim=0.cm 0.cm 0.5cm 0.5cm,height=4.5cm]{Figures/c6/backgrounds/mc_closure/mu_DeltaPV_SV_2D_zomm__0.pdf}
@@ -1039,7 +1061,11 @@ kinematic spectra.
     selection,~\ref{tab:baselinesel}, has been applied.}
   \label{fig:mcClosure}
 \end{figure}
-\vspace{3cm}
+
+In the following we present data control region orthogonal to the defined search region to test the
+prediction power of the method. 
+
+
  \paragraph{Closure test in data sample: sideband control region}\label{sec:llsidebandcr}
 This control region is defined in Table~\ref{tab:side_band_sel}.
 Data in this region are compared to our data-driven (nonprompt DF and
@@ -1164,8 +1190,9 @@ Figure~\ref{fig:sb_ttbar_Ctrl}.
 \end{figure}
 
 
-\paragraph{Closure test in data sample: data control region (sideband plus bjet)}
-Taking into account the additional informations just presented and considering the low statistic of the fig~\ref{fig:sb_sr_Ctrl}, a new CR has been defined. 
+\paragraph{Closure test in data sample: sideband plus b jet control region}
+Taking into account the complementary of the two control regions just
+presented above and considering the low statistic of the fig~\ref{fig:sb_sr_Ctrl}, a new CR has been defined. 
 \begin{table}[h!]
   \centering
 {\footnotesize
@@ -1203,7 +1230,8 @@ Taking into account the additional informations just presented and considering t
 
 
 
-This control region includes the selection listed in table~\ref{tab:side_band_sel} and the region with more than zero \PQb. It is obvious that the combination of these two regions 
+This control region combines the b jet and the sideband control
+regions and it is defined by the criteria listed in Table~\ref{tab:sideband_plus_bjet_table}. It is obvious that the combination of these two regions 
 is done in a fully orthogonal region with respect to the signal region. \\
   
 \begin{figure}[h]
@@ -1280,7 +1308,7 @@ The photon conversion background is modeled using simulated events,
 \end{figure}
 
 \clearpage
-\section{Corrections and efficiencies}\label{sec:llcorrection_efficiencies}
+\section{Validation of the signal efficiencies}\label{sec:llcorrection_efficiencies}
 
 \subsection{Prompt lepton efficiency} \label{sec:promptleptoneff}
 Prompt electron and muon identification and isolation efficiencies
@@ -1355,6 +1383,19 @@ in Figure~\ref{fig:idiso_muon_nonprompt}.
   requirement efficiency for nonprompt muons. \kirill}
   \label{fig:idiso_muon_nonprompt}
 \end{figure}
+
+Additional validation is performed in a sample enriched with moderate
+displaced muons. Displaced muon identification efficiencies without
+isolation requirement 
+are validated using
+$B^{\pm}\rightarrow J/\psi K^{\pm}\rightarrow \mu^{+} \mu^{-} K^{\pm}$ events, where the two muons
+from the $ J/\psi$~mesons decay are considered originating from a SV. The
+estimated efficiencies are found to be very close to 100\% and the data-MC
+agreement is within the statistical
+uncertainties.
+
+These two complementary measurements give confidence in our inderstanding
+and in the validity of the displaced muon identification strategy.
 
 \paragraph{Electrons}\label{sec:eff_disp_ele}
 
@@ -1569,9 +1610,9 @@ in fact much better for eras 2016 G and H.
 
 \begin{figure}[h!]
 	\centering	
-	\includegraphics[width=0.49\textwidth]{Figures/c6/efficiencies/2dplots/2016tot/smallrange}
-	\includegraphics[width=0.49\textwidth]{Figures/c6/efficiencies/2dplots/2017tot/smallrange}\\
-	\includegraphics[width=0.49\textwidth]{Figures/c6/efficiencies/2dplots/2018tot/smallrange}
+	\includegraphics[width=0.49\textwidth]{Figures/c6/efficiencies/2dplots/2016tot/smallrange.pdf}
+	\includegraphics[width=0.49\textwidth]{Figures/c6/efficiencies/2dplots/2017tot/smallrange.pdf}\\
+	\includegraphics[width=0.49\textwidth]{Figures/c6/efficiencies/2dplots/2018tot/smallrange.pdf}
 	\caption{Uncertainty factors per bin in radial distance and
           transverse momentum. The red-coloured band overlaying the
           figure shows the normalization range, i.e. 0 - 0.5 cm. Note
