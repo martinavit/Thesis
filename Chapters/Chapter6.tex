@@ -227,6 +227,7 @@ fekable object) are employed to determine the rate of fake electrons
 mis-identified as signal electrons (\fr or FR).
 \begin{table}[h!]
   \centering
+{\small
   \caption{\label{tab:electronSelection} Requirements for an electron
     to pass each of the defined selection working points. Variables
     defined in Section~\ref{sec:c2variables}.}
@@ -234,9 +235,6 @@ mis-identified as signal electrons (\fr or FR).
     \begin{tabular}{c|c|c|c}
       \hline
       Selection name & \tP & \tD & \fo \\
-      \hline
-      EGM POG ID & MVA ID --- 90\% w.p. &
-      \multicolumn{2}{c}{Modified cut-based Loose ID} \\
       \hline
       \hline
       $\abseta$ & $<2.5$ & $<2.5$ & $<2.5$ \\
@@ -253,6 +251,7 @@ mis-identified as signal electrons (\fr or FR).
       MVA estimator & $>f(\sigeta,\pt)$ & --- & --- \\
       \hline
     \end{tabular}
+}
     }
 \end{table}
 
@@ -285,6 +284,7 @@ with identification criteria looser than those used for \tD muons, and are emplo
 
 \begin{table}[h!]
   \centering
+{\small
   \caption{\label{tab:muonSelection} Requirements for a muon
     to pass each of the defined selection working points. Variables
     defined in Section~\ref{sec:c2variables}.}
@@ -292,9 +292,6 @@ with identification criteria looser than those used for \tD muons, and are emplo
     \begin{tabular}{r|c|c|c|c}
       \hline
       \multicolumn{2}{c|}{Selection name} & \tP & \tD & \fo \\
-      \hline
-      \multicolumn{2}{c|}{} & \emph{Medium} ID &
-      \multicolumn{2}{c}{Modified cut-based Medium ID} \\
       \hline
       \hline
       \multicolumn{2}{c|}{$\abseta$} & $<2.4$ & $<2.4$ & $<2.4$ \\
@@ -315,6 +312,7 @@ with identification criteria looser than those used for \tD muons, and are emplo
       Tracker muon & Segment-compatibility estimator & $>0.451$ & $>0.451$ & $>0.451$ \\
       \hline
     \end{tabular}
+}
     }
 \end{table}
 
@@ -538,12 +536,6 @@ mass is always lower than the HNL mass.\\
 
 In addition to the selections mentioned above, numerous dilepton
 resonances within the search
- \begin{wrapfigure}{r}{0.5\textwidth}
-\centering
-\includegraphics[clip,trim=1.2cm 0.1cm 0.8cm 0.3cm, width=.40\textwidth]{Figures/c2/dimuon}
-\caption{The dimuon invariant mass distribution showing dilepton resonances~\cite{Sirunyan_2018_muon}.}
-\label{fig:c6dimuon}
-\end{wrapfigure}
  region are removed.
 In case of \ltwo and \lthree having the same flavor and opposite
 charges and with the transverse position of the dilepton vertex
@@ -556,6 +548,12 @@ charges, events are removed if \mlonetwo or \mlonethree are in the
 ranges listed above, or consistent with other higher-mass resonances,
 including \PgUa $(9.46 \pm 0.08$\GeV), \PgUb $(10.02 \pm 0.08$\GeV),
 \PgUc $(10.36 \pm 0.08$\GeV), and \PZ $(91.19 \pm 10.00$\GeV).
+ \begin{figure}[h]
+\centering
+\includegraphics[clip,trim=1.2cm 0.1cm 0.8cm 0.3cm, width=.70\textwidth]{Figures/c2/dimuon}
+\caption{The dimuon invariant mass distribution showing dilepton resonances~\cite{Sirunyan_2018_muon}.}
+\label{fig:c6dimuon}
+\end{figure}
 
 \begin{center}
 \framebox{
@@ -1132,7 +1130,7 @@ Figure~\ref{fig:sb_sr_Ctrl}.\\
 This control region is defined in Table~\ref{tab:ttbar_sel}.
 Data in this region are compared to our data-driven (nonprompt DF and
 SF) and MC-based (the other) background estimates.\\
-Results for Run2 data  are shown in
+Results for Run2 data are shown in
 Figure~\ref{fig:sb_ttbar_Ctrl}.
 
 \begin{table}[h]
@@ -1192,7 +1190,10 @@ Figure~\ref{fig:sb_ttbar_Ctrl}.
 
 \paragraph{Closure test in data sample: sideband plus b jet control region}
 Taking into account the complementary of the two control regions just
-presented above and considering the low statistic of the fig~\ref{fig:sb_sr_Ctrl}, a new CR has been defined. 
+presented above and considering the low statistic of the
+Figure~\ref{fig:sb_sr_Ctrl}, a new CR has been defined. \\
+Results for Run2 data  are shown in
+Figure~\ref{fig:CR_dist}.
 \begin{table}[h!]
   \centering
 {\footnotesize
@@ -1226,9 +1227,6 @@ presented above and considering the low statistic of the fig~\ref{fig:sb_sr_Ctrl
 }
 \end{table}
      
-
-
-
 
 This control region combines the b jet and the sideband control
 regions and it is defined by the criteria listed in Table~\ref{tab:sideband_plus_bjet_table}. It is obvious that the combination of these two regions 
@@ -1267,6 +1265,7 @@ The photon conversion background is modeled using simulated events,
  control region in data, as defined in Table~\ref{tab:conv_sel}.
  \begin{table}[h!]
   \centering
+{\footnotesize
   \caption{\label{tab:conv_sel} Conversion control region selection requirements
     applied to all data sets.}
     \begin{tabular}{l|l}
@@ -1287,6 +1286,7 @@ The photon conversion background is modeled using simulated events,
     \hline
     \hline
   \end{tabular}
+}
 \end{table}
 
  This region is dominated by $\PZ\to\ell^-\ell^+\PGg\to\ell^-\ell^+\Pe$
@@ -1308,7 +1308,7 @@ The photon conversion background is modeled using simulated events,
 \end{figure}
 
 \clearpage
-\section{Validation of the signal efficiencies}\label{sec:llcorrection_efficiencies}
+\section{Signal efficiency validation}\label{sec:llcorrection_efficiencies}
 
 \subsection{Prompt lepton efficiency} \label{sec:promptleptoneff}
 Prompt electron and muon identification and isolation efficiencies
@@ -1384,8 +1384,8 @@ in Figure~\ref{fig:idiso_muon_nonprompt}.
   \label{fig:idiso_muon_nonprompt}
 \end{figure}
 
-Additional validation is performed in a sample enriched with moderate
-displaced muons. Displaced muon identification efficiencies without
+Additional validation is performed in samples enriched with displaced
+muons. Displaced muon identification efficiencies without
 isolation requirement 
 are validated using
 $B^{\pm}\rightarrow J/\psi K^{\pm}\rightarrow \mu^{+} \mu^{-} K^{\pm}$ events, where the two muons
@@ -1394,7 +1394,7 @@ estimated efficiencies are found to be very close to 100\% and the data-MC
 agreement is within the statistical
 uncertainties.
 
-These two complementary measurements give confidence in our inderstanding
+These two complementary measurements give confidence in our understanding
 and in the validity of the displaced muon identification strategy.
 
 \paragraph{Electrons}\label{sec:eff_disp_ele}
@@ -1454,7 +1454,7 @@ unknown, as a proxy for its displacement we use the following
 variable~\cite{convz}:
 
 \begin{align}
-\vcenter{\hbox{\includegraphics[clip,trim=0cm 0cm 0.5cm 0cm, width=.32\textwidth]{Figures/c6/efficiencies/figs_Displacement.png}}}
+\vcenter{\hbox{\includegraphics[clip,trim=0cm 0cm 0.5cm 0cm, width=.42\textwidth]{Figures/c6/efficiencies/figs_Displacement.png}}}
 &\qquad
 \begin{aligned}
 \mathrm{d = \sqrt{2Rd_{xy}+d_{xy}^2}};
@@ -1507,16 +1507,23 @@ The details on how the scale factors and the systematics from each of these stud
 \label{sec:displacedvertex}
 
 In this subsection, we investigate the discrepancy between simulation
-and data concerning heavily displaced track and vertex
+and data concerning heavily
+\begin{wrapfigure}{r}{0.50\textwidth}
+\centering
+   \includegraphics[width=0.8\linewidth]{Figures/c6/efficiencies/diagram_ks}
+   \caption{Diagrams for the decays of \PKzS studied in this method.}
+    \label{fig:svdiagrams}
+\end{wrapfigure}
+ displaced track and vertex
 reconstruction. 
 The method is based on the displaced decay of the
 neutral hadrons \PKzS to two charged particles (see
 Figure~\ref{fig:svdiagrams}), giving the signature of two displaced tracks
-originating from a common vertex.\\
+originating from a common vertex.
 We will briefly discuss the methodology
 and the most important results. More information can be found at~\cite{AN-20-111_KshortStudy}.
 
-The \PKzS hadrons are reconstructed in simulation and data focusing on $Z\rightarrow \mu\mu$-events, where the Drell-Yan process can be used for overall simulation-to-data comparison and normalization, and the targeted particles occur in the jets that are produced along with the main process. The study is carried out for the three data taking years of LHC's Run2.
+The \PKzS hadrons are reconstructed in simulation and data focusing on $Z\rightarrow \mu\mu$--events, where the Drell-Yan process can be used for overall simulation-to-data comparison and normalization, and the targeted particles occur in the jets that are produced along with the main process. The study is carried out for the three data taking years of LHC's Run2.
 
 \noindent The events in the selected data and simulated sets must pass the requirements listed below:
 \begin{itemize}
@@ -1529,13 +1536,7 @@ The \PKzS hadrons are reconstructed in simulation and data focusing on $Z\righta
 The vertex reconstruction algorithm developed for this study closely
 resembles the built-in $V^0$-vertex fitter in the CMS software (where
 $V^0$ is used to refer to
- \PKzS vertex), for details refer to
-\begin{wrapfigure}{r}{0.35\textwidth}
-   \includegraphics[width=0.8\linewidth]{Figures/c6/efficiencies/diagram_ks}
-   \caption{Diagrams for the decays of \PKzS studied in this method.}
-    \label{fig:svdiagrams}
-\end{wrapfigure}
-Sections~\ref{sec:trackvertex} and~\ref{sec:c2sv}.
+ \PKzS vertex), for details refer to Sections~\ref{sec:trackvertex} and~\ref{sec:c2sv}.
 Furthermore, we re-optimized some of the cut
 values in order to retain more $V^0$ candidates at small radial
 displacements from the primary vertex, at the cost of a slightly
@@ -1595,7 +1596,18 @@ uncertainties for displaced track and vertex reconstruction.
       the PV. \luka}
     \label{fig:2017_detector}
 \end{figure}
-
+\begin{figure}[h!]
+	\centering	
+	\includegraphics[width=0.49\textwidth]{Figures/c6/efficiencies/2dplots/2016tot/smallrange.pdf}
+	\includegraphics[width=0.49\textwidth]{Figures/c6/efficiencies/2dplots/2017tot/smallrange.pdf}\\
+	\includegraphics[width=0.49\textwidth]{Figures/c6/efficiencies/2dplots/2018tot/smallrange.pdf}
+	\caption{Uncertainty factors per bin in radial distance and
+          transverse momentum. The red-colored band overlaying the
+          figure shows the normalization range, i.e. 0 - 0.5 cm. Note
+          that an error of $\pm 0.00$ indicates that the (statistical)
+          error is smaller than 0.005. \luka}
+	\label{fig:2dplots}
+\end{figure}
 In Figure~\ref{fig:2dplots}, we extend these results by performing a
 two-dimensional binning: the $x$-axis again represents the radial
 distance from the primary vertex, while the $y$-axis now holds the
@@ -1608,18 +1620,7 @@ out to be caused by a saturation effect in the electronics
 and 2016 G. It can be checked in the dedicated note~\cite{AN-20-111_KshortStudy} that the simulation to data agreement is
 in fact much better for eras 2016 G and H. 
 
-\begin{figure}[h!]
-	\centering	
-	\includegraphics[width=0.49\textwidth]{Figures/c6/efficiencies/2dplots/2016tot/smallrange.pdf}
-	\includegraphics[width=0.49\textwidth]{Figures/c6/efficiencies/2dplots/2017tot/smallrange.pdf}\\
-	\includegraphics[width=0.49\textwidth]{Figures/c6/efficiencies/2dplots/2018tot/smallrange.pdf}
-	\caption{Uncertainty factors per bin in radial distance and
-          transverse momentum. The red-coloured band overlaying the
-          figure shows the normalization range, i.e. 0 - 0.5 cm. Note
-          that an error of $\pm 0.00$ indicates that the (statistical)
-          error is smaller than 0.005. \luka}
-	\label{fig:2dplots}
-\end{figure}
+
 
 \section{Systematic uncertainties}\label{sec:llsystematic}
 Several sources of systematic uncertainties affect the expected signal
@@ -1879,10 +1880,10 @@ predictions is shown.
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=.4\textwidth]{Figures/c6/results/ele_disp.pdf}
-    \includegraphics[width=.4\textwidth]{Figures/c6/results/mu_disp.pdf}\\
-    \includegraphics[width=.4\textwidth]{Figures/c6/results/ele_mass.pdf}
-    \includegraphics[width=.4\textwidth]{Figures/c6/results/mu_mass.pdf}
+    \includegraphics[width=.49\textwidth]{Figures/c6/results/ele_disp.pdf}
+    \includegraphics[width=.49\textwidth]{Figures/c6/results/mu_disp.pdf}\\
+    \includegraphics[width=.49\textwidth]{Figures/c6/results/ele_mass.pdf}
+    \includegraphics[width=.49\textwidth]{Figures/c6/results/mu_mass.pdf}
     \caption{\label{fig:datadriven_2displaced}
         Comparison between the number of observed events in data and their background
         predictions (shaded histograms, stacked) for the \Deltwod variable in
@@ -1906,8 +1907,8 @@ parameter, while the \mmx~channels (\MMM, \MMEos, and
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=.75\textwidth]{Figures/c6/results/ele_sr.pdf} \\
-    \includegraphics[width=.75\textwidth]{Figures/c6/results/mu_sr.pdf}
+    \includegraphics[width=.98\textwidth]{Figures/c6/results/ele_sr.pdf} \\
+    \includegraphics[width=.98\textwidth]{Figures/c6/results/mu_sr.pdf}
     \caption{\label{fig:finalyields_majorana_datacards}
         Predicted and observed yields in the different search
         regions for (upper) \eex and (lower) \mmx final states,
@@ -1921,14 +1922,12 @@ parameter, while the \mmx~channels (\MMM, \MMEos, and
     }
 \end{figure}
 
-
-
 The yields of observed events in data show a good agreement comparing with the
 SM background expectations. The agreement is within the statistical
 and systematic uncertainties and no significant
 excess with respect to the SM background predictions is found. The number of
 events for both observed data and background yields is shown in
-Tables~\ref{tab:compee} and~\ref{tab:compmm}.
+Tables~\ref{tab:compee} and~\ref{tab:compmm}. The quoted uncertainties include statistical and systematic uncertainties.
 
 
 \begin{table}[h!]
@@ -1937,54 +1936,40 @@ Tables~\ref{tab:compee} and~\ref{tab:compmm}.
     \centering
     \caption{\label{tab:compee}
         Number of predicted and observed events
-        in the \eex final states. The quoted uncertainties include
-        statistical and systematic uncertainties.
+        in the \eex final states. 
     }
     \input{tabs/bgk_sum_error_ele_combined.tex}
 \end{table}
-
+\vspace{10cm}
 \begin{table}[h!]
     \footnotesize
     \renewcommand{\arraystretch}{1.3}
     \centering
     \caption{\label{tab:compmm}
         Number of predicted and observed events
-        in the \mmx final states. The quoted uncertainties include
-        statistical and systematic uncertainties.
+        in the \mmx final states. 
     }
     \input{tabs/bgk_sum_error_muon_combined.tex}
 \end{table}
-The yields of expected HNL signal events for a set of benchmark signal models are listed in Tables~\ref{tab:ele_yield} and~\ref{tab:mu_yield}.
+
+The yields of expected HNL signal events for a set of benchmark signal
+models are listed in Table~\ref{tab:ele_yield}. The quoted uncertainties include statistical and systematic uncertainties.
+
 \begin{table}[h!]
-    \footnotesize
+    {\footnotesize
     \renewcommand{\arraystretch}{1.1}
     \centering
     \caption{\label{tab:ele_yield}
-        Number of predicted signal events in the \eex final states.
+        Number of predicted signal events in the \eex and \mmx final states.
         The results are presented for several benchmark signal hypotheses for Majorana HNL:
         \HNLtwo, \HNLsix, \HNLtwelve.
-        The quoted uncertainties include statistical and systematic uncertainties.
-    }
-    \cmsTable{\input{tabs/2_signal_sum_error_ele_combined.tex}}
-\end{table}
-
-\begin{table}[h!]
-    \footnotesize
-    \renewcommand{\arraystretch}{1.1}
-    \centering
-    \caption{\label{tab:mu_yield}
-        Number of predicted signal events in the \mmx final states.
-        The results are presented for several benchmark signal hypotheses for Majorana HNL:
-        \HNLtwo, \HNLsix, \HNLtwelve.
-        The quoted uncertainties include statistical and systematic uncertainties.
-    }
+    }}
+    \cmsTable{\input{tabs/2_signal_sum_error_ele_combined.tex}}\\
     \cmsTable{\input{tabs/2_signal_sum_error_muon_combined.tex}}
 \end{table}
 
 
 
-
-\clearpage
 \subsection{Interpretation}
 At this stage, it is relevant to recall the distinction between
 Majorana and Dirac particles explained
@@ -2046,9 +2031,9 @@ Limits on \mixpare and \mixparm as a function of \mhnl for a Majorana HNL in
 Figure~\ref{fig:limits_Maj} for Run2 dataset.
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=.48\textwidth]{Figures/paper/majorana_ele.pdf}
+    \includegraphics[width=.49\textwidth]{Figures/paper/majorana_ele.pdf}
     \hfill
-    \includegraphics[width=.48\textwidth]{Figures/paper/majorana_muo.pdf}
+    \includegraphics[width=.49\textwidth]{Figures/paper/majorana_muo.pdf}
     \caption{\label{fig:limits_Maj}
         Limits on \mixpare (left) and \mixparm (right) as
         functions of \mhnl for a Majorana HNL. Results from the DELPHI~\cite{Abreu:1996pa}
@@ -2072,9 +2057,9 @@ interpretations.\\
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=.48\textwidth]{Figures/paper/dirac_ele.pdf}
+    \includegraphics[width=.49\textwidth]{Figures/paper/dirac_ele.pdf}
     \hfill
-    \includegraphics[width=.48\textwidth]{Figures/paper/dirac_muo.pdf}
+    \includegraphics[width=.49\textwidth]{Figures/paper/dirac_muo.pdf}
     \caption{\label{fig:limits_Dir}
         Limits on \mixpare (left) and \mixparm (right) as
         functions of \mhnl for a Dirac HNL. Results from the DELPHI~\cite{Abreu:1996pa}
@@ -2128,7 +2113,21 @@ data. Background estimation undeniably represents one of the decisive challenges
 type of search at the hadron collider.\\
 Cases with LNV and LNC events are handled in separate ways in order to
 formulate the final limits
- \begin{wrapfigure}{l}{0.5\textwidth}
+in Majorana and Dirac scenarios. By
+applying appropriate lifetime corrections, the simulated samples of
+the Dirac HNL scenarios are fetched from the samples adopted for the
+Majorana HNL interpretation.\\
+
+
+At the time of the writing, these current results are the most
+stringent limits on this type of processes in the
+explored parameter space of the HNL production at the LHC. 
+The two direct comparisons are the DELPHI~\cite{Abreu:1996pa} and
+ATLAS~\cite{atlas_ll} results. \\
+DELPHI Collaboration performed HNL searches 
+  using the data corresponding to $3.3
+  \times 10^6$ hadronic
+ \begin{wrapfigure}{r}{0.5\textwidth}
 \centering
     \includegraphics[clip,trim=0.3cm 0cm 1.cm 2cm, width=.48\textwidth]{Figures/c6/results/dirac_mu_with_ATLAS.pdf}
 \caption{ Limits on \mixparm as
@@ -2137,20 +2136,7 @@ formulate the final limits
         and ATLAS~\cite{atlas_ll} Collaborations are shown for reference.}
 \label{fig:atlas}
 \end{wrapfigure}
- in Majorana and Dirac scenarios. By
-applying appropriate lifetime corrections, the simulated samples of
-the Dirac HNL scenarios are fetched from the samples adopted for the
-Majorana HNL interpretation.\\
-
-
-At the time of the writing, these current results are the most
-stringent limits on this type of processes in the
-explored parameter space of the HNL production at the LHC. \\
-The two direct comparisons are the DELPHI~\cite{Abreu:1996pa} and
-ATLAS~\cite{atlas_ll} results. \\
-DELPHI Collaboration performed HNL searches 
-  using the data corresponding to $3.3
-  \times 10^6$ hadronic $Z_0$ decays at LEP1, see Section~\ref{sec:c3directHNL}. This set of results 
+ $Z_0$ decays at LEP1, see Section~\ref{sec:c3directHNL}. This set of results 
   includes both the short-lived HNL
  and the long-lived HNL outlines and all three lepton flavor
  couplings. For the long-lived HNL case it was looked for detectable secondary vertices or calorimeter clusters.
@@ -2190,30 +2176,18 @@ signal efficiency.
 
 \vspace{2cm}
 
-Several people were involved in the completion of the HNL displaced leptons
-analysis.\\
+Several people were involved in the completion of the long-lived HNL analysis.\\
 Daniele Trocino studied in details the displaced muon reconstruction
-efficiency and developed the SV fitting procedure. He was also
-intensely involved with the design of the analysis strategy from day zero. He was
-the responsible of the re-weighting procedure and of the
-Majorana-Dirac emulation.\\
-Tom Cornelis took care of preparing the HNL simulation base-files and
-he generated the MC signal samples. Tom also provided the estimation
-of the electron trigger and ID efficiencies. \\
-Luka Lambrecht built up the displaced tracking and vertexing
-efficiency making use of the displaced decay of the neutral hadrons $K_S^{0}$ to
-two charged particles.\\
-Kirill Skovpen was the responsible of the ID selection efficiencies and
-corrections for displaced muons and displaced electrons. He was deeply
-involved during the full review process and he took care of setting
-the limit extraction framework. \\
-Joscha Knolle heavily contributed to the review process.\\
+efficiencies and developed the SV fitting and the re-weighting procedures.\\
+Tom Cornelis prepared the HNL simulation base-files and
+generated the MC signal samples. \\
+Luka Lambrecht and Kirill Skovpen contributed to the displaced lepton and vertexing
+efficiency studies.\\
 From my side, I was the main analyzer. I have contributed in the design of the
 entire analysis from the beginning. I performed the measurement of the
 lepton \fr and \Dfr and their validation in both MC and data. I
 produced the final results in the search regions and control
-regions. My contributions can be found also in the Majorana-Dirac
-emulation idea and in the writing of internal documentations. I also
+regions. I also
 gave most of the internal presentations on the topic, including the
 so-called pre-approval and approval talks.
 \subsubsection*{Conference talks and workshops}
