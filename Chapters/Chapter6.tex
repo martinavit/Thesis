@@ -13,59 +13,66 @@ what is already probed by the current experimental
 settings and analyses.
 
 Among the plethora of possible new physics theories, quite eccentric
-possibility could be the introduction of long-lived particles (LLPs)
-decaying in the detector or long-lived detector-stable particles which decay outside the detector volume. 
-These two require a change of scenario with respect to the usual
-searches for new physics probed until some years ago and they do require the
-inclusion of unconventional signature searches.\\
-Long-lived particles could be foreseen by several models due to:
+possibilities could be the introduction of long-lived particles (LLPs)
+decaying in the detector or long-lived detector-stable particles that decay outside the detector volume. 
+These hypotheses call for a change of scenario with respect to the usual
+new physics signals probed until some years ago, and they prompt
+the need to search for unconventional experimental signatures.\\
+Long-lived particles are predicted by several models as a result of:
 \begin{itemize}
-\setlength\itemsep{-0.1em}
-\item \emph{small coupling constants} -- \ie HNLs, RPV SUSY (R-parity violating
-  SUSY scenario), etc;
-\item \emph{very off-shell intermediate decay products} -- \ie split SUSY where
+%\setlength\itemsep{-0.1em}
+\item \emph{small coupling constants} -- \eg HNLs, %RPV SUSY (
+  R-parity violating SUSY, %scenario),
+  etc;
+\item \emph{very off-shell intermediate decay products} -- \eg split SUSY where
 heavy intermediate squarks enhance
 the gluino lifetime~\cite{ATLAS-CONF-2019-006,2020135114};
-\item \emph{limited decay phase space} --- \ie
-anomaly mediated SUSY breaking
-model where the lightest neutralino
+\item \emph{limited decay phase space} --- \eg
+anomaly-mediated SUSY-breaking
+models where the lightest neutralino
 and chargino are nearly degenerate~\cite{Sirunyan:2019wau,Sirunyan:2019gut}.
 \end{itemize}
 
 CMS and ATLAS were 
-initially designed to optimize object
-identification for prompt particles, thus to integrate displaced
-signatures into CMS framework we have to face quite a diverse number
-of challenges:
+originally designed to identify
+prompt particles, thus to integrate displaced
+signatures into the CMS framework we have to face
+several challenges:
 \begin{itemize}
-\setlength\itemsep{-0.1em}
+%\setlength\itemsep{-0.1em}
 \item \emph{triggers}: timing information at trigger level is not always
-  available and the majority of current triggers uses primary vertex
-  seeds to identify the matching tracks;
-\item \emph{reconstruction}: we need the possibility to use algorithms which
-  fit the eventual secondary vertices and integrate such informations in the
-  reconstruction procedure;
+  available and the majority of current triggers use primary vertex
+  constraints to identify particle 
+  tracks;
+\item \emph{particle reconstruction}:
+  we need to develop
+  algorithms to
+  fit possible secondary vertices and integrate such information in the
+  particle reconstruction procedure;
 \item \emph{background}: additional sources of background have to be
-  considered such as noise from the detector itself (instrumental
-  background), cosmic rays traveling through CMS's barrel, in-time
-  and out-of-time pileup and long-lived SM hadrons which
-  could mimic the interesting BSM particle.
+  considered, such as noise % maybe 'electronic noise'? But this is an issue for all analyses in principle
+  from the detector (instrumental
+  background), cosmic rays traveling through CMS, in-time
+  and out-of-time pileup, 
+  and long-lived SM hadrons that could mimic the BSM particle under investigation.
 \end{itemize}
 
+
 \subsection{Displaced signature at CMS}
-In Figure~\ref{fig:c6antonelli} several exemplary displaced
+In Figure~\ref{fig:c6antonelli} several examples of displaced
 signatures are shown.\\
-If the LLP decays into charged objects, we can have visible secondary vertices
-made either of displaced leptons or of displaced jets; in case the LLP decays into two $\gamma$,
-then we should rely on the possibility of the CMS
-ECAL to measure $\gamma$ arrival times with enough precision to detect
-signatures of delayed photons produced at displaced
+If the LLP decays into charged objects (leptons or jets), we have
+observable secondary vertices that can be fit from the displaced
+particles' tracks.
+In case the LLP decays into photons,
+then we can rely on the capability of the CMS
+ECAL to measure $\gamma$ arrival times with enough precision to
+discriminate delayed signals produced at displaced
 vertices~\cite{Sirunyan:2019wau}.
-There is also the chance of having the LLP that decays within the
-volume of the silicon tracker producing events with an isolated track
-which "disappears'' \ie it misses hits in the outermost layers of the
-silicon tracker, it is associated with little energy deposited in the
-calorimeters and it does not show hits in the muon detectors~\cite{Sirunyan_2020disapp}. 
+A charged LLP decaying within the volume of the silicon tracker could produce an isolated track
+that ``disappears'', \ie without hits in the outermost layers of the
+silicon tracker, with little energy deposited in the calorimeters, and
+with no hits in the muon detectors~\cite{Sirunyan_2020disapp}.  
 \begin{figure}[h]
 \centering
 \includegraphics[clip,trim=0cm 0.cm 0.cm 1.6cm, width=0.85\textwidth]{Figures/c6/antonelli_skech.pdf}
@@ -74,9 +81,10 @@ calorimeters and it does not show hits in the muon detectors~\cite{Sirunyan_2020
 \label{fig:c6antonelli}
 \end{figure}
 
-These are just few examples of the almost endless configurations which can
-be studied including the \emph{long-lived} particle signatures in the
-current particle physics searches. 
+These are just few examples of the almost endless configurations that can
+be studied, including some of the 
+long-lived particle
+signatures investigated by current searches. 
 
 \subsubsection{HNL with long lifetime}
 Along these lines, extending the HNL search described in
@@ -93,14 +101,12 @@ and must be accounted for in the signal simulation and in the results'
 interpretation.
 If $\hnl$ has a long lifetime, then a secondary vertex formed by the decay products of the HNL ($\ell^{\pm\prime}$, $\ell^{\mp\prime\prime}$, $\nu_{\ell^{\prime\prime}}$ or
 $\nu_{\ell^{\prime}}$, $\ell^{\pm\prime\prime}$,
-$\ell^{\mp\prime\prime}$) which is spatially displaced with respect to
-the primary pp collision vertex of the process and can be experimentally identified. 
+$\ell^{\mp\prime\prime}$) can be experimentally identified. 
 
 We present here the search of long-lived heavy neutral leptons in final states
-with three charged leptons and displaced vertices. Please note that
-the neutrino emerging in the decay chain of HNL is not used in the analysis.\\
+with three charged leptons and displaced vertices.\\
 The analysis strategy we follow here shares some similarities with the
-prompt HNL search (~\cite{Sirunyan:2018mtv}-Chapter~\ref{Chapter5})
+prompt HNL search (Ref.~\cite{Sirunyan:2018mtv}, Chapter~\ref{Chapter5})
 and uses the lessons learned from that
 analysis. 
 The main objective of the current search is to extend the
@@ -108,17 +114,18 @@ sensitivity to low HNL masses and mixing parameters, namely HNL masses
 below 20 GeV. This is obtained by optimizing the identification
 of leptons produced in the decay of long-lived HNLs and by fitting
 their displaced decay vertices. More precisely, the search is
-performed by designing search regions formed by the displacement of
+performed by designing search regions on the basis of
+the displacement of
 the HNL vertex and the invariant mass of the \displ leptons. The
 maximum sensitivity is reached by simultaneously fitting these search
-regions in each lepton flavor channels. The mixing of HNL to electron
-neutrino, \mixpare, is probed using the leptonic channels 
+regions in each lepton flavor channel. The mixing of HNLs to electron
+neutrinos, \mixpare, is probed using the leptonic final states 
 $\Pe\Pe\Pe$, $\Pepm\Pemp\PGm$, and $\Pepm\Pepm\PGm$ (collectively
 called \eex),
 while the $\PGm\PGm\PGm$,  $\PGmpm\PGmmp\Pe$, and $\PGmpm\PGmpm\Pe$
-channels (collectively called \mmx) are used to probe the coupling to
-muon neutrino, \mixparm.
-With these lepton flavor/charge configurations, the search is
+final states (collectively called \mmx) are used to probe the coupling to
+muon neutrinos, \mixparm.
+With these lepton flavor/charge categories, the search is
 sensitive to both LNV and LNC scenarios.
 The search uses the full Run2 data set with an integrated luminosity
 of 137\fbinv, and the major backgrounds are estimated using a
@@ -141,9 +148,9 @@ of \hnl (refer to Section~\ref{sec:c4hnl}).
 
 \subsection{Trigger strategy}\label{sec:trigger}
 Every HNL signal event contains one prompt lepton and two (generally)
-\displ leptons. Since (most of) the CMS leptonic triggers are
+\displ leptons. Since most of the CMS leptonic triggers are
 optimized for prompt lepton identification,
-we decided for the use of single-electron and single-muon triggers for the
+we opted for the use of single-electron and single-muon triggers for the
 signal selection, as listed in Table~\ref{tab:sgnlTriggers}.
 \begin{table}[h]
 {\small
@@ -183,19 +190,18 @@ between the reconstructed trigger lepton and offline lepton be less
 than 0.3. 
 
 \subsection{Object selection}\label{sec:llobject}
-For the rigorous explanation of the single object reconstruction in
-CMS see Chapter~\ref{Chapter2_5}, section~\ref{sec:reconstruction}.\\
-In Sections~\ref{sec:c2keleid} and~\ref{sec:c2muonselection} the
+For a detailed description of particle reconstruction in
+CMS, see Section~\ref{sec:reconstruction}.\\
+In Sections~\ref{sec:c2muonselection} and \ref{sec:c2keleid} the
 prompt lepton identification criteria are presented.\\
-For displaced
-leptons and SVs there are detailed explanations in
+For displaced leptons and SV, detailed explanations can be found in
 Sections~\ref{sec:c2muondisplaced} (displaced
-muons),~\ref{sec:c2dispele} (displaced electrons) and~\ref{sec:c2sv}
+muons),~\ref{sec:c2dispele} (displaced electrons), and~\ref{sec:c2sv}
 (displaced SV reconstruction).\\
 
 In the following sections, only the
-additional selections circumscribed
-to this specific scenario are listed and motivated.
+additional selections 
+targeting this specific scenario are described and motivated.
 
 \subsubsection{Electrons}\label{sec:llelectron}
 The electron selection criteria are summarized in
@@ -211,10 +217,10 @@ data set.
 The offline \pt threshold is driven by the trigger \pt threshold in
 each data set, such that the offline criteria always falls in the plateau
 of the trigger efficiency curve.
-Prompt electrons passing this selection will be referred to as \tP electrons~\footnote{
-N.B. these working points do not necessarily coincide with the ones
+Prompt electrons passing this selection will be referred to as \tP electrons\footnote{
+These working points do not necessarily coincide with the ones
 defined in Sections~\ref{sec:c2muonselection}
-and~\ref{sec:c2keleid}. For these latter the italic style is used.} hereafter.
+and~\ref{sec:c2keleid}. For the latter the italic style is used.} hereafter.
 
 \textbf {Displaced electrons.}
 \Displ electrons passing their selection will be referred to as
@@ -222,8 +228,9 @@ and~\ref{sec:c2keleid}. For these latter the italic style is used.} hereafter.
 They must have \pt greater than 7\GeV.
 Samples enriched in fake electrons are selected with
 identification criteria looser than those used for \tD
-electrons. These looser electrons referred as \fo electrons (from
-fekable object) are employed to determine the rate of fake electrons
+electrons. These loosely selected electrons, referred to as
+``fakeable objects'' or \fo electrons,
+are employed to determine the rate of fake electrons
 mis-identified as signal electrons (\fr or FR).
 \begin{table}[h!]
   \centering
@@ -259,9 +266,9 @@ mis-identified as signal electrons (\fr or FR).
 Muons are required to have
 $\abseta<2.4$ to fall inside the geometric acceptance of the muon
 detector.
-All muons considered for analysis must pass the \emph{Loose ID} (refer
-to Section~\ref{sec:c2muonselection}) in addition to a number
-of other loose criteria on isolation and their impact parameters with
+All muons considered for analysis must pass the \emph{Loose ID} (as
+defined in Section~\ref{sec:c2muonselection}), in addition to a number
+of loose criteria on isolation and track impact parameters with
 respect to the PV.\\
 Muon selection criteria are summarized in
 Table~\ref{tab:muonSelection}. Different selections are applied to prompt and \displ muons.
@@ -270,16 +277,16 @@ Table~\ref{tab:muonSelection}. Different selections are applied to prompt and \d
 Prompt muons must pass \emph{Medium ID} (refer
 to Section~\ref{sec:c2muonselection}) criteria. They must have \pt greater than
 25 (28, 25)\GeV in the 2016 (2017, 2018) data set.
-Prompt muons passing this selection will be referred to as \tP~\footnote{
-N.B. these working points do not necessarily coincide with the ones
+Prompt muons passing this selection will be referred to as \tP\footnote{
+These working points do not necessarily coincide with the ones
 defined in Sections~\ref{sec:c2muonselection}
-and~\ref{sec:c2keleid}. For these latter the italic style is used.} muons hereafter.
+and~\ref{sec:c2keleid}. For the latter the italic style is used.} muons hereafter.
 
 \textbf {Displaced muons.}
 \Displ muons that pass the displaced ID criteria
 (~\ref{sec:c2muondisplaced}) will be referred to as \tD
 muons. The displaced muons are required to have \pt greater than 5\GeV.\\
-In addition, looser muons referred as \fo muons are selected
+In addition, loosely defined muons, referred to as \fo muons, are selected
 with identification criteria looser than those used for \tD muons, and are employed to determine the muon FR.
 
 \begin{table}[h!]
@@ -340,7 +347,6 @@ electrons (\eex) or muons (\mmx).
 \end{figure}
 
 
-
 Figure~\ref{fig:llfeatures} illustrates some
 kinematic properties of the leptons in signal events, both at the
 generator and reconstruction levels.\\
@@ -364,7 +370,7 @@ decay.
 \includegraphics[width=.40\textwidth]{Figures/c6/selection/l2l3_mass_gen.png}\\
 \includegraphics[width=.40\textwidth]{Figures/c6/selection/l2l3_dR_gen.png}
 \includegraphics[width=.40\textwidth]{Figures/c6/selection/l1l3_dPhi_gen.png}
-  \caption{For the HNL scenario:HNL of mass
+  \caption{For the HNL scenario: HNL of mass
     $\mhnl=4$\GeV and $\mixpar=10^{-4}$. Top left, generated lepton \pt, separately
     for \lone (``from \PW''), \ltwo (``from \hnl''), and \lthree
     (``from $\hnl\PW$'').
@@ -405,11 +411,11 @@ flavor with the largest di-lepton \pt (vectorial sum of $p_{T_{\ltwo}}$
 and $p_{T_{\lthree}}$) and opposite charge are selected
 as \ltwo and \lthree,
 ($\Pe^\pm\Pe^\mp$, $\Pe^\pm\PGm^\mp$, $\PGm^\pm\PGm^\mp$).
-If there is no opposite-charge \displ leptons pair, the
+If there is no opposite-charge \displ lepton pair, the
 event is rejected. This reduces background processes with
 mis-identified leptons, while retaining almost full efficiency for the
-signal. In the following, we will label \ltwo (\lthree) the lepton in
-the pair with higher (lower) \pt.\\
+signal. In the following, we will label the lepton in
+the pair with higher (lower) \pt as \ltwo (\lthree).\\
 This selection strategy correctly identifies the one prompt and two
 \displ leptons in more than 99\% of signal events (99.9\% of
 signal events that pass the full analysis selection, described in
@@ -432,7 +438,7 @@ contributions (more details in the following Section~\ref{sec:llbackground}).
 
 The baseline selection includes the following requirements, summarized
 in Table~\ref{tab:baselinesel}. Please
-consider Figure~\ref{fig:c6llsketch} as reference for lepton
+consider Figure~\ref{fig:c6llsketch} as a reference for the lepton
 nomenclature. The distributions of all the variables used for the
 selection are shown in Figure~\ref{fig:selection_electrons}.
 {\footnotesize
@@ -463,7 +469,7 @@ selection are shown in Figure~\ref{fig:selection_electrons}.
 As explained above, \ltwo and \lthree are expected to have small
 opening angle, given the small mass and relatively large momentum of
 the HNL. As can be seen in
-Figure.~\ref{fig:selection_electrons} (top-left),
+Figure~\ref{fig:selection_electrons} (top-left),
 the variable \DRtwol discriminates the signal from all background
 processes. To retain high signal efficiency and reduce backgrounds
 where two leptons are relatively separated from each other, we select events with
@@ -522,14 +528,16 @@ well. For this reason, all
 background processes exhibit a peaking structure, randomly at $-1$ or
 $+1$.\\
 
-The quality of the secondary vertex ($\boldsymbol{ p_{SV}}$) necessarily correlates with the precision of the trajectories from \ltwo and \lthree as well as how close they are at the intersection point. It is represented as a probability based on the maximum likelihood fit from the kinematic vertex fitter. One can observe that for low probability values, the background dominates. This motivates a requirement of the \textbf{probability to be larger than 0.001}. \\
+The quality of the secondary vertex ($\boldsymbol{ p_{SV}}$)
+necessarily correlates with the precision of the trajectories from
+\ltwo and \lthree, as well as to how close they are at the intersection point. It is represented as a probability based on the maximum likelihood fit from the kinematic vertex fitter. One can observe that for low probability values, the background dominates. This motivates a requirement for the \textbf{probability to be larger than 0.001}. \\
 
-The quality of the SV fit is used as well as discriminating variable against random vertices. The significance of the distance between PV and SV, $\boldsymbol{ S(\Delta_{2D})}$ is shown in Figure~\ref{fig:selection_electrons}. The requirement of the \textbf{significance to be larger than 20} is applied.\\
+The quality of the SV fit is also used as a discriminating variable against random vertices. The significance of the distance between PV and SV, $\boldsymbol{ S(\Delta_{2D})}$ is shown in Figure~\ref{fig:selection_electrons}. A requirement on the \textbf{significance to be larger than 20} is applied.\\
 
 The dilepton (\ltwo, \lthree) transverse momentum  is required to be
 larger than 15\GeV, since the low-\pt region is heavily dominated by
 the nonprompt lepton background.
-The dilepton mass \mtwol distribution has an upper cut that
+The dilepton mass \mtwol distribution has an upper threshold that
 corresponds to the largest mass among all the considered signal
 samples. Due to the presence of the neutrino in the final state, the
 mass is always lower than the HNL mass.\\
@@ -569,7 +577,8 @@ When there are only MC predictions:
 \item {\color{gray}MC nonprompt SF:} processes that give rise to one or two nonprompt
   leptons, such as \PW + jets, \ttbar + jets, single-top and DY+ jets. To be defined as SF it has to be defined "single-fake" according to the definition in Section~\ref{sec:llbackground};
 \item {\color{gray}Conversions:}  processes with photon conversions, such as Z$\PGg$ and W$\PGg$;
-\item {\color{gray}$\PZ\PGg^{\ast}$:} we consider DY events with prompt leptons;
+\item {\color{gray}$\PZ\PGg^{\ast}$:}  it includes DY events with
+  additional prompt lepton(s) from a virtual photon conversion;
 \item {\color{gray}Other:} processes like diboson and triboson.
 \end{itemize}
 When there are both MC and data-driven predictions:
@@ -608,20 +617,21 @@ When there are both MC and data-driven predictions:
 
 
 \clearpage
-Figures~\ref{fig:cutflow1} and~\ref{fig:cutflow2} are a summary view of the entire selection
-step by step showing two different kinds of "cutflow". The
-first set, Figure~\ref{fig:cutflow1}, is the classic cutflow where each
-bin displays the number of remaining events after each selection and it goes in a
-"cascade" way (one after the other). The second one,
-Figure~\ref{fig:cutflow2}, is a $N-1$ plot where each bin has the number
-of events when that particular selection is not applied; in this way it is
-possible to appreciate which is the real impact of each selection no matter
-its arbitrary position in the event selection list. \\
-As it is seen in Figure~\ref{fig:cutflow2}, the most effective
+Figures~\ref{fig:cutflow1} and~\ref{fig:cutflow2} are a summary view of the entire selection,
+step by step, in the form of ``cutflow'' histograms. The
+first set, Figure~\ref{fig:cutflow1}, shows the event yields for all
+processes at each step of the selection: each bin displays the number
+of remaining events after each analysis cut, sequentially. The second set,
+Figure~\ref{fig:cutflow2}, shows the event yields for ``$N-1$'' analysis
+cuts: each bin corresponds to the number of events after the full
+selection is applied, with the exception of the particular cut in
+question; this way it is possible to appreciate the real impact of
+each selection, regardless of the order of the cuts in the selection sequence.\\
+As can be seen in Figure~\ref{fig:cutflow2}, the most effective
 background rejection is achieved with the \mthreel selection. In
 particular, it is effective in \eex final states as it rejects DY events
-where at least one electron comes from conversion. In such events,
-\mthreel values are in the region of $M_{\PZ}$ which remains outside the
+where at least one electron comes from conversions. In such events,
+\mthreel typically lies in the proximity of $M_{\PZ}$, which is outside the
 [50-80]\GeV signal region.
 
 \begin{figure}[h!]
@@ -666,14 +676,14 @@ CMS search presented in Chapter~\ref{Chapter5}.
 Although the sensitivity of the analysis strongly depends on the
 secondary vertex displacement, no selection is applied on this
 variable. This is due to the fact that both small and large
-displacement regions are interesting for the search. The small
-displacement region represents the region of the previous CMS search
+displacement regimes are interesting for the search. The small
+displacement region represents the domain of the previous CMS search
 and can be used to cross-check its results, while the large
 displacement region provides the highest sensitivity to long-lived
 HNLs. 
-Thus, the final signal region will be divided into bins of different
-displacement, in addition to the invariant mass of \ltwo and \lthree,
-\mtwol (Figure~\ref{fig:reco_displ}).\\
+Thus, the selected events will be divided into different \Deltwod
+categories, as well as different \mtwol categories
+(Figure~\ref{fig:reco_displ}).\\ 
 
 The residual background, dominated by \Xg,
 $\PZ/\PGg^{\ast}+\mathrm{jets}$, and top processes, accumulates at low
@@ -686,12 +696,12 @@ scenarios:
 $\Deltwod<0.5$\cm (fully background dominated), $0.5<\Deltwod<1.5$\cm,
 $1.5<\Deltwod<4$\cm and $\Deltwod>4$\cm.\\
 In addition, the events are split into three different categories
-according to lepton flavors. In case 
-the muon coupling is been probed the 3 final states are $\mu\mu\mu$,  $\mu^{\mp}\mu^{\pm} e$ 
-and $\mu^{\pm}\mu^{\pm}e$; in case of electron coupling the 3 final states
-are: $eee$,  $e^{\mp}e^{\pm}\mu$ and $e^{\pm}e^{\pm}\mu$. This latter categorization
-is necessary to provide separated limits for the case of LNC 
-and for the case LNV, (see Section~\ref{sec:lnv_lnc}).
+according to lepton flavors. When the muon coupling is being probed, the three final states $\mu\mu\mu$,  $\mu^{\mp}\mu^{\pm} e$,
+and $\mu^{\pm}\mu^{\pm}e$ are considered; when the electron coupling
+is concerned, the three final states
+are $eee$,  $e^{\mp}e^{\pm}\mu$, and $e^{\pm}e^{\pm}\mu$. This categorization
+is necessary to provide separate limits for LNC 
+and LNV scenarios (see Section~\ref{sec:lnv_lnc}).
 The different categories are also characterized by different
 background levels and composition, thus providing different
 sensitivities.
@@ -714,10 +724,9 @@ two categories: $\mtwol<4$\GeV and $\mtwol>4$\GeV.\\
   \label{fig:reco_displ}
 \end{wrapfigure}
 
-Due to the lack of statistic (in background) at large displacement
-bins for high mass region, it has
- been decided to reduce the number of bins 
-in the following way:
+Since the background yields are extremely low in large displacement
+bins for the high-mass category, we opted for a lower number of bins, as
+follows:
 \begin{itemize}
 \setlength\itemsep{-0.5em}
 \item for $\mtwol<4$\GeV
@@ -765,12 +774,13 @@ classified as follows.
   This background is dominated by top--quark and Drell--Yan processes,
   and is measured with the data-driven method described in
   Section~\ref{sec_llfakelepton}.\\
-In most of the analyses --like the one presented in Chapter~\ref{Chapter5}-- this
+In most analyses---such as the one presented in Chapter~\ref{Chapter5}---this
 background consists of events where one lepton is fake. 
-In this search, the particular event selection leads to the two
-displaced leptons being fake as the majority of this background and thus, it needs to be handled properly.
-Therefore fake nonprompt lepton
-backgrounds are split into two categories:
+The specific selection used in this search, however, leads to a majority of
+background events with two fake displaced leptons. Therefore, the
+measurement of this background needs to be carried out with particular care.
+To this purpose, fake nonprompt lepton backgrounds are split into two
+categories:
   \begin{itemize}
   \item \textbf{single fake nonprompt leptons}:
     a single reconstructed lepton produced via one of the above
@@ -789,14 +799,13 @@ backgrounds are split into two categories:
     Therefore, the lepton pair must be treated as a single system.
   \end{itemize}
 \item \textbf{Photon conversions:} this background was extensively
-  introduced in Sections~\ref{sec:c4photon} and~\ref{sec:bgk}.\\
+ introduced in Sections~\ref{sec:c4photon} and~\ref{sec:bgk}.\\
   It is estimated from simulation and verified in control regions with
-  three leptons forming a \PZ mass (Section~\ref{sec:conversion}).
+  three leptons with invariant mass close to the \PZ mass (Section~\ref{sec:conversion}).
   Such conversions are considered as a
-  source of a background, as well as an excellent probe for nonprompt
+  source of background, as well as an excellent probe for nonprompt
   lepton efficiency
  measurement, in many searches for displaced vertices.
-
 \end{itemize}
  
 \subsection{Fake-lepton background}\label{sec_llfakelepton}
@@ -806,25 +815,25 @@ A general description of the fake-rate method can be found in
 Section~\ref{sec:tight_loose_method}.\\
 For this search, the probability for 
 a fake lepton to pass the \tD (Tables~\ref{tab:electronSelection} and \ref{tab:muonSelection}) and isolation requirements is estimated by using event yields where at least one lepton fails to satisfy \tD 
-selection criteria but passes
-\fo ones~\footnote{We all agree that \ttol naming is not optimal when the
-  ratio happens between \tD and \fo leptons. For ``historical'' and ``traditional''
-  reasons we use \ttol name keeping in mind that the selection in the
+selection criteria, but passes the
+\fo ones\footnote{The ``\ttol'' naming is not very accurate when the
+  ratio is calculated between \tD and \fo leptons. For ``historical''
+  reasons, however, we will use \ttol, keeping in mind that the selection in the
   denominator is the \fo one.}.
 
 The main difference with respect to the prompt HNL analysis
 (Chapter~\ref{Chapter5}) comes from the different sources of fake
-leptons; here fake leptons are typically found in the proximity of a
-jet which is in common for both \ltwo and \lthree, and their
-experimental properties are correlated. Each \fo
+leptons: here both fake leptons are typically found in the proximity of a
+jet---the same for \ltwo and \lthree---and their
+properties are correlated. Each \fo
 lepton is therefore associated to the jet of $\pt>10$\GeV closest in
-\DR, \ie $\DR<0.4$.
+\DR, if $\DR<0.4$.
 If two \fo leptons 
 are either associated to the same jet or have $\DR<0.45$, they are considered double-fake
-leptons and treated as a single dilepton system.
-In all other cases --- \ie, if the two \fo leptons are associated to
-different jets and the $\DR>0.45$ ---,
-the \fo leptons are considered single fakes and (if more than one)
+candidates and treated as a single dilepton system.
+In all other cases---\ie, if the two \fo leptons are associated to
+different jets and $\DR>0.45$---,
+the \fo leptons are considered as single fakes and (if more than one)
 treated independently.
 
 An important clarification has to be made regarding the estimation of 
@@ -834,7 +843,7 @@ fake prompt (\ie \lone) leptons is expected to be very small, on
 account of the much higher probability for fake \ltwo and \lthree to
 pass the tight \displ selection. This assumption has been verified in
 MC using the information at generated level (MC truth); at the
-beginning of the selection only 1\textperthousand\ background
+beginning of the selection, only 1\textperthousand\ of background
 events have fake nonprompt \lone, at the end of the selection all \lone
 leptons are prompt leptons, which ensures that the contribution from
 pure QCD processes is negligible. 
@@ -846,8 +855,8 @@ For this reason, the contribution from fake \lone is neglected.
 Events in the application region are classified as double-fake
 background if the two fake leptons are either associated to the same
 jet or the distance between them is $\DR<0.45$, and at least one of them is \fo.
-In the first case (same jet associated), the \pt of the mother parton, \ptm from
-which the fake leptons originate is estimated using the \pt of the associated
+In the first case (same associated jet), the \pt of the mother parton, \ptm, from
+which both fake leptons originate, is estimated using the \pt of the associated
 jet, $\ptm=\ptj$, calibrated using jet energy corrections (JEC, see
 Section~\ref{sec:jetclustering}) after subtracting the \pt of the two leptons:
 \begin{linenomath}
@@ -917,15 +926,15 @@ which zero, one, or both can be \tD.
 }
 \end{table}
 
-The \Dfr, \dfr is defined as the fraction of events in this
+The \Dfr, \dfr, is defined as the fraction of events in this
 region where both \fo leptons pass \tD selection.
 Figure~\ref{fig:dFR_ptjet_16} (top) shows
 the measured values of \dfr for events with two electrons, an electron
 and a muon, and two muons, respectively, as a function of \ptj.
 Figure~\ref{fig:dFR_ptjet_16} (bottom) shows
 the measured values of \dfr for events with two electrons, an electron
-and a muon, and two muons, respectively, as a function of \Deltwod. The \Deltwod bins are the four bins chosen for the SR in order to evaluate 
-which is the dependance of the \dfr with respect to the displacement of the SV of the \hnl decay. 
+and a muon, and two muons, respectively, as a function of \Deltwod. The \Deltwod bins are the four bins chosen for the SR, in order to evaluate 
+the \dfr dependance on the displacement of the SV of the \hnl decay. 
 
 \begin{figure}[h]
   \noindent
@@ -947,7 +956,7 @@ which is the dependance of the \dfr with respect to the displacement of the SV o
 The application region for double-fake lepton backgrounds 
 is defined using the same selection as the signal region (see
 Table~\ref{tab:baselinesel}), but with one or two \fo -non-\tD
-leptons that either be associated to the same jet or have $\DR<0.45$. 
+leptons that are either associated to the same jet or have $\DR<0.45$. 
 The background from double-fake leptons in the signal region is
 estimated from the event yields in the application region using
 the formula
@@ -962,7 +971,7 @@ where the sum runs over all the events in the application region, with jet trans
 \subsubsection{Estimation of single-fake background}
 \label{sec:singleFakeBkg}
 
-The measurement of the single-fakerate (\fr), \sfr background follows the exact same
+The measurement of the single-\fr (\sfr) background follows the exact same
 procedure as the one explained in Section~\ref{sec:singleFR}. Thus, to
 avoid repetitions, only the final measured \fr are presented here.
 
@@ -980,13 +989,13 @@ respectively, as a function of \ptc and in different \abseta bins.
 
 Several studies in simulation are performed to ensure that different origins of fake leptons lead to
 similar \fr values (refer to Section~\ref{sec:tight_loose_method} for
-all the detailed motivations). To good extend no strong dependence on
+all the detailed motivations). To a good extent, no strong dependence on
 \dxy is
-observed as well as for different origins of fake leptons. Thus, the 
-the parametrization of the \sfr is made to depend only on \ptc and \abseta and the
+observed, nor on the different origins of fake leptons. Thus, \sfr is
+parametrized to only depend on \ptc and \abseta, while the
 dependence on \dxy is ignored. 
 Figure~\ref{fig:sfr_dxy} shows that \sfr values are fairly independent
-of the lepton \dxy which is used as proxy for the displacement. 
+of the lepton \dxy, which is used as a proxy for the displacement. 
 
 \begin{figure}[h!]
   \centering
@@ -1038,13 +1047,13 @@ the large-\Deltwod and low-\mtwol regions. We can conclude that the
 fake-rate background estimations correctly reproduce the expected
 single- and double-fake lepton backgrounds, both the overall yields and the
 kinematic spectra. 
-Although in some places as in \mtwol distribution
-(middle plot in Figure~\ref{fig:mcClosure}) around 4\GeV the transition region between
+Although in some places, \eg in the \mtwol distribution
+(middle plot in Figure~\ref{fig:mcClosure}) around 4\GeV, the transition region between
 single- and double-fake lepton background shows some discrepancies, in the
 actual SR bins (right plot of Figure~\ref{fig:mcClosure}) the agreement is
 reasonable. Nevertheless we value the validation tests in data
-control regions more than the one in simulation which is subject to
-various defects. \\
+control regions more than that in simulation, which is prone to
+mis-modeling from various sources. \\
 \begin{figure}[h!]
   \centering
   \includegraphics[clip,trim=0.cm 0.cm 0.5cm 0.5cm,height=4.5cm]{Figures/c6/backgrounds/mc_closure/mu_DeltaPV_SV_2D_zomm__0.pdf}
@@ -1060,8 +1069,9 @@ various defects. \\
   \label{fig:mcClosure}
 \end{figure}
 
-In the following we present data control region orthogonal to the defined search region to test the
-prediction power of the method. 
+
+In the following, we present data control regions orthogonal to the
+defined search region, to test the prediction power of the method.
 
 
  \paragraph{Closure test in data sample: sideband control region}\label{sec:llsidebandcr}
@@ -1130,7 +1140,7 @@ Figure~\ref{fig:sb_sr_Ctrl}.\\
 This control region is defined in Table~\ref{tab:ttbar_sel}.
 Data in this region are compared to our data-driven (nonprompt DF and
 SF) and MC-based (the other) background estimates.\\
-Results for Run2 data are shown in
+Results for Run2 data  are shown in
 Figure~\ref{fig:sb_ttbar_Ctrl}.
 
 \begin{table}[h]
@@ -1189,11 +1199,9 @@ Figure~\ref{fig:sb_ttbar_Ctrl}.
 
 
 \paragraph{Closure test in data sample: sideband plus b jet control region}
-Taking into account the complementary of the two control regions just
-presented above and considering the low statistic of the
-Figure~\ref{fig:sb_sr_Ctrl}, a new CR has been defined. \\
-Results for Run2 data  are shown in
-Figure~\ref{fig:CR_dist}.
+Taking into account the complementarity of the two control regions just
+presented, and considering the low statistical power exhibited in
+Figure~\ref{fig:sb_sr_Ctrl}, a new CR was defined.
 \begin{table}[h!]
   \centering
 {\footnotesize
@@ -1229,8 +1237,9 @@ Figure~\ref{fig:CR_dist}.
      
 
 This control region combines the b jet and the sideband control
-regions and it is defined by the criteria listed in Table~\ref{tab:sideband_plus_bjet_table}. It is obvious that the combination of these two regions 
-is done in a fully orthogonal region with respect to the signal region. \\
+regions and it is defined by the criteria listed in
+Table~\ref{tab:sideband_plus_bjet_table}. The combination of these two
+control regions is still fully orthogonal to the signal region. \\
   
 \begin{figure}[h]
   \noindent
@@ -1315,7 +1324,7 @@ Prompt electron and muon identification and isolation efficiencies
 are measured in data and simulation using a tag-and-probe method,
 applied to samples of inclusive Z boson events.
 The data-to-MC ratios of efficiencies (``scale factors'')
-measured centrally by the \emph{muon physics object group} as a
+measured centrally by the CMS \emph{muon physics object group} as a
 function of the lepton \pt and \sigeta are
 used to correct the simulated events. Additionally, the scale factors
 are measured for the isolation requirement and the impact
@@ -1327,12 +1336,12 @@ Figure~\ref{fig:isoip_muon_prompt}.
   \includegraphics[width=.45\textwidth]{Figures/c6/efficiencies/muons/2018/isoip_prompt_syst_2018.pdf}
   \caption{Data/MC efficiency scale factors (left) and associated
   systematic uncertainty (right) for impact parameter and isolation requirement efficiency
-  for prompt muons. \kirill}
+  for prompt muons.}
   \label{fig:isoip_muon_prompt}
 \end{figure}
 
-For the prompt electrons, the SFs are obtained following the \emph{electron-photon physics object group}  prescriptions using the same
-tag-and-probe techniques as the one for the muons. The results as a function of transverse momentum and pseudorapidity are shown in Figure~\ref{fig:id_sf_electrons}.
+For prompt electrons, the SFs are obtained following the CMS \emph{electron-photon physics object group} prescriptions, using the same
+tag-and-probe techniques as the ones for the muons. The results as a function of transverse momentum and pseudorapidity are shown in Figure~\ref{fig:id_sf_electrons}.
 \begin{figure}[h]
   \centering
    \includegraphics[width=.38\textwidth]{Figures/c6/efficiencies/ID_electrons/2018/leptonSF_SFvspT_HNLprompt.pdf}
@@ -1340,7 +1349,7 @@ tag-and-probe techniques as the one for the muons. The results as a function of 
   \includegraphics[width=.38\textwidth]{Figures/c6/efficiencies/ID_electrons/2016/leptonSF_SFvseta_HNLprompt.pdf}
   \caption{Prompt electron efficiencies and data-MC scaling factors as
     a function of transverse momentum (left) or pseudorapidity
-    (right). \tom}
+    (right). }
   \label{fig:id_sf_electrons}
 \end{figure}
 
@@ -1354,8 +1363,8 @@ tag-and-probe technique. The resulting data-MC scaling factors are used to corre
 simulated event yields. 
 
 Trigger efficiencies and data-MC scaling
-factors for electrons are shown in Figure~\ref{fig:trigger_electrons},
-they include both statistical and systematic uncertainties.
+factors for electrons are shown in Figure~\ref{fig:trigger_electrons}.
+They include both statistical and systematic uncertainties.
 
 \begin{figure}[h]
   \centering
@@ -1363,7 +1372,7 @@ they include both statistical and systematic uncertainties.
 \hspace{1cm}
   \includegraphics[width=.38\textwidth]{Figures/c6/efficiencies/trigger_electrons/2018/passEle32/leptonSF_SFvseta_passEle32.png}
   \caption{Trigger efficiencies and data-MC scaling factors as a function of transverse momentum (left) or pseudorapidity (right)
-    for HLT\_Ele32 in 2018 data. \tom}
+    for HLT\_Ele32 in 2018 data. }
   \label{fig:trigger_electrons}
 \end{figure}
 
@@ -1380,28 +1389,28 @@ in Figure~\ref{fig:idiso_muon_nonprompt}.
   \includegraphics[width=.45\textwidth]{Figures/c6/efficiencies/muons/2018/idiso_nonprompt_syst_2018.pdf}
   \caption{Data/MC efficiency scale factors (left) and associated
   systematic uncertainty (right) for ID selection and isolation
-  requirement efficiency for nonprompt muons. \kirill}
+  requirement efficiency for nonprompt muons. }
   \label{fig:idiso_muon_nonprompt}
 \end{figure}
 
-Additional validation is performed in samples enriched with displaced
-muons. Displaced muon identification efficiencies without
-isolation requirement 
+Additional validation is performed in a sample enriched with moderately
+displaced muons. Displaced muon identification efficiencies without
+isolation requirements 
 are validated using
 $B^{\pm}\rightarrow J/\psi K^{\pm}\rightarrow \mu^{+} \mu^{-} K^{\pm}$ events, where the two muons
-from the $ J/\psi$~mesons decay are considered originating from a SV. The
+from the $ J/\psi$~meson decay originate from a SV. The
 estimated efficiencies are found to be very close to 100\% and the data-MC
 agreement is within the statistical
 uncertainties.
 
-These two complementary measurements give confidence in our understanding
+These two complementary measurements give us confidence in our understanding
 and in the validity of the displaced muon identification strategy.
 
 \paragraph{Electrons}\label{sec:eff_disp_ele}
 
-Different reference processes are identified which could mimic --to
-some extent-- the main characteristics of \displ electrons 
-stemming from HNL decays, such as the photon conversions in the
+Different reference processes are identified which could mimic---to
+some extent---the main characteristics of \displ electrons 
+stemming from HNL decays, such as photon conversions in the
 detector material.
 
 \comm{
@@ -1429,7 +1438,8 @@ The events are selected as follows:
 \item a pair of oppositely-charged prompt electrons (muons) is selected with \pt > 35 (28)\GeV and
 10 (10)\GeV requirements applied on the leading and sub-leading lepton transverse momenta,
  respectively. Electrons (muons) are reconstructed and selected with
- the identification listed in Tables.~\ref{tab:electronSelection}-~\ref{tab:muonSelection}.
+ the identification criteria listed in
+ Tables~\ref{tab:electronSelection} and \ref{tab:muonSelection}.
   The higher-\pt threshold is driven by trigger constraints, while the
   lower-\pt threshold is chosen to improve the statistical power of
   the sample; 
@@ -1466,16 +1476,19 @@ variable~\cite{convz}:
 & \notag
 \end{align}
 
-\noindent where $\mathrm{R}$ is the radius of curvature of the path of
-a charged particle in magnetic field, $\mathrm{d_{xy}}$ is the
-transverse impact parameter of the associated track, $\mathrm{B}$ is the
-magnitude of the magnetic field. The obtained data/MC ratio measured in bins of displacement
-(Figure~\ref{fig:convdispl}) is used as a scale factors per
-electron applied to signal events.  Half of the difference of the
-scale-factor with respect to unity is considered as an uncertainty.
+\noindent where $\mathrm{R}$ is the radius of curvature of the trajectory of
+a charged particle in a magnetic field, $\mathrm{d_{xy}}$ is the
+transverse impact parameter of the trajectory, and $\mathrm{B}$ is the
+magnitude of the magnetic field. The resulting data/MC ratio measured in bins of displacement
+(Figure~\ref{fig:convdispl}) is used as a per-electron correction
+factor applied to signal events. Half of the difference of the
+scaling factor with respect to unity is considered as an uncertainty.
 
-A similar effect was also observed in a study where we use $K_s^0$  and $\lambda$ mesons, which we use to calibrate \displ muon reconstruction efficiencies. See Section~\ref{sec:displacedvertex}.
-The details on how the scale factors and the systematics from each of these studies implemented in the analysis can be found in Section~\ref{sec:nonpromptleptoneffsysts}.
+We obtained similar results in an independent study, where we used $K_s^0$
+mesons
+to measure \displ muon reconstruction efficiencies (see Section~\ref{sec:displacedvertex}).
+The details of how the scale factors and the systematic uncertainties
+from each of these studies are implemented in the analysis can be found in Section~\ref{sec:nonpromptleptoneffsysts}.
 
 \begin{figure}[h!]
     \centering
@@ -1507,28 +1520,18 @@ The details on how the scale factors and the systematics from each of these stud
 \label{sec:displacedvertex}
 
 In this subsection, we investigate the discrepancy between simulation
-and data concerning heavily
-\begin{wrapfigure}{r}{0.50\textwidth}
-\centering
-   \includegraphics[width=0.8\linewidth]{Figures/c6/efficiencies/diagram_ks}
-   \caption{Diagrams for the decays of \PKzS studied in this method.}
-    \label{fig:svdiagrams}
-\end{wrapfigure}
- displaced track and vertex
-reconstruction. 
+and data for strongly displaced tracks and vertices. 
 The method is based on the displaced decay of the
 neutral hadrons \PKzS to two charged particles (see
-Figure~\ref{fig:svdiagrams}), giving the signature of two displaced tracks
-originating from a common vertex.
+Figure~\ref{fig:svdiagrams}), producing a signature of two displaced tracks
+originating from a common vertex.\\
 We will briefly discuss the methodology
 and the most important results. More information can be found at~\cite{AN-20-111_KshortStudy}.
-
-The \PKzS hadrons are reconstructed in simulation and data focusing on $Z\rightarrow \mu\mu$--events, where the Drell-Yan process can be used for overall simulation-to-data comparison and normalization, and the targeted particles occur in the jets that are produced along with the main process. The study is carried out for the three data taking years of LHC's Run2.
 
 \noindent The events in the selected data and simulated sets must pass the requirements listed below:
 \begin{itemize}
 \setlength\itemsep{-0.2em}
-    \item exact 2 muons in the event;
+    \item exactly 2 muons in the event;
     \item the leading muon must have a \pt of at least 30\GeV, the trailing muon of at least 25\GeV;
     \item the selected muon invariant mass is required to be within 10\GeV of the $Z$-boson mass;
     \item events containing one or more loosely tagged $b$-jet are vetoed.
@@ -1536,7 +1539,13 @@ The \PKzS hadrons are reconstructed in simulation and data focusing on $Z\righta
 The vertex reconstruction algorithm developed for this study closely
 resembles the built-in $V^0$-vertex fitter in the CMS software (where
 $V^0$ is used to refer to
- \PKzS vertex), for details refer to Sections~\ref{sec:trackvertex} and~\ref{sec:c2sv}.
+ \PKzS vertex), for details refer to
+\begin{wrapfigure}{r}{0.35\textwidth}
+   \includegraphics[width=0.8\linewidth]{Figures/c6/efficiencies/diagram_ks}
+   \caption{Diagrams for the decays of \PKzS studied in this method.}
+    \label{fig:svdiagrams}
+\end{wrapfigure}
+Sections~\ref{sec:trackvertex} and~\ref{sec:c2sv}.
 Furthermore, we re-optimized some of the cut
 values in order to retain more $V^0$ candidates at small radial
 displacements from the primary vertex, at the cost of a slightly
@@ -1559,8 +1568,8 @@ from ``almost prompt'' to very displaced in Figure~\ref{fig:invmass_mumuskim}.
         The invariant mass distribution of the \PKzS candidates reconstructed using the $\pi^{\pm}\pi^{\mp}$ tracks for various displacement regions. The fitted \PKzS candidate mass in data in each region is also shown. \luka}
 \end{figure}
 
-It is extracted a normalization factor for the event yield in
-simulation to the corresponding yield in data at very small radial
+A normalization factor to correct the event yield in
+simulation to the corresponding yield in data is extracted at very small radial
 distances (0--0.5\cm). It represents an overall
 normalization correction for possible MC mis-modeling of the
 \PKzS production in \PZ~boson events. This approach allows us to correct for
@@ -1568,12 +1577,12 @@ overall mis-modeling effects of $V^0$-particles
 and to isolate the effect under consideration, \ie a systematic
 difference in vertex reconstruction efficiency due to its being
 displaced. \\
-As a first remark, we plot the yield of \PKzS particles, using a
+As a first remark, 
+we plot the yield of \PKzS particles using a
 relatively fine binning in Figure~\ref{fig:2017_detector} (left). Notice how the pixel detector layout has a clear structural influence on the yield, both in simulation and data.\\
-The validation scale factors for SV efficiencies are
-measured in bins of \Deltwod, as
-well as in bins of the \pt of the lepton
-for each data-taking period.\\
+Scale factors for SV efficiencies are
+measured in \Deltwod bins, as
+well as in lepton \pt bins for each data-taking period.\\
 In Figure~\ref{fig:2017_detector} (right), the comparison of data to
 simulation in all \pt ranges is shown as a function of \Deltwod.
 In events with either two displaced muons or one displaced muon, these results are used to
@@ -1613,24 +1622,25 @@ two-dimensional binning: the $x$-axis again represents the radial
 distance from the primary vertex, while the $y$-axis now holds the
 reconstructed transverse momentum of the particle. 
 Note that the discrepancy is very large in the last bin for 2016
-data. This can be explained by the reduced tracking performance in
-eras 2016 B to 2016 F due to the HIP-effect, which in the end turned
-out to be caused by a saturation effect in the electronics
-\cite{hipeffect}. The electronics were reconfigured between run 2016 F
-and 2016 G. It can be checked in the dedicated note~\cite{AN-20-111_KshortStudy} that the simulation to data agreement is
-in fact much better for eras 2016 G and H. 
+data. This can be explained by a reduced tracking performance during
+part of the 2016 data taking, caused by a saturation effect in the
+silicon tracker electronics~\cite{hipeffect}. This issue was fixed for
+the second half of the 2016 data taking, as can be observed in the
+detailed studies reported in~\cite{AN-20-111_KshortStudy}.
 
 
 
 \section{Systematic uncertainties}\label{sec:llsystematic}
-Several sources of systematic uncertainties affect the expected signal
+Several sources of systematic uncertainty affect the expected signal
 and background yields in different search regions. 
 The effect of the main uncertainties on the signal yields in each
 search region and lepton channels are summarized in
 Figure~\ref{fig:systematics_all}. 
 Most of the experimental uncertainties are relatively small (less than
-a few \%), where in some search regions the uncertainties are
-dominated by the ones due to the limited signal MC samples statistics. 
+a few \%). %where
+In some search regions the uncertainties are
+dominated by the signal modeling, because of the limited size of the
+signal MC samples.
 
 \begin{figure}[h]
 \noindent
@@ -1646,7 +1656,7 @@ dominated by the ones due to the limited signal MC samples statistics.
 
 \subsection{Uncertainties on the signal yields}
 All uncertainties summarized in this section are evaluated per search
-region and per lepton channel and considered as shape uncertainties in
+region and per lepton channel, and considered as shape uncertainties in
 the final fit, with the exception of those that only affect the
 overall normalization, such as the signal cross section and
 luminosity.
@@ -1683,7 +1693,7 @@ the total yields in each search region are recomputed with the scale
 factors varied up and down by the tag-and-probe fit uncertainties,
 treating all bins as correlated.
 Uncertainties of 2--5\% on the signal yields are found
-for events with a prompt electron, while the systematic on prompt
+for events with a prompt electron, while the uncertainty on prompt
 muons stays consistently below 1\% for all search regions.
 
 \paragraph{\Displ lepton identification efficiency and displaced vertex efficiency }
@@ -1691,23 +1701,24 @@ muons stays consistently below 1\% for all search regions.
 Data events with Z bosons decaying into lepton pairs provide an excellent testing ground for the prompt lepton 
 reconstruction and identification efficiencies in simulation.
 The main source of the systematic uncertainty in our analysis is the displaced track and vertex reconstruction modeling. 
-We make use of two types of processes to estimate this uncertainty. On one side the converted photons in Z events (described in section~\ref{sec:eff_disp_ele}) 
-are used to asses the modeling of \displ electron reconstruction,  long-lived \PKzS 
+We make use of two types of processes to estimate this uncertainty. Converted photons in Z events (described in section~\ref{sec:eff_disp_ele}) 
+are used to asses the modeling of \displ electron reconstruction, and long-lived \PKzS 
 mesons are used to scrutinize the displaced track and vertex reconstruction in simulation. 
 
-Both these studies studies show consistent results in terms of data/MC agreement across the data-taking periods. 
+Both studies show consistent results in terms of data/MC agreement across the data-taking periods. 
 In both cases we observe larger data/MC scale factors in 2016 data, which is caused by a known tracking inefficiency 
-in data which is not simulated in MC. In this dataset the discrepancy
-between data and simulation can reach up to 30\% (see
+in data which is not simulated in MC (see
+Section~\ref{sec:displacedvertex}). In this data set the discrepancy
+between can reach up to 30\% (see
 Figures~\ref{fig:convdispl}--\ref{fig:2dplots}).
-Based on these studies we apply data/MC scale factors per \displ
-lepton to be applied in simulation and half of the difference between
+Based on these studies, we apply data/MC scale factors per \displ
+lepton in simulation, and half of the difference between
 1 and the SF is considered as a systematic uncertainty.  
-In the channels with \displ $\Pe\Pe$ ($\PGm\PGm$) the scale factors
-are derived from conversion (\PKzS) and in events with \displ $\Pe\PGm$ the 
-scale factor for electron comes from the conversion while for muon
-comes from \PKzS study. The \displ-muon reconstruction and ID
-efficiency (~\ref{sec:eff_disp_muon}) is added per muon in 
+In channels with \displ $\Pe\Pe$ or $\PGm\PGm$, the scale factors
+are derived from conversions (\PKzS). In events with \displ $\Pe\PGm$
+instead, scale factors from conversions are used for the electron, while
+the corrections for the muon are taken from the \PKzS study. The \displ-muon reconstruction and ID
+efficiency (Section~\ref{sec:eff_disp_muon}) is added per muon in 
 $\PGm\PGm$ and $\Pe\PGm$ events on top of the corrections for the displaced
 track and vertex reconstruction.
 
@@ -1716,7 +1727,7 @@ The uncertainties in the final yields in the different search regions
 and data-taking periods are calculated by varying the MC event weights
 by half of these scale factors for each \displ lepton (\ie two per
 event). The resulting uncertainties in each signal region/year and
-lepton channel can be seen in Figure~\ref{fig:systematics_all}. 
+lepton channel can be seen in Figure~\ref{fig:systematics_all}.  
 
 \paragraph{\Displ muon momentum scale and resolution}
 \label{sec:nonpromptleptonscaleresol}
@@ -1748,6 +1759,7 @@ $\sigma_2$, whereas the larger $\sigma$ represents the mass tails.
 Figure~\ref{fig:displMuScaleResol} shows the values of the \PKzS\ mass
 peak and width as a function of the transverse displacement \Deltwod,
 in data and simulation, for the three data taking years.
+
 \begin{table}[h!]
 \centering
 \caption{}
@@ -1811,7 +1823,7 @@ distributions used in the analysis.
 
 
 
-\paragraph{Other minor systematic uncertainties}
+\subsubsection*{Other minor systematic uncertainties}
 \textbf{JEC and JER}
 The uncertainty in the calibration of the jet energy scale, as well
 as the jet energy resolution in simulation, affect directly the veto
@@ -1834,12 +1846,17 @@ be below 1\% for all search regions.
 \subsection{Uncertainties on the background data-driven predictions}
 The background consisting of fake leptons is estimated
 using data-driven techniques as described in
-Sec~\ref{sec_llfakelepton}. The general features of the method were
+Section~\ref{sec_llfakelepton}. The general features of the method were
 validated in simulation (Figure~\ref{fig:mcClosure}) as a function of
-the search variables. A much detailed validation in each lepton
-channel separately and in bins of the search regions is also performed
-in four data control samples. Although the lack of large number of events in the high displacement regions do not allow a precise validation, we find that in regions where reasonable statistics are available the method checks out good. 
-Based on the agreement between predictions and observations in these data control samples and simulations, we have decided to treat the uncertainties in this way:
+the search variables. A very detailed validation is performed in each
+lepton channel and in each search category separately, using
+four data control samples. Although the limited number of events in
+the high displacement regions does not allow for a precise validation,
+we find that in regions where enough events are available the method
+checks out fairly well. 
+Based on the agreement between predictions and observations in these
+data control samples and simulation, we assessed the uncertainties as
+follows:
 \begin{itemize}
 \setlength\itemsep{-0.2em}
 \item 30$\%$ for all channels flat;
@@ -1847,27 +1864,32 @@ Based on the agreement between predictions and observations in these data contro
 \item 3 additional uncorrelated nuisances ($\mu\mu$, $e\mu$ and $ee$) to account for the differences in sources and statistic between the 3 channels in the \Dfr measurement region.
 \end{itemize}
 The 30$\%$ covers all the discrepancies we observe in our control region closure and 50$\%$ is motivated with the lack of statistics in the control regions for the closure test. 
-The closure tests in simulation and data in each data-taking period show no particular behavior, as such we consider the 30$\%$ and 50$\%$ systematic uncertainties correlated over all data-taking period and lepton channels, while the additional 3 flavor systematics are taken uncorrelated among the channels and the years. ($\mu\mu$, $e\mu$ and $ee$. For 2016 17, 20, 40 $\%$, for 2017 14, 14, 33 $\%$ and for 2018 10, 11, 25 $\%$).
+The closure tests in simulation and data in each data-taking period
+show no particular dependence on the different data-taking period, as such we consider the 30$\%$ and 50$\%$ systematic uncertainties correlated over all data-taking period and lepton channels, while the additional 3 flavor systematics are taken uncorrelated among the channels and the years. ($\mu\mu$, $e\mu$ and $ee$. For 2016 17, 20, 40 $\%$, for 2017 14, 14, 33 $\%$ and for 2018 10, 11, 25 $\%$).
 
-Concerning the $\Pe\Pe\Pe$ and $\PGm\PGm\Pe$ channels where we observe
+Concerning the $\Pe\Pe\Pe$ and $\PGm\PGm\Pe$ channels, where we observe
 a large discrepancy in the largest displacement region in the
-sideband, we have done convincing studies (see
-section~\ref{sec:conversion}) that the origin of it is not the
-nonprompt lepton background but it comes from photon conversion. One
-evidence for this being due to photon conversions is the fact that the
-excess in data appears only in channels where one lepton from
-$\PGg\to\Pe\Pe$ gets combined with a prompt lepton that comes from a
-\PZ decay (namely only in $\Pe\Pe\Pe$ and $\PGmpm\PGmmp\Pe$) to form a
-displaced vertex. The other channels where we do not expect such a
-contribution have no such an excess. These excess events have
-three leptons forming a mass peak in correspondence
-of the Z boson mass being a strong evidence that are coming from conversions. It is however almost guaranteed that  the contribution from conversions should be very limited in the signal region due to the \mlll upper bound at 80 GeV. 
+sideband, we performed convincing studies (see
+section~\ref{sec:conversion}) to prove that the origin of it is not
+the nonprompt lepton background, but rather the photon conversion
+background.
+The main evidence is that the excess in data only appears in channels
+with at least one displaced electron (from $\PGg\to\Pe\Pe$).
+In these events, the three leptons form a mass peak in proximity of the Z boson
+mass. The contribution from conversions in the signal region, however,
+is expected to be very small, because of the \mlll upper bound at 80 GeV.
 
-The statistical uncertainty on the predicted fake lepton background
-in the majority of search regions is largely driven by the limited
-number of events in data in the sideband region. This uncertainty
-is propagated to the signal region and it is treated according to Gamma-distributions, using shape parameter $\alpha =$ (1 +  the number of events in the sideband region) and the scale parameter which is the average FR for each bin.
-If no events are observed in the sideband region, we consider, as error, the standard deviation of the Gamma Distribution which has the shape parameter $\alpha = 1$ and the scale parameter $\theta =$ maximum measured fake rate in the corresponding channel.  
+The statistical uncertainty in the predicted fake lepton background
+in the majority of search regions is driven by the limited
+amount of data in the sideband region. This uncertainty
+is propagated to the signal region and modeled using
+Gamma distributions, with a shape parameter $\alpha =$ 1 +  the
+number of events in the sideband region, and a scale parameter $\theta$ equal
+to the average FR for each bin.
+If no events are observed in the sideband region, the uncertainty is
+set to the standard deviation of a Gamma distribution with $\alpha =
+1$ and $\theta$ equal to the maximum measured fake rate in the
+corresponding channel. 
 
 \clearpage
 \section{Results}\label{sec:llresults}
@@ -1899,7 +1921,7 @@ The predictions and observations in each of the search regions are
 shown in Figure~\ref{fig:finalyields_majorana_datacards}.\\
 Only cases where the HNL mixes with a SM neutrino
 flavor per time are considered in this scenario, \ie, only one of \mixpare and \mixparm is
-nonzero, refer to Section~\ref{sec:c4hnl}.
+nonzero (see Section~\ref{sec:c4hnl}).
 Thus, the \eex~channels (\EEE, \EEMos, and
 \EEMss) are sensitive to the \mixpare mixing
 parameter, while the \mmx~channels (\MMM, \MMEos, and
@@ -1922,7 +1944,7 @@ parameter, while the \mmx~channels (\MMM, \MMEos, and
     }
 \end{figure}
 
-The yields of observed events in data show a good agreement comparing with the
+The yields of the observed events in data show a good agreement with the
 SM background expectations. The agreement is within the statistical
 and systematic uncertainties and no significant
 excess with respect to the SM background predictions is found. The number of
@@ -1974,26 +1996,26 @@ models are listed in Table~\ref{tab:ele_yield}. The quoted uncertainties include
 At this stage, it is relevant to recall the distinction between
 Majorana and Dirac particles explained
 in Section~\ref{sec:majo_dirac}.
-An important different between the two HNL
+An important difference between the two HNL
 natures concerns the decay widths (as explained
 in Section~\ref{sec:decay_width}):\\
- $\Gamma^{Tot, \: Majorana}_{\hnl} = 2 \times \Gamma^{Tot, \: Dirac}_{\hnl}
-$ and then consequently $c\:\tau^{Tot, \: Majorana}_{\hnl} = \frac{1}{2} \times c\:\tau^{Tot, \: Dirac}_{\hnl}
+$\Gamma^{Tot, \: Majorana}_{\hnl} = 2 \times \Gamma^{Tot, \:Dirac}_{\hnl}$,
+and then consequently
+$c\:\tau^{Tot, \: Majorana}_{\hnl} = \frac{1}{2} \times c\:\tau^{Tot, \: Dirac}_{\hnl}
 $.\\
-This last difference has a direct impact on the final signal yields is
-two unambiguous ways; first, if Dirac scenario, the bins with LNV events ($\mu^{\pm}\mu^{\pm} e$ and $e^{\pm}e^{\pm}\mu$)
-have zero signal events while LVC bins
-($\mu^{\pm}\mu^{\mp} e$ and $e^{\pm}e^{\mp}\mu$) have double the
-number of signal events with respect to Majorana
-scenario. Furthermore, Dirac HNLs have longer lifetimes and the decay SVs
-are more displaced. This on one hand leads to smaller acceptance, due to lower
-reconstruction efficiency, on the other hand it also leads to a shift of signal
+This last difference has a direct impact on the final signal yields in
+two unambiguous ways; first, in Dirac scenarios LNV categories ($\mu^{\pm}\mu^{\pm} e$ and $e^{\pm}e^{\pm}\mu$)
+have zero signal events, while LNC categories
+($\mu^{\pm}\mu^{\mp} e$ and $e^{\pm}e^{\mp}\mu$) have twice the
+number of signal events than Majorana scenarios.
+Furthermore, Dirac HNLs have longer lifetimes and the decay SVs
+are more displaced. This, on the one hand, leads to a smaller
+acceptance, due to a lower
+reconstruction efficiency. On the other hand, it also leads to a shift of signal
 events from small displacement bins to larger displacement bins,
 increasing the $S/B$ ratio.
 
-Two distinct treatments between
-Majorana and Dirac interpretations become then
-unavoidable. 
+Distinct treatments for Majorana and Dirac interpretations are then necessary.
 \subsubsection{Statistical analysis}
 Given the expected background yields and the observed yields in all
 search regions, we can test the exclusion of different HNL signal 
@@ -2001,9 +2023,9 @@ scenarios by computing the excluded cross section
 for each $(\mhnl,\mixpar)$ hypothesis.
 In order to obtain the correct excluded regions in the
 $(\mhnl,\mixpar)$ parameter space, however, we need to extrapolate the
-calculated limits among different points in the
+calculated limits across different points in the
 $\mixpar$ axis.
-As explained in Chapter~\ref{Chapter4}, Section~\ref{sec:reweighting}, varying the mass and mixing
+As explained in Section~\ref{sec:reweighting}, varying the mass and mixing
 probability of the HNL does not only change its production cross
 section, but also its kinematics and acceptance.
 Therefore, the excluded signal strength computed for a given
@@ -2018,7 +2040,7 @@ $\mu=1$.\\
 
 Limits are calculated with the modified frequentist construction
 CL$_{\mathrm{S}}$ with a binned profile likelihood
-test statistics, using the bins of Figures~\ref{fig:finalyields_majorana_datacards}.
+test statistic, using the bins of Figures~\ref{fig:finalyields_majorana_datacards}.
 This fit is performed in the asymptotic approximation~\cite{cowan}.
 The likelihood is constructed using the observed data yields and the
 signal and background expectations obtained from simulation or from
@@ -2027,8 +2049,9 @@ effect of the systematic uncertainties associated with the estimated
 yields, including possible effects on the shapes of the kinematic
 distributions.
 \paragraph{Limits on $V_{Nl}$: Majorana HNL.}
-Limits on \mixpare and \mixparm as a function of \mhnl for a Majorana HNL in
-Figure~\ref{fig:limits_Maj} for Run2 dataset.
+Limits on \mixpare and \mixparm as a function of \mhnl for a Majorana
+HNL are shown in
+Figure~\ref{fig:limits_Maj} for the Run2 data set.
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=.49\textwidth]{Figures/paper/majorana_ele.pdf}
@@ -2038,20 +2061,20 @@ Figure~\ref{fig:limits_Maj} for Run2 dataset.
         Limits on \mixpare (left) and \mixparm (right) as
         functions of \mhnl for a Majorana HNL. Results from the DELPHI~\cite{Abreu:1996pa}
         and the CMS~\cite{Sirunyan:2018mtv} Collaborations are shown
-        for reference. \kirill
+        for reference.
     }
 \end{figure}
 \paragraph{Limits on $V_{Nl}$: Dirac HNL.}
-Limits on \mixpare and \mixparm as a function of \mhnl for a Dirac HNL in
-Figure~\ref{fig:limits_Dir} for Run2 dataset.
+Limits on \mixpare and \mixparm as a function of \mhnl for a Dirac HNL
+are shown in
+Figure~\ref{fig:limits_Dir} for the Run2 data set.\\
 
 
-
-The simulated samples of the Dirac HNL scenarios are retrieved from
-the samples adopted for the Majorana HNL interpretation, by
+The simulation of Dirac HNL scenarios is obtained from
+the samples used for the Majorana HNL interpretation, by
 applying appropriate lifetime corrections, as explained in Section~\ref{sec:c4diracmajo}.
 As a result, the Majorana and Dirac HNL simulations used for the limit
-computation are statistically correlated, which brings to
+computation are statistically correlated, which may lead to
 similar statistical fluctuations in the exclusion curves in the two
 interpretations.\\
 
@@ -2064,7 +2087,7 @@ interpretations.\\
         Limits on \mixpare (left) and \mixparm (right) as
         functions of \mhnl for a Dirac HNL. Results from the DELPHI~\cite{Abreu:1996pa}
         and the CMS~\cite{Sirunyan:2018mtv} Collaborations are shown
-        for reference. \kirill
+        for reference. 
     }
 \end{figure}
 \vspace{5cm}
@@ -2088,11 +2111,12 @@ vertices is presented. The analysis is completed using data collected from the
 CMS experiment in years 2016 -- 18 corresponding to an integrated
 luminosity of 137\fbinv.\\
 At the moment of this thesis drafting, the results have been made
-public and the publication is going to be submitted soon to Journal
+public by the CMS collaboration after passing a series of scrutiny
+processes, and the publication is going to be submitted soon to Journal
 of High Energy Physics (JHEP). The public results can be accessed in
 Ref.~\cite{CMS-PAS-EXO-20-009}.
 
-The signature consists of one prompt charged lepton and two displaced
+The experimental signature consists of one prompt charged lepton and two displaced
 charged leptons in any flavor combination of electrons
 and muons. Two interpretations are proposed considering on one hand uniquely the
 Dirac HNL nature, on the other hand the Majorana HNL nature. 
@@ -2103,16 +2127,26 @@ The excluded values are in the
 ranges between $3\times 10^{-7}$ and $1\times 10^{-3}$ for masses included
 between 1\GeV $< m_\hnl <$ 15\GeV. 
 
-The analysis makes use of dedicated techniques and devices to select
+The analysis makes use of dedicated techniques to select
 leptons associated with long-lived HNL decays. Great effort was given
 to quantify the reconstruction efficiency and the acceptance phase space
 for displaced leptons and secondary vertices. Several innovative
-methods were exploited to get proper predictions
+methods were exploited to get
+ \begin{wrapfigure}{r}{0.6\textwidth}
+\centering
+    \includegraphics[clip,trim=0.3cm 0cm 1.cm 2cm, width=.58\textwidth]{Figures/c6/results/dirac_mu_with_ATLAS.pdf}
+\caption{ Limits on \mixparm as
+        functions of \mhnl for a Dirac HNL. Results from the
+        DELPHI~\cite{Abreu:1996pa}, the CMS~\cite{Sirunyan:2018mtv}
+        and ATLAS~\cite{atlas_ll} Collaborations are shown for reference.}
+\label{fig:atlas}
+\end{wrapfigure}
+ proper predictions
 of the significant background processes from control samples in
 data. Background estimation undeniably represents one of the decisive challenges in this
 type of search at the hadron collider.\\
 Cases with LNV and LNC events are handled in separate ways in order to
-formulate the final limits
+compute the final limits
 in Majorana and Dirac scenarios. By
 applying appropriate lifetime corrections, the simulated samples of
 the Dirac HNL scenarios are fetched from the samples adopted for the
@@ -2121,74 +2155,54 @@ Majorana HNL interpretation.\\
 
 At the time of the writing, these current results are the most
 stringent limits on this type of processes in the
-explored parameter space of the HNL production at the LHC. 
+explored parameter space of the HNL production. 
 The two direct comparisons are the DELPHI~\cite{Abreu:1996pa} and
 ATLAS~\cite{atlas_ll} results. \\
 DELPHI Collaboration performed HNL searches 
   using the data corresponding to $3.3
   \times 10^6$ hadronic
- \begin{wrapfigure}{r}{0.5\textwidth}
-\centering
-    \includegraphics[clip,trim=0.3cm 0cm 1.cm 2cm, width=.48\textwidth]{Figures/c6/results/dirac_mu_with_ATLAS.pdf}
-\caption{ Limits on \mixparm as
-        functions of \mhnl for a Dirac HNL. Results from the
-        DELPHI~\cite{Abreu:1996pa}, the CMS~\cite{Sirunyan:2018mtv}
-        and ATLAS~\cite{atlas_ll} Collaborations are shown for reference.}
-\label{fig:atlas}
-\end{wrapfigure}
  $Z_0$ decays at LEP1, see Section~\ref{sec:c3directHNL}. This set of results 
   includes both the short-lived HNL
- and the long-lived HNL outlines and all three lepton flavor
+ and the long-lived HNL and all three lepton flavor
  couplings. For the long-lived HNL case it was looked for detectable secondary vertices or calorimeter clusters.
  Upper limits were set for the branching ratio $BR (\: Z_0\rightarrow$ \hnl) of
  about $1.3 \times 10^{-6}$ at 95\% C.L. for \hnl masses between 1 and
  15\GeV for a mean decay length of 100 cm for a $m_\hnl = 3$\GeV.
 
-The second comparison occurs with the relatively recent ATLAS
+The second comparison is made with the relatively recent ATLAS
 results~\cite{atlas_ll} which are marked in chartreuse in
 Figure~\ref{fig:atlas} for an easier juxtaposition. The search used
 data corresponding to an integrated
-luminosity of 32.9\fbinv; it looked for HNLs produced through mixing with
+luminosity of 32.9\fbinv\footnote{Novel
+with respect to standard ATLAS analyses is the employment of a
+dedicated algorithm called Large-radius tracking, LRT, which is run on
+a smaller dataset of pre-selected events. So the 32.9\fbinv with
+respect to the 35.9\fbinv of the standard analyses.}; it looked for HNLs produced through mixing with
 muon neutrinos only. The desired signature consists of one prompt muon and SVs
 with either $\mu \mu$ or $\mu e$ pairs. The considered displacements
 are located in the transverse plane by 4-300 mm from the PV. The
-results set limits on the \mixparm for HNL masses 4.5-10\GeV. Novel
-with respect to standard ATLAS analyses is the employment of a
-dedicated algorithm called Large-radius tracking, LRT, which is run on
-a smaller dataset of pre-selected events.\\
+results set limits on the \mixparm for HNL masses 4.5-10\GeV.\\
 Some techniques of the ATLAS's analysis gave us several useful
 insights regarding the displaced tracking and vertexing
 efficiency. The use of $K_S^{0} \rightarrow \pi \pi$ events was also
 adopted by CMS analysis to model of displaced tracks
 and SV reconstruction, see Section~\ref{sec:displacedvertex}.\\
 
-As for the prompt HNL analysis presented in Chapter~\ref{Chapter5},
-the exclusion limits on \mixpart are missing. As opposed to what
-previously explained, the analysis with hadronic tau channel appears
-to be extremely challenging in the displaced case. It would require
-first a
-dedicated displaced jets strategy and furthermore the expected SM background would almost
-for sure be way larger than the signal.
-At the same time, the leptonic tau decay channel encounters the
-problem to have very small
-signal efficiency.
 
 
-\vspace{2cm}
 
-Several people were involved in the completion of the long-lived HNL analysis.\\
-Daniele Trocino studied in details the displaced muon reconstruction
-efficiencies and developed the SV fitting and the re-weighting procedures.\\
-Tom Cornelis prepared the HNL simulation base-files and
-generated the MC signal samples. \\
-Luka Lambrecht and Kirill Skovpen contributed to the displaced lepton and vertexing
-efficiency studies.\\
-From my side, I was the main analyzer. I have contributed in the design of the
-entire analysis from the beginning. I performed the measurement of the
+\vspace{1.5cm}
+
+Several people were involved in the completion of the long-lived HNL
+analysis.\\
+The analysis presented in this chapter was performed in the context of
+CMS collaboration, with leading contributions from the several members
+of the UGent CMS team.\\
+I was the main analyzer responsible from designing of the entire analysis  from the beginning to the writing of the journal publication. I performed the measurement of the lepton fake-rateI performed the measurement of the
 lepton \fr and \Dfr and their validation in both MC and data. I
 produced the final results in the search regions and control
 regions. I also
-gave most of the internal presentations on the topic, including the
+gave most of the internal CMS presentations on the topic, including the
 so-called pre-approval and approval talks.
 \subsubsection*{Conference talks and workshops}
 I have presented the results in different various occasions:
