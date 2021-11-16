@@ -144,7 +144,7 @@ radiation (ISR) or final state radiation (FSR). In the first case,
 partons in the incoming protons emit low energy/collinear radiation
 prior to the hard scattering process. For FSR, collinear photons are emitted by
 the final states particles.\\
-Events (Figure~\ref{fig:c43}) presenting a W of Z boson in association with a real or virtual
+Events (Figure~\ref{fig:c43}) presenting either a W or a Z boson in association with a real or virtual
 photon from ISR or FSR can extensively contribute to
 the background in three lepton final states.\\
 This is the case when a virtual photon decays (internal
@@ -216,7 +216,7 @@ where they originate from semi-leptonic b quark decay and lepton \PW decay.
 \subsection{Long-lived particles}\label{sec:c4LLbgk}
 Long-lived HNL search looks for displaced
 vertices and displaced leptons produced relatively far from the PV.
-This kind of signature happens to be very different with respect the
+This kind of signature happens to be very different with respect to the
 very well known SM processes. Along these lines, the backgrounds
 are not the conventional ones and
 therefore special care has to be used in understanding them.
@@ -237,7 +237,7 @@ It is clear from Figure~\ref{fig:c4LLbgk} that the resonance
 backgrounds can be rejected with proper criteria according to
 the phase space we are investigating.
 The top-right corner of Figure~\ref{fig:c4LLbgk} is
-background free because marks a region with very displaced particles
+background free because it marks a region with very displaced particles
 with relative high masses; in this region we will not need to implement
 any selection to remove B and D meson contribution. In the central
 region of Figure~\ref{fig:c4LLbgk}, $m_\hnl \sim 1$\GeV, we find several
@@ -266,11 +266,10 @@ purposes with the CMS results.
 
 Signal samples are generated using the
 \texttt{MadGraph5\_aMC@NLO}~\cite{Alwall_2014} software. 
-For the prompt HNL
-model a generator is used with next-to-leading order (NLO) precision
-in perturbative quantum chromodynamics; for the long-lived model, it
-is adopted a leading order (LO) precision in the strong
-coupling constant $\alpha_{\mathrm{S}}$.\\
+The generator is used with next-to-leading order (NLO) precision
+in perturbative quantum chromodynamics (QCD) for the prompt HNL
+model, and at leading-order (LO) precision for the long-lived model.
+ %in the strong coupling constant $\alpha_{\mathrm{S}}$.\\
 The generation is based on the \texttt{heavyN} model described in
 Ref.~\cite{Atre:2009rg}, which is available in Universal FeynRules
 Output (UFO) by Ref.~\cite{Alva:2014gxa,Degrande_2016,heavyN}.
@@ -288,13 +287,15 @@ fusion,~\ref{fid:hnl_production}(c) is simulated.
  \includegraphics[clip,trim=0cm 0cm 0cm 1cm, width=0.70\textwidth]{Figures/c4/hnl_production}
   \caption{Diagrams for heavy neutrino production mechanisms at
     LHC~\cite{Pascoli_2019}. Each color corresponds to a different
-    particle (black = \hnl, yellow = leptons/neutrinos)}
+    particle: black = \hnl, yellow = leptons/neutrinos, green =
+    quarks, blue = bosons, purble = photons and red = gluons.}
   \label{fid:hnl_production}
 \end{figure}
 
 The production mechanisms via gluon and vector-boson fusion are
 crucial because
 \begin{wrapfigure}{r}{0.48\textwidth}
+\centering
   \includegraphics[clip,trim=0cm 0cm 0.5cm 0.5cm, width=.39\textwidth]{Figures/c4/hnl_lhc_production}
   \caption{``HNL production cross section, divided by \mixpar, via
 charged (CC) and neutral (NC) current DY, $\PW \gamma$ fusion (VBF),
@@ -302,7 +303,7 @@ and gluon fusion (GF) at $\sqrt{s}
 \sim 14$\TeV ''~\cite{Pascoli_2019}.}
   \label{fig:hnl_lhc_graph}
 \end{wrapfigure} 
- at the energies the LHC operates and at high \hnl mass the CC DY process
+ at the LHC energies and at high \hnl mass, the CC DY process
 is no longer the only viable way for producing heavy neutrinos. 
 Vector boson fusion $\PW \gamma \rightarrow N
 \ell^{\pm}$~\cite{PhysRevLett.112.081801, Alva:2014gxa,Degrande_2016}
@@ -310,10 +311,10 @@ is the dominant production mechanism at the LHC
 energies for HNLs with very large masses
 (TeV energy scale)~\cite{Alva:2014gxa,Degrande_2016, Pascoli_2019} and for
 lighter HNLs it enhances the inclusive production rate. Neutral current
-processes~\cite{PhysRevD.44.1593,WILLENBROCK1985429} which include
+processes~\cite{PhysRevD.44.1593,WILLENBROCK1985429}, which involve
 gluon fusion, $gg \rightarrow \PZ^{*}/H^{*} \rightarrow \hnl \nu \ell$
-can even surpass CC DY cross section for large HNL masses~\cite{PhysRevD.96.055042,
-  Pascoli_2019}. Refer to Figure~\ref{fig:hnl_lhc_graph} for
+can even surpass the CC DY cross section for large HNL masses~\cite{PhysRevD.96.055042,
+  Pascoli_2019}. See Figure~\ref{fig:hnl_lhc_graph} for
 reference.\\
 For the high mass HNL samples used in the search described in
 Chapter~\ref{Chapter5}, both gluon
@@ -325,14 +326,16 @@ fusion uses the LUXqed plus PDF4LHC15 NNLO 100
 PDF set~\cite{PhysRevLett.117.242002}.\\
 For all the signal MC samples the parton showering and hadronization are simulated with PYTHIA. \\
 
-Samples with HNLs masses from 
-$\mhnl = 1$\GeV to $\mhnl = 1.2$\TeV are produced for signal simulation. The simulated HNLs couple
+Samples with HNL masses from 
+$\mhnl = 1$\GeV to $\mhnl = 1.2$\TeV are produced for signal
+modeling.
+The simulated HNLs couple
 exclusively to one of the three SM neutrino families at a time with 
 mixing probabilities typically in a range $\mixpar = 10^{-6}$ -- 1,
 depending on the mass. For this thesis work only the mixing processes between
 $\nu_e$--\hnl and $\nu_{\mu}$--\hnl are considered and they are
 assumed to be different from zero while the
-$\nu_{\tau}$--\hnl is set at zero. The mixing parameters are:
+$\nu_{\tau}$--\hnl is set to zero. The mixing parameters are:
 \begin{linenomath}
 \begin{equation}
   \mathbf{V}_{\hnl\ell} =
@@ -407,7 +410,7 @@ and \mixpar scenario, first compute the limits by evaluating parameters
 of interest as the overall \emph{signal strength} (number of signal events /
 number of expected signal events); when computing the fit between
 signal, data and background yields, by default the signal strength is
-left floating in the fit, so that the measurement is independent from the
+left floating in the fit, so that the measurement is independent of the
 presence or absence of a signal. Depending on the value of the signal
 strength there are two options. If the signal strength is below 1 it
 means that the \mhnl --\mixpar case is excluded and a new sample with
@@ -439,8 +442,8 @@ probabilities to obtain $t$ from $\tau_{\mathrm T}$ or from $\tau_0$:
   \label{eq:ctauReweightingSingle}
   \end{equation}
 \end{linenomath}
-Furthermore, it can be used a set of multiple HNL samples with different lifetimes
-$\{\tau_i\}$ to emulate the $\tau_{\mathrm T}$ scenario. In this case the
+Taking it a step further, a whole set of multiple HNL samples with different lifetimes
+$\{\tau_i\}$ can be used to emulate the $\tau_{\mathrm T}$ scenario. In this case the
 decay time distributions must include the correct normalization
 factors for each sample, $N_i/\tau_i$, where $N_i$ is the number of
 simulated events for the sample with mean lifetime $\tau_i$ and
@@ -511,12 +514,12 @@ three samples with different $\mixparm$ values and the re-weighting of
 Eq.~\ref{eq:ctauReweighting} (red histograms). The two models are compatible.\\
 The histograms
 presented in Figure~\ref{fig:newReweightRec} are filled with events
-which pass the event selection specifically designed for the
+that pass the event selection specifically designed for the
 long-lived HNL analysis presented in Chapter~\ref{Chapter6}, for details
 refer to Section~\ref{sec:llanalisi}. \\
 
 Figure~\ref{fig:hnlSamples} shows the total number of HNL signal
-events available for each $(\mhnl,\mixparm)$ point which have been
+events available for each $(\mhnl,\mixparm)$ point, which were
 generated specifically for the long-live HNL search. For each HNL
 mass, all the samples produced with different lifetimes
 $\{\tau_i\}$ have been used to emulate the $\tau_{\mathrm T}$ scenario.
@@ -586,7 +589,7 @@ This method provides a good modeling of the Dirac HNL signal, but
 uses only half the events from the Majorana HNL MC samples. With a
 simple extra assumption, it is possible to make use of the full
 statistical power of our MC production.\\
-As explained in the Section~\ref{sec:llresults}, the signal selection is the
+As explained in Section~\ref{sec:llresults}, the signal selection is the
 same for LNC and LNV events. Just in the final stage of the analysis,
 events are split into same-lepton-charge and opposite-lepton-charge
 categories to distinguish LNV and LNC events for the physics
@@ -605,7 +608,7 @@ Majorana HNL samples in the Dirac HNL interpretation.\\
 Figure~\ref{fig:majToDirReweighting} shows a comparison between Dirac
 HNL samples and Majorana HNL samples corrected to emulate Dirac
 scenarios, employing both strategies outlined above.
-As can be seen, differences are small across the most relevant observables for defining the search strategy.
+As can be seen, differences are small accros the most relevant observables  for defining the search strategy.
 \begin{figure}[h!]
   \centering
   \includegraphics[width = .32\textwidth]{Figures/c4/reweighting/diracReweighting_M-2_V-0p0157162336455_mu_mass_18.pdf}

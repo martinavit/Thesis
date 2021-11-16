@@ -543,7 +543,7 @@ samples. Due to the presence of the neutrino in the final state, the
 mass is always lower than the HNL mass.\\
 
 In addition to the selections mentioned above, numerous dilepton
-resonances within the search
+resonances (see Figure~\ref{fig:c6dimuon}) within the search
  region are removed.
 In case of \ltwo and \lthree having the same flavor and opposite
 charges and with the transverse position of the dilepton vertex
@@ -1376,7 +1376,7 @@ They include both statistical and systematic uncertainties.
   \label{fig:trigger_electrons}
 \end{figure}
 
-\subsection{\Displ-lepton reconstruction and ID efficiency} \label{sec:displeptoneff}
+\subsection{\Displ-lepton reconstruction and selection efficiency} \label{sec:displeptoneff}
 \paragraph{Muons}\label{sec:eff_disp_muon}
 The identification and isolation requirement selection
 efficiency corrections for \displ muons are measured
@@ -1464,7 +1464,7 @@ unknown, as a proxy for its displacement we use the following
 variable~\cite{convz}:
 
 \begin{align}
-\vcenter{\hbox{\includegraphics[clip,trim=0cm 0cm 0.5cm 0cm, width=.42\textwidth]{Figures/c6/efficiencies/figs_Displacement.png}}}
+\vcenter{\hbox{\includegraphics[clip,trim=0cm 0cm 0.5cm 0cm, width=.62\textwidth]{Figures/c6/efficiencies/figs_Displacement.png}}}
 &\qquad
 \begin{aligned}
 \mathrm{d = \sqrt{2Rd_{xy}+d_{xy}^2}};
@@ -1818,8 +1818,7 @@ For the processes estimated from simulation, the available number of
 events in the MC samples limits the precision of the modeling.
 The statistical uncertainty on the event yield in each search bin,
 corresponding to the sum in quadrature of the MC event weights, is
-therefore taken as a systematic uncertainty on the shape of the
-distributions used in the analysis.
+taken into account for the final limit computation.
 
 
 
@@ -1869,8 +1868,7 @@ show no particular dependence on the different data-taking period, as such we co
 
 Concerning the $\Pe\Pe\Pe$ and $\PGm\PGm\Pe$ channels, where we observe
 a large discrepancy in the largest displacement region in the
-sideband, we performed convincing studies (see
-section~\ref{sec:conversion}) to prove that the origin of it is not
+data control region, we performed convincing studies to prove that the origin of it is not
 the nonprompt lepton background, but rather the photon conversion
 background.
 The main evidence is that the excess in data only appears in channels
@@ -1881,12 +1879,12 @@ is expected to be very small, because of the \mlll upper bound at 80 GeV.
 
 The statistical uncertainty in the predicted fake lepton background
 in the majority of search regions is driven by the limited
-amount of data in the sideband region. This uncertainty
+amount of data in the application region. This uncertainty
 is propagated to the signal region and modeled using
 Gamma distributions, with a shape parameter $\alpha =$ 1 +  the
-number of events in the sideband region, and a scale parameter $\theta$ equal
+number of events in the application region, and a scale parameter $\theta$ equal
 to the average FR for each bin.
-If no events are observed in the sideband region, the uncertainty is
+If no events are observed in the application region, the uncertainty is
 set to the standard deviation of a Gamma distribution with $\alpha =
 1$ and $\theta$ equal to the maximum measured fake rate in the
 corresponding channel. 
@@ -2108,7 +2106,7 @@ respect to the DELPHI results for masses above about 3.5\GeV.
 \section{Summary}
 In this chapter, the search for long-lived heavy neutral leptons with displaced
 vertices is presented. The analysis is completed using data collected from the
-CMS experiment in years 2016 -- 18 corresponding to an integrated
+CMS experiment in the years 2016 -- 18 corresponding to an integrated
 luminosity of 137\fbinv.\\
 At the moment of this thesis drafting, the results have been made
 public by the CMS collaboration after passing a series of scrutiny
@@ -2173,11 +2171,11 @@ The second comparison is made with the relatively recent ATLAS
 results~\cite{atlas_ll} which are marked in chartreuse in
 Figure~\ref{fig:atlas} for an easier juxtaposition. The search used
 data corresponding to an integrated
-luminosity of 32.9\fbinv\footnote{Novel
+luminosity of 32.9\fbinv(\footnote{Novel
 with respect to standard ATLAS analyses is the employment of a
 dedicated algorithm called Large-radius tracking, LRT, which is run on
 a smaller dataset of pre-selected events. So the 32.9\fbinv with
-respect to the 35.9\fbinv of the standard analyses.}; it looked for HNLs produced through mixing with
+respect to the 35.9\fbinv of the standard analyses.}); it looked for HNLs produced through mixing with
 muon neutrinos only. The desired signature consists of one prompt muon and SVs
 with either $\mu \mu$ or $\mu e$ pairs. The considered displacements
 are located in the transverse plane by 4-300 mm from the PV. The
@@ -2198,7 +2196,7 @@ analysis.\\
 The analysis presented in this chapter was performed in the context of
 CMS collaboration, with leading contributions from the several members
 of the UGent CMS team.\\
-I was the main analyzer responsible from designing of the entire analysis  from the beginning to the writing of the journal publication. I performed the measurement of the lepton fake-rateI performed the measurement of the
+I was the main analyzer responsible from designing of the entire analysis  from the beginning to the writing of the journal publication. I performed the measurement of the
 lepton \fr and \Dfr and their validation in both MC and data. I
 produced the final results in the search regions and control
 regions. I also
