@@ -71,7 +71,7 @@ headsepline, % Uncomment to get a line under the header
 \usepackage[compat=1.0.0]{tikz-feynman}
 
 \usepackage{lineno}{\color{gray}}
-\linenumbers
+%\linenumbers
 
 %----------------------------------------------------------------------------------------
 %	MARGIN SETTINGS
@@ -98,6 +98,8 @@ headsepline, % Uncomment to get a line under the header
   olines,
 }
 \usepackage{titlesec}
+\usepackage{tabularx} % in the preamble
+
 \titleformat*{\section}{\LARGE\bfseries}
 
 % \ModifyLayer[addhoffset=\ifodd\value{page}\else -\fi 1.5\ratio]{scrheadings.foot.above.line}
@@ -159,6 +161,8 @@ headsepline, % Uncomment to get a line under the header
 %	QUOTATION PAGE
 %----------------------------------------------------------------------------------------
 %	ABSTRACT PAGE
+\include{Parts/board}
+
 \include{Parts/quotation1}
 
 \include{Parts/abstract}
