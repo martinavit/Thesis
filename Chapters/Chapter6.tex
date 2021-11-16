@@ -20,7 +20,7 @@ new physics signals probed until some years ago, and they prompt
 the need to search for unconventional experimental signatures.\\
 Long-lived particles are predicted by several models as a result of:
 \begin{itemize}
-%\setlength\itemsep{-0.1em}
+\setlength\itemsep{-0.1em}
 \item \emph{small coupling constants} -- \eg HNLs, %RPV SUSY (
   R-parity violating SUSY, %scenario),
   etc;
@@ -39,7 +39,7 @@ prompt particles, thus to integrate displaced
 signatures into the CMS framework we have to face
 several challenges:
 \begin{itemize}
-%\setlength\itemsep{-0.1em}
+\setlength\itemsep{-0.1em}
 \item \emph{triggers}: timing information at trigger level is not always
   available and the majority of current triggers use primary vertex
   constraints to identify particle 
@@ -499,7 +499,9 @@ spectrum. \\
 
 Events with a b jet (see Section~\ref{sec:object}) with \pt greater
 than 25\GeV are rejected, in order to substantially reduce the
-background from the top processes.\\
+background from the top processes.
+
+
 
 The vector sum of the momenta of \ltwo, \lthree, and the neutrino
 corresponds to the momentum of the HNL, and points back exactly to the
@@ -593,7 +595,8 @@ When there are both MC and data-driven predictions:
 }
 \end{center}
 
-\begin{figure}[h]
+
+\begin{figure}[h!]
 \centering
   \includegraphics[clip,trim=0.9cm 0.7cm 0.7cm 0.6cm,width=.35\textwidth]{Figures/c6/selection/18/e_DeltaR_l2_l3__0.pdf}
   \includegraphics[clip,trim=0.9cm 0.7cm 0.7cm 0.6cm,width=.35\textwidth]{Figures/c6/selection/18/e_minDeltaphil1_other__0.pdf}\\
@@ -615,8 +618,7 @@ When there are both MC and data-driven predictions:
   \label{fig:selection_electrons}
 \end{figure}
 
-
-\clearpage
+%\clearpage
 Figures~\ref{fig:cutflow1} and~\ref{fig:cutflow2} are a summary view of the entire selection,
 step by step, in the form of ``cutflow'' histograms. The
 first set, Figure~\ref{fig:cutflow1}, shows the event yields for all
@@ -636,8 +638,8 @@ where at least one electron comes from conversions. In such events,
 
 \begin{figure}[h!]
 \centering
-  \includegraphics[clip,trim=0.9cm 0.7cm 0.7cm 0.7cm,width=.4\textwidth]{Figures/c6/selection/18/e_cutflow__0.pdf}
-  \includegraphics[clip,trim=0.9cm 0.7cm 0.7cm 0.7cm,width=.4\textwidth]{Figures/c6/selection/18/mu_cutflow__0.pdf}\\
+  \includegraphics[clip,trim=0.9cm 0.7cm 0.cm 0.7cm,width=.48\textwidth]{Figures/c6/selection/18/e_cutflow__0.pdf}
+  \includegraphics[clip,trim=0.9cm 0.7cm 0.cm 0.7cm,width=.48\textwidth]{Figures/c6/selection/18/mu_cutflow__0.pdf}\\
   \caption{Cutflow plots showing the full selection applied in simulated backgrounds using the 2018 MC samples,
     in \eex (left) and \mmx (right) final states.
     Signal models for different values of \mhnl and \mixpar
@@ -648,8 +650,8 @@ where at least one electron comes from conversions. In such events,
 
 \begin{figure}[h!]
 \centering
-   \includegraphics[clip,trim=0.9cm 0.7cm 0.7cm 0.7cm,width=.4\textwidth]{Figures/c6/selection/eff_e_cutflow_n_1__0.pdf}
-  \includegraphics[clip,trim=0.9cm 0.7cm 0.7cm 0.7cm,width=.4\textwidth]{Figures/c6/selection/eff_mu_cutflow_n_1__0.pdf}
+   \includegraphics[clip,trim=0.9cm 0.7cm 0.7cm 0.7cm,width=.48\textwidth]{Figures/c6/selection/eff_e_cutflow_n_1__0.pdf}
+  \includegraphics[clip,trim=0.9cm 0.7cm 0.7cm 0.7cm,width=.48\textwidth]{Figures/c6/selection/eff_mu_cutflow_n_1__0.pdf}
   \caption{
    $N-1$ plots but showing the impact in percentage of the single cut (each bin is $yield_{bin}/yield_{full\:selection}$).
     Signal models for different values of \mhnl and \mixpar
@@ -694,7 +696,8 @@ Therefore we select four event categories, based on the value of
 \Deltwod, with different sensitivities for different signal
 scenarios:
 $\Deltwod<0.5$\cm (fully background dominated), $0.5<\Deltwod<1.5$\cm,
-$1.5<\Deltwod<4$\cm and $\Deltwod>4$\cm.\\
+$1.5<\Deltwod<4$\cm and
+ $\Deltwod>4$\cm.\\
 In addition, the events are split into three different categories
 according to lepton flavors. When the muon coupling is being probed, the three final states $\mu\mu\mu$,  $\mu^{\mp}\mu^{\pm} e$,
 and $\mu^{\pm}\mu^{\pm}e$ are considered; when the electron coupling
@@ -712,6 +715,10 @@ hadrons, populate a region of $\mtwol<4$\GeV, and are basically absent
 at higher dilepton masses. Therefore we further split the data into
 two categories: $\mtwol<4$\GeV and $\mtwol>4$\GeV.\\
  
+
+
+Since the background yields are extremely low in large displacement
+bins for the high-
  \begin{wrapfigure}{r}{0.62\textwidth}
   \centering
   \includegraphics[clip,trim=0.9cm 0.7cm 0.7cm 0.9cm,width=.3\textwidth]{Figures/c6/selection/18/e_DeltaPV_SV_2D_zomm__final.pdf}
@@ -722,10 +729,8 @@ two categories: $\mtwol<4$\GeV and $\mtwol>4$\GeV.\\
     passing the baseline selection of Table~\ref{tab:baselinesel}. For illustration purposes we show
     only the predictions corresponding to 2018 data-taking and luminosity.}
   \label{fig:reco_displ}
-\end{wrapfigure}
-
-Since the background yields are extremely low in large displacement
-bins for the high-mass category, we opted for a lower number of bins, as
+\end{wrapfigure} 
+mass category, we opted for a lower number of bins, as
 follows:
 \begin{itemize}
 \setlength\itemsep{-0.5em}
@@ -1056,9 +1061,9 @@ control regions more than that in simulation, which is prone to
 mis-modeling from various sources. \\
 \begin{figure}[h!]
   \centering
-  \includegraphics[clip,trim=0.cm 0.cm 0.5cm 0.5cm,height=4.5cm]{Figures/c6/backgrounds/mc_closure/mu_DeltaPV_SV_2D_zomm__0.pdf}
-  \includegraphics[clip,trim=0.cm 0.cm 0.5cm 0.5cm,height=4.5cm]{Figures/c6/backgrounds/mc_closure/mu_M_ll_l2_l3_zoom__0.pdf}
-  \includegraphics[clip,trim=0.5cm 0.cm 0.5cm 0.5cm,height=4.5cm]{Figures/c6/backgrounds/mc_closure/mu_SR__final.pdf}
+  \includegraphics[clip,trim=0.cm 0.cm 0.5cm 0.5cm,height=4.8cm]{Figures/c6/backgrounds/mc_closure/mu_DeltaPV_SV_2D_zomm__0.pdf}
+  \includegraphics[clip,trim=0.cm 0.cm 0.5cm 0.5cm,height=4.8cm]{Figures/c6/backgrounds/mc_closure/mu_M_ll_l2_l3_zoom__0.pdf}
+  \includegraphics[clip,trim=0.5cm 0.cm 0.5cm 0.5cm,height=4.8cm]{Figures/c6/backgrounds/mc_closure/mu_SR__final.pdf}
   \caption{Distributions of \Deltwod (left), \mtwol (middle)
     2016 \ttbar MC samples,
     comparing the MC events containing SF leptons
@@ -1073,7 +1078,7 @@ mis-modeling from various sources. \\
 In the following, we present data control regions orthogonal to the
 defined search region, to test the prediction power of the method.
 
-
+\clearpage
  \paragraph{Closure test in data sample: sideband control region}\label{sec:llsidebandcr}
 This control region is defined in Table~\ref{tab:side_band_sel}.
 Data in this region are compared to our data-driven (nonprompt DF and
@@ -1135,7 +1140,7 @@ Figure~\ref{fig:sb_sr_Ctrl}.\\
     electron couplings (bottom).}
   \label{fig:sb_sr_Ctrl}
 \end{figure}
-\vspace{10cm}
+
 \paragraph*{Closure test in data sample: \PQb control region}
 This control region is defined in Table~\ref{tab:ttbar_sel}.
 Data in this region are compared to our data-driven (nonprompt DF and
@@ -1197,7 +1202,7 @@ Figure~\ref{fig:sb_ttbar_Ctrl}.
   \label{fig:sb_ttbar_Ctrl}
 \end{figure}
 
-
+\vspace{10cm}
 \paragraph{Closure test in data sample: sideband plus b jet control region}
 Taking into account the complementarity of the two control regions just
 presented, and considering the low statistical power exhibited in
@@ -1244,8 +1249,8 @@ control regions is still fully orthogonal to the signal region. \\
 \begin{figure}[h]
   \noindent
   \makebox[\textwidth]{
-  \includegraphics[width=.51\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/SideBandPlusBjet/mu_cr.pdf}
-  \includegraphics[width=.51\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/SideBandPlusBjet/ele_cr.pdf}}\\
+  \includegraphics[width=.71\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/SideBandPlusBjet/mu_cr.pdf}}\\
+  \makebox[\textwidth]{\includegraphics[width=.71\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/SideBandPlusBjet/ele_cr.pdf}}\\
 \noindent
   \makebox[\textwidth]{
   \includegraphics[width=.33\textwidth]{Figures/c6/backgrounds/FR/closureTest/Data/SideBandPlusBjet/M-6_V-0p00202484567313_mu_muo_mass3_datacard_combined_mass3.pdf}
@@ -1265,7 +1270,7 @@ control regions is still fully orthogonal to the signal region. \\
 
 
 
-\vspace{10cm}
+\clearpage
 \paragraph{Closure test in data sample: validation of internal and external conversions }
 \label{sec:conversion}
 The photon conversion background is modeled using simulated events,
@@ -1305,11 +1310,11 @@ The photon conversion background is modeled using simulated events,
  simulation, with no
  corrections required.
  
- \begin{figure}[h]
+ \begin{figure}[h!]
 \centering
-\includegraphics[height=3.5cm]{Figures/c6/backgrounds/FR/closureTest/Data/conversion/M-6_V-0p00202484567313_e_ele_datacard_combined_SR.pdf}
-  \includegraphics[height=3.5cm]{Figures/c6/backgrounds/FR/closureTest/Data/conversion/M-6_V-0p00202484567313_e_ele_mass_datacard_combined_massl2l3.pdf}
-  \includegraphics[height=3.5cm]{Figures/c6/backgrounds/FR/closureTest/Data/conversion/M-6_V-0p00202484567313_e_ele_disp_datacard_combined_displacement.pdf}
+\includegraphics[height=4cm]{Figures/c6/backgrounds/FR/closureTest/Data/conversion/M-6_V-0p00202484567313_e_ele_datacard_combined_SR.pdf}\\
+  \includegraphics[height=4cm]{Figures/c6/backgrounds/FR/closureTest/Data/conversion/M-6_V-0p00202484567313_e_ele_mass_datacard_combined_massl2l3.pdf}
+  \includegraphics[height=4cm]{Figures/c6/backgrounds/FR/closureTest/Data/conversion/M-6_V-0p00202484567313_e_ele_disp_datacard_combined_displacement.pdf}
     \caption{Distribution of SR-like bins, the two-lepton invariant
     masses, \mtwol, and \Deltwod in the photon-conversion control
     region with events with at least 2 electrons in the final state. Run2.}
@@ -1464,7 +1469,7 @@ unknown, as a proxy for its displacement we use the following
 variable~\cite{convz}:
 
 \begin{align}
-\vcenter{\hbox{\includegraphics[clip,trim=0cm 0cm 0.5cm 0cm, width=.62\textwidth]{Figures/c6/efficiencies/figs_Displacement.png}}}
+\vcenter{\hbox{\includegraphics[clip,trim=0cm 0cm 0.5cm 0cm, width=.48\textwidth]{Figures/c6/efficiencies/figs_Displacement.png}}}
 &\qquad
 \begin{aligned}
 \mathrm{d = \sqrt{2Rd_{xy}+d_{xy}^2}};
@@ -1492,9 +1497,9 @@ from each of these studies are implemented in the analysis can be found in Secti
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.45\textwidth]{Figures/paper/convDisplacement-crop.pdf}
-    \includegraphics[width=0.45\textwidth]{Figures/paper/convM4l-crop.pdf} \\
-    \includegraphics[width=0.45\textwidth]{Figures/paper/convPVSV4l-crop.pdf}
+    \includegraphics[width=0.48\textwidth]{Figures/paper/convDisplacement-crop.pdf}
+    \includegraphics[width=0.48\textwidth]{Figures/paper/convM4l-crop.pdf} \\
+    \includegraphics[width=0.48\textwidth]{Figures/paper/convPVSV4l-crop.pdf}
     \caption{\label{fig:convdispl}
         Comparison between the observed number of events in data and
         simulation for converted photons.
@@ -1515,7 +1520,7 @@ from each of these studies are implemented in the analysis can be found in Secti
 \end{figure}
 
 
-
+\clearpage
 \subsection{\Displ tracking and vertexing efficiency}
 \label{sec:displacedvertex}
 
@@ -1560,10 +1565,10 @@ from ``almost prompt'' to very displaced in Figure~\ref{fig:invmass_mumuskim}.
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.35\textwidth]{Figures/paper/ksinvmass_run2_fig_0.pdf}
-    \includegraphics[width=0.35\textwidth]{Figures/paper/ksinvmass_run2_fig_1.pdf} \\
-    \includegraphics[width=0.35\textwidth]{Figures/paper/ksinvmass_run2_fig_2.pdf}
-    \includegraphics[width=0.35\textwidth]{Figures/paper/ksinvmass_run2_fig_3.pdf} \\
+    \includegraphics[width=0.34\textwidth]{Figures/paper/ksinvmass_run2_fig_0.pdf}
+    \includegraphics[width=0.34\textwidth]{Figures/paper/ksinvmass_run2_fig_1.pdf} \\
+    \includegraphics[width=0.34\textwidth]{Figures/paper/ksinvmass_run2_fig_2.pdf}
+    \includegraphics[width=0.34\textwidth]{Figures/paper/ksinvmass_run2_fig_3.pdf} \\
     \caption{\label{fig:invmass_mumuskim}
         The invariant mass distribution of the \PKzS candidates reconstructed using the $\pi^{\pm}\pi^{\mp}$ tracks for various displacement regions. The fitted \PKzS candidate mass in data in each region is also shown. \luka}
 \end{figure}
@@ -1592,8 +1597,8 @@ uncertainties for displaced track and vertex reconstruction.
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.40\textwidth]{Figures/c6/efficiencies/2017E_detector}
-    \includegraphics[width=0.40\textwidth]{Figures/paper/K_short_Displacement.pdf}
+    \includegraphics[width=0.44\textwidth]{Figures/c6/efficiencies/2017E_detector}
+    \includegraphics[width=0.44\textwidth]{Figures/paper/K_short_Displacement.pdf}
     \caption{Results for \PKzS particles using a fine binning and
       linear $y$-axis scale with the radial distances of the pixel
       detector layers superimposed. Note that in this plot, the total
@@ -2130,21 +2135,22 @@ leptons associated with long-lived HNL decays. Great effort was given
 to quantify the reconstruction efficiency and the acceptance phase space
 for displaced leptons and secondary vertices. Several innovative
 methods were exploited to get
+ proper predictions
+of the significant background processes from control samples in
+data. Background estimation undeniably represents one of the decisive challenges in this
+type of search at the hadron collider.\\
+Cases with LNV and LNC events are handled in separate ways in order to
+compute the final 
  \begin{wrapfigure}{r}{0.6\textwidth}
 \centering
-    \includegraphics[clip,trim=0.3cm 0cm 1.cm 2cm, width=.58\textwidth]{Figures/c6/results/dirac_mu_with_ATLAS.pdf}
+    \includegraphics[clip,trim=1.2cm 1cm 0.cm 0.5cm, width=.58\textwidth]{Figures/c6/results/signalStrength_mu_Dirac_muo_limits_atlas.pdf}
 \caption{ Limits on \mixparm as
         functions of \mhnl for a Dirac HNL. Results from the
         DELPHI~\cite{Abreu:1996pa}, the CMS~\cite{Sirunyan:2018mtv}
         and ATLAS~\cite{atlas_ll} Collaborations are shown for reference.}
 \label{fig:atlas}
 \end{wrapfigure}
- proper predictions
-of the significant background processes from control samples in
-data. Background estimation undeniably represents one of the decisive challenges in this
-type of search at the hadron collider.\\
-Cases with LNV and LNC events are handled in separate ways in order to
-compute the final limits
+ limits
 in Majorana and Dirac scenarios. By
 applying appropriate lifetime corrections, the simulated samples of
 the Dirac HNL scenarios are fetched from the samples adopted for the
@@ -2189,7 +2195,7 @@ and SV reconstruction, see Section~\ref{sec:displacedvertex}.\\
 
 
 
-\vspace{1.5cm}
+\vspace{1cm}
 
 Several people were involved in the completion of the long-lived HNL
 analysis.\\
@@ -2205,6 +2211,8 @@ so-called pre-approval and approval talks.
 \subsubsection*{Conference talks and workshops}
 I have presented the results in different various occasions:
 \begin{itemize}
+\setlength\itemsep{-0.2em}
+{\small
 \item ``Sterile neutrino searches at LHC and CMS'', talk at WP5
   meeting, 26 November 2018, Antwerp (Belgium);
 \item ``HNL experimental overview'', talks Searching for long-lived
@@ -2212,7 +2220,7 @@ I have presented the results in different various occasions:
   May 2019, CERN (Switzerland);
 \item ``Neutral Long-Lived Particle Search'', plenary at DM\@ LHC 2019, 13-16 Aug 2019, University of Washington (United States);
 \item ``HNL experimental overview'', plenary at EOS winter Solstice
-  meeting, 19 Dec 2019, Brussels (Belgium);
+  meeting, 19 Dec 2019, Brussels (Belgium);}
 \end{itemize}
 
 I have actively participated to five \emph{LHC LLP Community}
