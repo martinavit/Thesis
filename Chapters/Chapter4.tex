@@ -2,29 +2,29 @@
 \chapter{Data and simulated datasets} \label{Chapter4} 
 
 
-Nearly all of new physics signals which can be studied at CMS are
+Nearly all of the new physics signals which can be studied at CMS are
 expected to have their potential backgrounds in which SM
 processes sporadically have fluctuations that make them appear more
 exotic than they truly are, or backgrounds arising from detector noise
 or mis-measurements.
 For example, an isolated high \pt electron can be a ``smoking gun'' for
-a few rare new physics processes. At the same time an electron contained in a b
-jet is hardly ever isolated, but since the total b jet cross section
+a few rare new physics processes. At the same time, an electron contained in a b
+jet is hardly ever isolated, but since the total b jet cross-section
 is extremely large, even a small portion can be critical. It becomes
 crucial to have a sort of ``litmus test'' to cross-check the observed
 outcomes with the expected features and the predicted amount of events.
 The idea is to validate the observed information by comparing it to
-generated events. For this reason collision events are simulated for
+generated events. For this reason, collision events are simulated for
 several physics processes as they are predicted from theory. The
 detector simulation response is taken into account. \\
-In a simplistic way we can summarize a number of applications of event
+In a simplistic way, we can summarize a number of applications of event
 generators as follows: to give analyzers a sense of the type of
 events to expect and at which rates; to help in planning new
 experiment designs hence detector performances are optimal for the
 desired physics search; to help in drafting analysis strategies which
 can be applied to data but that have been optimized a priori without
 any possible unconscious bias; to estimate detector calibrations and acceptance
-corrections; and to have a appropriate framework inside which to
+corrections; and to have an appropriate framework inside which to
 interpret the meaning of observed physics phenomena in the optics of a
 fundamental underlying theory (SM).
 
@@ -36,12 +36,12 @@ The event simulation is based on the Monte Carlo (MC)
 method~\cite{mc}. The simulated events
  are grouped in a specific
 sample for each physics process and they are called MC samples.\\
-The full simulation chain is divided in separate generation stages:
+The full simulation chain is divided into separate generation stages:
 \begin{itemize}
 \setlength\itemsep{-0.1em}
 \item \textbf{Matrix element (ME) calculation.} The ME calculation
   makes use of a list of PDFs (Parton Distribution Function) for the initial state
-  depiction; a MC generator is used for the computation of the
+  depiction; an MC generator is used for the computation of the
   partonic interaction.
  For the signal samples produced specifically for this thesis and for
   most SM processes here presented, the software
@@ -54,7 +54,7 @@ The full simulation chain is divided in separate generation stages:
   the \texttt{PYTHIA 8}~\cite{Sj_strand_2008, Sj_strand_2015}
   software. The parton shower step is necessary to address some aspects
   of the collision with regards to the evolution of quarks and gluons into jets of
-  hadrons, so called \emph{hadronization}. The hadronization is
+  hadrons, so-called \emph{hadronization}. The hadronization is
   simulated starting from an energy scale of 1 GeV, adopting phenomenological models tuned to
   experimental results~\cite{Skands_2014, Khachatryan_2016_ps, Sirunyan_2020_ps}.
 \item \textbf{Detector simulation.} The detector simulation is done
@@ -64,17 +64,17 @@ The full simulation chain is divided in separate generation stages:
   the authentic sub-detector responses. Particle interactions with
   matter are simulated and their energy deposit is reproduced according to the
   energy and the mass of the particle and the material that it goes through. Data collected by CMS are used to
-  parametrize the real detector response of each single
-  sub-detector. Furthermore the trigger system and the readout system
-  is mimicked. 
+  parametrize the real detector response of every single
+  sub-detector. Furthermore, the trigger system and the readout system
+  are mimicked. 
 \end{itemize}
 
 While analyzing the simulated samples the kinematics and all
 properties of the produced primary particles are available in addition
 to the detector signals just like in real collision data. This
-possibility makes the simulations a corner stone of the detector and
+possibility makes the simulations a cornerstone of the detector and
 algorithm performance studies.\\
-Furthermore there are single year campaigns for
+Furthermore, there are single year campaigns for
 each year of data-taking which correspond to different detector
 conditions for each period. 
 
@@ -91,7 +91,7 @@ conditions for each period.
     relative rates with respect the signal expected yields.}
   \label{fig:crosssection}
 \end{figure}
-In this section we give an overview of the SM processes that form
+In this section, we give an overview of the SM processes that form
 sizable backgrounds to the HNL searches performed in this thesis. The
 focus is specifically on processes that can lead to three light
 lepton final states, which is the
@@ -161,8 +161,8 @@ the external conversion is a ``nasty'' background because it can mimic
 a HNL decay vertex where $e^{+}e^{-}$ is produced. In order
 to reduce this background either requirements on the kinematic
 properties of the event or a material veto can be applied. The latter
-helps in rejecting all the SV
-which are located in proximity either of a detector layer or of an inert material.
+helps in rejecting all the SVs
+which are located in proximity either of a detector layer or of inert material.
 
 \begin{figure}[h!]
 \centering
@@ -190,10 +190,10 @@ photon, $\gamma^{*}$ or to a
  \caption{Drell–Yan dilepton production~\cite{diagram}.}
   \label{fig:c44}
 \end{figure}
-Drell-Yan events contribute in three prompt leptons final states when
+Drell-Yan events contribute to three prompt leptons final states when
 associated with a jet production (DY plus jets) or when one nonprompt
 lepton is reconstructed and passes the analysis selection. The Drell-Yan
-production cross section is so large with respect to other three
+production cross-section is so large with respect to the other three
 leptons processes that even a modest misidentification probability can
 lead to a large background contribution.
 
@@ -231,17 +231,17 @@ therefore special care has to be used in understanding them.
 
 In Figure~\ref{fig:c4LLbgk} the phase space of long-lived HNLs is
 superimposed with potentially important backgrounds coming from
-long-lived meson and baryon decays. The figure shows the crowded area as function
-of HNL mass and life time.\\
+long-lived meson and baryon decays. The figure shows the crowded area as a function
+of HNL mass and lifetime.\\
 It is clear from Figure~\ref{fig:c4LLbgk} that the resonance
 backgrounds can be rejected with proper criteria according to
 the phase space we are investigating.
 The top-right corner of Figure~\ref{fig:c4LLbgk} is
-background free because it marks a region with very displaced particles
-with relative high masses; in this region we will not need to implement
+background-free because it marks a region with very displaced particles
+with relatively high masses; in this region, we will not need to implement
 any selection to remove B and D meson contribution. In the central
 region of Figure~\ref{fig:c4LLbgk}, $m_\hnl \sim 1$\GeV, we find several
-baryons with relative small lifetimes. In this cases, implementing a 
+baryons with relative small lifetimes. In these cases, implementing a 
 veto on a narrow mass window only for those events with small
 displacement could help in rejecting them. The same mass veto is redundant
 for events with larger displacement in the same mass region.
@@ -400,23 +400,23 @@ As explained in Section~\ref{sec:promptll}, the values of \mhnl
 and \mixpar do not only determine the HNL production cross section,
 but also its mean lifetime and, consequently, its kinematics,
 acceptance, and reconstruction efficiency.
-For a fixed value of \mhnl, therefore, a simple cross section
+For a fixed value of \mhnl, therefore, a simple cross-section
 rescaling is not sufficient to correctly reproduce the behavior of
-other HNLs with same mass and different \mixpar.
+other HNLs with the same mass and different \mixpar.
 
 The simple and naive approach with endless computing power would be an
 iterative one. For a \mhnl
-and \mixpar scenario, first compute the limits by evaluating parameters
+and \mixpar scenario, first, compute the limits by evaluating parameters
 of interest as the overall \emph{signal strength} (number of signal events /
 number of expected signal events); when computing the fit between
-signal, data and background yields, by default the signal strength is
-left floating in the fit, so that the measurement is independent of the
+signal, data, and background yields, by default the signal strength is
+left floating in the fit so that the measurement is independent of the
 presence or absence of a signal. Depending on the value of the signal
 strength there are two options. If the signal strength is below 1 it
 means that the \mhnl --\mixpar case is excluded and a new sample with
-same \mhnl but smaller \mixpar has to be simulated. If the signal strength is above 1 it
+the same \mhnl but smaller \mixpar has to be simulated. If the signal strength is above 1 it
 means that the analysis is not sensitive to that \mhnl --\mixpar case and a new sample with
-same \mhnl but larger \mixpar has to be simulated. This iteration can
+the same \mhnl but larger \mixpar has to be simulated. This iteration can
 be repeated with steps smaller and smaller until the signal strength is
 exactly 1 which means we found the exclusion limits. It is clear that
 this kind of approach is not sustainable due to the limited computing
@@ -430,7 +430,7 @@ $p_\hnl=\beta\gamma\mhnl$, and its decay length,
 independently of its mean lifetime $\tau_\hnl$.
 Therefore, given a simulated HNL sample of mass \mhnl
 and mean lifetime $\tau_0$, we can reproduce the kinematic
-distributions of any target HNL scenario with same mass and 
+distributions of any target HNL scenario with the same mass and 
 different lifetime, $(\mhnl, \tau_{\mathrm T})$.
 An event with proper decay time $t$ taken from the simulated sample
 of mean lifetime $\tau_0$ is re-weighted by the ratio of
@@ -538,7 +538,7 @@ $\{\tau_i\}$ have been used to emulate the $\tau_{\mathrm T}$ scenario.
 
 
 \subsubsection{Dirac HNL signal emulation}\label{sec:c4diracmajo}
-The HNL production cross section is fixed by the \mhnl and \mixpar
+The HNL production cross-section is fixed by the \mhnl and \mixpar
 values~\cite{Degrande_2016,heavyN}, and it is the same for Dirac and
 Majorana HNLs.
 The resonance width for a Majorana HNL, on the other hand, is exactly
@@ -562,7 +562,7 @@ to Section~\ref{sec:c3majo_dirac}.
 For the HNL analysis with three prompt leptons (Chapter~\ref{Chapter5}) there is no 
 need to produce distinct Dirac and Majorana MC samples since there is
 no difference between them except the final state combinations. For the
-long-lived scenario separate samples are necessary.
+long-lived scenario, separate samples are necessary.
 
 After the lessons learned with the emulation procedure described 
 above, a similar idea and strategy
@@ -581,11 +581,11 @@ steps:
   Dirac HNL, by using Eq.~\ref{eq:ctauReweightingSingle} with
   $\tau_{\mathrm{T}}=2\tau_0$;
 \item since only half the events of the original Majorana sample are
-  used (while the cross section is the same for Majorana and Dirac
+  used (while the cross-section is the same for Majorana and Dirac
   scenarios), add a factor 2 to the event weight to restore the correct
   normalization.
 \end{itemize}
-This method provides a good modeling of the Dirac HNL signal, but
+This method provides good modeling of the Dirac HNL signal, but
 uses only half the events from the Majorana HNL MC samples. With a
 simple extra assumption, it is possible to make use of the full
 statistical power of our MC production.\\
@@ -594,8 +594,8 @@ same for LNC and LNV events. Just in the final stage of the analysis,
 events are split into same-lepton-charge and opposite-lepton-charge
 categories to distinguish LNV and LNC events for the physics
 interpretation. If we assume that the lepton efficiency and
-acceptance are the same for positively and negatively charged leptons
-(\ie, same reconstruction and identification efficiency, same momentum
+the acceptance are the same for positively and negatively charged leptons
+(\ie, same reconstruction and identification efficiency, the same momentum
 scale and resolution, etc.), then we can use both LNC and LNV events
 from the Majorana HNL samples to emulate the Dirac scenarios, and
 simply classify all of them as opposite-charge events. In fact, any
@@ -608,7 +608,7 @@ Majorana HNL samples in the Dirac HNL interpretation.\\
 Figure~\ref{fig:majToDirReweighting} shows a comparison between Dirac
 HNL samples and Majorana HNL samples corrected to emulate Dirac
 scenarios, employing both strategies outlined above.
-As can be seen, differences are small accros the most relevant observables  for defining the search strategy.
+As can be seen, differences are small across the most relevant observables for defining the search strategy.
 \begin{figure}[h!]
   \centering
   \includegraphics[width = .32\textwidth]{Figures/c4/reweighting/diracReweighting_M-2_V-0p0157162336455_mu_mass_18.pdf}
@@ -629,13 +629,13 @@ As can be seen, differences are small accros the most relevant observables  for 
 
 
 \subsubsection{Uncertainty on LL-signal MC cross section}\label{sec:c4lo}
-The \texttt{heavyN} model used for generation of long-lived HNL events does not allow for NLO QCD calculations. The simulation of HNL events happens therefore at LO, resulting in large theoretical uncertainties on the cross section (up to $15\%$) that have to cover the effect of the missing higher order QCD corrections and PDF uncertainties.
+The \texttt{heavyN} model used for the generation of long-lived HNL events does not allow for NLO QCD calculations. The simulation of HNL events happens therefore at LO, resulting in large theoretical uncertainties on the cross-section (up to $15\%$) that have to cover the effect of the missing higher-order QCD corrections and PDF uncertainties.
 
-Instead of relying on these LO uncertainties, a general correction factor for the cross section from LO to NNLO can be derived based on the SM production of \PW\ $\rightarrow$ $\ell$ $\bar{\nu}$ . In HNL production, the only difference from this SM process is the exchange of the SM neutrino by a HNL. The effect of the mass and coupling of the HNL can be factorized in the calculation of the HNL cross section and is not affected by the PDF and scale variations. The dominant effect of these uncertainties appears at the production of the \PW boson, therefore it can be studied in the SM process \PW\ $\rightarrow$ $\ell$ $\bar{\nu}$ , for which recommended values for the cross section at NNLO exist with their corresponding theory uncertainties. Our approach is to get a LO cross section for \PW\ $\rightarrow$ $\ell$ $\bar{\nu}$ calculated with Madgraph using the same exact conditions as the HNL MC production. A correction factor from LO to NNLO can be derived based on this and can then be applied to HNL MC. The PDF and scale uncertainties at NNLO are applied as flat systematic uncertainties to cover the remaining uncertainty on the MC cross section.
+Instead of relying on these LO uncertainties, a general correction factor for the cross-section from LO to NNLO can be derived based on the SM production of \PW\ $\rightarrow$ $\ell$ $\bar{\nu}$. In HNL production, the only difference from this SM process is the exchange of the SM neutrino by a HNL. The effect of the mass and coupling of the HNL can be factorized in the calculation of the HNL cross-section and is not affected by the PDF and scale variations. The dominant effect of these uncertainties appears at the production of the \PW boson, therefore it can be studied in the SM process \PW\ $\rightarrow$ $\ell$ $\bar{\nu}$, for which recommended values for the cross-section at NNLO exist with their corresponding theory uncertainties. Our approach is to get a LO cross-section for \PW\ $\rightarrow$ $\ell$ $\bar{\nu}$ calculated with Madgraph using the same exact conditions as the HNL MC production. A correction factor from LO to NNLO can be derived based on this and can then be applied to HNL MC. The PDF and scale uncertainties at NNLO are applied as flat systematic uncertainties to cover the remaining uncertainty on the MC cross-section.
 
-It has been checked and verified that the generator conditions are similar between our MC production and the centrally produced W+jets samples, from which the recommended NNLO cross section was taken. The small differences that are present have no significant effect on the cross section calculation. Additionally, lepton universality will allow us to apply the scale factor and uncertainty across all HNL samples, regardless of which lepton flavor(s) they couple with.
+It has been checked and verified that the generator conditions are similar between our MC production and the centrally produced W+jets samples, from which the recommended NNLO cross-section was taken. The small differences that are present have no significant effect on the cross-section calculation. Additionally, lepton universality will allow us to apply the scale factor and uncertainty across all HNL samples, regardless of which lepton flavor(s) they couple with.
 
-The resulting LO cross section for \PW\ $\rightarrow$ $\ell$
+The resulting LO cross-section for \PW\ $\rightarrow$ $\ell$
 $\bar{\nu}$ ($\ell$ = \Pe\ , \PGm\ , \PGt\ ) is 56500 pb. The recommended NNLO value is $61526.7^{+497.1}_{-264.6}\pm 2312.7$ pb where the quoted uncertainties are respectively scale and PDF uncertainties. Assuming uncorrelated uncertainties and taking the maximum of the two asymmetric errors, the combined uncertainty is $61526.7 \pm 2365.5$ pb, an effect of $3.86\%$. This gives a final scale factor of $1.089 \pm 0.042$.
 
 \section{Data sets}\label{sec:c4data}
@@ -648,7 +648,7 @@ around particles reconstructed in the event by the HLT, and follows one simple p
 grouping together events with similar physics content; for instance, there are
 single-lepton datasets and double-leptons datasets.
 Since an event can pass more than one HLT path,
-it can enter in more than one primary dataset. At a practical level, possible overlaps among different datasets are
+it can enter more than one primary dataset. At a practical level, possible overlaps among different datasets are
 removed by checking run, lumi-section, and event numbers in order to not have twice the same event coming from different PDs.\\
 
 
@@ -662,7 +662,7 @@ The analysis presented in Chapter~\ref{Chapter6} includes only
 \texttt{SingleElectron} and \texttt{SingleMuon} for signal search,
 while \texttt{DoubleEG} and
 \texttt{DoubleMuon} primary datasets are used for background
-measurements. For this specific case the choice was
+measurements. For this specific case, the choice was
 made considering the limitations due to the presence of displaced
 leptons in the final states.
 Since (most of) the CMS leptonic triggers are
@@ -672,7 +672,7 @@ signal selection.\\
 
 The first analysis presented in the following chapters used only 
 \Pp collision data collected
-by the CMS experiment at center-of-mass energy of 13\TeV
+by the CMS experiment at a center-of-mass energy of 13\TeV
 in 2016, corresponding to an integrated luminosity of 35.92\fbinv.\\
 
 The long-lived HNL analysis uses three sets of \Pp collision data
@@ -700,6 +700,7 @@ interpretation of the results in both the prompt and displaced heavy neutral lep
 analyses of Chapters~\ref{Chapter5}
 and~\ref{Chapter6}.
 
-Finally details about data taking, data campaigns and primary datasets were presented.
+Finally, details about data taking, data campaigns, and primary datasets were presented.
+
 
 
